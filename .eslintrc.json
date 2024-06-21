@@ -32,6 +32,7 @@
     }
   },
   "rules": {
+    "react/react-in-jsx-scope": "off",
     "tailwindcss/no-custom-classname": "off"
   },
   "overrides": [
@@ -43,7 +44,8 @@
         "extraFileExtensions": [".astro"]
       },
       "rules": {
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "react/no-unknown-property": "off"
       }
     },
     {
