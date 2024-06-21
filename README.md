@@ -1,16 +1,32 @@
+Here's the modified README for Astro, following the structure and style of the Next.js README you provided:
+
+File: README.md
+
+````markdown
 # Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
+This is an [Astro](https://astro.build/) project bootstrapped with [`create astro`](https://docs.astro.build/en/getting-started/).
+
+## Getting Started
+
+1. Clone the repo
+
+2. Update the .env (if applicable)
+
+First, run the development server:
+
+```bash
+
+
+# Install deps
+npm install
+
+# Run dev server
+npm dev
 ```
+````
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Open [http://localhost:4321](http://localhost:4321) with your browser to see the result.
 
 ## 🚀 Project Structure
 
@@ -32,9 +48,7 @@ Inside of your Astro project, you'll see the following folders and files:
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+Any static assets, like images, can be placed in the `public/` directory except if used within content
 
 ## 🧞 Commands
 
@@ -49,6 +63,27 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+### pnpm
+
+- Fixing Prettier lint
+
+```bash
+npm format:write
+```
+
+### Convention
+
+- filename should be in `kebab-case`
+- variable name should be in `camelCase`
+- constant should be in `UPPERCASE`
+- component should be in `PascalCase`
+- [Git Commit Message](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
+
+### Docs
+
+- [Astro Documentation](https://docs.astro.build)
+- [Astro Discord Server](https://astro.build/chat)
+
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [Astro documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
