@@ -32,9 +32,20 @@
     }
   },
   "rules": {
-    // Add your custom rules here
+    "tailwindcss/no-custom-classname": "off"
   },
   "overrides": [
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
+      },
+      "rules": {
+        "react/react-in-jsx-scope": "off"
+      }
+    },
     {
       "files": ["prettier.config.cjs"],
       "env": {
