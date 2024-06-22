@@ -1,3 +1,4 @@
+import { supportedLanguages } from "@/i18n/ui";
 import { defineCollection, z } from "astro:content";
 
 const articleSchema = z.object({
@@ -7,6 +8,7 @@ const articleSchema = z.object({
   featured: z.boolean(),
   image: z.string(),
   title: z.string(),
+  lang: z.enum(supportedLanguages),
 });
 
 const articlesCollection = defineCollection({

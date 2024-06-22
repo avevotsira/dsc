@@ -1,0 +1,17 @@
+---
+import { supportedLanguages } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import Layout from "@/layouts/Layout.astro";
+
+export function getStaticPaths() {
+  const paths = supportedLanguages.map((lang) => ({ params: { lang } }));
+  return paths;
+}
+
+const lang = Astro.currentLocale;
+const t = useTranslations(lang);
+---
+
+<Layout title={`Welcome to Astro - ${lang}`}>
+  <h1 class="text-3xl font-bold underline">{t("nav.home")}</h1>
+</Layout>
