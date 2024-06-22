@@ -1,0 +1,35 @@
+---
+import { Heading } from "@/components/Heading";
+import Main from "@/components/Main.astro";
+
+import { supportedLanguages } from "@/i18n/ui";
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+// Function to generate static paths for each supported language
+export function getStaticPaths() {
+  const paths = supportedLanguages.map((lang) => ({ params: { lang } }));
+  return paths;
+}
+
+// Get the current locale from Astro
+const lang = Astro.currentLocale;
+
+// Fetch articles collection, filtering by language in frontmatter
+const articles = await getCollection("articles", ({ data }) => {
+  return data.lang === lang;
+});
+---
+
+<Layout title="Articles">
+  <Main>
+    <Heading as="h1" size="xl">This is a heading</Heading>
+    {
+      articles.map((article) => (
+        <Heading as="h2" size="lg">
+          {article.data.title}
+        </Heading>
+      ))
+    }
+  </Main>
+</Layout>
