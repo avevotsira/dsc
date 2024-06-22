@@ -21,4 +21,10 @@ const page = Astro.props;
 const { Content } = await page.render();
 ---
 
-<Layout title={page.data.title}><Main><Content /></Main></Layout>
+<Layout title={page.data.title}
+  ><Main>
+    <div class="prose mx-auto text-pretty">
+      <Content />
+    </div>
+  </Main>
+</Layout>
