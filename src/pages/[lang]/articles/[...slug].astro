@@ -1,0 +1,30 @@
+---
+import Main from "@/components/Main.astro";
+
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("articles");
+
+  const paths = pages.map((page) => {
+    const [slug, lang] = page.slug.split("/");
+    const path = { params: { lang, slug }, props: page };
+    return path;
+  });
+
+  return paths;
+}
+
+const page = Astro.props;
+
+const { Content } = await page.render();
+---
+
+<Layout title={page.data.title}
+  ><Main>
+    <div class="prose mx-auto text-pretty">
+      <Content />
+    </div>
+  </Main>
+</Layout>
