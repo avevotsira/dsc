@@ -8,7 +8,7 @@ title: Behind-the-scenes with our artists
 lang: km
 ---
 
-Collaboration is a key component of many creative endeavors, and music production is no exception. In fact, collaboration can be essential to the success of a music project, as it allows for the pooling of diverse talents and perspectives to create something truly unique and compelling.
+ការសហការគ្នាគឺជាធាតុផ្សំដ៏សំខាន់នៃកិច្ចខិតខំប្រឹងប្រែងច្នៃប្រឌិតជាច្រើន ហើយការផលិតតន្ត្រីក៏មិនមានករណីលើកលែងដែរ។ ជាការពិត ការសហការគ្នាអាចមានសារៈសំខាន់ចំពោះភាពជោគជ័យនៃគម្រោងតន្ត្រី ព្រោះវាអនុញ្ញាតឱ្យមានទេពកោសល្យ និងទស្សនវិស័យចម្រុះគ្នា ដើម្បីបង្កើតនូវអ្វីដែលប្លែក និងទាក់ទាញ។
 
 ## Introduction
 
