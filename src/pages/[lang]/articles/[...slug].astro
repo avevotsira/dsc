@@ -8,7 +8,7 @@ export async function getStaticPaths() {
   const pages = await getCollection("articles");
 
   const paths = pages.map((page) => {
-    const [slug, lang] = page.slug.split("/");
+    const [lang, slug] = page.slug.split("/");
     const path = { params: { lang, slug }, props: page };
     return path;
   });
