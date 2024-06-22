@@ -75,7 +75,7 @@ export default function Footer() {
             Digital Economy And Business Committee
           </a>
         </div>
-        </div>
-      </footer>
+      </div>
+    </footer>
   );
 }
