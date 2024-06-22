@@ -1,6 +1,9 @@
 ---
+import { InvalidArticleFilenameError } from "@/lib/error/article-error";
+
 import Main from "@/components/Main.astro";
 
+import { supportedLanguages, type SupportedLanguage } from "@/i18n/ui";
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
@@ -9,8 +12,16 @@ export async function getStaticPaths() {
 
   const paths = pages.map((page) => {
     const [slug, lang] = page.slug.split("/");
-    const path = { params: { lang, slug }, props: page };
-    return path;
+
+    if (!supportedLanguages.includes(lang as SupportedLanguage)) {
+      throw new InvalidArticleFilenameError(
+        page.slug,
+        lang,
+        supportedLanguages,
+      );
+    }
+
+    return { params: { lang, slug }, props: page };
   });
 
   return paths;
