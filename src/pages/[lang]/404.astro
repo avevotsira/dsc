@@ -1,7 +1,13 @@
 ---
 import { Button } from "@/components/ui/button";
 
+import { supportedLanguages } from "@/i18n/ui";
 import Layout from "@/layouts/Layout.astro";
+
+export function getStaticPaths() {
+  const paths = supportedLanguages.map((lang) => ({ params: { lang } }));
+  return paths;
+}
 ---
 
 <Layout title="Page Not Found">
