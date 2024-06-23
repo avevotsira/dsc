@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="grid gap-2">
-          <h4 className="text-lg font-semibold">Quick Links</h4>
+          <h4 className="text-lg font-semibold">Quick Linkss</h4>
           <a href="/" className="hover:underline">
             Menu
           </a>
