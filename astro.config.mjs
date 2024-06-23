@@ -16,8 +16,5 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: true,
     },
-    fallbacks: {
-      km: "en",
-    },
   },
 });
