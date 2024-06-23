@@ -2,14 +2,13 @@
 import { Heading } from "@/components/Heading";
 import Main from "@/components/Main.astro";
 
-import { supportedLanguages } from "@/i18n/ui";
+import { languages } from "@/i18n/ui";
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 // Function to generate static paths for each supported language
 export function getStaticPaths() {
-  const paths = supportedLanguages.map((lang) => ({ params: { lang } }));
-  return paths;
+  return Object.values(languages).map((lang) => ({ params: { lang } }));
 }
 
 // Get the current locale from Astro

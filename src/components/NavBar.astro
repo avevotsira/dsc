@@ -1,0 +1,42 @@
+---
+import { getLocalizedRoutes, routes } from "@/lib/route";
+
+import LanguageSwitcher from "./LanguageSwitcher";
+import type { SupportedLanguage } from "@/i18n/ui";
+
+const locale = Astro.currentLocale;
+const currentPath = Astro.url.pathname;
+const links = getLocalizedRoutes(
+  [routes.home, routes.about, routes.projects, routes.contact],
+  locale,
+);
+---
+
+<nav class="bg-slate-100">
+  <div class="container sticky top-0 z-50 mx-auto flex max-w-screen-2xl p-8">
+    <a href="/">
+      <div class="text-lg font-bold text-foreground">
+        <div>LOGO</div>
+      </div>
+    </a>
+    <div class="grow"></div>
+    <ul class="flex space-x-4">
+      {
+        links.map((link) => (
+          <li>
+            <a href={link.href} class="text-foreground hover:text-primary">
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+      <li>
+        <LanguageSwitcher
+          currentPath={currentPath}
+          initialLocale={(locale as SupportedLanguage) ?? "en"}
+          client:load
+        />
+      </li>
+    </ul>
+  </div>
+</nav>
