@@ -1,0 +1,13 @@
+---
+import Main from "@/components/Main.astro";
+
+import { useTranslations } from "@/i18n/utils";
+import Layout from "@/layouts/Layout.astro";
+
+const lang = Astro.currentLocale;
+const t = useTranslations(lang);
+---
+
+<Layout title={`Welcome to Astro - ${lang}`}>
+  <Main> <h1 class="text-3xl font-bold underline">{t("nav.home")}</h1></Main>
+</Layout>
