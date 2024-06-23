@@ -14,6 +14,8 @@ export const languages = {
   km: "km",
 } as const;
 
+export type SupportedLanguage = keyof typeof languages;
+
 export const defaultLang = languages.en;
 
 export const supportedLanguages = [languages.en, languages.km] as const;
