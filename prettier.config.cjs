@@ -28,9 +28,9 @@ module.exports = {
   ],
   importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
   plugins: [
+    "prettier-plugin-astro",
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss",
-    "prettier-plugin-astro",
   ],
   overrides: [
     {

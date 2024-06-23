@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import { Button } from "@/components/ui/button";
+---
+
+<Layout title="Page Not Found">
+  <div
+    class="flex flex-col items-center justify-center bg-gradient-to-b from-gray-100 to-white text-center"
+    style="min-height: 100vh;"
+  >
+    <div class="flex flex-col gap-4 rounded-lg p-12">
+      <h1 class="text-9xl font-bold text-red-600">404</h1>
+      <p class="mt-5 text-2xl font-light text-gray-800 md:text-3xl">
+        Oops! The page you are looking for could not be found.
+      </p>
+      <p class="mt-2 text-gray-600">
+        It seems that the page you're trying to access doesn't exist or has been
+        moved.
+      </p>
+      <Button>
+        <a href="/"> Go back to homepage </a>
+      </Button>
+    </div>
+  </div>
+</Layout>
