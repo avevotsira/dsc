@@ -19,11 +19,7 @@ const LanguageSwitcher = ({
   };
 
   return (
-    <button
-      onClick={toggleLanguage}
-      className="text-foreground hover:text-primary"
-      type="button"
-    >
+    <button onClick={toggleLanguage} type="button">
       {languages[initialLocale]}
     </button>
   );

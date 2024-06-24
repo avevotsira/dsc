@@ -1,11 +1,10 @@
 ---
-import Card from "@/components/Card.astro";
+import ArticleList from "@/components/ArticleList.astro";
 import Main from "@/components/Main.astro";
 import TextElement from "@/components/TextElement";
 
 import { languages } from "@/i18n/ui";
 import type { SupportedLanguage } from "@/i18n/ui";
-import { removeLanguagePrefix } from "@/i18n/utils";
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
@@ -21,19 +20,14 @@ const lang = Astro.currentLocale as SupportedLanguage;
 const articles = await getCollection("articles", ({ data }) => {
   return data.lang === lang;
 });
+
+const title = "Articles";
 ---
 
-<Layout title="Articles">
+<Layout title={title}>
   <Main>
-    <TextElement variant="heading">This is a heading</TextElement>
-    {
-      articles.map((article) => (
-        <Card
-          title={article.data.title}
-          body={article.body}
-          href={removeLanguagePrefix(article.slug, lang)}
-        />
-      ))
-    }
+    <TextElement variant="heading" className="text-primary">{title}</TextElement
+    >
+    <ArticleList articles={articles} lang={lang} />
   </Main>
 </Layout>

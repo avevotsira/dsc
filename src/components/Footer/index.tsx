@@ -10,7 +10,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-muted py-6 text-muted-foreground">
+    <footer className="bg-primary py-6 text-primary-foreground">
       <div className="container grid max-w-screen-2xl grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
         <div className="flex flex-col items-center justify-center space-y-4">
           <a href="/" className="gap-2">
