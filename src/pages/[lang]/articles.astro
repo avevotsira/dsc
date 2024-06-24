@@ -1,6 +1,6 @@
 ---
-import { Heading } from "@/components/Heading";
 import Main from "@/components/Main.astro";
+import TextElement from "@/components/TextElement";
 
 import { languages } from "@/i18n/ui";
 import Layout from "@/layouts/Layout.astro";
@@ -18,21 +18,11 @@ const lang = Astro.currentLocale;
 const articles = await getCollection("articles", ({ data }) => {
   return data.lang === lang;
 });
-
-articles.map((article) => {
-  console.log(article.slug);
-});
 ---
 
 <Layout title="Articles">
   <Main>
-    <Heading as="h1" size="xl">This is a heading</Heading>
-    {
-      articles.map((article) => (
-        <Heading as="h2" size="lg">
-          {article.data.title}
-        </Heading>
-      ))
-    }
+    <TextElement variant="heading">This is a heading</TextElement>
+    {articles.map((article) => <TextElement>{article.data.title}</TextElement>)}
   </Main>
 </Layout>
