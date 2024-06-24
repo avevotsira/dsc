@@ -17,10 +17,19 @@ export const routes = {
  */
 export function getLocalizedRoutes(
   paths: { href: string; label: string }[],
-  locale: string = defaultLang,
+  locale: string | undefined,
 ) {
+  const currentLocale = locale ?? defaultLang;
   return paths.map((path) => ({
     ...path,
-    href: getRelativeLocaleUrl(locale, path.href),
+    href: getRelativeLocaleUrl(currentLocale, path.href),
   }));
+}
+
+export function getLocalizedUrl(
+  path: string,
+  locale: string | undefined,
+): string {
+  const currentLocale = locale ?? defaultLang;
+  return getRelativeLocaleUrl(currentLocale, path);
 }

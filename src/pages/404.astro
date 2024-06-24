@@ -1,7 +1,12 @@
 ---
+import { getLocalizedUrl } from "@/lib/route";
+
 import { Button } from "@/components/ui/button";
 
 import Layout from "@/layouts/Layout.astro";
+
+const currentLocale = Astro.currentLocale;
+const url = getLocalizedUrl("/", currentLocale);
 ---
 
 <Layout title="Page Not Found">
@@ -18,9 +23,9 @@ import Layout from "@/layouts/Layout.astro";
         It seems that the page you&apos;re trying to access doesn&apos;t exist
         or has been moved.
       </p>
-      <Button>
-        <a href="/"> Go back to homepage </a>
-      </Button>
     </div>
+    <Button>
+      <a href=`${url}`> Go back to homepage </a>
+    </Button>
   </div>
 </Layout>
