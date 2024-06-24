@@ -2,6 +2,7 @@
 import Main from "@/components/Main.astro";
 
 import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -21,9 +22,19 @@ const page = Astro.props;
 const { Content } = await page.render();
 ---
 
-<Layout title={page.data.title}
-  ><Main>
+<Layout title={page.data.title}>
+  <Main>
     <div class="prose mx-auto text-pretty">
+      {
+        page.data.image && (
+          <Image
+            src={page.data.image}
+            alt={page.data.title || "Article image"}
+            width={800}
+            height={400}
+          />
+        )
+      }
       <Content />
     </div>
   </Main>
