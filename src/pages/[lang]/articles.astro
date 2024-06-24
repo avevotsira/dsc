@@ -1,8 +1,11 @@
 ---
+import Card from "@/components/Card.astro";
 import Main from "@/components/Main.astro";
 import TextElement from "@/components/TextElement";
 
 import { languages } from "@/i18n/ui";
+import type { SupportedLanguage } from "@/i18n/ui";
+import { removeLanguagePrefix } from "@/i18n/utils";
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
@@ -12,7 +15,7 @@ export function getStaticPaths() {
 }
 
 // Get the current locale from Astro
-const lang = Astro.currentLocale;
+const lang = Astro.currentLocale as SupportedLanguage;
 
 // Fetch articles collection, filtering by language in frontmatter
 const articles = await getCollection("articles", ({ data }) => {
@@ -23,6 +26,14 @@ const articles = await getCollection("articles", ({ data }) => {
 <Layout title="Articles">
   <Main>
     <TextElement variant="heading">This is a heading</TextElement>
-    {articles.map((article) => <TextElement>{article.data.title}</TextElement>)}
+    {
+      articles.map((article) => (
+        <Card
+          title={article.data.title}
+          body={article.body}
+          href={removeLanguagePrefix(article.slug, lang)}
+        />
+      ))
+    }
   </Main>
 </Layout>
