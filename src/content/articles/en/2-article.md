@@ -3,7 +3,7 @@ author: dwight-schrute
 categories: ["studio tips"]
 date: 08/10/2021
 featured: false
-image: src\asset\1-article\photomode_07052024_224722.png
+image: src/asset/2-article/photomode_09052024_234640.png
 title: Behind-the-scenes with our artists
 lang: en
 ---

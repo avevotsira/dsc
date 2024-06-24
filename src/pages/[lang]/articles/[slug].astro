@@ -1,7 +1,10 @@
 ---
 import Main from "@/components/Main.astro";
+import TextElement from "@/components/TextElement";
 
+import { removeLanguagePrefix } from "@/i18n/utils";
 import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -21,9 +24,25 @@ const page = Astro.props;
 const { Content } = await page.render();
 ---
 
-<Layout title={page.data.title}
-  ><Main>
-    <div class="prose mx-auto text-pretty">
+<Layout title={page.data.title}>
+  <Main>
+    <div
+      class="prose mx-auto text-pretty"
+      transition:name={`slug-${removeLanguagePrefix(page.slug)}`}
+    >
+      {
+        page.data.image && (
+          <Image
+            src={page.data.image}
+            alt={page.data.title || "Article image"}
+            width={800}
+            height={400}
+            class={"rounded-lg"}
+            transition:persist
+          />
+        )
+      }
+      <TextElement variant="subheading">{page.data.title}</TextElement>
       <Content />
     </div>
   </Main>
