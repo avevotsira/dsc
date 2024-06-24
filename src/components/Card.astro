@@ -1,7 +1,6 @@
 ---
 import { ButtonLink } from "./ButtonLink";
 import TextElement from "./TextElement";
-import { AspectRatio } from "./ui/aspect-ratio";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
@@ -18,16 +17,20 @@ const { title, body, href, image } = Astro.props as Props;
 <div
   class="overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-lg"
 >
-  <div class="flex flex-col gap-2 p-4">
-    <AspectRatio ratio={16 / 9}>
-      <Image src={image} alt="" class="w-full rounded-lg" />
-    </AspectRatio>
+  <div
+    class="flex flex-col gap-2 p-4"
+    transition:name={`slug-${href}`}
+    transition:persist
+  >
+    <Image src={image} alt="" class="w-full rounded-lg" loading="eager" />
     <TextElement variant="smallheading">
       {title}
     </TextElement>
     <TextElement className="line-clamp-4 text-card-foreground">
       {body}
     </TextElement>
-    <ButtonLink href={href}> Read more </ButtonLink>
+  </div>
+  <div class="flex justify-center p-4">
+    <ButtonLink href={href} className="w-full"> Read more </ButtonLink>
   </div>
 </div>
