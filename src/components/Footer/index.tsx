@@ -64,17 +64,25 @@ export default function Footer() {
             <h4 className="mb-3 text-lg font-semibold">Contact</h4>
             <ul className="grid gap-3">
               <li>
-                <a href="tel:#" target="_blank">
+                <a href="tel:#" target="_blank" rel="noopener noreferrer">
                   <span>Tel: +855 94 85834 975</span>
                 </a>
               </li>
               <li>
-                <a href="mailtoexample@gmail.com" target="_blank">
+                <a
+                  href="mailtoexample@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span>Email: example@gmail.com</span>
                 </a>
               </li>
               <li>
-                <a href="https://goo.gl/maps/7S8TwSuD47Ee8MG26" target="_blank">
+                <a
+                  href="https://goo.gl/maps/7S8TwSuD47Ee8MG26"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span>
                     Address: Building 13, Monivong Blvd, Sangkat Srah Chak, Khan
                     Daun Penh Phnom Penh, Cambodia, 120210
