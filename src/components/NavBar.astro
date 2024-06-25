@@ -1,20 +1,24 @@
 ---
-import { getLocalizedRoutes, routes } from "@/lib/route";
+import { Routes } from "@/lib/route";
 
 import LanguageSwitcher from "./LanguageSwitcher";
-import { defaultLang, type SupportedLanguage } from "@/i18n/ui";
+import type { SupportedLanguage } from "@/i18n/ui";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
-const locale = Astro.currentLocale;
+const locale = Astro.currentLocale as SupportedLanguage;
 const currentPath = Astro.url.pathname;
-const links = getLocalizedRoutes(
-  [routes.home, routes.about, routes.projects, routes.contact],
-  locale ?? defaultLang,
-);
+
+const navItems = [
+  { href: Routes.Home, label: "Home" },
+  { href: Routes.About, label: "Articles" },
+  { href: Routes.Projects, label: "Projects" },
+  { href: Routes.Contact, label: "Contact" },
+];
 ---
 
 <nav class="bg-primary text-primary-foreground">
   <div class="container sticky top-0 z-50 mx-auto flex max-w-screen-2xl p-8">
-    <a href="/">
+    <a href={getRelativeLocaleUrl(locale, Routes.Home)}>
       <div class="text-lg font-bold">
         <div>LOGO</div>
       </div>
@@ -22,16 +26,16 @@ const links = getLocalizedRoutes(
     <div class="grow"></div>
     <ul class="flex space-x-4">
       {
-        links.map((link) => (
+        navItems.map((item) => (
           <li>
-            <a href={link.href}>{link.label}</a>
+            <a href={getRelativeLocaleUrl(locale, item.href)}>{item.label}</a>
           </li>
         ))
       }
       <li>
         <LanguageSwitcher
           currentPath={currentPath}
-          initialLocale={(locale as SupportedLanguage) ?? "en"}
+          initialLocale={locale}
           client:load
         />
       </li>
