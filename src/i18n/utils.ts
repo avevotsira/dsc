@@ -10,7 +10,7 @@ export function useTranslations(lang: keyof typeof ui = "en") {
 // Function to remove language prefix from slug
 export function removeLanguagePrefix(
   slug: string,
-  lang: SupportedLanguage = defaultLang,
+  lang: SupportedLanguage,
 ): string {
   return slug.replace(`${lang}/`, "");
 }

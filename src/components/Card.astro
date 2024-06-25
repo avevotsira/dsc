@@ -1,6 +1,7 @@
 ---
 import { ButtonLink } from "./ButtonLink";
 import TextElement from "./TextElement";
+import { AspectRatio } from "./ui/aspect-ratio";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
@@ -9,18 +10,24 @@ interface Props {
   image: ImageMetadata;
   body: string;
   href: string;
+  date: string;
 }
 
-const { title, body, href, image } = Astro.props as Props;
+const { title, body, href, image, date } = Astro.props as Props;
 ---
 
-<div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+<div class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm">
   <div
-    class="flex flex-col gap-2 p-4"
+    class="flex flex-col gap-2"
     transition:name={`slug-${href}`}
     transition:persist
   >
-    <Image src={image} alt="" class="w-full rounded-lg" loading="eager" />
+    <AspectRatio ratio={16 / 9}>
+      <Image src={image} alt="" class="w-full rounded-lg" loading="eager" />
+    </AspectRatio>
+    <TextElement variant="body" className="text-right text-mptc-secondary"
+      >{date}</TextElement
+    >
     <TextElement variant="smallheading">
       {title}
     </TextElement>
@@ -28,7 +35,7 @@ const { title, body, href, image } = Astro.props as Props;
       {body}
     </TextElement>
   </div>
-  <div class="flex justify-center p-4">
+  <div class="flex justify-center pt-5">
     <ButtonLink href={href} className="w-full"> Read more </ButtonLink>
   </div>
 </div>

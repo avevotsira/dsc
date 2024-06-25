@@ -24,6 +24,9 @@
     --input: 215 20% 50%;
     --ring: 215 61.6% 28.6%;
     --radius: 0.5rem;
+
+    --mptc-secondary: 27, 86%, 53%;
+    --mptc-secondary-foreground: 0, 0%, 100%;
   }
   .dark {
     --background: 215 10% 10%;

@@ -1,12 +1,18 @@
 ---
+import type { SupportedLanguage } from "@/i18n/ui";
 import { removeLanguagePrefix } from "@/i18n/utils";
 
-const { slug } = Astro.props;
+interface Props {
+  slug: string;
+  lang: SupportedLanguage;
+}
+
+const { slug, lang } = Astro.props;
 ---
 
 <div
   class="prose mx-auto max-w-5xl text-pretty"
-  transition:name={`slug-${removeLanguagePrefix(slug)}`}
+  transition:name={`slug-${removeLanguagePrefix(slug, lang)}`}
 >
   <slot />
 </div>
