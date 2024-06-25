@@ -1,7 +1,8 @@
 ---
-import Card from "./Card.astro";
+import { getArticleUrl } from "@/lib/route";
+
+import Card from "./ArticleCard.astro";
 import type { SupportedLanguage } from "@/i18n/ui";
-import { removeLanguagePrefix } from "@/i18n/utils";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -19,7 +20,7 @@ const { articles, lang } = Astro.props;
         image={article.data.image}
         title={article.data.title}
         body={article.body}
-        href={removeLanguagePrefix(article.slug, lang)}
+        href={getArticleUrl(article.slug, lang)}
         date={article.data.date}
       />
     ))

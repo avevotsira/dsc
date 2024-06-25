@@ -1,12 +1,9 @@
 ---
-import { getLocalizedUrl } from "@/lib/route";
-
 import { Button } from "@/components/ui/button";
 
 import Layout from "@/layouts/Layout.astro";
 
-const currentLocale = Astro.currentLocale;
-const url = getLocalizedUrl("/", currentLocale);
+const currentLocale = Astro.url.pathname.split("/")[1];
 ---
 
 <Layout title="Page Not Found">
@@ -25,7 +22,7 @@ const url = getLocalizedUrl("/", currentLocale);
       </p>
     </div>
     <Button>
-      <a href=`${url}`> Go back to homepage </a>
+      <a href={`${currentLocale}/`}>Go back to homepage</a>
     </Button>
   </div>
 </Layout>
