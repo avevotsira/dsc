@@ -1,4 +1,3 @@
-import { defaultLang } from "@/i18n/ui";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 export const routes = {
@@ -17,19 +16,14 @@ export const routes = {
  */
 export function getLocalizedRoutes(
   paths: { href: string; label: string }[],
-  locale: string | undefined,
+  locale: string,
 ) {
-  const currentLocale = locale ?? defaultLang;
   return paths.map((path) => ({
     ...path,
-    href: getRelativeLocaleUrl(currentLocale, path.href),
+    href: getRelativeLocaleUrl(locale, path.href),
   }));
 }
 
-export function getLocalizedUrl(
-  path: string,
-  locale: string | undefined,
-): string {
-  const currentLocale = locale ?? defaultLang;
-  return getRelativeLocaleUrl(currentLocale, path);
+export function getLocalizedUrl(path: string, locale: string): string {
+  return getRelativeLocaleUrl(locale, path);
 }

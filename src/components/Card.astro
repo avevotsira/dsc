@@ -17,11 +17,7 @@ const { title, body, href, image, date } = Astro.props as Props;
 ---
 
 <div class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm">
-  <div
-    class="flex flex-col gap-2"
-    transition:name={`slug-${href}`}
-    transition:persist
-  >
+  <div class="flex flex-col gap-2" transition:name={`slug-${href}`}>
     <AspectRatio ratio={16 / 9}>
       <Image src={image} alt="" class="w-full rounded-lg" loading="eager" />
     </AspectRatio>

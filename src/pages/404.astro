@@ -3,10 +3,11 @@ import { getLocalizedUrl } from "@/lib/route";
 
 import { Button } from "@/components/ui/button";
 
+import { defaultLang } from "@/i18n/ui";
 import Layout from "@/layouts/Layout.astro";
 
 const currentLocale = Astro.currentLocale;
-const url = getLocalizedUrl("/", currentLocale);
+const url = getLocalizedUrl("/", currentLocale ?? defaultLang);
 ---
 
 <Layout title="Page Not Found">

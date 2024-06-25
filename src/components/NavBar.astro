@@ -2,13 +2,13 @@
 import { getLocalizedRoutes, routes } from "@/lib/route";
 
 import LanguageSwitcher from "./LanguageSwitcher";
-import type { SupportedLanguage } from "@/i18n/ui";
+import { defaultLang, type SupportedLanguage } from "@/i18n/ui";
 
 const locale = Astro.currentLocale;
 const currentPath = Astro.url.pathname;
 const links = getLocalizedRoutes(
   [routes.home, routes.about, routes.projects, routes.contact],
-  locale,
+  locale ?? defaultLang,
 );
 ---
 
