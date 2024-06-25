@@ -32,7 +32,3 @@ export const getArticleUrl = (slug: string, lang: SupportedLanguage) => {
     `articles/${removeLanguagePrefix(slug, lang)}`,
   );
 };
-
-export function getLocalizedUrl(path: string, locale: string): string {
-  return getRelativeLocaleUrl(locale, path);
-}

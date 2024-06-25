@@ -4,18 +4,17 @@ import { getLocalizedRoutes, Routes } from "@/lib/route";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { defaultLang, type SupportedLanguage } from "@/i18n/ui";
 
-const locale = Astro.currentLocale as SupportedLanguage;
+const locale = Astro.currentLocale;
 const currentPath = Astro.url.pathname;
 
 export const routes = {
-  home: { href: "/", label: "Home" },
-  about: { href: "/articles", label: "Articles" },
-  projects: { href: "/projects", label: "Projects" },
-  contact: { href: "/contact", label: "Contact" },
+  about: { href: Routes.About, label: "Articles" },
+  projects: { href: Routes.Projects, label: "Projects" },
+  contact: { href: Routes.Contact, label: "Contact" },
 };
 
 const links = getLocalizedRoutes(
-  [routes.home, routes.about, routes.projects, routes.contact],
+  [routes.about, routes.projects, routes.contact],
   locale ?? defaultLang,
 );
 ---
@@ -39,7 +38,7 @@ const links = getLocalizedRoutes(
       <li>
         <LanguageSwitcher
           currentPath={currentPath}
-          initialLocale={locale}
+          initialLocale={locale as SupportedLanguage}
           client:load
         />
       </li>
