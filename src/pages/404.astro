@@ -2,12 +2,8 @@
 import { Button } from "@/components/ui/button";
 
 import Layout from "@/layouts/Layout.astro";
-import { getRelativeLocaleUrl } from "astro:i18n";
 
 const currentLocale = Astro.url.pathname.split("/")[1];
-
-// Generate the correct home URL for the current locale
-const homeUrl = getRelativeLocaleUrl(currentLocale, "");
 ---
 
 <Layout title="Page Not Found">
@@ -26,7 +22,7 @@ const homeUrl = getRelativeLocaleUrl(currentLocale, "");
       </p>
     </div>
     <Button>
-      <a href={homeUrl}>Go back to homepage</a>
+      <a href={`${currentLocale}/`}>Go back to homepage</a>
     </Button>
   </div>
 </Layout>

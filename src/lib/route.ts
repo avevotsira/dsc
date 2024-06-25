@@ -27,9 +27,6 @@ export function getLocalizedRoutes(
 }
 
 export const getArticleUrl = (slug: string, lang: SupportedLanguage) => {
-  console.log(
-    getRelativeLocaleUrl(lang, `articles/${removeLanguagePrefix(slug, lang)}`),
-  );
   return getRelativeLocaleUrl(
     lang,
     `articles/${removeLanguagePrefix(slug, lang)}`,
