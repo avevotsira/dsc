@@ -3,6 +3,7 @@ import Card from "./Card.astro";
 import type { SupportedLanguage } from "@/i18n/ui";
 import { removeLanguagePrefix } from "@/i18n/utils";
 import type { CollectionEntry } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 interface Props {
   articles: CollectionEntry<"articles">[];
@@ -10,6 +11,9 @@ interface Props {
 }
 
 const { articles, lang } = Astro.props;
+
+const getArticleUrl = (slug: string) =>
+  getRelativeLocaleUrl(lang, `articles/${removeLanguagePrefix(slug, lang)}`);
 ---
 
 <div class="grid grid-cols-1 gap-5 p-5 md:grid-cols-3 lg:grid-cols-4">
@@ -19,7 +23,7 @@ const { articles, lang } = Astro.props;
         image={article.data.image}
         title={article.data.title}
         body={article.body}
-        href={removeLanguagePrefix(article.slug, lang)}
+        href={getArticleUrl(article.slug)}
         date={article.data.date}
       />
     ))

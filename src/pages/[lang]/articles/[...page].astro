@@ -1,0 +1,44 @@
+---
+import ArticleList from "@/components/ArticleList.astro";
+import Main from "@/components/Main.astro";
+import Pagination from "@/components/Pagination.astro";
+import TextElement from "@/components/TextElement";
+
+import { languages } from "@/i18n/ui";
+import Layout from "@/layouts/Layout.astro";
+import type { PaginateFunction } from "astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
+}) {
+  const allLanguages = Object.values(languages);
+  const allArticles = await getCollection("articles");
+
+  return allLanguages.flatMap((lang) => {
+    const langArticles = allArticles.filter(
+      (article) => article.data.lang === lang,
+    );
+    return paginate(langArticles, {
+      params: { lang },
+      pageSize: 1,
+    });
+  });
+}
+
+const { lang } = Astro.params;
+const { page } = Astro.props;
+
+const title = "Articles";
+---
+
+<Layout title={title}>
+  <Main>
+    <TextElement variant="heading" className="text-primary">{title}</TextElement
+    >
+    <ArticleList articles={page.data} lang={lang} />
+    <Pagination page={page} />
+  </Main>
+</Layout>
