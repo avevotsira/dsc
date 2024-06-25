@@ -1,8 +1,9 @@
 ---
 import Main from "@/components/Main.astro";
+import ProseWrapper from "@/components/ProseWrapper.astro";
 import TextElement from "@/components/TextElement";
 
-import { removeLanguagePrefix } from "@/i18n/utils";
+import type { SupportedLanguage } from "@/i18n/ui";
 import Layout from "@/layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
@@ -10,40 +11,33 @@ import { getCollection } from "astro:content";
 export async function getStaticPaths() {
   const pages = await getCollection("articles");
 
-  const paths = pages.map((page) => {
+  return pages.map((page) => {
     const [lang, slug] = page.slug.split("/");
-    const path = { params: { lang, slug }, props: page };
-    return path;
+    return { params: { lang, slug }, props: { page } };
   });
-
-  return paths;
 }
 
-const page = Astro.props;
-
+const { page } = Astro.props;
+const {
+  params: { lang },
+} = Astro;
 const { Content } = await page.render();
 ---
 
 <Layout title={page.data.title}>
   <Main>
-    <div
-      class="prose mx-auto text-pretty"
-      transition:name={`slug-${removeLanguagePrefix(page.slug)}`}
-    >
-      {
-        page.data.image && (
-          <Image
-            src={page.data.image}
-            alt={page.data.title || "Article image"}
-            width={800}
-            height={400}
-            class={"rounded-lg"}
-            transition:persist
-          />
-        )
-      }
-      <TextElement variant="subheading">{page.data.title}</TextElement>
+    <ProseWrapper slug={page.slug} lang={lang as SupportedLanguage}>
+      <Image
+        src={page.data.image}
+        alt={page.data.title || "Article image"}
+        class="w-full rounded-lg"
+        transition:persist
+      />
+
+      <TextElement variant="subheading" className="mt-0"
+        >{page.data.title}</TextElement
+      >
       <Content />
-    </div>
+    </ProseWrapper>
   </Main>
 </Layout>
