@@ -1,6 +1,7 @@
 ---
+import { getArticleUrl } from "@/lib/route";
+
 import type { SupportedLanguage } from "@/i18n/ui";
-import { removeLanguagePrefix } from "@/i18n/utils";
 
 interface Props {
   slug: string;
@@ -8,11 +9,10 @@ interface Props {
 }
 
 const { slug, lang } = Astro.props;
+
+const transition = getArticleUrl(slug, lang);
 ---
 
-<div
-  class="prose mx-auto max-w-5xl text-pretty"
-  transition:name={`slug-${removeLanguagePrefix(slug, lang)}`}
->
+<div class="prose mx-auto max-w-5xl text-pretty" transition:name={transition}>
   <slot />
 </div>
