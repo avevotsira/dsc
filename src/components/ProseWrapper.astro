@@ -1,0 +1,12 @@
+---
+import { removeLanguagePrefix } from "@/i18n/utils";
+
+const { slug } = Astro.props;
+---
+
+<div
+  class="prose mx-auto max-w-5xl text-pretty"
+  transition:name={`slug-${removeLanguagePrefix(slug)}`}
+>
+  <slot />
+</div>
