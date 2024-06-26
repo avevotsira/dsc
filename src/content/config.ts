@@ -6,8 +6,8 @@ const SupportedLanguage = Object.values(languages) as [string, ...string[]];
 
 const articleSchema = ({ image }: SchemaContext) =>
   z.object({
-    author: z.string(),
-    categories: z.array(z.string()),
+    author: z.string().default("Digital Security Committee"),
+    categories: z.array(z.string()).default(["News", "Article"]),
     date: z.string(),
     featured: z.boolean(),
     image: image(),

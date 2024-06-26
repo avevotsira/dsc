@@ -16,28 +16,42 @@ interface Props {
 const { title, body, href, image, date } = Astro.props as Props;
 ---
 
-<article class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm">
+<article
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+  class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
+>
   <div transition:name={`${href}`}>
     <header class="flex flex-col gap-2">
       <figure>
         <AspectRatio ratio={16 / 9}>
-          <Image src={image} alt="" class="w-full rounded-lg" loading="eager" />
+          <Image
+            src={image}
+            alt={`Featured image for article: ${title}`}
+            class="w-full rounded-lg"
+            loading="eager"
+          />
         </AspectRatio>
       </figure>
-      <time>
+      <time itemprop="datePublished" datetime={new Date(date).toISOString()}>
         <TextElement variant="body" className="text-right text-mptc-secondary">
-          {date}
+          {new Date(date).toLocaleDateString()}
         </TextElement>
       </time>
-      <TextElement variant="smallheading">
+      <TextElement variant="smallheading" itemProp="headline">
         {title}
       </TextElement>
     </header>
-    <TextElement className="mt-2 line-clamp-4 text-card-foreground">
+    <TextElement
+      itemProp="abstract"
+      className="mt-2 line-clamp-4 text-card-foreground"
+    >
       {body}
     </TextElement>
   </div>
   <div class="flex justify-center pt-5">
-    <ButtonLink href={href} className="w-full"> Read more </ButtonLink>
+    <ButtonLink href={href} className="w-full" itemProp="url">
+      Read more
+    </ButtonLink>
   </div>
 </article>

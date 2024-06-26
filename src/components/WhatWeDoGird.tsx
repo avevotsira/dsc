@@ -38,15 +38,13 @@ const cards = [
 
 const WhatWeDoGrid = () => {
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <ul className="grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-2 lg:grid-cols-3">
       {cards.map((card) => (
-        <WhatWeDoCard
-          key={card.title}
-          title={card.title}
-          description={card.description}
-        />
+        <li key={card.title}>
+          <WhatWeDoCard title={card.title} description={card.description} />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

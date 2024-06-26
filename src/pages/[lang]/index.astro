@@ -17,9 +17,12 @@ const t = useTranslations(lang);
 
 <Layout title={`Welcome to Astro - ${lang}`}>
   <Main>
-    <h1 class="text-3xl font-bold underline">{t("home.whatwedo")}</h1>
-    <section>
-      <TextElement variant="subheading" className="text-center">
+    <section aria-labelledby="what-we-do-title">
+      <TextElement
+        id="what-we-do-title"
+        variant="subheading"
+        className="text-center"
+      >
         {t("home.whatwedo")}
       </TextElement>
       <WhatWeDoGrid />
