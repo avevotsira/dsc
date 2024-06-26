@@ -23,15 +23,15 @@ const CONFIG = {
   },
   body: {
     tag: "p",
-    tw: "leading-6 text-sm",
+    tw: "leading-6 text-base",
   },
   small: {
     tag: "p",
-    tw: "leading-6 text-xs",
+    tw: "leading-6 text-sm",
   },
   paragraph: {
     tag: "p",
-    tw: "leading-7 text-sm [&:not(:first-child)]:mt-6",
+    tw: "leading-7 text-base [&:not(:first-child)]:mt-6",
   },
 } as const;
 
