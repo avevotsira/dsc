@@ -1,5 +1,4 @@
 ---
-author: dwight-schrute
 categories: ["studio tips"]
 date: 08/10/2021
 featured: false

@@ -22,26 +22,64 @@ const {
   params: { lang },
 } = Astro;
 const { Content } = await page.render();
+
+const publicationDate = new Date(page.data.date);
 ---
 
-<Layout title={page.data.title}>
+<Layout
+  title={page.data.title}
+  description={page.body.slice(0, 160)}
+  image={page.data.image.src}
+  canonicalURL={new URL(Astro.url.pathname, Astro.site).toString()}
+  type="article"
+  publishDate={publicationDate}
+>
   <Main>
     <ProseWrapper slug={page.slug} lang={lang as SupportedLanguage}>
-      <article>
+      <article itemscope itemtype="https://schema.org/Article">
         <header>
-          <TextElement variant="heading" className="text-center">
+          <TextElement
+            variant="heading"
+            className="text-center"
+            itemProp="headline"
+          >
             {page.data.title}
           </TextElement>
+
           <figure>
             <Image
               src={page.data.image}
-              alt={page.data.title || "Article image"}
+              alt={`Featured image for article: ${page.data.title}`}
               class="w-full rounded-lg"
               loading="eager"
+              itemprop="image"
             />
           </figure>
+          <div class="my-4 flex items-center justify-between">
+            <time
+              datetime={publicationDate.toISOString()}
+              itemprop="datePublished"
+            >
+              {
+                publicationDate.toLocaleDateString(lang, {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })
+              }
+            </time>
+            <span
+              itemprop="author"
+              itemscope
+              itemtype="https://schema.org/Organization"
+            >
+              <span itemprop="name">Digital Security Committee</span>
+            </span>
+          </div>
         </header>
-        <Content />
+        <section itemprop="articleBody">
+          <Content />
+        </section>
       </article>
     </ProseWrapper>
   </Main>

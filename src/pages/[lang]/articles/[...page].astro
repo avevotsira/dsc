@@ -36,9 +36,12 @@ const title = "Articles";
 
 <Layout title={title}>
   <Main>
-    <TextElement variant="heading" className="text-primary">{title}</TextElement
-    >
-    <ArticleList articles={page.data} lang={lang} />
-    <Pagination page={page} />
+    <section aria-label="Blog Posts">
+      <TextElement variant="heading" className="text-primary">
+        {title}
+      </TextElement>
+      <ArticleList articles={page.data} lang={lang} />
+      <Pagination page={page} />
+    </section>
   </Main>
 </Layout>
