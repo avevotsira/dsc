@@ -4,7 +4,7 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "http://localhost:3000",
+  site: import.meta.env.SITE_URL || "http://localhost:3000",
   integrations: [
     react(),
     tailwind({
