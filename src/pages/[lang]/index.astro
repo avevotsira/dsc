@@ -1,5 +1,6 @@
 ---
 import Main from "@/components/Main.astro";
+import TextElement from "@/components/TextElement";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
 
 import { languages } from "@/i18n/ui";
@@ -16,8 +17,12 @@ const t = useTranslations(lang);
 
 <Layout title={`Welcome to Astro - ${lang}`}>
   <Main>
-    <WhatWeDoGrid />
-
-    <h1 class="text-3xl font-bold underline">{t("nav.home")}</h1></Main
-  >
+    <h1 class="text-3xl font-bold underline">{t("home.whatwedo")}</h1>
+    <section>
+      <TextElement variant="subheading" className="text-center">
+        {t("home.whatwedo")}
+      </TextElement>
+      <WhatWeDoGrid />
+    </section>
+  </Main>
 </Layout>
