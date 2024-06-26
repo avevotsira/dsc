@@ -16,22 +16,28 @@ interface Props {
 const { title, body, href, image, date } = Astro.props as Props;
 ---
 
-<div class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm">
-  <div class="flex flex-col gap-2" transition:name={`${href}`}>
-    <AspectRatio ratio={16 / 9}>
-      <Image src={image} alt="" class="w-full rounded-lg" loading="eager" />
-    </AspectRatio>
-    <TextElement variant="body" className="text-right text-mptc-secondary"
-      >{date}</TextElement
-    >
-    <TextElement variant="smallheading">
-      {title}
-    </TextElement>
-    <TextElement className="line-clamp-4 text-card-foreground">
+<article class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm">
+  <div transition:name={`${href}`}>
+    <header class="flex flex-col gap-2">
+      <figure>
+        <AspectRatio ratio={16 / 9}>
+          <Image src={image} alt="" class="w-full rounded-lg" loading="eager" />
+        </AspectRatio>
+      </figure>
+      <time>
+        <TextElement variant="body" className="text-right text-mptc-secondary">
+          {date}
+        </TextElement>
+      </time>
+      <TextElement variant="smallheading">
+        {title}
+      </TextElement>
+    </header>
+    <TextElement className="mt-2 line-clamp-4 text-card-foreground">
       {body}
     </TextElement>
   </div>
   <div class="flex justify-center pt-5">
     <ButtonLink href={href} className="w-full"> Read more </ButtonLink>
   </div>
-</div>
+</article>

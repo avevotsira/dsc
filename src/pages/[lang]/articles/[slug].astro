@@ -27,15 +27,22 @@ const { Content } = await page.render();
 <Layout title={page.data.title}>
   <Main>
     <ProseWrapper slug={page.slug} lang={lang as SupportedLanguage}>
-      <TextElement variant="heading" className="text-center"
-        >{page.data.title}</TextElement
-      >
-      <Image
-        src={page.data.image}
-        alt={page.data.title || "Article image"}
-        class="w-full rounded-lg"
-      />
-      <Content />
+      <article>
+        <header>
+          <TextElement variant="heading" className="text-center">
+            {page.data.title}
+          </TextElement>
+          <figure>
+            <Image
+              src={page.data.image}
+              alt={page.data.title || "Article image"}
+              class="w-full rounded-lg"
+              loading="eager"
+            />
+          </figure>
+        </header>
+        <Content />
+      </article>
     </ProseWrapper>
   </Main>
 </Layout>
