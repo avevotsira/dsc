@@ -26,7 +26,14 @@ const { Content } = await page.render();
 const publicationDate = new Date(page.data.date);
 ---
 
-<Layout title={page.data.title}>
+<Layout
+  title={page.data.title}
+  description={page.body.slice(0, 160)}
+  image={page.data.image.src}
+  canonicalURL={new URL(Astro.url.pathname, Astro.site).toString()}
+  type="article"
+  publishDate={publicationDate}
+>
   <Main>
     <ProseWrapper slug={page.slug} lang={lang as SupportedLanguage}>
       <article itemscope itemtype="https://schema.org/Article">
