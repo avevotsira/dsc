@@ -22,7 +22,7 @@ const currentLocale = Astro.url.pathname.split("/")[1];
       </p>
     </div>
     <Button>
-      <a href={`${currentLocale}/`}>Go back to homepage</a>
+      <a href={`/${currentLocale}`}>Go back to homepage</a>
     </Button>
   </div>
 </Layout>
