@@ -1,5 +1,3 @@
-import React from "react";
-
 import WhatWeDoCard from "./WhatWeDoCard";
 
 const cards = [
