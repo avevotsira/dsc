@@ -1,8 +1,9 @@
 ---
-import Footer from "@/components/footer";
 import NavBar from "@/components/NavBar.astro";
 
 import "@/styles/globals.css";
+
+import Footer from "@/components/footer";
 
 import { ViewTransitions } from "astro:transitions";
 
@@ -66,6 +67,7 @@ const siteTitle = "Your Site Name";
 
     <!-- JSON-LD structured data -->
     <script
+      is:inline
       type="application/ld+json"
       set:html={JSON.stringify({
         "@context": "https://schema.org",
