@@ -12,47 +12,39 @@ interface Props {
   lang: SupportedLanguage;
 }
 
-const { title, body, href, date } = Astro.props as Props;
+const { title, href, lang, date } = Astro.props as Props;
 ---
 
 <article
   itemscope
   itemtype="https://schema.org/Article"
-  class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
+  class="flex h-full flex-col rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
 >
-  <div>
-    <header class="flex flex-col gap-2">
-      <time
-        itemprop="datePublished"
-        datetime={new Date(date).toISOString()}
-        transition:name={`date-${href}`}
-      >
-        <TextElement
-          variant="body"
-          className="text-left text-mptc-secondary-foreground"
-        >
-          {new Date(date).toLocaleDateString()}
-        </TextElement>
-      </time>
-      <TextElement
-        variant="smallheading"
-        itemProp="name"
-        transitionName={`title-${href}`}
-      >
-        {title}
-      </TextElement>
-    </header>
-    <section transition:name={`body-${href}`}>
-      <TextElement
-        itemProp="description"
-        className="mt-2 line-clamp-4 text-card-foreground"
-      >
-        {body}
-      </TextElement>
-    </section>
+  <div class="flex grow flex-col gap-2">
+    <time
+      itemprop="datePublished"
+      class="text-left text-mptc-secondary-foreground"
+      datetime={new Date(date).toISOString()}
+    >
+      {
+        new Date(date).toLocaleDateString(lang, {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })
+      }
+    </time>
+    <TextElement variant="body" itemProp="description">
+      {title}
+    </TextElement>
   </div>
-  <div class="flex justify-center pt-5">
-    <ButtonLink href={href} className="w-full" itemProp="url">
+  <div class="pt-5">
+    <ButtonLink
+      href={href}
+      className="w-full"
+      itemProp="url"
+      aria-label="Read full decree"
+    >
       Read full decree
     </ButtonLink>
   </div>

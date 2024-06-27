@@ -22,9 +22,11 @@ const lang = Astro.params.lang as SupportedLanguage;
 <Layout title={title}>
   <Main>
     <section aria-label={title}>
-      <TextElement variant="heading" className="text-primary">
-        {title}
-      </TextElement>
+      <header>
+        <TextElement variant="heading" className="text-primary">
+          {title}
+        </TextElement>
+      </header>
       <DecreesList decrees={decrees} lang={lang} />
     </section>
   </Main>
