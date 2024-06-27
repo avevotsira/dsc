@@ -1,4 +1,6 @@
 ---
+import { formatDate } from "@/lib/date-helper";
+
 import { ButtonLink } from "@/components/ButtonLink";
 import TextElement from "@/components/TextElement";
 
@@ -26,15 +28,13 @@ const { title, href, lang, date } = Astro.props as Props;
       class="text-left text-mptc-secondary-foreground"
       datetime={new Date(date).toISOString()}
     >
-      {
-        new Date(date).toLocaleDateString(lang, {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })
-      }
+      {formatDate(date, lang)}
     </time>
-    <TextElement variant="body" itemProp="description">
+    <TextElement
+      variant="body"
+      itemProp="description"
+      className="line-clamp-4 text-pretty"
+    >
       {title}
     </TextElement>
   </div>

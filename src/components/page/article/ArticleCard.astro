@@ -1,7 +1,10 @@
 ---
+import { formatDate, toISOString } from "@/lib/date-helper";
+
 import { ButtonLink } from "../../ButtonLink";
 import TextElement from "../../TextElement";
 import { AspectRatio } from "../../ui/aspect-ratio";
+import type { SupportedLanguage } from "@/i18n/ui";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
@@ -11,9 +14,10 @@ interface Props {
   body: string;
   href: string;
   date: string;
+  lang: SupportedLanguage;
 }
 
-const { title, body, href, image, date } = Astro.props as Props;
+const { title, body, href, image, date, lang } = Astro.props as Props;
 ---
 
 <article
@@ -27,23 +31,23 @@ const { title, body, href, image, date } = Astro.props as Props;
         <AspectRatio ratio={16 / 9}>
           <Image
             src={image}
-            alt={`Featured image for article: ${title}`}
+            alt={title}
             class="w-full rounded-lg"
-            loading="eager"
+            loading="lazy"
             transition:name={`image-${href}`}
           />
         </AspectRatio>
       </figure>
       <time
         itemprop="datePublished"
-        datetime={new Date(date).toISOString()}
+        datetime={toISOString(date)}
         transition:name={`date-${href}`}
       >
         <TextElement
           variant="body"
           className="text-right text-mptc-secondary-foreground"
         >
-          {new Date(date).toLocaleDateString()}
+          {formatDate(date, lang)}
         </TextElement>
       </time>
       <TextElement

@@ -23,6 +23,7 @@ const { articles, lang } = Astro.props;
           body={article.body}
           href={getArticleUrl(article.slug, lang)}
           date={article.data.date}
+          lang={lang}
         />
       </li>
     ))
