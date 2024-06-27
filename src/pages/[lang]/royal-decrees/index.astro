@@ -15,8 +15,9 @@ export async function getStaticPaths() {
   }));
 }
 
-const decrees = await getCollection("decrees");
 const lang = Astro.params.lang as SupportedLanguage;
+const allDecrees = await getCollection("decrees");
+const decrees = allDecrees.filter((decree) => decree.data.lang === lang);
 ---
 
 <Layout title={title}>

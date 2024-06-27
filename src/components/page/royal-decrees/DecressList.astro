@@ -1,6 +1,4 @@
 ---
-// Assuming you have a function to get the decree URL
-
 import DecreesCard from "./DecreesCard.astro";
 import type { SupportedLanguage } from "@/i18n/ui";
 import type { CollectionEntry } from "astro:content";
@@ -20,9 +18,9 @@ const { decrees, lang } = Astro.props;
         <DecreesCard
           title={decree.data.title}
           body={decree.body}
-          href={decree.slug}
           date={decree.data.date}
           lang={lang}
+          file={decree.data.file}
         />
       </li>
     ))

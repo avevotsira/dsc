@@ -9,12 +9,14 @@ import type { SupportedLanguage } from "@/i18n/ui";
 interface Props {
   title: string;
   body: string;
-  href: string;
   date: string;
   lang: SupportedLanguage;
+  file: string;
 }
 
-const { title, href, lang, date } = Astro.props as Props;
+const { title, lang, date, file } = Astro.props as Props;
+
+const absoluteFileUrl = new URL(file, Astro.url.origin).href;
 ---
 
 <article
@@ -40,10 +42,12 @@ const { title, href, lang, date } = Astro.props as Props;
   </div>
   <div class="pt-5">
     <ButtonLink
-      href={href}
+      href={absoluteFileUrl}
       className="w-full"
       itemProp="url"
       aria-label="Read full decree"
+      target="_blank"
+      rel="noopener noreferrer"
     >
       Read full decree
     </ButtonLink>
