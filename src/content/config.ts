@@ -19,6 +19,18 @@ const articlesCollection = defineCollection({
   schema: articleSchema,
 });
 
+const decreeSchema = z.object({
+  date: z.string(),
+  title: z.string(),
+  lang: z.enum(SupportedLanguage),
+  file: z.string(),
+});
+
+const decreesCollection = defineCollection({
+  schema: decreeSchema,
+});
+
 export const collections = {
   articles: articlesCollection,
+  decrees: decreesCollection,
 };

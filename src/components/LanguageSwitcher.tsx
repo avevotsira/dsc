@@ -19,7 +19,7 @@ const LanguageSwitcher = ({
   };
 
   return (
-    <button onClick={toggleLanguage} type="button">
+    <button onClick={toggleLanguage} type="button" aria-label="Toggle language">
       {languages[initialLocale]}
     </button>
   );
