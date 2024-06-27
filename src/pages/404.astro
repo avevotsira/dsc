@@ -1,12 +1,22 @@
 ---
 import { Button } from "@/components/ui/button";
 
+import { defaultLang, languages, type SupportedLanguage } from "@/i18n/ui";
 import Layout from "@/layouts/Layout.astro";
 
-const currentLocale = Astro.url.pathname.split("/")[1];
+const currentLocale = (Astro.url.pathname.split("/").filter(Boolean)[0] ||
+  defaultLang) as SupportedLanguage;
+
+const safeLocale: SupportedLanguage = Object.keys(languages).includes(
+  currentLocale,
+)
+  ? currentLocale
+  : defaultLang;
+
+const homepageUrl = `/${safeLocale}`;
 ---
 
-<Layout title="Page Not Found">
+<Layout title={"Page Not Found"}>
   <div
     class="flex flex-col items-center justify-center bg-gradient-to-b from-gray-100 to-white text-center"
     style="min-height: 100vh;"
@@ -14,15 +24,16 @@ const currentLocale = Astro.url.pathname.split("/")[1];
     <div class="flex flex-col gap-4 rounded-lg p-12">
       <h1 class="text-9xl font-bold text-red-600">404</h1>
       <p class="mt-5 text-2xl font-light text-gray-800 md:text-3xl">
-        Oops! The page you are looking for could not be found.
+        {"Oops! The page you are looking for could not be found."}
       </p>
       <p class="mt-2 text-gray-600">
-        It seems that the page you&apos;re trying to access doesn&apos;t exist
-        or has been moved.
+        {
+          "It seems that the page you're trying to access doesn't exist or has been moved."
+        }
       </p>
     </div>
     <Button>
-      <a href={`/${currentLocale}`}>Go back to homepage</a>
+      <a href={homepageUrl}>{"Go back to homepage"}</a>
     </Button>
   </div>
 </Layout>

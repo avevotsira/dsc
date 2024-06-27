@@ -1,4 +1,6 @@
 ---
+import { getArticleUrl } from "@/lib/route";
+
 import Main from "@/components/Main.astro";
 import ProseWrapper from "@/components/ProseWrapper.astro";
 import TextElement from "@/components/TextElement";
@@ -24,6 +26,8 @@ const {
 const { Content } = await page.render();
 
 const publicationDate = new Date(page.data.date);
+
+const transition = getArticleUrl(page.slug, lang as SupportedLanguage);
 ---
 
 <Layout
@@ -36,51 +40,51 @@ const publicationDate = new Date(page.data.date);
 >
   <Main>
     <ProseWrapper slug={page.slug} lang={lang as SupportedLanguage}>
-      <article itemscope itemtype="https://schema.org/Article">
-        <header>
-          <TextElement
-            variant="heading"
-            className="text-center"
-            itemProp="headline"
+      <header>
+        <figure>
+          <Image
+            src={page.data.image}
+            alt={`Featured image for article: ${page.data.title}`}
+            class="w-full rounded-lg"
+            loading="eager"
+            itemprop="image"
+            transition:name={`image-${transition}`}
+          />
+        </figure>
+        <TextElement
+          variant="heading"
+          className="text-center"
+          itemProp="headline"
+          transitionName={`title-${transition}`}
+        >
+          {page.data.title}
+        </TextElement>
+        <div class="my-4 flex items-center justify-between">
+          <span
+            itemprop="author"
+            itemscope
+            itemtype="https://schema.org/Organization"
           >
-            {page.data.title}
-          </TextElement>
-
-          <figure>
-            <Image
-              src={page.data.image}
-              alt={`Featured image for article: ${page.data.title}`}
-              class="w-full rounded-lg"
-              loading="eager"
-              itemprop="image"
-            />
-          </figure>
-          <div class="my-4 flex items-center justify-between">
-            <time
-              datetime={publicationDate.toISOString()}
-              itemprop="datePublished"
+            <span itemprop="name">Digital Security Committee</span>
+          </span>
+          <time
+            datetime={publicationDate.toISOString()}
+            itemprop="datePublished"
+            transition:name={`date-${transition}`}
+          >
+            <TextElement
+              variant="body"
+              className="text-right text-mptc-secondary-foreground"
+              itemProp="headline"
             >
-              {
-                publicationDate.toLocaleDateString(lang, {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })
-              }
-            </time>
-            <span
-              itemprop="author"
-              itemscope
-              itemtype="https://schema.org/Organization"
-            >
-              <span itemprop="name">Digital Security Committee</span>
-            </span>
-          </div>
-        </header>
-        <section itemprop="articleBody">
-          <Content />
-        </section>
-      </article>
+              {publicationDate.toLocaleDateString()}
+            </TextElement>
+          </time>
+        </div>
+      </header>
+      <section itemprop="articleBody" transition:name={`body-${transition}`}>
+        <Content />
+      </section>
     </ProseWrapper>
   </Main>
 </Layout>

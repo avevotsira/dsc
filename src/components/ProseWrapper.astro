@@ -1,18 +1,11 @@
 ---
-import { getArticleUrl } from "@/lib/route";
 
-import type { SupportedLanguage } from "@/i18n/ui";
-
-interface Props {
-  slug: string;
-  lang: SupportedLanguage;
-}
-
-const { slug, lang } = Astro.props;
-
-const transition = getArticleUrl(slug, lang);
 ---
 
-<div class="prose mx-auto max-w-5xl text-pretty" transition:name={transition}>
+<article
+  class="prose mx-auto max-w-5xl text-pretty"
+  itemscope
+  itemtype="https://schema.org/Article"
+>
   <slot />
-</div>
+</article>

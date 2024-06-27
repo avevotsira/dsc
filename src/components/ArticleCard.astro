@@ -21,7 +21,7 @@ const { title, body, href, image, date } = Astro.props as Props;
   itemtype="https://schema.org/BlogPosting"
   class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
 >
-  <div transition:name={`${href}`}>
+  <div>
     <header class="flex flex-col gap-2">
       <figure>
         <AspectRatio ratio={16 / 9}>
@@ -30,24 +30,38 @@ const { title, body, href, image, date } = Astro.props as Props;
             alt={`Featured image for article: ${title}`}
             class="w-full rounded-lg"
             loading="eager"
+            transition:name={`image-${href}`}
           />
         </AspectRatio>
       </figure>
-      <time itemprop="datePublished" datetime={new Date(date).toISOString()}>
-        <TextElement variant="body" className="text-right text-mptc-secondary">
+      <time
+        itemprop="datePublished"
+        datetime={new Date(date).toISOString()}
+        transition:name={`date-${href}`}
+      >
+        <TextElement
+          variant="body"
+          className="text-right text-mptc-secondary-foreground"
+        >
           {new Date(date).toLocaleDateString()}
         </TextElement>
       </time>
-      <TextElement variant="smallheading" itemProp="headline">
+      <TextElement
+        variant="smallheading"
+        itemProp="headline"
+        transitionName={`title-${href}`}
+      >
         {title}
       </TextElement>
     </header>
-    <TextElement
-      itemProp="abstract"
-      className="mt-2 line-clamp-4 text-card-foreground"
-    >
-      {body}
-    </TextElement>
+    <section transition:name={`body-${href}`}>
+      <TextElement
+        itemProp="abstract"
+        className="mt-2 line-clamp-4 text-card-foreground"
+      >
+        {body}
+      </TextElement>
+    </section>
   </div>
   <div class="flex justify-center pt-5">
     <ButtonLink href={href} className="w-full" itemProp="url">

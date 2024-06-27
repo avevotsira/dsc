@@ -26,7 +26,7 @@
     --radius: 0.5rem;
 
     --mptc-secondary: 27, 86%, 53%;
-    --mptc-secondary-foreground: 0, 0%, 100%;
+    --mptc-secondary-foreground: 27, 86%, 39%;
   }
   .dark {
     --background: 215 10% 10%;
