@@ -3,11 +3,13 @@ import { getLocalizedRoutes, Routes } from "@/lib/route";
 
 import LanguageSwitcher from "./LanguageSwitcher";
 import { defaultLang, type SupportedLanguage } from "@/i18n/ui";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
-const locale = Astro.currentLocale;
+const locale = Astro.currentLocale ?? defaultLang;
 const currentPath = Astro.url.pathname;
 
 export const routes = {
+  home: { href: Routes.Home, label: "Home" },
   about: { href: Routes.About, label: "Articles" },
   projects: { href: Routes.Projects, label: "Projects" },
   contact: { href: Routes.Contact, label: "Contact" },
@@ -15,13 +17,13 @@ export const routes = {
 
 const links = getLocalizedRoutes(
   [routes.about, routes.projects, routes.contact],
-  locale ?? defaultLang,
+  locale,
 );
 ---
 
 <nav class="sticky top-0 z-50 bg-primary text-primary-foreground">
   <div class="container mx-auto flex max-w-screen-2xl p-8">
-    <a href={Routes.Home}>
+    <a href={getRelativeLocaleUrl(locale, Routes.Home)}>
       <div class="text-lg font-bold">
         <div>LOGO</div>
       </div>
