@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string | null;
+  body: string;
+}
+
+const { title, body } = Astro.props as Props;
+console.log("title ", title);
+---
+
+<div class="card h-full">
+  <div
+    class="shadow-m flex h-full flex-col rounded-lg border border-gray-200 bg-white !shadow-none"
+  >
+    <div class="flex h-full flex-col justify-center gap-4 p-6">
+      {title && <b>{title}</b>}
+      <p>{body}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+---
+import Main from "@/components/Main.astro";
+import Card from "@/components/page/about/AboutCard.astro";
+import AboutList from "@/components/page/about/AboutList.astro";
+import TextElement from "@/components/TextElement";
+
+import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const title = "About Us";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const lang = Astro.params.lang as SupportedLanguage;
+const t = useTranslations(lang);
+const allAbouts = await getCollection("abouts");
+const abouts = allAbouts.filter((about) => about.data.lang === lang);
+const goals = abouts.filter((about) => about.data.type === "goal");
+const roles = abouts.filter((about) => about.data.type === "role");
+---
+
+<Layout title={title}>
+  <Main>
+    <section aria-label={"Strategic Goals and Strategies"}>
+      <header>
+        <TextElement
+          variant="subheading"
+          className="text-center text-primary lg:text-3xl"
+        >
+          {t("about.strategies")}
+        </TextElement>
+        <p class="pt-8 text-center">
+          {t("about.strategiesText")}
+        </p>
+      </header>
+      <AboutList abouts={goals} className="lg:grid-cols-2" />
+      <section aria-label={"Role and Responsibilites "} class="py-12">
+        <header>
+          <TextElement
+            variant="subheading"
+            className="text-center text-primary lg:text-3xl"
+          >
+            {t("about.roleResponsibilities")}
+          </TextElement>
+        </header>
+        <AboutList abouts={roles} className="sm:grid-cols-2 lg:grid-cols-3" />
+      </section>
+    </section>
+  </Main>
+</Layout>
