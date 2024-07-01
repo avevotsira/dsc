@@ -47,7 +47,7 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com"; // Repl
 
     <ViewTransitions />
 
-    <!-- JSON-LD structured data for CollectionPage -->
+    <!-- Updated JSON-LD structured data for CollectionPage -->
     <script
       is:inline
       type="application/ld+json"
@@ -74,7 +74,10 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com"; // Repl
           "@type": "BlogPosting",
           headline: article.data.title,
           url: new URL(article.slug, Astro.site).toString(),
-          datePublished: article.data.date,
+          datePublished: new Date(article.data.date).toISOString(),
+          image: article.data.image
+            ? new URL(article.data.image.src, Astro.site).toString()
+            : undefined,
           author: {
             "@type": "Organization",
             name: authorName,
@@ -84,11 +87,13 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com"; // Repl
       })}
     />
   </head>
-  <header aria-label="Main navigation">
-    <NavBar />
-  </header>
-  <body class="min-h-screen">
-    <slot />
+  <body>
+    <header aria-label="Main navigation">
+      <NavBar />
+    </header>
+    <main class="min-h-screen">
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
