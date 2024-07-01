@@ -1,7 +1,7 @@
 ---
 date: 30/06/2024
 title: The standard Lorem Ipsum passage, used since the 1500s
-type: strategies
+type: goal
 
 lang: km
 ---

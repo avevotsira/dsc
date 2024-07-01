@@ -16,7 +16,7 @@ const tw = "grid place-items-center gap-6 pt-12 grid-cols-1";
 <div class={cn(tw, className)}>
   {
     abouts.map((about) => {
-      return <Card title={about.data.title} body={about.body} />;
+      return <Card title={about?.data.title} body={about?.body} />;
     })
   }
 </div>

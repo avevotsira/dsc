@@ -1,6 +1,9 @@
-export const DECREE_TYPES = {
+export const DIRECTIVE_TYPES = {
   SUB_DECREE: "sub-decree",
   ROYAL_DECREE: "royal-decree",
+  POLICY: "policy",
+  DECISION: "decision",
 } as const;
 
-export type DecreeType = (typeof DECREE_TYPES)[keyof typeof DECREE_TYPES];
+export type DirectiveType =
+  (typeof DIRECTIVE_TYPES)[keyof typeof DIRECTIVE_TYPES];
