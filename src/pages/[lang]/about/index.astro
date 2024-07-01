@@ -6,6 +6,7 @@ import TextElement from "@/components/TextElement";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
 import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 const title = "About Us";
@@ -22,6 +23,10 @@ const allAbouts = await getCollection("abouts");
 const abouts = allAbouts.filter((about) => about.data.lang === lang);
 const goals = abouts.filter((about) => about.data.type === "goal");
 const roles = abouts.filter((about) => about.data.type === "role");
+
+// tempo value: remove when have content
+const goalTmp = Array.from({ length: 4 }, () => goals[0]);
+const roleTmp = Array.from({ length: 9 }, () => roles[0]);
 ---
 
 <Layout title={title}>
@@ -38,7 +43,19 @@ const roles = abouts.filter((about) => about.data.type === "role");
           {t("about.strategiesText")}
         </p>
       </header>
-      <AboutList abouts={goals} className="lg:grid-cols-2" />
+      <!-- tempo value: change to goals when have content -->
+      <AboutList abouts={goalTmp} className="lg:grid-cols-2" />
+      <div
+        class="pb-full relative mx-auto flex max-w-5xl justify-center pt-12 text-center"
+      >
+        <Image
+          src="/images/policy-digital-economy-en.webp"
+          alt="fiqure"
+          width="200"
+          height="150"
+          class="w-full max-w-[800px] rounded-lg"
+        />
+      </div>
       <section aria-label={"Role and Responsibilites "} class="py-12">
         <header>
           <TextElement
@@ -48,7 +65,8 @@ const roles = abouts.filter((about) => about.data.type === "role");
             {t("about.roleResponsibilities")}
           </TextElement>
         </header>
-        <AboutList abouts={roles} className="sm:grid-cols-2 lg:grid-cols-3" />
+        <!-- tempo value, change to roles when have content -->
+        <AboutList abouts={roleTmp} className="sm:grid-cols-2 lg:grid-cols-3" />
       </section>
     </section>
   </Main>
