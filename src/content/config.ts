@@ -1,12 +1,12 @@
-import { DECREE_TYPES, type DecreeType } from "./content.type";
+import { POLICY_TYPES, type PolicyType } from "./content.type";
 import { languages } from "@/i18n/ui";
 import { defineCollection, z } from "astro:content";
 import type { SchemaContext } from "astro:content";
 
 const SupportedLanguage = Object.values(languages) as [string, ...string[]];
 
-const DecreeTypeEnum = z.enum(
-  Object.values(DECREE_TYPES) as [DecreeType, ...DecreeType[]],
+const PolicyTypeEnum = z.enum(
+  Object.values(POLICY_TYPES) as [PolicyType, ...PolicyType[]],
 );
 
 const articleSchema = ({ image }: SchemaContext) =>
@@ -24,19 +24,19 @@ const articlesCollection = defineCollection({
   schema: articleSchema,
 });
 
-const decreeSchema = z.object({
+const policySchema = z.object({
   date: z.string(),
   title: z.string(),
   lang: z.enum(SupportedLanguage),
   file: z.string(),
-  type: DecreeTypeEnum,
+  type: PolicyTypeEnum,
 });
 
-const decreesCollection = defineCollection({
-  schema: decreeSchema,
+const policiesCollection = defineCollection({
+  schema: policySchema,
 });
 
 export const collections = {
   articles: articlesCollection,
-  decrees: decreesCollection,
+  policies: policiesCollection,
 };

@@ -4,6 +4,7 @@ import { formatDate } from "@/lib/date-helper";
 import { ButtonLink } from "@/components/ButtonLink";
 import TextElement from "@/components/TextElement";
 
+import type { PolicyType } from "@/content/content.type";
 import type { SupportedLanguage } from "@/i18n/ui";
 
 interface Props {
@@ -12,9 +13,10 @@ interface Props {
   date: string;
   lang: SupportedLanguage;
   file: string;
+  type: PolicyType;
 }
 
-const { title, lang, date, file } = Astro.props as Props;
+const { title, lang, date, file, type } = Astro.props as Props;
 
 const absoluteFileUrl = new URL(file, Astro.url.origin).href;
 ---
@@ -33,9 +35,9 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
       {formatDate(date, lang)}
     </time>
     <TextElement
-      variant="body"
+      variant="subheading"
       itemProp="description"
-      className="line-clamp-4 text-pretty"
+      className="line-clamp-4 scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight lg:text-base xl:text-base"
     >
       {title}
     </TextElement>
@@ -45,7 +47,7 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
       href={absoluteFileUrl}
       className="w-full"
       itemProp="url"
-      aria-label="Read full decree"
+      aria-label={`Read full ${type} on ${title}`}
       target="_blank"
       rel="noopener noreferrer"
     >

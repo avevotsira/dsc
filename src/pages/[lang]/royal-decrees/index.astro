@@ -3,7 +3,7 @@ import Main from "@/components/Main.astro";
 import DecreesList from "@/components/page/royal-decrees/DecressList.astro";
 import TextElement from "@/components/TextElement";
 
-import { DECREE_TYPES } from "@/content/content.type";
+import { POLICY_TYPES } from "@/content/content.type";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
@@ -20,7 +20,7 @@ const lang = Astro.params.lang as SupportedLanguage;
 const allDecrees = await getCollection("decrees");
 const decrees = allDecrees.filter(
   (decree) =>
-    decree.data.lang === lang && decree.data.type === DECREE_TYPES.ROYAL_DECREE,
+    decree.data.lang === lang && decree.data.type === POLICY_TYPES.ROYAL_DECREE,
 );
 ---
 
