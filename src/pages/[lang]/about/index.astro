@@ -3,6 +3,7 @@ import Main from "@/components/Main.astro";
 import AboutList from "@/components/page/about/AboutList.astro";
 import TextElement from "@/components/TextElement";
 
+import { ABOUT_TYPES } from "@/content/about.type";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
 import Layout from "@/layouts/Layout.astro";
@@ -21,8 +22,8 @@ const lang = Astro.params.lang as SupportedLanguage;
 const t = useTranslations(lang);
 const allAbouts = await getCollection("abouts");
 const abouts = allAbouts.filter((about) => about.data.lang === lang);
-const goals = abouts.filter((about) => about.data.type === "goal");
-const roles = abouts.filter((about) => about.data.type === "role");
+const goals = abouts.filter((about) => about.data.type === ABOUT_TYPES.GOAL);
+const roles = abouts.filter((about) => about.data.type === ABOUT_TYPES.ROLE);
 
 // tempo value: remove when have content
 const goalTmp = Array.from({ length: 4 }, () => goals[0]);
