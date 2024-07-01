@@ -1,0 +1,94 @@
+---
+import NavBar from "@/components/NavBar.astro";
+
+import "@/styles/globals.css";
+
+import Footer from "@/components/footer";
+
+import type { CollectionEntry } from "astro:content";
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalURL: string;
+  articles: CollectionEntry<"articles">[];
+}
+
+const { title, description, canonicalURL, articles } = Astro.props;
+const siteTitle = "Your Site Name";
+const authorName = "Digital Security Committee";
+const authorUrl = Astro.site?.toString() || "https://your-site-url.com"; // Replace with your actual site URL if Astro.site is not available
+---
+
+<!doctype html>
+<html lang={Astro.currentLocale || "en"}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title} | {siteTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+
+    <ViewTransitions />
+
+    <!-- JSON-LD structured data for CollectionPage -->
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": Astro.url,
+        },
+        name: title,
+        description: description,
+        url: Astro.url,
+        isPartOf: {
+          "@type": "WebSite",
+          name: siteTitle,
+          url: Astro.site,
+        },
+        about: {
+          "@type": "Thing",
+          name: "Blog Articles",
+        },
+        hasPart: articles.map((article) => ({
+          "@type": "BlogPosting",
+          headline: article.data.title,
+          url: new URL(article.slug, Astro.site).toString(),
+          datePublished: article.data.date,
+          author: {
+            "@type": "Organization",
+            name: authorName,
+            url: authorUrl,
+          },
+        })),
+      })}
+    />
+  </head>
+  <header aria-label="Main navigation">
+    <NavBar />
+  </header>
+  <body class="min-h-screen">
+    <slot />
+    <Footer />
+  </body>
+</html>

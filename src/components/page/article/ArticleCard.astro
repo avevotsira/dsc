@@ -20,11 +20,7 @@ interface Props {
 const { title, body, href, image, date, lang } = Astro.props as Props;
 ---
 
-<article
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
-  class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
->
+<article class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm">
   <div>
     <header class="flex flex-col gap-2">
       <figure>
@@ -38,11 +34,7 @@ const { title, body, href, image, date, lang } = Astro.props as Props;
           />
         </AspectRatio>
       </figure>
-      <time
-        itemprop="datePublished"
-        datetime={toISOString(date)}
-        transition:name={`date-${href}`}
-      >
+      <time datetime={toISOString(date)} transition:name={`date-${href}`}>
         <TextElement
           variant="body"
           className="text-right text-mptc-secondary-foreground"
@@ -50,26 +42,17 @@ const { title, body, href, image, date, lang } = Astro.props as Props;
           {formatDate(date, lang)}
         </TextElement>
       </time>
-      <TextElement
-        variant="smallheading"
-        itemProp="headline"
-        transitionName={`title-${href}`}
-      >
+      <TextElement variant="smallheading" transitionName={`title-${href}`}>
         {title}
       </TextElement>
     </header>
     <section transition:name={`body-${href}`}>
-      <TextElement
-        itemProp="abstract"
-        className="mt-2 line-clamp-4 text-card-foreground"
-      >
+      <TextElement className="mt-2 line-clamp-4 text-card-foreground">
         {body}
       </TextElement>
     </section>
   </div>
   <div class="flex justify-center pt-5">
-    <ButtonLink href={href} className="w-full" itemProp="url">
-      Read more
-    </ButtonLink>
+    <ButtonLink href={href} className="w-full"> Read more </ButtonLink>
   </div>
 </article>

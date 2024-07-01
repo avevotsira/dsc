@@ -5,7 +5,7 @@ import Pagination from "@/components/Pagination.astro";
 import TextElement from "@/components/TextElement";
 
 import { languages } from "@/i18n/ui";
-import Layout from "@/layouts/Layout.astro";
+import BlogListLayout from "@/layouts/BlogListLayout.astro";
 import type { PaginateFunction } from "astro";
 import { getCollection } from "astro:content";
 
@@ -23,7 +23,7 @@ export async function getStaticPaths({
     );
     return paginate(langArticles, {
       params: { lang },
-      pageSize: 1,
+      pageSize: 10,
     });
   });
 }
@@ -32,9 +32,16 @@ const { lang } = Astro.params;
 const { page } = Astro.props;
 
 const title = "Articles";
+const description = "Browse our collection of articles on various topics.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 ---
 
-<Layout title={title}>
+<BlogListLayout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  articles={page.data}
+>
   <Main>
     <section aria-label="Blog Posts">
       <TextElement variant="heading" className="text-primary">
@@ -44,4 +51,4 @@ const title = "Articles";
       <Pagination page={page} />
     </section>
   </Main>
-</Layout>
+</BlogListLayout>
