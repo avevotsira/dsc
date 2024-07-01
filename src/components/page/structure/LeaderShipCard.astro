@@ -13,7 +13,7 @@ const { title, image, name } = Astro.props as Props;
 
 <div class="grid place-items-center gap-y-5">
   <div
-    class="relative h-52 w-52 overflow-hidden rounded-full border-[5px] border-white drop-shadow-lg dark:border-gray-300"
+    class="relative size-52 overflow-hidden rounded-full border-[5px] border-white drop-shadow-lg dark:border-gray-300"
   >
     <Image src={image} alt={title + " " + name} />
   </div>
