@@ -1,9 +1,9 @@
 ---
+import DirectiveCardList from "@/components/directive/DirectiveCardList.astro";
 import Main from "@/components/Main.astro";
-import DecreesList from "@/components/page/royal-decrees/DecressList.astro";
 import TextElement from "@/components/TextElement";
 
-import { DECREE_TYPES } from "@/content/content.type";
+import { DIRECTIVE_TYPES } from "@/content/content.type";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
@@ -17,10 +17,11 @@ export async function getStaticPaths() {
 }
 
 const lang = Astro.params.lang as SupportedLanguage;
-const allDecrees = await getCollection("decrees");
-const decrees = allDecrees.filter(
-  (decree) =>
-    decree.data.lang === lang && decree.data.type === DECREE_TYPES.ROYAL_DECREE,
+const allDirectives = await getCollection("directives");
+const directives = allDirectives.filter(
+  (directive) =>
+    directive.data.lang === lang &&
+    directive.data.type === DIRECTIVE_TYPES.ROYAL_DECREE,
 );
 ---
 
@@ -32,7 +33,7 @@ const decrees = allDecrees.filter(
           {title}
         </TextElement>
       </header>
-      <DecreesList decrees={decrees} lang={lang} />
+      <DirectiveCardList directives={directives} lang={lang} />
     </section>
   </Main>
 </Layout>
