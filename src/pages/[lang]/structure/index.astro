@@ -1,0 +1,58 @@
+---
+import Main from "@/components/Main.astro";
+import BoardMember from "@/components/page/structure/BoardMember.astro";
+import LeaderShipCard from "@/components/page/structure/LeaderShipCard.astro";
+import StructureChart from "@/components/page/structure/StructureChart.astro";
+import TextElement from "@/components/TextElement";
+
+import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import profile from "src/asset/leadership/profile.png";
+
+const title = "Structure";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const lang = Astro.params.lang as SupportedLanguage;
+
+const t = useTranslations(lang);
+---
+
+<Layout title={title}>
+  <Main>
+    <TextElement variant="heading" className="pb-6 text-primary">
+      {t("structure.heading")}
+    </TextElement>
+    <BoardMember lang={lang} />
+    <StructureChart />
+    <div>
+      <TextElement
+        variant="subheading"
+        className="py-10 text-center text-primary"
+      >
+        Secretary General
+      </TextElement>
+    </div>
+    <div>
+      <LeaderShipCard title="H.E" name="Name" image={profile} />
+      <TextElement
+        variant="subheading"
+        className="py-10 text-center text-primary"
+      >
+        Deputy Secretary General
+      </TextElement>
+      <div class="grid grid-cols-1 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
+        <LeaderShipCard title="H.E" name="Name" image={profile} />
+        <LeaderShipCard title="H.E" name="Name" image={profile} />
+        <LeaderShipCard title="H.E" name="Name" image={profile} />
+        <LeaderShipCard title="H.E" name="Name" image={profile} />
+      </div>
+    </div>
+  </Main>
+</Layout>
