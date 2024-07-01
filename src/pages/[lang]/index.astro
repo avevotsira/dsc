@@ -1,5 +1,6 @@
 ---
-import Main from "@/components/Main.astro";
+import Hero from "@/components/page/home/Hero.astro";
+import HomeMain from "@/components/page/home/HomeMain.astro";
 import TextElement from "@/components/TextElement";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
 
@@ -16,16 +17,24 @@ const t = useTranslations(lang);
 ---
 
 <Layout title={`Welcome to Astro - ${lang}`}>
-  <Main>
-    <section aria-labelledby="what-we-do-title">
-      <TextElement
-        id="what-we-do-title"
-        variant="subheading"
-        className="text-center"
-      >
-        {t("home.whatwedo")}
-      </TextElement>
-      <WhatWeDoGrid />
+  <HomeMain>
+    <section aria-label="hero-section" class="text-balance text-center">
+      <Hero
+        title="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages."
+        subtitle="It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      />
     </section>
-  </Main>
+    <div class="container flex flex-col items-center px-24 py-8 max-sm:p-5">
+      <section aria-label="what-we-do-title">
+        <TextElement
+          id="what-we-do-title"
+          variant="subheading"
+          className="text-center"
+        >
+          {t("home.whatwedo")}
+        </TextElement>
+        <WhatWeDoGrid />
+      </section>
+    </div>
+  </HomeMain>
 </Layout>
