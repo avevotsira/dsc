@@ -1,18 +1,31 @@
 ---
+import ArticleList from "@/components/page/article/ArticleList.astro";
 import Hero from "@/components/page/home/Hero.astro";
 import HomeMain from "@/components/page/home/HomeMain.astro";
 import TextElement from "@/components/TextElement";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
 
-import { languages } from "@/i18n/ui";
+import { languages, type SupportedLanguage } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
 import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const lang = Astro.currentLocale as SupportedLanguage;
 
 export function getStaticPaths() {
   return Object.values(languages).map((lang) => ({ params: { lang } }));
 }
 
-const lang = Astro.currentLocale;
+const allArticles = await getCollection("articles");
+const langArticles = allArticles.filter(
+  (article) => article.data.lang === lang,
+);
+const latestArticles = langArticles
+  .sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
+  .slice(0, 3);
+
 const t = useTranslations(lang);
 ---
 
@@ -24,7 +37,9 @@ const t = useTranslations(lang);
         subtitle="It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
       />
     </section>
-    <div class="container flex flex-col items-center px-24 py-8 max-sm:p-5">
+    <div
+      class="container flex flex-col items-center gap-32 px-24 py-8 max-sm:p-5"
+    >
       <section aria-label="what-we-do-title">
         <TextElement
           id="what-we-do-title"
@@ -34,6 +49,16 @@ const t = useTranslations(lang);
           {t("home.whatwedo")}
         </TextElement>
         <WhatWeDoGrid />
+      </section>
+      <section aria-labelledby="latest-articles-title">
+        <TextElement
+          id="latest-articles-title"
+          variant="subheading"
+          className="text-center"
+        >
+          {"Latest News And Events"}
+        </TextElement>
+        <ArticleList articles={latestArticles} lang={lang} />
       </section>
     </div>
   </HomeMain>
