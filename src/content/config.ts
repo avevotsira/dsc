@@ -1,8 +1,13 @@
+import { DECREE_TYPES, type DecreeType } from "./content.type";
 import { languages } from "@/i18n/ui";
 import { defineCollection, z } from "astro:content";
 import type { SchemaContext } from "astro:content";
 
 const SupportedLanguage = Object.values(languages) as [string, ...string[]];
+
+const DecreeTypeEnum = z.enum(
+  Object.values(DECREE_TYPES) as [DecreeType, ...DecreeType[]],
+);
 
 const articleSchema = ({ image }: SchemaContext) =>
   z.object({
@@ -24,6 +29,7 @@ const decreeSchema = z.object({
   title: z.string(),
   lang: z.enum(SupportedLanguage),
   file: z.string(),
+  type: DecreeTypeEnum,
 });
 
 const decreesCollection = defineCollection({
