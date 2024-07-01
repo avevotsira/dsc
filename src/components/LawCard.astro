@@ -1,0 +1,44 @@
+---
+import TextElement from "./TextElement";
+import { AspectRatio } from "./ui/aspect-ratio";
+import type { SupportedLanguage } from "@/i18n/ui";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  image: ImageMetadata;
+  body: string;
+  href: string;
+  date: string;
+  lang: SupportedLanguage;
+}
+
+const { title, body, href, image } = Astro.props as Props;
+---
+
+<article
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+  class="flex flex-col items-start gap-2 rounded-lg border bg-card p-5 text-card-foreground"
+>
+  <figure>
+    <AspectRatio ratio={16 / 9}>
+      <Image
+        src={image}
+        alt={title}
+        class="w-full rounded-lg"
+        loading="lazy"
+        transition:name={`image-${href}`}
+      />
+    </AspectRatio>
+  </figure>
+  <div>
+    <TextElement variant="title" className="text-lg text-primary">
+      {title}
+    </TextElement>
+    <TextElement variant="body" className="line-clamp-4 text-pretty">
+      {body}
+    </TextElement>
+  </div>
+</article>;

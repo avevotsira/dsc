@@ -1,4 +1,5 @@
 ---
+import LawGird from "@/components/LawGird.astro";
 import Hero from "@/components/page/home/Hero.astro";
 import HomeMain from "@/components/page/home/HomeMain.astro";
 import TextElement from "@/components/TextElement";
@@ -34,6 +35,14 @@ const t = useTranslations(lang);
           {t("home.whatwedo")}
         </TextElement>
         <WhatWeDoGrid />
+        <TextElement
+          id="royal-degree-title"
+          variant="subheading"
+          className="text-center"
+        >
+          {t("home.royal-degree")}
+        </TextElement>
+        <LawGird articles={page.data} />
       </section>
     </div>
   </HomeMain>

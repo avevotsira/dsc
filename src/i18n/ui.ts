@@ -4,11 +4,13 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.about": "About",
     "nav.projects": "Projects",
     "home.whatwedo": "What We Do",
+    "home.royal-degree": "Royal Degree",
   },
   km: {
     "nav.home": "Accueil",
     "nav.about": "À propos",
     "home.whatwedo": "កាតព្វកិច្ចរបស់យើង",
+    "home.royal-degree": "Royal Degree",
   },
 } as const;
 
