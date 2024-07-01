@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
@@ -51,16 +52,6 @@
         "react/react-in-jsx-scope": "off",
         "react/no-unknown-property": "off",
         "react-hooks/rules-of-hooks": "off"
-        // "prettier/prettier": "error"
-      }
-    },
-    {
-      "files": ["prettier.config.cjs"],
-      "env": {
-        "node": true
-      },
-      "globals": {
-        "module": "readonly"
       }
     }
   ]

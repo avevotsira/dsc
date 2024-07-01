@@ -23,38 +23,54 @@ const CONFIG = {
   },
   body: {
     tag: "p",
-    tw: "leading-6 text-sm",
+    tw: "leading-6 text-base",
   },
   small: {
     tag: "p",
-    tw: "leading-6 text-xs",
+    tw: "leading-6 text-sm",
   },
   paragraph: {
     tag: "p",
-    tw: "leading-7 text-sm [&:not(:first-child)]:mt-6",
+    tw: "leading-7 text-base [&:not(:first-child)]:mt-6",
   },
 } as const;
 
 type TextVariant = keyof typeof CONFIG;
-
 type Tag = (typeof CONFIG)[TextVariant]["tag"];
 
 type Props = {
   variant?: TextVariant;
   children?: React.ReactNode;
+  className?: string;
+  itemProp?: string;
+  transitionName?: string;
 } & React.ComponentProps<Tag>;
+
+function getSanitizedTransitionStyle(transitionName?: string) {
+  if (!transitionName) return undefined;
+  const sanitizedTransitionName = transitionName.replace(
+    /[^a-zA-Z0-9_-]/g,
+    "-",
+  );
+  return { viewTransitionName: sanitizedTransitionName };
+}
 
 export default function TextElement({
   children,
   variant = "body",
   className,
+  transitionName,
   ...rest
 }: Props) {
   const DynamicText = CONFIG[variant].tag;
   const tw = CONFIG[variant].tw;
 
   return (
-    <DynamicText {...rest} className={cn(tw, className)}>
+    <DynamicText
+      {...rest}
+      className={cn(tw, className)}
+      style={getSanitizedTransitionStyle(transitionName)}
+    >
       {children}
     </DynamicText>
   );

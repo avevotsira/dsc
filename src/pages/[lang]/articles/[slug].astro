@@ -1,4 +1,7 @@
 ---
+import { formatDate, toISOString } from "@/lib/date-helper";
+import { getArticleUrl } from "@/lib/route";
+
 import Main from "@/components/Main.astro";
 import ProseWrapper from "@/components/ProseWrapper.astro";
 import TextElement from "@/components/TextElement";
@@ -22,22 +25,61 @@ const {
   params: { lang },
 } = Astro;
 const { Content } = await page.render();
+
+const publicationDate = new Date(page.data.date);
+
+const transition = getArticleUrl(page.slug, lang as SupportedLanguage);
 ---
 
-<Layout title={page.data.title}>
+<Layout
+  title={page.data.title}
+  description={page.body.slice(0, 160)}
+  image={page.data.image.src}
+  canonicalURL={new URL(Astro.url.pathname, Astro.site).toString()}
+  type="article"
+  publishDate={publicationDate}
+>
   <Main>
-    <ProseWrapper slug={page.slug} lang={lang as SupportedLanguage}>
-      <Image
-        src={page.data.image}
-        alt={page.data.title || "Article image"}
-        class="w-full rounded-lg"
-        transition:persist
-      />
-
-      <TextElement variant="subheading" className="mt-0"
-        >{page.data.title}</TextElement
-      >
-      <Content />
+    <ProseWrapper>
+      <header>
+        <figure>
+          <Image
+            src={page.data.image}
+            alt={page.data.title}
+            class="w-full rounded-lg"
+            loading="eager"
+            transition:name={`image-${transition}`}
+          />
+        </figure>
+        <TextElement
+          variant="heading"
+          className="text-center"
+          itemProp="headline"
+          transitionName={`title-${transition}`}
+        >
+          {page.data.title}
+        </TextElement>
+        <div class="my-4 flex items-center justify-between">
+          <span
+            itemprop="author"
+            itemscope
+            itemtype="https://schema.org/Organization"
+          >
+            <span itemprop="name">Digital Security Committee</span>
+          </span>
+          <time
+            datetime={toISOString(publicationDate)}
+            itemprop="datePublished"
+            transition:name={`date-${transition}`}
+            class="text-right text-mptc-secondary-foreground"
+          >
+            {formatDate(publicationDate, lang as SupportedLanguage)}
+          </time>
+        </div>
+      </header>
+      <section itemprop="articleBody" transition:name={`body-${transition}`}>
+        <Content />
+      </section>
     </ProseWrapper>
   </Main>
 </Layout>

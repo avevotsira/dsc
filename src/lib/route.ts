@@ -1,12 +1,13 @@
-import { defaultLang } from "@/i18n/ui";
+import type { SupportedLanguage } from "@/i18n/ui";
+import { removeLanguagePrefix } from "@/i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
-export const routes = {
-  home: { href: "/", label: "Home" },
-  about: { href: "/articles", label: "Articles" },
-  projects: { href: "/projects", label: "Projects" },
-  contact: { href: "/contact", label: "Contact" },
-};
+export enum Routes {
+  Home = "/",
+  About = "/articles",
+  Projects = "/projects",
+  Contact = "/contact",
+}
 
 /**
  * Maps paths to localized routes based on the specified locale.
@@ -17,19 +18,17 @@ export const routes = {
  */
 export function getLocalizedRoutes(
   paths: { href: string; label: string }[],
-  locale: string | undefined,
+  locale: string,
 ) {
-  const currentLocale = locale ?? defaultLang;
   return paths.map((path) => ({
     ...path,
-    href: getRelativeLocaleUrl(currentLocale, path.href),
+    href: getRelativeLocaleUrl(locale, path.href),
   }));
 }
 
-export function getLocalizedUrl(
-  path: string,
-  locale: string | undefined,
-): string {
-  const currentLocale = locale ?? defaultLang;
-  return getRelativeLocaleUrl(currentLocale, path);
-}
+export const getArticleUrl = (slug: string, lang: SupportedLanguage) => {
+  return getRelativeLocaleUrl(
+    lang,
+    `articles/${removeLanguagePrefix(slug, lang)}`,
+  );
+};

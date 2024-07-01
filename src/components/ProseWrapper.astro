@@ -1,18 +1,11 @@
 ---
-import type { SupportedLanguage } from "@/i18n/ui";
-import { removeLanguagePrefix } from "@/i18n/utils";
 
-interface Props {
-  slug: string;
-  lang: SupportedLanguage;
-}
-
-const { slug, lang } = Astro.props;
 ---
 
-<div
+<article
   class="prose mx-auto max-w-5xl text-pretty"
-  transition:name={`slug-${removeLanguagePrefix(slug, lang)}`}
+  itemscope
+  itemtype="https://schema.org/Article"
 >
   <slot />
-</div>
+</article>
