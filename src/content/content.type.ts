@@ -1,8 +1,9 @@
-export const POLICY_TYPES = {
+export const DIRECTIVE_TYPES = {
   SUB_DECREE: "sub-decree",
   ROYAL_DECREE: "royal-decree",
-  POLITIC: "politic",
+  POLICY: "policy",
   DECISION: "decision",
 } as const;
 
-export type PolicyType = (typeof POLICY_TYPES)[keyof typeof POLICY_TYPES];
+export type DirectiveType =
+  (typeof DIRECTIVE_TYPES)[keyof typeof DIRECTIVE_TYPES];

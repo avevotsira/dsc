@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/date-helper";
 import { ButtonLink } from "@/components/ButtonLink";
 import TextElement from "@/components/TextElement";
 
-import type { PolicyType } from "@/content/content.type";
+import type { DirectiveType } from "@/content/content.type";
 import type { SupportedLanguage } from "@/i18n/ui";
 
 interface Props {
@@ -13,7 +13,7 @@ interface Props {
   date: string;
   lang: SupportedLanguage;
   file: string;
-  type: PolicyType;
+  type: DirectiveType;
 }
 
 const { title, lang, date, file, type } = Astro.props as Props;

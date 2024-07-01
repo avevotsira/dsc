@@ -1,12 +1,12 @@
-import { POLICY_TYPES, type PolicyType } from "./content.type";
+import { DIRECTIVE_TYPES, type DirectiveType } from "./content.type";
 import { languages } from "@/i18n/ui";
 import { defineCollection, z } from "astro:content";
 import type { SchemaContext } from "astro:content";
 
 const SupportedLanguage = Object.values(languages) as [string, ...string[]];
 
-const PolicyTypeEnum = z.enum(
-  Object.values(POLICY_TYPES) as [PolicyType, ...PolicyType[]],
+const DirectiveTypeEnum = z.enum(
+  Object.values(DIRECTIVE_TYPES) as [DirectiveType, ...DirectiveType[]],
 );
 
 const articleSchema = ({ image }: SchemaContext) =>
@@ -24,19 +24,19 @@ const articlesCollection = defineCollection({
   schema: articleSchema,
 });
 
-const policySchema = z.object({
+const directiveSchema = z.object({
   date: z.string(),
   title: z.string(),
   lang: z.enum(SupportedLanguage),
   file: z.string(),
-  type: PolicyTypeEnum,
+  type: DirectiveTypeEnum,
 });
 
-const policiesCollection = defineCollection({
-  schema: policySchema,
+const directivesCollection = defineCollection({
+  schema: directiveSchema,
 });
 
 export const collections = {
   articles: articlesCollection,
-  policies: policiesCollection,
+  directives: directivesCollection,
 };
