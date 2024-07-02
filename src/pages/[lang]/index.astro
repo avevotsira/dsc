@@ -2,6 +2,7 @@
 import ArticleList from "@/components/page/article/ArticleList.astro";
 import Hero from "@/components/page/home/Hero.astro";
 import HomeMain from "@/components/page/home/HomeMain.astro";
+import LawCardList from "@/components/page/home/law/LawCardList.astro";
 import TextElement from "@/components/TextElement";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
 
@@ -21,6 +22,16 @@ const langArticles = allArticles.filter(
   (article) => article.data.lang === lang,
 );
 const latestArticles = langArticles
+  .sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
+  .slice(0, 3);
+
+const allDirectives = await getCollection("directives");
+const langDirectives = allDirectives.filter(
+  (article) => article.data.lang === lang,
+);
+const latestDirectives = langDirectives
   .sort(
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   )
@@ -55,6 +66,12 @@ const t = useTranslations(lang);
             {"Latest News And Events"}
           </TextElement>
           <ArticleList articles={latestArticles} lang={lang} />
+        </section>
+        <section aria-label="Law and Regulations">
+          <TextElement variant="subheading" className="text-center">
+            {"Law and Regulations"}
+          </TextElement>
+          <LawCardList directives={latestDirectives} lang={lang} />
         </section>
       </div>
     </div>

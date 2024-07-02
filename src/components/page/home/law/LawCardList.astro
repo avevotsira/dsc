@@ -1,0 +1,29 @@
+---
+import LawCard from "./LawCard.astro";
+import type { SupportedLanguage } from "@/i18n/ui";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  directives: CollectionEntry<"directives">[];
+  lang: SupportedLanguage;
+}
+
+const { directives, lang } = Astro.props;
+---
+
+<ul class="grid list-none grid-cols-1 gap-5 p-5 md:grid-cols-1 lg:grid-cols-2">
+  {
+    directives.map((directive) => (
+      <li>
+        <LawCard
+          title={directive.data.title}
+          body={directive.body}
+          date={directive.data.date}
+          lang={lang}
+          file={directive.data.file}
+          type={directive.data.type}
+        />
+      </li>
+    ))
+  }
+</ul>

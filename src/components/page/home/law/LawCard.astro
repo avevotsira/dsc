@@ -1,0 +1,69 @@
+---
+import { formatDate } from "@/lib/date-helper";
+
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { ButtonLink } from "@/components/ButtonLink";
+import TextElement from "@/components/TextElement";
+
+import heroImage from "../../../../static/Hero.png";
+import type { DirectiveType } from "@/content/content.type";
+import type { SupportedLanguage } from "@/i18n/ui";
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  body: string;
+  date: string;
+  lang: SupportedLanguage;
+  file: string;
+  type: DirectiveType;
+}
+
+const { title, lang, date, file, type } = Astro.props as Props;
+
+const absoluteFileUrl = new URL(file, Astro.url.origin).href;
+---
+
+<article
+  itemscope
+  itemtype="https://schema.org/Article"
+  class="grid grid-cols-5 gap-4 rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
+>
+  <figure class="col-span-1">
+    <AspectRatio ratio={9 / 16}>
+      <Image
+        src={heroImage}
+        alt={title}
+        class="w-full rounded-lg"
+        loading="lazy"
+      />
+    </AspectRatio>
+  </figure>
+  <div class="col-span-4 flex flex-col justify-between gap-2">
+    <TextElement variant="smallheading">{type}</TextElement>
+    <time
+      itemprop="datePublished"
+      datetime={new Date(date).toISOString()}
+      class="text-left text-mptc-secondary-foreground"
+    >
+      {formatDate(date, lang)}
+    </time>
+    <TextElement
+      variant="subheading"
+      itemProp="description"
+      className="line-clamp-4 scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight lg:text-base xl:text-base"
+    >
+      {title}
+    </TextElement>
+    <ButtonLink
+      href={absoluteFileUrl}
+      itemProp="url"
+      aria-label={`Read full ${type} on ${title}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="self-end"
+    >
+      Read full decree
+    </ButtonLink>
+  </div>
+</article>
