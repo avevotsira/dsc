@@ -45,7 +45,7 @@ const t = useTranslations(lang);
 
 <Layout title={`Welcome to Astro - ${lang}`}>
   <HomeMain>
-    <div class="flex flex-col items-center gap-32">
+    <div class="flex flex-col items-center gap-16">
       <section
         aria-label="hero-section"
         class="w-full text-balance text-center"
@@ -56,22 +56,34 @@ const t = useTranslations(lang);
         />
       </section>
       <div
-        class="container flex flex-col items-center gap-32 px-24 py-8 max-sm:p-5"
+        class="container flex flex-col items-center gap-16 px-24 py-8 max-sm:p-5"
       >
-        <section aria-label="What we do?">
-          <TextElement variant="subheading" className="text-center">
+        <section aria-labelledby="what-we-do-heading">
+          <TextElement
+            variant="subheading"
+            id="what-we-do-heading"
+            className="mb-4 text-center"
+          >
             {t("home.whatwedo")}
           </TextElement>
           <WhatWeDoGrid />
         </section>
-        <section aria-label="Latest News And Events">
-          <TextElement variant="subheading" className="text-center">
+        <section aria-labelledby="latest-news-heading">
+          <TextElement
+            variant="subheading"
+            id="latest-news-heading"
+            className="mb-4 text-center"
+          >
             {"Latest News And Events"}
           </TextElement>
           <ArticleList articles={latestArticles} lang={lang} />
         </section>
-        <section aria-label="Law and Regulations">
-          <TextElement variant="subheading" className="text-center">
+        <section aria-labelledby="law-regulations-heading">
+          <TextElement
+            variant="subheading"
+            id="law-regulations-heading"
+            className="mb-4 text-center"
+          >
             {"Law and Regulations"}
           </TextElement>
           <LawCardList directives={latestDirectives} lang={lang} />

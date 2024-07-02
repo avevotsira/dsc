@@ -35,6 +35,10 @@ export const routes = [
 const navigationItems = getLocalizedRoutes(routes, locale);
 ---
 
+<a
+  class="absolute left-0 m-3 -translate-y-16 bg-primary p-3 text-primary-foreground transition focus:translate-y-0"
+  href="#main-content">Skip Navigation</a
+>
 <div class="bg-white shadow-md" aria-label="Main navigation">
   <div class="container mx-auto flex max-w-screen-2xl p-6">
     <a href={getRelativeLocaleUrl(locale, Routes.Home)}>
