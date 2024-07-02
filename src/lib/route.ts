@@ -5,6 +5,12 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 export enum Routes {
   Home = "/",
   About = "/about",
+  Structure = "/struture",
+  RoyalDecrees = "/royal-decrees",
+  SubDecrees = "/sub-decrees",
+  Policies = "/policies",
+  Decisions = "/decisions",
+  Videos = "/videos",
   Aritcles = "/articles",
   Projects = "/projects",
   Contact = "/contact",
@@ -43,14 +49,16 @@ export function getLocalizedRoutes(
         label: path.label,
         href: getRelativeLocaleUrl(locale, path.href),
       };
-    } else if (path.children) {
+    }
+
+    if (path.children) {
       return {
         label: path.label,
         children: getLocalizedRoutes(path.children, locale),
       };
-    } else {
-      return path;
     }
+
+    return path;
   });
 }
 

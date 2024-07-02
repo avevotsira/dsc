@@ -10,41 +10,32 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 const locale = Astro.currentLocale ?? defaultLang;
 const currentPath = Astro.url.pathname;
 
-export const routesTest = {
-  home: { href: Routes.Home, label: "Home" },
-  about: { href: Routes.About, label: "About Us" },
-  articles: { href: Routes.About, label: "Articles" },
-  projects: { href: Routes.Projects, label: "Projects" },
-  contact: { href: Routes.Contact, label: "Contact" },
-  test: { children: "test", label: "Contact" },
-};
-
 export const routes = [
   { label: "Home", href: Routes.Home },
   {
     label: "About Us",
     children: [
-      { label: "About DSC", href: Routes.Contact },
-      { label: "Structure", href: Routes.Contact },
+      { label: "About DSC", href: Routes.About },
+      { label: "Structure", href: Routes.Structure },
     ],
   },
   {
     label: "Media Hub",
     children: [
-      { label: "Royal Degrees", href: Routes.Contact },
-      { label: "Sub Degrees", href: Routes.Contact },
-      { label: "Policies", href: Routes.Contact },
-      { label: "Decisions", href: Routes.Contact },
-      { label: "Videos", href: Routes.Contact },
+      { label: "Royal Degrees", href: Routes.RoyalDecrees },
+      { label: "Sub Degrees", href: Routes.SubDecrees },
+      { label: "Policies", href: Routes.Policies },
+      { label: "Decisions", href: Routes.Decisions },
+      { label: "Videos", href: Routes.Videos },
     ],
   },
-  { label: "New & Events", href: Routes.Contact },
+  { label: "New & Events", href: Routes.Aritcles },
   { label: "Cybersecurity Tips", href: Routes.Contact },
 ];
 const navigationItems = getLocalizedRoutes(routes, locale);
 ---
 
-<div class="sticky top-0 z-50 bg-white shadow-md" aria-label="Main navigation">
+<div class="bg-white shadow-md" aria-label="Main navigation">
   <div class="container mx-auto flex max-w-screen-2xl p-6">
     <a href={getRelativeLocaleUrl(locale, Routes.Home)}>
       <div class="text-lg font-bold">
