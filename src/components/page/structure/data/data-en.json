@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Title",
+    "name": "Name",
+    "organization": "Organization",
+    "role": "Chair"
+  },
+  {
+    "title": "Title",
+    "name": "Name",
+    "organization": "Organization",
+    "role": "Vice-Chair"
+  },
+  {
+    "title": "Title",
+    "name": "Name",
+    "organization": "Organization",
+    "role": "Member"
+  },
+  {
+    "title": "Title",
+    "name": "Name",
+    "organization": "Organization",
+    "role": "Member"
+  }
+]

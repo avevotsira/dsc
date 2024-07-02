@@ -4,11 +4,13 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.about": "About",
     "nav.projects": "Projects",
     "home.whatwedo": "What We Do",
+    "structure.heading": "Organization Structure of DSC General Secretariat",
   },
   km: {
     "nav.home": "Accueil",
     "nav.about": "À propos",
     "home.whatwedo": "កាតព្វកិច្ចរបស់យើង",
+    "structure.heading": "រចនាសម្ព័ន្ធរបស់អគ្គលេខាធិការដ្ឋាន គ.ស.ឌ.",
   },
 } as const;
 
