@@ -10,13 +10,14 @@ const currentPath = Astro.url.pathname;
 
 export const routes = {
   home: { href: Routes.Home, label: "Home" },
-  about: { href: Routes.About, label: "Articles" },
+  about: { href: Routes.About, label: "About Us" },
+  articles: { href: Routes.About, label: "Articles" },
   projects: { href: Routes.Projects, label: "Projects" },
   contact: { href: Routes.Contact, label: "Contact" },
 };
 
 const links = getLocalizedRoutes(
-  [routes.about, routes.projects, routes.contact],
+  [routes.about, routes.articles, routes.projects, routes.contact],
   locale,
 );
 ---
