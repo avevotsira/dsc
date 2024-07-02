@@ -30,7 +30,7 @@ const { title, body, href, image, date, lang } = Astro.props as Props;
         <AspectRatio ratio={16 / 9}>
           <Image
             src={image}
-            alt={`Featured image for article: ${title}`}
+            alt={title}
             class="w-full rounded-lg"
             loading="lazy"
             transition:name={`image-${href}`}
