@@ -3,32 +3,25 @@ import NavBar from "@/components/NavBar.astro";
 
 import "@/styles/globals.css";
 
-import { getArticleUrl } from "@/lib/route";
-
 import Footer from "@/components/footer";
 
-import type { SupportedLanguage } from "@/i18n/ui";
-import type { CollectionEntry } from "astro:content";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
-  description: string;
-  canonicalURL: string;
-  articles: CollectionEntry<"articles">[];
+  description?: string;
   image?: string;
+  canonicalURL?: string;
 }
 
 const {
   title,
-  description,
-  canonicalURL,
-  articles,
-  image = "/default-og-image.jpg",
+  description = "Default description of your organization",
+  image = "/default-org-image.jpg",
+  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
 } = Astro.props;
-const siteTitle = "Your Site Name";
-const authorName = "Digital Security Committee";
-const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
+
+const siteTitle = "Digital Security Committee";
 ---
 
 <!doctype html>
@@ -59,50 +52,33 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
 
     <ViewTransitions />
 
-    <!-- Updated JSON-LD structured data for CollectionPage -->
+    <!-- JSON-LD structured data for Organization -->
     <script
-      is:inline
       type="application/ld+json"
       set:html={JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        mainEntityOfPage: {
-          "@type": "WebPage",
-          "@id": Astro.url,
-        },
-        name: title,
+        "@type": "Organization",
+        name: siteTitle,
+        url: Astro.site,
+        logo: new URL("/logo.png", Astro.url),
         description: description,
-        url: Astro.url,
-        image: new URL(image, Astro.url).toString(),
-        isPartOf: {
-          "@type": "WebSite",
-          name: siteTitle,
-          url: Astro.site,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Your City",
+          addressRegion: "Your Region",
+          postalCode: "Your Postal Code",
+          addressCountry: "Your Country",
         },
-        about: {
-          "@type": "Thing",
-          name: "News Articles",
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+1-234-567-8901",
+          contactType: "customer support",
         },
-        hasPart: articles.map((article) => ({
-          "@type": "NewsArticle",
-          headline: article.data.title,
-          url: new URL(
-            getArticleUrl(
-              article.slug,
-              Astro.currentLocale as SupportedLanguage,
-            ),
-            Astro.site,
-          ).toString(),
-          datePublished: new Date(article.data.date).toISOString(),
-          image: article.data.image
-            ? new URL(article.data.image.src, Astro.site).toString()
-            : undefined,
-          author: {
-            "@type": "Organization",
-            name: authorName,
-            url: authorUrl,
-          },
-        })),
+        sameAs: [
+          "https://www.facebook.com/yourorganization",
+          "https://twitter.com/yourorganization",
+          "https://www.linkedin.com/company/yourorganization",
+        ],
       })}
     />
   </head>
@@ -110,7 +86,9 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
     <header aria-label="Main navigation">
       <NavBar />
     </header>
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>

@@ -1,0 +1,26 @@
+---
+import { cn } from "@/lib/utils";
+
+import Card from "./AboutCard.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  abouts: CollectionEntry<"abouts">[];
+  className?: string;
+}
+const { abouts, className } = Astro.props;
+
+const tw = "grid place-items-center gap-6 pt-12 grid-cols-1";
+---
+
+<div aria-label="Strategic Goals">
+  <ul class={cn(tw, className)}>
+    {
+      abouts.map((about) => (
+        <li>
+          <Card title={about.data.title} body={about.body} />
+        </li>
+      ))
+    }
+  </ul>
+</div>

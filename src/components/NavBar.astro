@@ -12,7 +12,8 @@ const currentPath = Astro.url.pathname;
 
 export const routesTest = {
   home: { href: Routes.Home, label: "Home" },
-  about: { href: Routes.About, label: "Articles" },
+  about: { href: Routes.About, label: "About Us" },
+  articles: { href: Routes.About, label: "Articles" },
   projects: { href: Routes.Projects, label: "Projects" },
   contact: { href: Routes.Contact, label: "Contact" },
   test: { children: "test", label: "Contact" },
@@ -43,7 +44,7 @@ export const routes = [
 const navigationItems = getLocalizedRoutes(routes, locale);
 ---
 
-<div class="bg-white shadow-md">
+<div class="sticky top-0 z-50 bg-white shadow-md" aria-label="Main navigation">
   <div class="container mx-auto flex max-w-screen-2xl p-6">
     <a href={getRelativeLocaleUrl(locale, Routes.Home)}>
       <div class="text-lg font-bold">

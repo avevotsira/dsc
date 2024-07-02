@@ -24,7 +24,9 @@ const {
   publishDate,
 } = Astro.props;
 
-const siteTitle = "Your Site Name";
+const siteTitle = "Digital Security Committee";
+const authorName = "Digital Security Committee";
+const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
 ---
 
 <!doctype html>
@@ -81,7 +83,8 @@ const siteTitle = "Your Site Name";
         image: new URL(image, Astro.url),
         author: {
           "@type": "Organization",
-          name: "Digital Security Committee",
+          name: authorName,
+          url: authorUrl,
         },
         publisher: {
           "@type": "Organization",
@@ -96,7 +99,7 @@ const siteTitle = "Your Site Name";
       })}
     />
   </head>
-  <header class="sticky top-0 z-10" aria-label="Main navigation">
+  <header>
     <NavBar />
   </header>
   <body class="min-h-screen">
