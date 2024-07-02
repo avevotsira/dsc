@@ -31,35 +31,32 @@ const t = useTranslations(lang);
 
 <Layout title={`Welcome to Astro - ${lang}`}>
   <HomeMain>
-    <section aria-label="hero-section" class="text-balance text-center">
-      <Hero
-        title="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages."
-        subtitle="It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-      />
-    </section>
-    <div
-      class="container flex flex-col items-center gap-32 px-24 py-8 max-sm:p-5"
-    >
-      <section aria-label="what-we-do-title">
-        <TextElement
-          id="what-we-do-title"
-          variant="subheading"
-          className="text-center"
-        >
-          {t("home.whatwedo")}
-        </TextElement>
-        <WhatWeDoGrid />
+    <div class="flex flex-col items-center gap-32">
+      <section
+        aria-label="hero-section"
+        class="w-full text-balance text-center"
+      >
+        <Hero
+          title="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages."
+          subtitle="It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+        />
       </section>
-      <section aria-labelledby="latest-articles-title">
-        <TextElement
-          id="latest-articles-title"
-          variant="subheading"
-          className="text-center"
-        >
-          {"Latest News And Events"}
-        </TextElement>
-        <ArticleList articles={latestArticles} lang={lang} />
-      </section>
+      <div
+        class="container flex flex-col items-center gap-32 px-24 py-8 max-sm:p-5"
+      >
+        <section aria-label="What we do?">
+          <TextElement variant="subheading" className="text-center">
+            {t("home.whatwedo")}
+          </TextElement>
+          <WhatWeDoGrid />
+        </section>
+        <section aria-label="Latest News And Events">
+          <TextElement variant="subheading" className="text-center">
+            {"Latest News And Events"}
+          </TextElement>
+          <ArticleList articles={latestArticles} lang={lang} />
+        </section>
+      </div>
     </div>
   </HomeMain>
 </Layout>

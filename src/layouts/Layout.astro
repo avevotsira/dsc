@@ -25,6 +25,8 @@ const {
 } = Astro.props;
 
 const siteTitle = "Your Site Name";
+const authorName = "Digital Security Committee";
+const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
 ---
 
 <!doctype html>
@@ -81,7 +83,8 @@ const siteTitle = "Your Site Name";
         image: new URL(image, Astro.url),
         author: {
           "@type": "Organization",
-          name: "Digital Security Committee",
+          name: authorName,
+          url: authorUrl,
         },
         publisher: {
           "@type": "Organization",
