@@ -6,13 +6,11 @@ import TextElement from "@/components/TextElement";
 import { ABOUT_TYPES } from "@/content/about.type";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
-import Layout from "@/layouts/Layout.astro";
+import OrganizationLayout from "@/layouts/OrganizationLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import enAboutUs from "src/static/about-us/en-about-us.webp";
 import kmAboutUs from "src/static/about-us/km-about-us.webp";
-
-const title = "About Us";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -37,9 +35,17 @@ const langImages = {
 };
 
 const currentImage = langImages[lang] || enAboutUs;
+
+const title = "About Us";
+const description =
+  "Learn about the Digital Security Committee's strategic goals, roles, and responsibilities in developing Cambodia's digital government policy for 2022-2035.";
 ---
 
-<Layout title={title}>
+<OrganizationLayout
+  title={title}
+  description={description}
+  image={currentImage.src}
+>
   <Main>
     <div class="flex flex-col gap-12 py-8">
       <section aria-label={"Strategic Goals and Strategies"}>
@@ -54,7 +60,6 @@ const currentImage = langImages[lang] || enAboutUs;
             {t("about.strategiesText")}
           </p>
         </header>
-        <!-- tempo value: change to goals when have content -->
         <AboutList abouts={goalTmp} className="lg:grid-cols-2" />
       </section>
       <figure class="mx-auto flex flex-col items-center gap-4 text-center">
@@ -79,9 +84,8 @@ const currentImage = langImages[lang] || enAboutUs;
             {t("about.roleResponsibilities")}
           </TextElement>
         </header>
-        <!-- tempo value, change to roles when have content -->
         <AboutList abouts={roleTmp} className="sm:grid-cols-2 lg:grid-cols-3" />
       </section>
     </div>
   </Main>
-</Layout>
+</OrganizationLayout>
