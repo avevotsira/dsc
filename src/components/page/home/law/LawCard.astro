@@ -40,7 +40,6 @@ const capitalizedType = replaceSeparatorsAndCapitalize(type);
     </TextElement>
     <TextElement
       variant="body"
-      itemProp="description"
       className="line-clamp-4 scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight lg:text-base xl:text-base"
     >
       {title}
@@ -48,7 +47,6 @@ const capitalizedType = replaceSeparatorsAndCapitalize(type);
     <ButtonLink
       variant={"outline"}
       href={absoluteFileUrl}
-      itemProp="url"
       aria-label={`Read full ${type} on ${title}`}
       target="_blank"
       rel="noopener noreferrer"
