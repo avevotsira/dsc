@@ -3,8 +3,11 @@ import NavBar from "@/components/NavBar.astro";
 
 import "@/styles/globals.css";
 
+import { getArticleUrl } from "@/lib/route";
+
 import Footer from "@/components/footer";
 
+import type { SupportedLanguage } from "@/i18n/ui";
 import type { CollectionEntry } from "astro:content";
 import { ViewTransitions } from "astro:transitions";
 
@@ -83,7 +86,13 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
         hasPart: articles.map((article) => ({
           "@type": "NewsArticle",
           headline: article.data.title,
-          url: new URL(article.slug, Astro.site).toString(),
+          url: new URL(
+            getArticleUrl(
+              article.slug,
+              Astro.currentLocale as SupportedLanguage,
+            ),
+            Astro.site,
+          ).toString(),
           datePublished: new Date(article.data.date).toISOString(),
           image: article.data.image
             ? new URL(article.data.image.src, Astro.site).toString()
