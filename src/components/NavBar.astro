@@ -1,6 +1,8 @@
 ---
 import { getLocalizedRoutes, Routes } from "@/lib/route";
 
+import NavMenu from "@/components/header/NavMenu";
+
 import LanguageSwitcher from "./LanguageSwitcher";
 import { defaultLang, type SupportedLanguage } from "@/i18n/ui";
 import { getRelativeLocaleUrl } from "astro:i18n";
@@ -8,42 +10,52 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 const locale = Astro.currentLocale ?? defaultLang;
 const currentPath = Astro.url.pathname;
 
-export const routes = {
+export const routesTest = {
   home: { href: Routes.Home, label: "Home" },
   about: { href: Routes.About, label: "Articles" },
   projects: { href: Routes.Projects, label: "Projects" },
   contact: { href: Routes.Contact, label: "Contact" },
+  test: { children: "test", label: "Contact" },
 };
 
-const links = getLocalizedRoutes(
-  [routes.about, routes.projects, routes.contact],
-  locale,
-);
+export const routes = [
+  { label: "Home", href: Routes.Home },
+  {
+    label: "About Us",
+    children: [
+      { label: "About DSC", href: Routes.Contact },
+      { label: "Structure", href: Routes.Contact },
+    ],
+  },
+  {
+    label: "Media Hub",
+    children: [
+      { label: "Royal Degrees", href: Routes.Contact },
+      { label: "Sub Degrees", href: Routes.Contact },
+      { label: "Policies", href: Routes.Contact },
+      { label: "Decisions", href: Routes.Contact },
+      { label: "Videos", href: Routes.Contact },
+    ],
+  },
+  { label: "New & Events", href: Routes.Contact },
+  { label: "Cybersecurity Tips", href: Routes.Contact },
+];
+const navigationItems = getLocalizedRoutes(routes, locale);
 ---
 
-<nav class="sticky top-0 z-50 bg-primary text-primary-foreground">
-  <div class="container mx-auto flex max-w-screen-2xl p-8">
+<div class="bg-white shadow-md">
+  <div class="container mx-auto flex max-w-screen-2xl p-6">
     <a href={getRelativeLocaleUrl(locale, Routes.Home)}>
       <div class="text-lg font-bold">
         <div>LOGO</div>
       </div>
     </a>
     <div class="grow"></div>
-    <ul class="flex space-x-4">
-      {
-        links.map((link) => (
-          <li>
-            <a href={link.href}>{link.label}</a>
-          </li>
-        ))
-      }
-      <li>
-        <LanguageSwitcher
-          currentPath={currentPath}
-          initialLocale={locale as SupportedLanguage}
-          client:load
-        />
-      </li>
-    </ul>
+    <NavMenu navMenuItem={navigationItems} client:load />
+    <LanguageSwitcher
+      currentPath={currentPath}
+      initialLocale={locale as SupportedLanguage}
+      client:load
+    />
   </div>
-</nav>
+</div>
