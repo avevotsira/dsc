@@ -55,7 +55,6 @@ const aboutsCollection = defineCollection({
 const leaderSchema = ({ image }: SchemaContext) =>
   z.object({
     name: z.string(),
-    bio: z.string(),
     title: z.string(),
     image: image(),
     lang: z.enum(SupportedLanguage),

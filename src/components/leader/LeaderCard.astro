@@ -1,0 +1,42 @@
+---
+import TextElement from "../TextElement";
+import type { SupportedLanguage } from "@/i18n/ui";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  name: string;
+  title: string;
+  image: ImageMetadata;
+  body: string;
+  lang: SupportedLanguage;
+}
+
+const { title, name, body, image } = Astro.props as Props;
+---
+
+<article class="grid grid-cols-2 gap-4">
+  <figure class="relative w-full">
+    <Image
+      src={image}
+      alt={title}
+      class="h-48 w-full object-cover sm:h-full"
+      loading="lazy"
+    />
+  </figure>
+  <div>
+    <header class="flex flex-col gap-2">
+      <TextElement variant="title" className="text-2xl text-primary">
+        {name}
+      </TextElement>
+      <TextElement variant="caption">
+        {title}
+      </TextElement>
+    </header>
+    <section>
+      <TextElement className="mt-2 line-clamp-4">
+        {body}
+      </TextElement>
+    </section>
+  </div>
+</article>
