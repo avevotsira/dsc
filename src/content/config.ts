@@ -52,8 +52,22 @@ const aboutsCollection = defineCollection({
   schema: aboutsSchema,
 });
 
+const leaderSchema = ({ image }: SchemaContext) =>
+  z.object({
+    name: z.string(),
+    bio: z.string(),
+    title: z.string(),
+    image: image(),
+    lang: z.enum(SupportedLanguage),
+  });
+
+const leaderCollection = defineCollection({
+  schema: leaderSchema,
+});
+
 export const collections = {
   articles: articlesCollection,
   directives: directivesCollection,
   abouts: aboutsCollection,
+  leaders: leaderCollection,
 };
