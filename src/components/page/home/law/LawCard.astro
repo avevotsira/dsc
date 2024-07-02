@@ -1,0 +1,60 @@
+---
+import { replaceSeparatorsAndCapitalize } from "@/lib/string-helper";
+
+import { ButtonLink } from "@/components/ButtonLink";
+import TextElement from "@/components/TextElement";
+
+import heroImage from "../../../../static/Hero.png";
+import type { DirectiveType } from "@/content/content.type";
+import { Image } from "astro:assets";
+import { ExternalLink } from "lucide-react";
+
+interface Props {
+  title: string;
+  body: string;
+  file: string;
+  type: DirectiveType;
+}
+
+const { title, file, type } = Astro.props as Props;
+const absoluteFileUrl = new URL(file, Astro.url.origin).href;
+const capitalizedType = replaceSeparatorsAndCapitalize(type);
+---
+
+<article
+  class="flex h-full flex-col gap-5 rounded-lg border bg-card p-5 text-card-foreground shadow-sm sm:flex-row"
+>
+  <figure
+    class="relative w-full overflow-hidden rounded-lg sm:w-2/5 md:w-1/3 lg:w-1/3 xl:w-1/4"
+  >
+    <Image
+      src={heroImage}
+      alt={title}
+      class="h-48 w-full object-cover sm:h-full"
+      loading="eager"
+    />
+  </figure>
+  <div class="flex w-full flex-col gap-4 sm:w-3/5 md:w-2/3 lg:w-2/3 xl:w-3/4">
+    <TextElement variant="title" className="text-2xl text-primary">
+      {capitalizedType}
+    </TextElement>
+    <TextElement
+      variant="body"
+      itemProp="description"
+      className="line-clamp-4 scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight lg:text-base xl:text-base"
+    >
+      {title}
+    </TextElement>
+    <ButtonLink
+      variant={"outline"}
+      href={absoluteFileUrl}
+      itemProp="url"
+      aria-label={`Read full ${type} on ${title}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-auto gap-2 self-end border-primary text-primary"
+    >
+      <ExternalLink size={14} /> Read more
+    </ButtonLink>
+  </div>
+</article>
