@@ -13,10 +13,14 @@ const { abouts, className } = Astro.props;
 const tw = "grid place-items-center gap-6 pt-12 grid-cols-1";
 ---
 
-<div class={cn(tw, className)}>
-  {
-    abouts.map((about) => {
-      return <Card title={about?.data.title} body={about?.body} />;
-    })
-  }
+<div aria-label="Strategic Goals">
+  <ul class={cn(tw, className)}>
+    {
+      abouts.map((about) => (
+        <li>
+          <Card title={about.data.title} body={about.body} />
+        </li>
+      ))
+    }
+  </ul>
 </div>

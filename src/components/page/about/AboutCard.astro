@@ -1,4 +1,6 @@
 ---
+import TextElement from "@/components/TextElement";
+
 interface Props {
   title: string | null;
   body: string;
@@ -7,13 +9,10 @@ interface Props {
 const { title, body } = Astro.props as Props;
 ---
 
-<div class="card h-full">
-  <div
-    class="shadow-m flex h-full flex-col rounded-lg border border-gray-200 bg-white !shadow-none"
-  >
-    <div class="flex h-full flex-col justify-center gap-4 p-6">
-      {title && <b>{title}</b>}
-      <p>{body}</p>
-    </div>
+<div class="h-full rounded-lg border bg-card text-card-foreground shadow-sm">
+  <div class="flex flex-col justify-center gap-4 p-6">
+    {title && <TextElement variant="smallheading">{title}</TextElement>}
+    <TextElement variant="body" className="grow text-pretty">{body}</TextElement
+    >
   </div>
 </div>

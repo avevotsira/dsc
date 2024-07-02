@@ -50,6 +50,9 @@ const transition = getArticleUrl(page.slug, lang as SupportedLanguage);
             loading="eager"
             transition:name={`image-${transition}`}
           />
+          <figcaption class="sr-only">
+            {page.data.title}
+          </figcaption>
         </figure>
         <TextElement
           variant="heading"
