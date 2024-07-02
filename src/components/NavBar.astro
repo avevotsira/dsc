@@ -44,10 +44,12 @@ const navigationItems = getLocalizedRoutes(routes, locale);
     </a>
     <div class="grow"></div>
     <NavMenu navMenuItem={navigationItems} client:load />
-    <LanguageSwitcher
-      currentPath={currentPath}
-      initialLocale={locale as SupportedLanguage}
-      client:load
-    />
+    <div class="flex ps-2 align-middle">
+      <LanguageSwitcher
+        currentPath={currentPath}
+        initialLocale={locale as SupportedLanguage}
+        client:load
+      />
+    </div>
   </div>
 </div>
