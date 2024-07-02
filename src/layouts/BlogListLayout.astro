@@ -13,12 +13,19 @@ interface Props {
   description: string;
   canonicalURL: string;
   articles: CollectionEntry<"articles">[];
+  image?: string;
 }
 
-const { title, description, canonicalURL, articles } = Astro.props;
+const {
+  title,
+  description,
+  canonicalURL,
+  articles,
+  image = "/default-og-image.jpg",
+} = Astro.props;
 const siteTitle = "Your Site Name";
 const authorName = "Digital Security Committee";
-const authorUrl = Astro.site?.toString() || "https://your-site-url.com"; // Replace with your actual site URL if Astro.site is not available
+const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
 ---
 
 <!doctype html>
@@ -38,12 +45,14 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com"; // Repl
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
     <ViewTransitions />
 
@@ -61,6 +70,7 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com"; // Repl
         name: title,
         description: description,
         url: Astro.url,
+        image: new URL(image, Astro.url).toString(),
         isPartOf: {
           "@type": "WebSite",
           name: siteTitle,
@@ -68,10 +78,10 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com"; // Repl
         },
         about: {
           "@type": "Thing",
-          name: "Blog Articles",
+          name: "News Articles",
         },
         hasPart: articles.map((article) => ({
-          "@type": "BlogPosting",
+          "@type": "NewsArticle",
           headline: article.data.title,
           url: new URL(article.slug, Astro.site).toString(),
           datePublished: new Date(article.data.date).toISOString(),
@@ -87,13 +97,11 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com"; // Repl
       })}
     />
   </head>
-  <body>
+  <body class="min-h-screen">
     <header aria-label="Main navigation">
       <NavBar />
     </header>
-    <main class="min-h-screen">
-      <slot />
-    </main>
+    <slot />
     <Footer />
   </body>
 </html>

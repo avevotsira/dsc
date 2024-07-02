@@ -21,7 +21,10 @@ const links = getLocalizedRoutes(
 );
 ---
 
-<nav class="sticky top-0 z-50 bg-primary text-primary-foreground">
+<nav
+  class="sticky top-0 z-50 bg-primary text-primary-foreground"
+  aria-label="Main navigation"
+>
   <div class="container mx-auto flex max-w-screen-2xl p-8">
     <a href={getRelativeLocaleUrl(locale, Routes.Home)}>
       <div class="text-lg font-bold">
