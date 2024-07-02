@@ -1,3 +1,4 @@
+import { ABOUT_TYPES, type AboutType } from "./about.type";
 import { DIRECTIVE_TYPES, type DirectiveType } from "./content.type";
 import { languages } from "@/i18n/ui";
 import { defineCollection, z } from "astro:content";
@@ -7,6 +8,10 @@ const SupportedLanguage = Object.values(languages) as [string, ...string[]];
 
 const DirectiveTypeEnum = z.enum(
   Object.values(DIRECTIVE_TYPES) as [DirectiveType, ...DirectiveType[]],
+);
+
+const AboutTypeEnum = z.enum(
+  Object.values(ABOUT_TYPES) as [AboutType, ...AboutType[]],
 );
 
 const articleSchema = ({ image }: SchemaContext) =>
@@ -36,7 +41,19 @@ const directivesCollection = defineCollection({
   schema: directiveSchema,
 });
 
+const aboutsSchema = z.object({
+  date: z.string(),
+  title: z.string().nullable(),
+  lang: z.enum(SupportedLanguage),
+  type: AboutTypeEnum,
+});
+
+const aboutsCollection = defineCollection({
+  schema: aboutsSchema,
+});
+
 export const collections = {
   articles: articlesCollection,
   directives: directivesCollection,
+  abouts: aboutsCollection,
 };
