@@ -1,5 +1,5 @@
 ---
-import { formatDate } from "@/lib/date-helper";
+import { replaceSeparatorsAndCapitalize } from "@/lib/string-helper";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -7,63 +7,57 @@ import TextElement from "@/components/TextElement";
 
 import heroImage from "../../../../static/Hero.png";
 import type { DirectiveType } from "@/content/content.type";
-import type { SupportedLanguage } from "@/i18n/ui";
 import { Image } from "astro:assets";
+import { ExternalLink } from "lucide-react";
 
 interface Props {
   title: string;
   body: string;
-  date: string;
-  lang: SupportedLanguage;
   file: string;
   type: DirectiveType;
 }
 
-const { title, lang, date, file, type } = Astro.props as Props;
+const { title, file, type } = Astro.props as Props;
 
 const absoluteFileUrl = new URL(file, Astro.url.origin).href;
+
+const capitalizedType = replaceSeparatorsAndCapitalize(type);
 ---
 
 <article
-  itemscope
-  itemtype="https://schema.org/Article"
-  class="grid grid-cols-5 gap-4 rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
+  class="flex h-full flex-col gap-5 rounded-lg border bg-card p-5 text-card-foreground shadow-sm md:flex-row"
 >
-  <figure class="col-span-1">
-    <AspectRatio ratio={9 / 16}>
+  <figure class="h-full w-2/3">
+    <AspectRatio ratio={3 / 4} className="h-full">
       <Image
         src={heroImage}
         alt={title}
-        class="w-full rounded-lg"
-        loading="lazy"
+        class="size-full rounded-lg"
+        loading="eager"
       />
     </AspectRatio>
   </figure>
-  <div class="col-span-4 flex flex-col justify-between gap-2">
-    <TextElement variant="smallheading">{type}</TextElement>
-    <time
-      itemprop="datePublished"
-      datetime={new Date(date).toISOString()}
-      class="text-left text-mptc-secondary-foreground"
-    >
-      {formatDate(date, lang)}
-    </time>
+  <div class="flex flex-col gap-4">
+    <TextElement variant="title" className="text-2xl text-primary">
+      {capitalizedType}
+    </TextElement>
     <TextElement
-      variant="subheading"
+      variant="body"
       itemProp="description"
       className="line-clamp-4 scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight lg:text-base xl:text-base"
     >
       {title}
     </TextElement>
     <ButtonLink
+      variant={"outline"}
       href={absoluteFileUrl}
       itemProp="url"
       aria-label={`Read full ${type} on ${title}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="self-end"
+      className="mt-auto h-10 gap-2 self-end border-primary text-primary"
     >
-      Read full decree
+      <ExternalLink size={14} /> Read more
     </ButtonLink>
   </div>
 </article>
