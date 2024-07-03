@@ -18,6 +18,8 @@ const { title, subtitle } = Astro.props;
     alt="Hero background"
     class="absolute inset-0 size-full object-cover"
     loading={"eager"}
+    widths={[200, 400, 800]}
+    sizes="(max-width: 640px) 100vw, (max-width: 768px) 40vw, (max-width: 1024px) 33vw, 25vw"
   />
   <div class="absolute inset-0 bg-black opacity-80" aria-hidden="true"></div>
   <div

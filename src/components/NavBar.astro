@@ -41,7 +41,10 @@ const navigationItems = getLocalizedRoutes(routes, locale);
 >
 <nav class="bg-primary-foreground shadow-md" aria-label="Main navigation">
   <div class="container mx-auto flex max-w-screen-2xl p-6">
-    <a href={getRelativeLocaleUrl(locale, Routes.Home)}>
+    <a
+      href={getRelativeLocaleUrl(locale, Routes.Home)}
+      aria-label="Go to home page"
+    >
       <div class="text-lg font-bold">
         <div>LOGO</div>
       </div>
