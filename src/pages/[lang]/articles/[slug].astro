@@ -50,26 +50,21 @@ const transition = getArticleUrl(page.slug, lang as SupportedLanguage);
             loading="eager"
             transition:name={`image-${transition}`}
           />
+          <figcaption class="sr-only">
+            {page.data.title}
+          </figcaption>
         </figure>
         <TextElement
           variant="heading"
           className="text-center"
-          itemProp="headline"
           transitionName={`title-${transition}`}
         >
           {page.data.title}
         </TextElement>
         <div class="my-4 flex items-center justify-between">
-          <span
-            itemprop="author"
-            itemscope
-            itemtype="https://schema.org/Organization"
-          >
-            <span itemprop="name">Digital Security Committee</span>
-          </span>
+          <span>Digital Security Committee</span>
           <time
             datetime={toISOString(publicationDate)}
-            itemprop="datePublished"
             transition:name={`date-${transition}`}
             class="text-right text-mptc-secondary-foreground"
           >
@@ -77,7 +72,7 @@ const transition = getArticleUrl(page.slug, lang as SupportedLanguage);
           </time>
         </div>
       </header>
-      <section itemprop="articleBody" transition:name={`body-${transition}`}>
+      <section transition:name={`body-${transition}`}>
         <Content />
       </section>
     </ProseWrapper>

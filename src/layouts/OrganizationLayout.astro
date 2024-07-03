@@ -12,21 +12,16 @@ interface Props {
   description?: string;
   image?: string;
   canonicalURL?: string;
-  type?: "website" | "article";
-  publishDate?: Date;
 }
+
 const {
   title,
-  description = "Default description of your site",
-  image = "/default-og-image.jpg",
+  description = "Default description of your organization",
+  image = "/default-org-image.jpg",
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
-  type = "website",
-  publishDate,
 } = Astro.props;
 
 const siteTitle = "Digital Security Committee";
-const authorName = "Digital Security Committee";
-const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
 ---
 
 <!doctype html>
@@ -42,7 +37,7 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content={type} />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -55,55 +50,45 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-    <!-- If it's an article page -->
-    {
-      publishDate && (
-        <meta
-          property="article:published_time"
-          content={publishDate.toISOString()}
-        />
-      )
-    }
-
     <ViewTransitions />
 
-    <!-- JSON-LD structured data -->
+    <!-- JSON-LD structured data for Organization -->
     <script
-      is:inline
       type="application/ld+json"
       set:html={JSON.stringify({
         "@context": "https://schema.org",
-        "@type": type === "article" ? "Article" : "WebPage",
-        mainEntityOfPage: {
-          "@type": "WebPage",
-          "@id": Astro.url,
-        },
-        headline: title,
+        "@type": "Organization",
+        name: siteTitle,
+        url: Astro.site,
+        logo: new URL("/logo.png", Astro.url),
         description: description,
-        image: new URL(image, Astro.url),
-        author: {
-          "@type": "Organization",
-          name: authorName,
-          url: authorUrl,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Your City",
+          addressRegion: "Your Region",
+          postalCode: "Your Postal Code",
+          addressCountry: "Your Country",
         },
-        publisher: {
-          "@type": "Organization",
-          name: siteTitle,
-          logo: {
-            "@type": "ImageObject",
-            url: new URL("/logo.png", Astro.url),
-          },
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+1-234-567-8901",
+          contactType: "customer support",
         },
-        datePublished: publishDate ? publishDate.toISOString() : null,
-        dateModified: new Date().toISOString(),
+        sameAs: [
+          "https://www.facebook.com/yourorganization",
+          "https://twitter.com/yourorganization",
+          "https://www.linkedin.com/company/yourorganization",
+        ],
       })}
     />
   </head>
-  <header class="sticky top-0 z-10">
-    <NavBar />
-  </header>
   <body class="min-h-screen">
-    <slot />
+    <header class="sticky top-0 z-10">
+      <NavBar />
+    </header>
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>

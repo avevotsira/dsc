@@ -4,9 +4,22 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 
 export enum Routes {
   Home = "/",
-  About = "/articles",
+  About = "/about",
+  Structure = "/struture",
+  RoyalDecrees = "/royal-decrees",
+  SubDecrees = "/sub-decrees",
+  Policies = "/policies",
+  Decisions = "/decisions",
+  Videos = "/videos",
+  Aritcles = "/articles",
   Projects = "/projects",
   Contact = "/contact",
+}
+
+interface RouteType {
+  href?: string;
+  label: string;
+  children?: RouteType[];
 }
 
 /**
@@ -16,7 +29,7 @@ export enum Routes {
  * @param {string} locale - The locale to use for localization, defaults to defaultLang.
  * @return {Array<{ href: string; label: string }>} The array of localized routes.
  */
-export function getLocalizedRoutes(
+export function getLocalizedRoute(
   paths: { href: string; label: string }[],
   locale: string,
 ) {
@@ -24,6 +37,29 @@ export function getLocalizedRoutes(
     ...path,
     href: getRelativeLocaleUrl(locale, path.href),
   }));
+}
+
+export function getLocalizedRoutes(
+  paths: RouteType[],
+  locale: string,
+): RouteType[] {
+  return paths.map((path) => {
+    if (path.href) {
+      return {
+        label: path.label,
+        href: getRelativeLocaleUrl(locale, path.href),
+      };
+    }
+
+    if (path.children) {
+      return {
+        label: path.label,
+        children: getLocalizedRoutes(path.children, locale),
+      };
+    }
+
+    return path;
+  });
 }
 
 export const getArticleUrl = (slug: string, lang: SupportedLanguage) => {

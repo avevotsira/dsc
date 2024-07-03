@@ -1,31 +1,94 @@
 ---
-import Main from "@/components/Main.astro";
+import ArticleList from "@/components/page/article/ArticleList.astro";
+import Hero from "@/components/page/home/Hero.astro";
+import HomeMain from "@/components/page/home/HomeMain.astro";
+import LawCardList from "@/components/page/home/law/LawCardList.astro";
 import TextElement from "@/components/TextElement";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
 
-import { languages } from "@/i18n/ui";
+import { languages, type SupportedLanguage } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
 import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const lang = Astro.currentLocale as SupportedLanguage;
 
 export function getStaticPaths() {
   return Object.values(languages).map((lang) => ({ params: { lang } }));
 }
 
-const lang = Astro.currentLocale;
+const allArticles = await getCollection("articles");
+
+const langArticles = allArticles.filter(
+  (article) => article.data.lang === lang,
+);
+
+const latestArticles = langArticles
+  .sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
+  .slice(0, 3);
+
+const allDirectives = await getCollection("directives");
+const langDirectives = allDirectives.filter(
+  (article) => article.data.lang === lang,
+);
+
+const latestDirectives = langDirectives
+  .sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
+  .slice(0, 3);
+
 const t = useTranslations(lang);
 ---
 
 <Layout title={`Welcome to Astro - ${lang}`}>
-  <Main>
-    <section aria-labelledby="what-we-do-title">
-      <TextElement
-        id="what-we-do-title"
-        variant="subheading"
-        className="text-center"
+  <HomeMain>
+    <div class="flex flex-col items-center gap-16">
+      <section
+        aria-label="hero-section"
+        class="w-full text-balance text-center"
       >
-        {t("home.whatwedo")}
-      </TextElement>
-      <WhatWeDoGrid />
-    </section>
-  </Main>
+        <Hero
+          title="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages."
+          subtitle="It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+        />
+      </section>
+      <div
+        class="container flex flex-col items-center gap-16 px-24 py-8 max-sm:p-5"
+      >
+        <section aria-labelledby="what-we-do-heading">
+          <TextElement
+            variant="subheading"
+            id="what-we-do-heading"
+            className="mb-4 text-center"
+          >
+            {t("home.whatwedo")}
+          </TextElement>
+          <WhatWeDoGrid />
+        </section>
+        <section aria-labelledby="latest-news-heading">
+          <TextElement
+            variant="subheading"
+            id="latest-news-heading"
+            className="mb-4 text-center"
+          >
+            {"Latest News And Events"}
+          </TextElement>
+          <ArticleList articles={latestArticles} lang={lang} />
+        </section>
+        <section aria-labelledby="law-regulations-heading">
+          <TextElement
+            variant="subheading"
+            id="law-regulations-heading"
+            className="mb-4 text-center"
+          >
+            {"Law and Regulations"}
+          </TextElement>
+          <LawCardList directives={latestDirectives} lang={lang} />
+        </section>
+      </div>
+    </div>
+  </HomeMain>
 </Layout>

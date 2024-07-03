@@ -21,9 +21,8 @@ const { title, body, href, image, date, lang } = Astro.props as Props;
 ---
 
 <article
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
   class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
+  aria-labelledby={`article-title-${href}`}
 >
   <div>
     <header class="flex flex-col gap-2">
@@ -38,11 +37,7 @@ const { title, body, href, image, date, lang } = Astro.props as Props;
           />
         </AspectRatio>
       </figure>
-      <time
-        itemprop="datePublished"
-        datetime={toISOString(date)}
-        transition:name={`date-${href}`}
-      >
+      <time datetime={toISOString(date)} transition:name={`date-${href}`}>
         <TextElement
           variant="body"
           className="text-right text-mptc-secondary-foreground"
@@ -52,24 +47,27 @@ const { title, body, href, image, date, lang } = Astro.props as Props;
       </time>
       <TextElement
         variant="smallheading"
-        itemProp="headline"
         transitionName={`title-${href}`}
+        id={`article-title-${href}`}
       >
         {title}
       </TextElement>
     </header>
-    <section transition:name={`body-${href}`}>
-      <TextElement
-        itemProp="abstract"
-        className="mt-2 line-clamp-4 text-card-foreground"
-      >
+    <section transition:name={`body-${href}`} aria-label="Article summary">
+      <TextElement className="mt-2 line-clamp-4 text-card-foreground">
         {body}
       </TextElement>
     </section>
   </div>
   <div class="flex justify-center pt-5">
-    <ButtonLink href={href} className="w-full" itemProp="url">
-      Read more
+    <ButtonLink
+      href={href}
+      className="w-full"
+      aria-labelledby={`read-more-${href}`}
+    >
+      <span id={`read-more-${href}`}
+        >Read more<span class="sr-only"> about {title}</span></span
+      >
     </ButtonLink>
   </div>
 </article>

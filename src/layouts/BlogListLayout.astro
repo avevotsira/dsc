@@ -3,28 +3,30 @@ import NavBar from "@/components/NavBar.astro";
 
 import "@/styles/globals.css";
 
+import { getArticleUrl } from "@/lib/route";
+
 import Footer from "@/components/footer";
 
+import type { SupportedLanguage } from "@/i18n/ui";
+import type { CollectionEntry } from "astro:content";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
-  description?: string;
+  description: string;
+  canonicalURL: string;
+  articles: CollectionEntry<"articles">[];
   image?: string;
-  canonicalURL?: string;
-  type?: "website" | "article";
-  publishDate?: Date;
 }
+
 const {
   title,
-  description = "Default description of your site",
+  description,
+  canonicalURL,
+  articles,
   image = "/default-og-image.jpg",
-  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
-  type = "website",
-  publishDate,
 } = Astro.props;
-
-const siteTitle = "Digital Security Committee";
+const siteTitle = "Your Site Name";
 const authorName = "Digital Security Committee";
 const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
 ---
@@ -42,7 +44,7 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content={type} />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -55,54 +57,59 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-    <!-- If it's an article page -->
-    {
-      publishDate && (
-        <meta
-          property="article:published_time"
-          content={publishDate.toISOString()}
-        />
-      )
-    }
-
     <ViewTransitions />
 
-    <!-- JSON-LD structured data -->
+    <!-- Updated JSON-LD structured data for CollectionPage -->
     <script
       is:inline
       type="application/ld+json"
       set:html={JSON.stringify({
         "@context": "https://schema.org",
-        "@type": type === "article" ? "Article" : "WebPage",
+        "@type": "CollectionPage",
         mainEntityOfPage: {
           "@type": "WebPage",
           "@id": Astro.url,
         },
-        headline: title,
+        name: title,
         description: description,
-        image: new URL(image, Astro.url),
-        author: {
-          "@type": "Organization",
-          name: authorName,
-          url: authorUrl,
-        },
-        publisher: {
-          "@type": "Organization",
+        url: Astro.url,
+        image: new URL(image, Astro.url).toString(),
+        isPartOf: {
+          "@type": "WebSite",
           name: siteTitle,
-          logo: {
-            "@type": "ImageObject",
-            url: new URL("/logo.png", Astro.url),
-          },
+          url: Astro.site,
         },
-        datePublished: publishDate ? publishDate.toISOString() : null,
-        dateModified: new Date().toISOString(),
+        about: {
+          "@type": "Thing",
+          name: "News Articles",
+        },
+        hasPart: articles.map((article) => ({
+          "@type": "NewsArticle",
+          headline: article.data.title,
+          url: new URL(
+            getArticleUrl(
+              article.slug,
+              Astro.currentLocale as SupportedLanguage,
+            ),
+            Astro.site,
+          ).toString(),
+          datePublished: new Date(article.data.date).toISOString(),
+          image: article.data.image
+            ? new URL(article.data.image.src, Astro.site).toString()
+            : undefined,
+          author: {
+            "@type": "Organization",
+            name: authorName,
+            url: authorUrl,
+          },
+        })),
       })}
     />
   </head>
-  <header class="sticky top-0 z-10">
-    <NavBar />
-  </header>
   <body class="min-h-screen">
+    <header class="sticky top-0 z-10">
+      <NavBar />
+    </header>
     <slot />
     <Footer />
   </body>
