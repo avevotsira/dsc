@@ -33,8 +33,11 @@ const trimmedTitle = title.trim();
           src={image}
           alt={title}
           class="w-full rounded-lg"
-          loading="lazy"
+          loading="eager"
           transition:name={`image-${href}`}
+          widths={[200, 400, 800]}
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 40vw, (max-width: 1024px) 33vw, 25vw"
+          quality={80}
         />
       </AspectRatio>
     </figure>
