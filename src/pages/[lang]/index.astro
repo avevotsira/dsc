@@ -1,6 +1,6 @@
 ---
-import ArticleList from "@/components/page/article/ArticleList.astro";
 import Hero from "@/components/page/home/Hero.astro";
+import HomeArticleList from "@/components/page/home/HomeArticleList.astro";
 import HomeMain from "@/components/page/home/HomeMain.astro";
 import LawCardList from "@/components/page/home/law/LawCardList.astro";
 import TextElement from "@/components/TextElement";
@@ -76,7 +76,7 @@ const t = useTranslations(lang);
           >
             {"Latest News And Events"}
           </TextElement>
-          <ArticleList articles={latestArticles} lang={lang} />
+          <HomeArticleList articles={latestArticles} lang={lang} />
         </section>
         <section aria-labelledby="law-regulations-heading">
           <TextElement
