@@ -37,7 +37,7 @@ const LanguageSwitcher = ({
       type="button"
       aria-label={`Current language: ${languageNames[initialLocale]}. Click to toggle language.`}
     >
-      <img src={icon.src} width="26" alt="" />
+      <img src={icon.src} width="26" height="26" alt="" />
     </button>
   );
 };
