@@ -23,8 +23,6 @@ const { title, body, href, image, date, lang } = Astro.props as Props;
 const trimmedTitle = title.trim().replace(/\s+/g, "-");
 
 const cleanBody = removeMarkdown(body);
-
-console.log(trimmedTitle);
 ---
 
 <article
@@ -60,6 +58,7 @@ console.log(trimmedTitle);
       variant="title"
       transitionName={`title-${href}`}
       id={`article-${trimmedTitle}`}
+      className="text-lg"
     >
       {title}
     </TextElement>
