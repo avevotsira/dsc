@@ -22,13 +22,10 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
 ---
 
 <article
-  itemscope
-  itemtype="https://schema.org/Article"
   class="flex h-full flex-col rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
 >
   <div class="flex grow flex-col gap-2">
     <time
-      itemprop="datePublished"
       class="text-left text-mptc-secondary-foreground"
       datetime={new Date(date).toISOString()}
     >
@@ -36,7 +33,6 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
     </time>
     <TextElement
       variant="subheading"
-      itemProp="description"
       className="line-clamp-4 scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight lg:text-base xl:text-base"
     >
       {title}
@@ -46,7 +42,6 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
     <ButtonLink
       href={absoluteFileUrl}
       className="w-full"
-      itemProp="url"
       aria-label={`(opens in a new tab) Read full ${type} on ${title}`}
       target="_blank"
       rel="noopener noreferrer"

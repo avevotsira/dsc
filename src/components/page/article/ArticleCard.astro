@@ -1,5 +1,6 @@
 ---
 import { formatDate, toISOString } from "@/lib/date-helper";
+import { removeMarkdown } from "@/lib/string-helper";
 
 import { ButtonLink } from "../../ButtonLink";
 import TextElement from "../../TextElement";
@@ -19,7 +20,8 @@ interface Props {
 
 const { title, body, href, image, date, lang } = Astro.props as Props;
 
-const trimmedTitle = title.trim();
+const trimmedTitle = title.trim().replace(/\s+/g, "-");
+const cleanBody = removeMarkdown(body);
 ---
 
 <article
@@ -61,7 +63,7 @@ const trimmedTitle = title.trim();
   </header>
   <section transition:name={`body-${href}`} aria-label="Article summary">
     <TextElement className="mt-2 line-clamp-4 text-card-foreground">
-      {body}
+      {cleanBody}
     </TextElement>
   </section>
   <div class="flex justify-center pt-5">

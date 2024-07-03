@@ -38,23 +38,18 @@ const latestDirectives = langDirectives
   .sort(
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   )
-  .slice(0, 3);
+  .slice(0, 4);
 
 const t = useTranslations(lang);
 ---
 
 <Layout title={`Welcome to Astro - ${lang}`}>
   <HomeMain>
-    <div class="flex flex-col items-center gap-8">
-      <section
-        aria-label="hero-section"
-        class="w-full text-balance text-center"
-      >
-        <Hero
-          title="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages."
-          subtitle="It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-        />
-      </section>
+    <section aria-label="hero-section">
+      <Hero
+        title="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages."
+        subtitle="It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      />
       <div
         class="container flex flex-col items-center gap-16 px-24 py-8 max-sm:p-5"
       >
@@ -89,6 +84,6 @@ const t = useTranslations(lang);
           <LawCardList directives={latestDirectives} lang={lang} />
         </section>
       </div>
-    </div>
+    </section>
   </HomeMain>
 </Layout>
