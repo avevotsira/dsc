@@ -22,43 +22,43 @@ const { title, body, href, image, date, lang } = Astro.props as Props;
 
 <article
   class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
-  aria-labelledby={`article-title-${href}`}
+  aria-labelledby={`article-${href}`}
 >
-  <div>
-    <header class="flex flex-col gap-2">
-      <figure>
-        <AspectRatio ratio={16 / 9}>
-          <Image
-            src={image}
-            alt={title}
-            class="w-full rounded-lg"
-            loading="lazy"
-            transition:name={`image-${href}`}
-          />
-        </AspectRatio>
-      </figure>
-      <time datetime={toISOString(date)} transition:name={`date-${href}`}>
-        <TextElement
-          variant="body"
-          className="text-right text-mptc-secondary-foreground"
-        >
-          {formatDate(date, lang)}
-        </TextElement>
-      </time>
-      <TextElement
-        variant="smallheading"
-        transitionName={`title-${href}`}
-        id={`article-title-${href}`}
+  <header class="flex flex-col gap-2">
+    <figure>
+      <AspectRatio ratio={16 / 9}>
+        <Image
+          src={image}
+          alt={title}
+          class="w-full rounded-lg"
+          loading="lazy"
+          transition:name={`image-${href}`}
+        />
+      </AspectRatio>
+    </figure>
+    <time
+      datetime={toISOString(date)}
+      transition:name={`date-${href}`}
+      class="text-right text-base leading-6 text-mptc-secondary-foreground"
+    >
+      <TextElement className="sr-only" variant="paragraph"
+        >published on:</TextElement
       >
-        {title}
-      </TextElement>
-    </header>
-    <section transition:name={`body-${href}`} aria-label="Article summary">
-      <TextElement className="mt-2 line-clamp-4 text-card-foreground">
-        {body}
-      </TextElement>
-    </section>
-  </div>
+      {formatDate(date, lang)}
+    </time>
+    <TextElement
+      variant="smallheading"
+      transitionName={`title-${href}`}
+      id={`article-${href}`}
+    >
+      {title}
+    </TextElement>
+  </header>
+  <section transition:name={`body-${href}`} aria-label="Article summary">
+    <TextElement className="mt-2 line-clamp-4 text-card-foreground">
+      {body}
+    </TextElement>
+  </section>
   <div class="flex justify-center pt-5">
     <ButtonLink
       href={href}
