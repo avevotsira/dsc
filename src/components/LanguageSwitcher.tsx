@@ -1,5 +1,7 @@
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import { navigate } from "astro:transitions/client";
+import enIcon from "src/static/lang-icon/en.svg";
+import kmIcon from "src/static/lang-icon/km.svg";
 
 const LanguageSwitcher = ({
   currentPath,
@@ -18,9 +20,24 @@ const LanguageSwitcher = ({
     navigate(newPath);
   };
 
+  const langImages = {
+    en: kmIcon,
+    km: enIcon,
+  };
+  const icon = langImages[initialLocale];
+
+  const languageNames = {
+    en: "English",
+    km: "Khmer",
+  };
+
   return (
-    <button onClick={toggleLanguage} type="button" aria-label="Toggle language">
-      {languages[initialLocale]}
+    <button
+      onClick={toggleLanguage}
+      type="button"
+      aria-label={`Current language: ${languageNames[initialLocale]}. Click to toggle language.`}
+    >
+      <img src={icon.src} width="26" height="26" alt="" />
     </button>
   );
 };

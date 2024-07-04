@@ -42,12 +42,15 @@ const transition = getArticleUrl(page.slug, lang as SupportedLanguage);
   <Main>
     <ProseWrapper>
       <header>
-        <figure>
+        <figure role="none">
           <Image
             src={page.data.image}
             alt={page.data.title}
-            class="w-full rounded-lg"
+            widths={[240, 540, 720, 1080, 1440]}
+            sizes="(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1080px) 720px, (max-width: 1440px) 1080px, 1440px"
+            class="rounded-lg"
             loading="eager"
+            quality={80}
             transition:name={`image-${transition}`}
           />
           <figcaption class="sr-only">

@@ -35,19 +35,28 @@ export const routes = [
 const navigationItems = getLocalizedRoutes(routes, locale);
 ---
 
-<div class="bg-white shadow-md" aria-label="Main navigation">
+<a
+  class="absolute left-0 m-3 -translate-y-16 bg-primary p-3 text-primary-foreground transition focus:translate-y-0"
+  href="#main-content">Skip Navigation</a
+>
+<nav class="bg-primary-foreground shadow-md" aria-label="Main navigation">
   <div class="container mx-auto flex max-w-screen-2xl p-6">
-    <a href={getRelativeLocaleUrl(locale, Routes.Home)}>
+    <a
+      href={getRelativeLocaleUrl(locale, Routes.Home)}
+      aria-label="Go to home page"
+    >
       <div class="text-lg font-bold">
         <div>LOGO</div>
       </div>
     </a>
     <div class="grow"></div>
     <NavMenu navMenuItem={navigationItems} client:load />
-    <LanguageSwitcher
-      currentPath={currentPath}
-      initialLocale={locale as SupportedLanguage}
-      client:load
-    />
+    <div class="flex ps-2 align-middle">
+      <LanguageSwitcher
+        currentPath={currentPath}
+        initialLocale={locale as SupportedLanguage}
+        client:load
+      />
+    </div>
   </div>
-</div>
+</nav>
