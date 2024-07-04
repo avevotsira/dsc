@@ -4,6 +4,7 @@ import HomeArticleList from "@/components/page/home/HomeArticleList.astro";
 import HomeMain from "@/components/page/home/HomeMain.astro";
 import LawCardList from "@/components/page/home/law/LawCardList.astro";
 import TextElement from "@/components/TextElement";
+import Vision from "@/components/Vision";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
 
 import { languages, type SupportedLanguage } from "@/i18n/ui";
@@ -53,6 +54,7 @@ const t = useTranslations(lang);
       <div
         class="container flex flex-col items-center gap-16 px-24 py-8 max-sm:p-5"
       >
+        <selection aria-labelledby="vision"><Vision /></selection>
         <section aria-labelledby="what-we-do-heading">
           <TextElement
             variant="subheading"
