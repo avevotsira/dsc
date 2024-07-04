@@ -26,34 +26,33 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
 }) => {
   return (
     <Sheet>
-      <SheetTrigger>
+      <SheetTrigger className="lg:hidden">
         <Menu
-          className="ml-4 h-8 w-8 text-blue-950 lg:hidden"
+          className="ml-4 size-8 text-blue-950"
           aria-label="Open mobile menu"
         />
       </SheetTrigger>
       <SheetContent className="w-[300px] sm:w-[400px]">
-        {/* need to include tittle and description otherwise it'll log error and warning */}
-        <SheetHeader className="hidden">
+        <SheetHeader className="sr-only">
           <SheetTitle>Mobile Menu</SheetTitle>
           <SheetDescription>Mobile Navigation</SheetDescription>
         </SheetHeader>
         <ul className="h-[calc(100vh-4rem)] overflow-auto px-0 pt-2">
-          <Accordion type="single" collapsible className="border-0">
-            {navMenuItem?.map((item, index) => (
-              <AccordionItem
-                key={item.label}
-                value={"item_" + index}
-                className="rounded border-0 data-[state=open]:bg-accent/50"
-              >
-                {item.href ? (
-                  <li className="rounded-md bg-background text-sm font-medium hover:bg-accent md:text-base">
-                    <a className="block px-4 py-2" href={item.href}>
-                      {item.label}
-                    </a>
-                  </li>
-                ) : (
-                  <>
+          {navMenuItem?.map((item, index) => (
+            <li key={item.label}>
+              {item.href ? (
+                <a
+                  className="block rounded-md bg-background px-4 py-2 text-sm font-medium hover:bg-accent md:text-base"
+                  href={item.href}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Accordion type="single" collapsible className="border-0">
+                  <AccordionItem
+                    value={`item_${index}`}
+                    className="rounded border-0 data-[state=open]:bg-accent/50"
+                  >
                     <AccordionTrigger className="rounded-md bg-transparent px-4 py-2 text-sm font-medium hover:bg-accent hover:no-underline md:text-base">
                       {item.label}
                     </AccordionTrigger>
@@ -71,11 +70,11 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
                         ))}
                       </ul>
                     </AccordionContent>
-                  </>
-                )}
-              </AccordionItem>
-            ))}
-          </Accordion>
+                  </AccordionItem>
+                </Accordion>
+              )}
+            </li>
+          ))}
         </ul>
       </SheetContent>
     </Sheet>
