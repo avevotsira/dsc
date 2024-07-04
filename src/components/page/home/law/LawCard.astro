@@ -30,11 +30,12 @@ const capitalizedType = replaceSeparatorsAndCapitalize(type);
     <Image
       src={heroImage}
       alt={type}
-      widths={[200, 400, 800]}
-      sizes="(max-width: 640px) 100vw, (max-width: 768px) 40vw, (max-width: 1024px) 33vw, 25vw"
-      quality={80}
+      widths={[384, 512, 768]}
+      sizes="(max-width: 640px) 100vw, (max-width: 768px) 256px, (max-width: 1024px) 256px, 128px"
+      quality="high"
       class="h-36 w-full object-cover sm:h-full"
-      loading="eager"
+      loading="lazy"
+      format="avif"
     />
   </figure>
   <div class="flex w-full flex-col gap-4 sm:w-3/5 md:w-2/3 lg:w-2/3 xl:w-3/4">
