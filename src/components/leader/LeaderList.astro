@@ -1,0 +1,29 @@
+---
+import LeaderCard from "./LeaderCard.astro";
+import type { SupportedLanguage } from "@/i18n/ui";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  leaders: CollectionEntry<"leaders">[];
+  lang: SupportedLanguage;
+}
+
+const { leaders, lang } = Astro.props;
+---
+
+<ul class="flex list-none flex-col gap-5 p-5">
+  {
+    leaders.map((leader, index) => (
+      <li>
+        <LeaderCard
+          name={leader.data.name}
+          image={leader.data.image}
+          title={leader.data.title}
+          body={leader.body}
+          lang={lang}
+          reverse={index % 2 !== 0}
+        />
+      </li>
+    ))
+  }
+</ul>
