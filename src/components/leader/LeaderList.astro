@@ -11,9 +11,9 @@ interface Props {
 const { leaders, lang } = Astro.props;
 ---
 
-<ul class="grid list-none grid-cols-1 gap-5 p-5 md:grid-cols-1 lg:grid-cols-1">
+<ul class="flex list-none flex-col gap-5 p-5">
   {
-    leaders.map((leader) => (
+    leaders.map((leader, index) => (
       <li>
         <LeaderCard
           name={leader.data.name}
@@ -21,6 +21,7 @@ const { leaders, lang } = Astro.props;
           title={leader.data.title}
           body={leader.body}
           lang={lang}
+          reverse={index % 2 !== 0}
         />
       </li>
     ))

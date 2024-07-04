@@ -46,13 +46,14 @@ const transition = getArticleUrl(page.slug, lang as SupportedLanguage);
           <Image
             src={page.data.image}
             alt={page.data.title}
-            widths={[240, 540, 720, 1080, 1440]}
-            sizes="(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1080px) 720px, (max-width: 1440px) 1080px, 1440px"
             class="rounded-lg"
             loading="eager"
             quality={80}
+            widths={[640, 768, 1024, 1280]}
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 768px, (max-width: 1024px) 1024px, 1280px"
             transition:name={`image-${transition}`}
           />
+
           <figcaption class="sr-only">
             {page.data.title}
           </figcaption>

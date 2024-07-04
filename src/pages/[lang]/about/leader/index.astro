@@ -23,14 +23,10 @@ const leaders = allLeaders.filter((leader) => leader.data.lang === lang);
 <Layout title={title}>
   <Main>
     <section aria-label={title}>
-      <header>
-        <TextElement
-          variant="heading"
-          className="mb-4 text-center text-primary"
-        >
-          {title}
-        </TextElement>
-      </header>
+      <TextElement variant="heading" className="mb-4 text-center text-primary">
+        {title}
+      </TextElement>
+
       <LeaderList leaders={leaders} lang={lang} />
     </section>
   </Main>

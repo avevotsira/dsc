@@ -14,7 +14,7 @@ export enum Routes {
   Aritcles = "/articles",
   Projects = "/projects",
   Contact = "/contact",
-  Leader = "/leader",
+  Leader = "/about/leader",
 }
 
 interface RouteType {

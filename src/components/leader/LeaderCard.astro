@@ -1,4 +1,8 @@
 ---
+import { cn } from "@/lib/utils";
+
+import { Separator } from "@/components/ui/separator";
+
 import TextElement from "../TextElement";
 import type { SupportedLanguage } from "@/i18n/ui";
 import type { ImageMetadata } from "astro";
@@ -10,32 +14,41 @@ interface Props {
   image: ImageMetadata;
   body: string;
   lang: SupportedLanguage;
+  reverse: boolean;
 }
 
-const { title, name, body, image } = Astro.props as Props;
+const { title, name, body, image, reverse } = Astro.props as Props;
+
+const articleClasses = cn(
+  "flex flex-col gap-4 md:flex-row",
+  reverse && "md:flex-row-reverse",
+);
 ---
 
-<article class="grid grid-cols-2 gap-4">
-  <figure class="relative w-full">
+<article class={articleClasses}>
+  <figure class="relative w-full md:w-1/2" role="none">
     <Image
       src={image}
-      alt={title}
-      class="h-48 w-full object-cover sm:h-full"
-      loading="lazy"
+      alt={`${title} - ${name}`}
+      class="w-full rounded-lg object-cover sm:h-64 md:h-full"
+      loading="eager"
+      widths={[280, 560, 840, 1100, 1400]}
+      sizes="(max-width: 768px) 100vw, 50vw"
+      quality="high"
     />
   </figure>
-  <div>
-    <header class="flex flex-col gap-2">
+  <div class="w-full md:w-1/2">
+    <header class="flex flex-col gap-4">
       <TextElement variant="title" className="text-2xl text-primary">
         {name}
       </TextElement>
-      <TextElement variant="caption">
+      <TextElement variant="body">
         {title}
       </TextElement>
     </header>
-    <hr class="mt-2" />
+    <Separator className="my-4" />
     <section>
-      <TextElement className="mt-2 line-clamp-4">
+      <TextElement className="mt-2 line-clamp-4 md:line-clamp-none">
         {body}
       </TextElement>
     </section>
