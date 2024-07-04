@@ -1,6 +1,7 @@
 ---
 import { getLocalizedRoutes, Routes } from "@/lib/route";
 
+import MobileNavMenu from "@/components/header/MobileNavMenu";
 import NavMenu from "@/components/header/NavMenu";
 
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -59,5 +60,6 @@ const navigationItems = getLocalizedRoutes(routes, locale);
         client:load
       />
     </div>
+    <MobileNavMenu navMenuItem={navigationItems} client:load />
   </div>
 </nav>
