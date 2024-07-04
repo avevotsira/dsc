@@ -29,8 +29,11 @@ const capitalizedType = replaceSeparatorsAndCapitalize(type);
   >
     <Image
       src={heroImage}
-      alt={title}
-      class="h-48 w-full object-cover sm:h-full"
+      alt={type}
+      widths={[200, 400, 800]}
+      sizes="(max-width: 640px) 100vw, (max-width: 768px) 40vw, (max-width: 1024px) 33vw, 25vw"
+      quality={80}
+      class="h-36 w-full object-cover sm:h-full"
       loading="eager"
     />
   </figure>
@@ -47,12 +50,12 @@ const capitalizedType = replaceSeparatorsAndCapitalize(type);
     <ButtonLink
       variant={"outline"}
       href={absoluteFileUrl}
-      aria-label={`Read full ${type} on ${title}`}
+      aria-label={`(opens in a new tab) Read full ${type} on ${title}`}
       target="_blank"
       rel="noopener noreferrer"
       className="mt-auto gap-2 self-end border-primary text-primary"
     >
-      <ExternalLink size={14} /> Read more
+      <ExternalLink size={14} aria-hidden="true" /> Read full document
     </ButtonLink>
   </div>
 </article>

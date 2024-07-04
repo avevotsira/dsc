@@ -21,6 +21,7 @@ interface Props {
 const { title, body, href, image, date, lang } = Astro.props as Props;
 
 const trimmedTitle = title.trim().replace(/\s+/g, "-");
+
 const cleanBody = removeMarkdown(body);
 ---
 
@@ -54,9 +55,10 @@ const cleanBody = removeMarkdown(body);
       {formatDate(date, lang)}
     </time>
     <TextElement
-      variant="smallheading"
+      variant="title"
       transitionName={`title-${href}`}
       id={`article-${trimmedTitle}`}
+      className="text-lg"
     >
       {title}
     </TextElement>

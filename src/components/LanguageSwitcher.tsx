@@ -26,9 +26,18 @@ const LanguageSwitcher = ({
   };
   const icon = langImages[initialLocale];
 
+  const languageNames = {
+    en: "English",
+    km: "Khmer",
+  };
+
   return (
-    <button onClick={toggleLanguage} type="button" aria-label="Toggle language">
-      <img src={icon.src} width="26" alt="" />
+    <button
+      onClick={toggleLanguage}
+      type="button"
+      aria-label={`Current language: ${languageNames[initialLocale]}. Click to toggle language.`}
+    >
+      <img src={icon.src} width="26" height="26" alt="" />
     </button>
   );
 };
