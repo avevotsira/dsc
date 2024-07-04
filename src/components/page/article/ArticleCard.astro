@@ -37,9 +37,10 @@ const cleanBody = removeMarkdown(body);
           class="w-full rounded-lg"
           loading="eager"
           transition:name={`image-${href}`}
-          widths={[200, 400, 800]}
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 40vw, (max-width: 1024px) 33vw, 25vw"
-          quality={80}
+          widths={[320, 480, 640, 768, 1024]}
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          quality="mid"
+          format="avif"
         />
       </AspectRatio>
     </figure>
