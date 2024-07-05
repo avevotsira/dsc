@@ -9,7 +9,6 @@ import Footer from "@/components/footer";
 
 import type { SupportedLanguage } from "@/i18n/ui";
 import type { CollectionEntry } from "astro:content";
-import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -56,8 +55,6 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
-
-    <ViewTransitions />
 
     <!-- Updated JSON-LD structured data for CollectionPage -->
     <script

@@ -43,34 +43,19 @@ type Props = {
   children?: React.ReactNode;
   className?: string;
   itemProp?: string;
-  transitionName?: string;
 } & React.ComponentProps<Tag>;
-
-function getSanitizedTransitionStyle(transitionName?: string) {
-  if (!transitionName) return undefined;
-  const sanitizedTransitionName = transitionName.replace(
-    /[^a-zA-Z0-9_-]/g,
-    "-",
-  );
-  return { viewTransitionName: sanitizedTransitionName };
-}
 
 export default function TextElement({
   children,
   variant = "body",
   className,
-  transitionName,
   ...rest
 }: Props) {
   const DynamicText = CONFIG[variant].tag;
   const tw = CONFIG[variant].tw;
 
   return (
-    <DynamicText
-      {...rest}
-      className={cn(tw, className)}
-      style={getSanitizedTransitionStyle(transitionName)}
-    >
+    <DynamicText {...rest} className={cn(tw, className)}>
       {children}
     </DynamicText>
   );
