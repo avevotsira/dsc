@@ -52,25 +52,19 @@ const transition = getArticleUrl(page.slug, lang as SupportedLanguage);
             format="avif"
             widths={[640, 768, 1024, 1280]}
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 768px, (max-width: 1024px) 1024px, 1280px"
-            transition:name={`image-${transition}`}
           />
 
           <figcaption class="sr-only">
             {page.data.title}
           </figcaption>
         </figure>
-        <TextElement
-          variant="heading"
-          className="text-center"
-          transitionName={`title-${transition}`}
-        >
+        <TextElement variant="heading" className="text-center">
           {page.data.title}
         </TextElement>
         <div class="my-4 flex items-center justify-between">
           <span>Digital Security Committee</span>
           <time
             datetime={toISOString(publicationDate)}
-            transition:name={`date-${transition}`}
             class="text-right text-mptc-secondary-foreground"
           >
             {formatDate(publicationDate, lang as SupportedLanguage)}

@@ -5,8 +5,6 @@ import "@/styles/globals.css";
 
 import Footer from "@/components/footer";
 
-import { ViewTransitions } from "astro:transitions";
-
 interface Props {
   title: string;
   description?: string;
@@ -49,8 +47,6 @@ const siteTitle = "Digital Security Committee";
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
-
-    <ViewTransitions />
 
     <!-- JSON-LD structured data for Organization -->
     <script

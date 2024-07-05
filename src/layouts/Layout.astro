@@ -5,8 +5,6 @@ import "@/styles/globals.css";
 
 import Footer from "@/components/footer";
 
-import { ViewTransitions } from "astro:transitions";
-
 interface Props {
   title: string;
   description?: string;
@@ -65,8 +63,6 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
       )
     }
 
-    <ViewTransitions />
-
     <!-- JSON-LD structured data -->
     <script
       is:inline
@@ -106,4 +102,6 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
     <slot />
     <Footer />
   </body>
+
+
 </html>

@@ -36,7 +36,6 @@ const cleanBody = removeMarkdown(body);
           alt={title}
           class="w-full rounded-lg"
           loading="eager"
-          transition:name={`image-${href}`}
           widths={[320, 480, 640, 768, 1024]}
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
           quality="mid"
@@ -46,7 +45,6 @@ const cleanBody = removeMarkdown(body);
     </figure>
     <time
       datetime={toISOString(date)}
-      transition:name={`date-${href}`}
       class="text-right text-base leading-6 text-mptc-secondary-foreground"
     >
       <TextElement className="sr-only" variant="paragraph"
@@ -54,11 +52,7 @@ const cleanBody = removeMarkdown(body);
       >
       {formatDate(date, lang)}
     </time>
-    <TextElement
-      variant="smallheading"
-      transitionName={`title-${href}`}
-      id={`article-${trimmedTitle}`}
-    >
+    <TextElement variant="smallheading" id={`article-${trimmedTitle}`}>
       {title}
     </TextElement>
   </header>
