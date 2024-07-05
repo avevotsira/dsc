@@ -1,6 +1,5 @@
 ---
 import { formatDate, toISOString } from "@/lib/date-helper";
-import { getArticleUrl } from "@/lib/route";
 
 import Main from "@/components/Main.astro";
 import ProseWrapper from "@/components/ProseWrapper.astro";
@@ -27,8 +26,6 @@ const {
 const { Content } = await page.render();
 
 const publicationDate = new Date(page.data.date);
-
-const transition = getArticleUrl(page.slug, lang as SupportedLanguage);
 ---
 
 <Layout
@@ -49,9 +46,9 @@ const transition = getArticleUrl(page.slug, lang as SupportedLanguage);
             class="rounded-lg"
             loading="eager"
             quality="high"
-            format="avif"
-            widths={[640, 768, 1024, 1280]}
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 768px, (max-width: 1024px) 1024px, 1280px"
+            format="webp"
+            widths={[480, 768, 1024]}
+            sizes="(min-width: 1024px) 100vw"
           />
 
           <figcaption class="sr-only">
@@ -71,7 +68,7 @@ const transition = getArticleUrl(page.slug, lang as SupportedLanguage);
           </time>
         </div>
       </header>
-      <section transition:name={`body-${transition}`}>
+      <section>
         <Content />
       </section>
     </ProseWrapper>
