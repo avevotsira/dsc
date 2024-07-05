@@ -2,9 +2,9 @@ import LottieAnimation from "../../lottie/LottieAnimation";
 import TextElement from "../../TextElement";
 
 const Vision: React.FC = () => (
-  <div className="flex flex-col gap-4 md:flex-row">
-    <div className="w-full md:w-2/5">
-      <LottieAnimation />
+  <div className="flex flex-col gap-8 md:flex-row">
+    <div className="w-full md:w-2/5 md:justify-center">
+      <LottieAnimation animationType="vision" />
     </div>
     <div className="w-full md:w-3/5">
       <TextElement variant="subheading" id="vision" className="pt-4">

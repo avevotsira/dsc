@@ -3,6 +3,7 @@ import Hero from "@/components/page/home/Hero.astro";
 import HomeArticleList from "@/components/page/home/HomeArticleList.astro";
 import HomeMain from "@/components/page/home/HomeMain.astro";
 import LawCardList from "@/components/page/home/law/LawCardList.astro";
+import Mission from "@/components/page/home/Mission";
 import Vision from "@/components/page/home/Vision";
 import TextElement from "@/components/TextElement";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
@@ -56,6 +57,9 @@ const t = useTranslations(lang);
       >
         <section aria-labelledby="vision">
           <Vision client:idle />
+        </section>
+        <section aria-labelledby="mission">
+          <Mission client:idle />
         </section>
         <section aria-labelledby="what-we-do-heading">
           <TextElement
