@@ -1,11 +1,11 @@
 import TextElement from "./TextElement";
 
 const Vision = () => (
-  <div className="grid grid-cols-1 gap-4 md:grid-cols-5">
-    <div className="md:col-span-2">
+  <div className="flex flex-col gap-4 md:flex-row">
+    <div className="w-full md:w-2/5">
       <div className="h-80 w-full bg-primary">Image</div>
     </div>
-    <div className="md:col-span-3">
+    <div className="w-full md:w-3/5">
       <TextElement variant="subheading" id="vision" className="pt-4">
         Vision
       </TextElement>
