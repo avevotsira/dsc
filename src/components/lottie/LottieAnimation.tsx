@@ -25,7 +25,10 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({
   const { View } = useLottie(options);
 
   return (
-    <div style={{ width, height, maxWidth: "320px", margin: "0 auto" }}>
+    <div
+      aria-hidden="true"
+      style={{ width, height, maxWidth: "320px", margin: "0 auto" }}
+    >
       {View}
     </div>
   );
