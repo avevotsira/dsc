@@ -1,9 +1,10 @@
-import TextElement from "./TextElement";
+import LottieAnimation from "../../lottie/LottieAnimation";
+import TextElement from "../../TextElement";
 
-const Vision = () => (
+const Vision: React.FC = () => (
   <div className="flex flex-col gap-4 md:flex-row">
     <div className="w-full md:w-2/5">
-      <div className="h-80 w-full bg-primary">Image</div>
+      <LottieAnimation />
     </div>
     <div className="w-full md:w-3/5">
       <TextElement variant="subheading" id="vision" className="pt-4">
