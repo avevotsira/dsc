@@ -51,7 +51,8 @@
       "rules": {
         "react/react-in-jsx-scope": "off",
         "react/no-unknown-property": "off",
-        "react-hooks/rules-of-hooks": "off"
+        "react-hooks/rules-of-hooks": "off",
+        "prettier/prettier": "off"
       }
     }
   ]
