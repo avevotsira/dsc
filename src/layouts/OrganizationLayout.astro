@@ -19,6 +19,7 @@ const {
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
 } = Astro.props;
 
+const authorName = "Digital Security Committee";
 const siteTitle = "Digital Security Committee";
 ---
 
@@ -33,6 +34,7 @@ const siteTitle = "Digital Security Committee";
     <title>{title} | {siteTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    <meta property="twitter:creator" content={authorName} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />

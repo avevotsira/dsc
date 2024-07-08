@@ -41,6 +41,7 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
     <title>{title} | {siteTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    <meta property="twitter:creator" content={authorName} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
