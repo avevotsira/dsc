@@ -1,6 +1,5 @@
 ---
 import { formatDate, toISOString } from "@/lib/date-helper";
-import { removeMarkdown } from "@/lib/string-helper";
 
 import { ButtonLink } from "../../ButtonLink";
 import TextElement from "../../TextElement";
@@ -15,14 +14,13 @@ interface Props {
   body: string;
   href: string;
   date: string;
+  description: string;
   lang: SupportedLanguage;
 }
 
-const { title, body, href, image, date, lang } = Astro.props as Props;
+const { title, href, image, date, description, lang } = Astro.props as Props;
 
 const trimmedTitle = title.trim().replace(/\s+/g, "-");
-
-const cleanBody = removeMarkdown(body);
 ---
 
 <article
@@ -63,7 +61,7 @@ const cleanBody = removeMarkdown(body);
   </header>
   <section aria-label="Article summary">
     <TextElement className="mt-2 line-clamp-4 text-card-foreground">
-      {cleanBody}
+      {description}
     </TextElement>
   </section>
   <div class="flex justify-center pt-5">
