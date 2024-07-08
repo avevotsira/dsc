@@ -59,6 +59,9 @@ const publicationDate = new Date(page.data.date);
         <TextElement variant="heading" className="prose-headings mt-4">
           {page.data.title}
         </TextElement>
+        <TextElement variant="body" className="text-xl text-muted-foreground">
+          {page.data.description}
+        </TextElement>
         <div class="my-4 flex items-center gap-4 text-muted-foreground">
           <span class="author byline flex flex-row gap-2">
             <span class="sr-only">Author:</span>
