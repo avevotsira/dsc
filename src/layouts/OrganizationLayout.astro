@@ -5,6 +5,8 @@ import "@/styles/globals.css";
 
 import Footer from "@/components/Footer.astro";
 
+import { languages } from "@/i18n/ui";
+
 interface Props {
   title: string;
   description?: string;
@@ -19,6 +21,7 @@ const {
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
 } = Astro.props;
 
+const authorName = "Digital Security Committee";
 const siteTitle = "Digital Security Committee";
 ---
 
@@ -33,6 +36,17 @@ const siteTitle = "Digital Security Committee";
     <title>{title} | {siteTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    <meta property="twitter:creator" content={authorName} />
+
+    {
+      Object.values(languages).map((lang) => (
+        <link
+          rel="alternate"
+          hreflang={lang}
+          href={new URL(`/${lang}${Astro.url.pathname}`, Astro.site).href}
+        />
+      ))
+    }
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
