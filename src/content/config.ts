@@ -32,6 +32,23 @@ const articlesCollection = defineCollection({
   schema: articleSchema,
 });
 
+const tipSchema = ({ image }: SchemaContext) =>
+  z.object({
+    author: z.string().default("Digital Security Committee"),
+    date: z.string(),
+    featured: z.boolean(),
+    image: image(),
+    title: z.string(),
+    description: z.string().max(160, {
+      message: "Description must be at most 160 characters long",
+    }),
+    lang: z.enum(SupportedLanguage),
+  });
+
+const tipsCollection = defineCollection({
+  schema: tipSchema,
+});
+
 const directiveSchema = z.object({
   date: z.string(),
   title: z.string(),
@@ -68,6 +85,7 @@ const leaderCollection = defineCollection({
 });
 
 export const collections = {
+  tips: tipsCollection,
   articles: articlesCollection,
   directives: directivesCollection,
   abouts: aboutsCollection,

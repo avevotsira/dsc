@@ -15,6 +15,7 @@ export enum Routes {
   Projects = "/projects",
   Contact = "/contact",
   Leader = "/about/leader",
+  Tip = "/tips",
 }
 
 export const NavRoutes = [
@@ -38,7 +39,7 @@ export const NavRoutes = [
     ],
   },
   { label: "New & Events", href: Routes.Aritcles },
-  { label: "Cybersecurity Tips", href: Routes.Contact },
+  { label: "Cybersecurity Tips", href: Routes.Tip },
 ];
 
 interface RouteType {

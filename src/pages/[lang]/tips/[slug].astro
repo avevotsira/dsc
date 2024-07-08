@@ -1,0 +1,96 @@
+---
+import { formatDate, toISOString } from "@/lib/date-helper";
+
+import { Separator } from "@/components/ui/separator";
+import Main from "@/components/Main.astro";
+import ProseWrapper from "@/components/ProseWrapper.astro";
+import TextElement from "@/components/TextElement";
+
+import type { SupportedLanguage } from "@/i18n/ui";
+import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import { Clock3, NotebookPen } from "lucide-react";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("tips");
+
+  return pages.map((page) => {
+    const [lang, slug] = page.slug.split("/");
+    return { params: { lang, slug }, props: { page } };
+  });
+}
+
+const { page } = Astro.props;
+const {
+  params: { lang },
+} = Astro;
+const { Content } = await page.render();
+
+const publicationDate = new Date(page.data.date);
+---
+
+<Layout
+  title={page.data.title}
+  description={page.data.description}
+  image={page.data.image.src}
+  canonicalURL={new URL(Astro.url.pathname, Astro.site).toString()}
+  type="article"
+  publishDate={publicationDate}
+>
+  <Main>
+    <ProseWrapper class="px-4 sm:px-6 md:px-8">
+      <header>
+        <figure role="none" class="-mx-4 sm:-mx-6 md:-mx-8">
+          <Image
+            src={page.data.image}
+            alt={page.data.title}
+            class="w-full rounded-lg"
+            loading="eager"
+            quality="high"
+            format="webp"
+            widths={[480, 768, 1024]}
+            sizes="(min-width: 1024px) 100vw"
+          />
+          <figcaption class="sr-only">
+            {page.data.title}
+          </figcaption>
+        </figure>
+        <div class="my-6 space-y-6">
+          <TextElement variant="heading" className="mb-0">
+            {page.data.title}
+          </TextElement>
+          <TextElement variant="body" className="text-xl text-muted-foreground">
+            {page.data.description}
+          </TextElement>
+          <div class="flex items-center gap-4 text-muted-foreground">
+            <span class="author byline flex flex-row gap-2">
+              <span class="sr-only">Author:</span>
+              <NotebookPen
+                size={16}
+                className="self-center"
+                aria-hidden="true"
+              />
+              <span>Digital Security Committee</span>
+            </span>
+            <span class="text-muted-foreground/50" aria-hidden="true">|</span>
+            <time
+              datetime={toISOString(publicationDate)}
+              class="dateline flex flex-row gap-2"
+            >
+              <span class="sr-only">Publication date:</span>
+              <Clock3 size={16} className="self-center" aria-hidden="true" />
+              <span
+                >{formatDate(publicationDate, lang as SupportedLanguage)}</span
+              >
+            </time>
+          </div>
+        </div>
+      </header>
+      <Separator className="m-2" />
+      <section>
+        <Content />
+      </section>
+    </ProseWrapper>
+  </Main>
+</Layout>

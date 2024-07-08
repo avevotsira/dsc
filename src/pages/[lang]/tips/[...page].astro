@@ -1,0 +1,54 @@
+---
+import Main from "@/components/Main.astro";
+import ArticleList from "@/components/page/article/ArticleList.astro";
+import Pagination from "@/components/Pagination.astro";
+import TextElement from "@/components/TextElement";
+
+import { languages } from "@/i18n/ui";
+import BlogListLayout from "@/layouts/BlogListLayout.astro";
+import type { PaginateFunction } from "astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
+}) {
+  const allLanguages = Object.values(languages);
+  const allArticles = await getCollection("tips");
+
+  return allLanguages.flatMap((lang) => {
+    const langArticles = allArticles.filter(
+      (article) => article.data.lang === lang,
+    );
+    return paginate(langArticles, {
+      params: { lang },
+      pageSize: 10,
+    });
+  });
+}
+
+const { lang } = Astro.params;
+const { page } = Astro.props;
+
+const title = "Cybersecurity Tips";
+const description = "Browse our collection of articles on various topics.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+---
+
+<BlogListLayout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  articles={page.data}
+>
+  <Main>
+    <section aria-label="Blog Posts">
+      <TextElement variant="heading" className="text-primary">
+        {title}
+      </TextElement>
+      <ArticleList articles={page.data} lang={lang} />
+      <Pagination page={page} />
+    </section>
+  </Main>
+</BlogListLayout>
