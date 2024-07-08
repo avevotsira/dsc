@@ -6,6 +6,7 @@ import TextElement from "@/components/TextElement";
 
 import type { DirectiveType } from "@/content/content.type";
 import type { SupportedLanguage } from "@/i18n/ui";
+import { ExternalLink } from "lucide-react";
 
 interface Props {
   title: string;
@@ -22,7 +23,7 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
 ---
 
 <article
-  class="flex h-full flex-col rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
+  class="flex h-full min-h-[12rem] flex-col rounded-lg border bg-card p-5 text-card-foreground shadow-sm sm:min-h-[13rem] md:min-h-[14rem]"
 >
   <div class="flex grow flex-col gap-2">
     <time
@@ -41,12 +42,12 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
   <div class="pt-5">
     <ButtonLink
       href={absoluteFileUrl}
-      className="w-full"
-      aria-label={`(opens in a new tab) Read full ${type} on ${title}`}
+      className="w-full gap-2"
+      aria-label={`(opens PDF in a new tab) Read full ${type} on ${title}`}
       target="_blank"
       rel="noopener noreferrer"
     >
-      Read full document
+      <ExternalLink size={14} aria-hidden="true" /> Read full document
     </ButtonLink>
   </div>
 </article>
