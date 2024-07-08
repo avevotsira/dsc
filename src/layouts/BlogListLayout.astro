@@ -7,7 +7,7 @@ import { getArticleUrl } from "@/lib/route";
 
 import Footer from "@/components/Footer.astro";
 
-import type { SupportedLanguage } from "@/i18n/ui";
+import { languages, type SupportedLanguage } from "@/i18n/ui";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -42,6 +42,16 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
     <meta property="twitter:creator" content={authorName} />
+
+    {
+      Object.values(languages).map((lang) => (
+        <link
+          rel="alternate"
+          hreflang={lang}
+          href={new URL(`/${lang}${Astro.url.pathname}`, Astro.site).href}
+        />
+      ))
+    }
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />

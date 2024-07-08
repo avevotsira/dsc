@@ -5,6 +5,8 @@ import "@/styles/globals.css";
 
 import Footer from "@/components/Footer.astro";
 
+import { languages } from "@/i18n/ui";
+
 interface Props {
   title: string;
   description?: string;
@@ -35,6 +37,16 @@ const siteTitle = "Digital Security Committee";
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
     <meta property="twitter:creator" content={authorName} />
+
+    {
+      Object.values(languages).map((lang) => (
+        <link
+          rel="alternate"
+          hreflang={lang}
+          href={new URL(`/${lang}${Astro.url.pathname}`, Astro.site).href}
+        />
+      ))
+    }
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
