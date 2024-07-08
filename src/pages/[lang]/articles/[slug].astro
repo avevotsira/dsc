@@ -61,14 +61,18 @@ const publicationDate = new Date(page.data.date);
         </TextElement>
         <div class="my-4 flex items-center gap-4 text-muted-foreground">
           <span class="author byline flex flex-row gap-2">
-            <NotebookPen size={16} className="self-center" /> Digital Security Committee</span
-          >
+            <span class="sr-only">Author:</span>
+            <NotebookPen size={16} className="self-center" aria-hidden="true" />
+            <span>Digital Security Committee</span>
+          </span>
           <time
             datetime={toISOString(publicationDate)}
             class="dateline flex flex-row gap-2"
           >
-            <Clock3 size={16} className="self-center" />
-            {formatDate(publicationDate, lang as SupportedLanguage)}
+            <span class="sr-only">Publication date:</span>
+            <Clock3 size={16} className="self-center" aria-hidden="true" />
+            <span>{formatDate(publicationDate, lang as SupportedLanguage)}</span
+            >
           </time>
         </div>
         <Separator className="m-2" />
