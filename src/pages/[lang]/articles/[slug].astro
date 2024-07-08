@@ -1,6 +1,7 @@
 ---
 import { formatDate, toISOString } from "@/lib/date-helper";
 
+import { Separator } from "@/components/ui/separator";
 import Main from "@/components/Main.astro";
 import ProseWrapper from "@/components/ProseWrapper.astro";
 import TextElement from "@/components/TextElement";
@@ -9,6 +10,7 @@ import type { SupportedLanguage } from "@/i18n/ui";
 import Layout from "@/layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
+import { Clock3, NotebookPen } from "lucide-react";
 
 export async function getStaticPaths() {
   const pages = await getCollection("articles");
@@ -38,39 +40,42 @@ const publicationDate = new Date(page.data.date);
 >
   <Main>
     <ProseWrapper>
-      <header>
-        <figure role="none">
+      <header class="px-4 sm:px-6 md:px-8">
+        <figure role="none" class="-mx-4 sm:-mx-6 md:-mx-8">
           <Image
             src={page.data.image}
             alt={page.data.title}
-            class="rounded-lg"
+            class="w-full rounded-lg"
             loading="eager"
             quality="high"
             format="webp"
             widths={[480, 768, 1024]}
             sizes="(min-width: 1024px) 100vw"
           />
-
           <figcaption class="sr-only">
             {page.data.title}
           </figcaption>
         </figure>
-        <TextElement variant="heading" className="text-center">
+        <TextElement variant="heading" className="prose-headings mt-4">
           {page.data.title}
         </TextElement>
-        <div class="my-4 flex items-center justify-between">
-          <span>Digital Security Committee</span>
+        <div class="my-4 flex items-center gap-4 text-muted-foreground">
+          <span class="author byline flex flex-row gap-2">
+            <NotebookPen size={16} className="self-center" /> Digital Security Committee</span
+          >
           <time
             datetime={toISOString(publicationDate)}
-            class="text-right text-mptc-secondary-foreground"
+            class="dateline flex flex-row gap-2"
           >
+            <Clock3 size={16} className="self-center" />
             {formatDate(publicationDate, lang as SupportedLanguage)}
           </time>
         </div>
+        <Separator className="m-2" />
+        <section>
+          <Content />
+        </section>
       </header>
-      <section>
-        <Content />
-      </section>
     </ProseWrapper>
   </Main>
 </Layout>
