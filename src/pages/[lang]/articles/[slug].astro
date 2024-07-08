@@ -32,7 +32,7 @@ const publicationDate = new Date(page.data.date);
 
 <Layout
   title={page.data.title}
-  description={page.body.slice(0, 160)}
+  description={page.data.description}
   image={page.data.image.src}
   canonicalURL={new URL(Astro.url.pathname, Astro.site).toString()}
   type="article"
