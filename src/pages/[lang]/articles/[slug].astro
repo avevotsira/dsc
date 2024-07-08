@@ -39,8 +39,8 @@ const publicationDate = new Date(page.data.date);
   publishDate={publicationDate}
 >
   <Main>
-    <ProseWrapper>
-      <header class="px-4 sm:px-6 md:px-8">
+    <ProseWrapper class="px-4 sm:px-6 md:px-8">
+      <header>
         <figure role="none" class="-mx-4 sm:-mx-6 md:-mx-8">
           <Image
             src={page.data.image}
@@ -56,13 +56,16 @@ const publicationDate = new Date(page.data.date);
             {page.data.title}
           </figcaption>
         </figure>
-        <TextElement variant="heading" className="prose-headings mt-4">
+        <TextElement variant="heading" className="prose-headings my-6">
           {page.data.title}
         </TextElement>
-        <TextElement variant="body" className="text-xl text-muted-foreground">
+        <TextElement
+          variant="body"
+          className="my-6 text-xl text-muted-foreground"
+        >
           {page.data.description}
         </TextElement>
-        <div class="my-4 flex items-center gap-4 text-muted-foreground">
+        <div class="my-6 flex items-center gap-4 text-muted-foreground">
           <span class="author byline flex flex-row gap-2">
             <span class="sr-only">Author:</span>
             <NotebookPen size={16} className="self-center" aria-hidden="true" />
@@ -79,11 +82,11 @@ const publicationDate = new Date(page.data.date);
             >
           </time>
         </div>
-        <Separator className="m-2" />
-        <section>
-          <Content />
-        </section>
       </header>
+      <Separator className="m-2" />
+      <section>
+        <Content />
+      </section>
     </ProseWrapper>
   </Main>
 </Layout>
