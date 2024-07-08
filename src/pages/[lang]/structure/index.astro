@@ -1,0 +1,105 @@
+---
+import Main from "@/components/Main.astro";
+import BoardMemberCard from "@/components/page/structure/BoardMemberCard.astro";
+import LeaderShipCard from "@/components/page/structure/LeaderShipCard.astro";
+import StructureChart from "@/components/page/structure/StructureChart.astro";
+import TextElement from "@/components/TextElement";
+
+import { SECRETARY_TYPES } from "@/content/secretary.type";
+import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const title = "Structure";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const lang = Astro.params.lang as SupportedLanguage;
+const allBoardMembers = await getCollection("boardMembers");
+const boardMembers = allBoardMembers.filter(
+  (member) => member.data.lang === lang,
+);
+
+const allSecretaries = await getCollection("secretaries");
+const secretaties = allSecretaries.filter(
+  (secretary) => secretary.data.lang === lang,
+);
+
+const general = secretaties.filter(
+  (secretary) => secretary.data.role === SECRETARY_TYPES.GENERAL,
+);
+const deputyGenerals = secretaties.filter(
+  (secretary) => secretary.data.role === SECRETARY_TYPES.DEPUTY,
+);
+
+const t = useTranslations(lang);
+---
+
+<Layout title={title}>
+  <Main>
+    <TextElement variant="heading" className="pb-6 text-primary">
+      {t("structure.heading")}
+    </TextElement>
+    <div class="pb-8">
+      <div class="grid gap-y-3 rounded-md bg-gray-200 p-5 text-sm xl:text-base">
+        {
+          boardMembers.map((member) => {
+            return (
+              <BoardMemberCard
+                title={member.data.title}
+                name={member.data.name}
+                organization={member.data.organization}
+                role={member.data.role}
+                lang={lang}
+              />
+            );
+          })
+        }
+      </div>
+    </div>
+
+    <StructureChart />
+    <div>
+      <TextElement
+        variant="subheading"
+        className="py-10 text-center text-primary"
+      >
+        Secretary General
+      </TextElement>
+    </div>
+    <div>
+      {
+        general[0] && (
+          <LeaderShipCard
+            title={general[0].data.title}
+            name={general[0].data.name}
+            image={general[0].data.image}
+          />
+        )
+      }
+
+      <TextElement
+        variant="subheading"
+        className="py-10 text-center text-primary"
+      >
+        Deputy Secretary General
+      </TextElement>
+      <div class="grid grid-cols-1 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          deputyGenerals.map((deputy) => (
+            <LeaderShipCard
+              title={deputy.data.title}
+              name={deputy.data.name}
+              image={deputy.data.image}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </Main>
+</Layout>

@@ -5,7 +5,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 export enum Routes {
   Home = "/",
   About = "/about",
-  Structure = "/struture",
+  Structure = "/structure",
   RoyalDecrees = "/royal-decrees",
   SubDecrees = "/sub-decrees",
   Policies = "/policies",

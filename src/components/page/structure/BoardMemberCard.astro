@@ -1,0 +1,24 @@
+---
+interface Props {
+  title: string;
+  lang: string;
+  role: string;
+  name: string;
+  organization: string;
+}
+
+const { title, name, organization, role } = Astro.props as Props;
+---
+
+<div
+  class="board-member lg:grid-cols-16 grid-cols-12 gap-x-3 space-y-3 rounded-t-md bg-white px-4 py-5 dark:bg-gray-500 md:grid md:space-y-0"
+>
+  <div class="name col-span-3 flex gap-x-2 lg:col-span-3">
+    {title}
+    <b class="font-bold">{name}</b>
+  </div>
+  <div class="organization col-span-7">{organization}</div>
+  <div class="role col-span-2 text-sm md:whitespace-nowrap">
+    {role}
+  </div>
+</div>
