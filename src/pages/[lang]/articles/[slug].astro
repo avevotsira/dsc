@@ -56,31 +56,35 @@ const publicationDate = new Date(page.data.date);
             {page.data.title}
           </figcaption>
         </figure>
-        <TextElement variant="heading" className="prose-headings my-6">
-          {page.data.title}
-        </TextElement>
-        <TextElement
-          variant="body"
-          className="my-6 text-xl text-muted-foreground"
-        >
-          {page.data.description}
-        </TextElement>
-        <div class="my-6 flex items-center gap-4 text-muted-foreground">
-          <span class="author byline flex flex-row gap-2">
-            <span class="sr-only">Author:</span>
-            <NotebookPen size={16} className="self-center" aria-hidden="true" />
-            <span>Digital Security Committee</span>
-          </span>
-          <span class="text-muted-foreground/50" aria-hidden="true">|</span>
-          <time
-            datetime={toISOString(publicationDate)}
-            class="dateline flex flex-row gap-2"
-          >
-            <span class="sr-only">Publication date:</span>
-            <Clock3 size={16} className="self-center" aria-hidden="true" />
-            <span>{formatDate(publicationDate, lang as SupportedLanguage)}</span
+        <div class="my-6 space-y-6">
+          <TextElement variant="heading" className="mb-0">
+            {page.data.title}
+          </TextElement>
+          <TextElement variant="body" className="text-xl text-muted-foreground">
+            {page.data.description}
+          </TextElement>
+          <div class="flex items-center gap-4 text-muted-foreground">
+            <span class="author byline flex flex-row gap-2">
+              <span class="sr-only">Author:</span>
+              <NotebookPen
+                size={16}
+                className="self-center"
+                aria-hidden="true"
+              />
+              <span>Digital Security Committee</span>
+            </span>
+            <span class="text-muted-foreground/50" aria-hidden="true">|</span>
+            <time
+              datetime={toISOString(publicationDate)}
+              class="dateline flex flex-row gap-2"
             >
-          </time>
+              <span class="sr-only">Publication date:</span>
+              <Clock3 size={16} className="self-center" aria-hidden="true" />
+              <span
+                >{formatDate(publicationDate, lang as SupportedLanguage)}</span
+              >
+            </time>
+          </div>
         </div>
       </header>
       <Separator className="m-2" />
