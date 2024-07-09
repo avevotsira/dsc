@@ -10,7 +10,7 @@ import WhatWeDoGrid from "@/components/WhatWeDoGird";
 
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
-import Layout from "@/layouts/Layout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
 const lang = Astro.currentLocale as SupportedLanguage;
@@ -45,7 +45,7 @@ const latestDirectives = langDirectives
 const t = useTranslations(lang);
 ---
 
-<Layout title={`Welcome to Astro - ${lang}`}>
+<BaseLayout title={`Welcome to Astro - ${lang}`} description={"test"}>
   <HomeMain>
     <section aria-label="hero-section">
       <Hero
@@ -94,4 +94,4 @@ const t = useTranslations(lang);
       </div>
     </section>
   </HomeMain>
-</Layout>
+</BaseLayout>

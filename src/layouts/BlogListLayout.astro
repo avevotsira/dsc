@@ -1,13 +1,8 @@
 ---
-import NavBar from "@/components/NavBar.astro";
-
-import "@/styles/globals.css";
-
 import { getArticleUrl } from "@/lib/route";
 
-import Footer from "@/components/Footer.astro";
-
-import { languages, type SupportedLanguage } from "@/i18n/ui";
+import BaseLayout from "./BaseLayout.astro";
+import type { SupportedLanguage } from "@/i18n/ui";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -18,58 +13,18 @@ interface Props {
   image?: string;
 }
 
-const {
-  title,
-  description,
-  canonicalURL,
-  articles,
-  image = "/default-og-image.jpg",
-} = Astro.props;
-const siteTitle = "Your Site Name";
-const authorName = "Digital Security Committee";
-const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
+const { title, description, canonicalURL, articles, image } = Astro.props;
 ---
 
-<!doctype html>
-<html lang={Astro.currentLocale || "en"}>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-
-    <title>{title} | {siteTitle}</title>
-    <meta name="description" content={description} />
-    <link rel="canonical" href={canonicalURL} />
-    <meta property="twitter:creator" content={authorName} />
-
-    {
-      Object.values(languages).map((lang) => (
-        <link
-          rel="alternate"
-          hreflang={lang}
-          href={new URL(`/${lang}${Astro.url.pathname}`, Astro.site).href}
-        />
-      ))
-    }
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, Astro.url)} />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.url} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL(image, Astro.url)} />
-
-    <!-- Updated JSON-LD structured data for CollectionPage -->
-    <script
-      is:inline
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  image={image}
+  type="website"
+>
+  <Fragment slot="head">
+    <script is:inline
       type="application/ld+json"
       set:html={JSON.stringify({
         "@context": "https://schema.org",
@@ -81,10 +36,10 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
         name: title,
         description: description,
         url: Astro.url,
-        image: new URL(image, Astro.url).toString(),
+        image: new URL(image || "/default-og-image.jpg", Astro.url).toString(),
         isPartOf: {
           "@type": "WebSite",
-          name: siteTitle,
+          name: "Digital Security Committee",
           url: Astro.site,
         },
         about: {
@@ -107,18 +62,13 @@ const authorUrl = Astro.site?.toString() || "https://your-site-url.com";
             : undefined,
           author: {
             "@type": "Organization",
-            name: authorName,
-            url: authorUrl,
+            name: "Digital Security Committee",
+            url: Astro.site,
           },
         })),
       })}
     />
-  </head>
-  <body class="min-h-screen">
-    <header class="sticky top-0 z-10">
-      <NavBar />
-    </header>
-    <slot />
-    <Footer />
-  </body>
-</html>
+  </Fragment>
+
+  <slot />
+</BaseLayout>

@@ -53,7 +53,10 @@
         "react/react-in-jsx-scope": "off",
         "react/no-unknown-property": "off",
         "react-hooks/rules-of-hooks": "off",
-        "prettier/prettier": "off"
+        "prettier/prettier": "off",
+        "react/jsx-no-undef": "off",
+        "astro/no-conflict-set-directives": "error",
+        "astro/no-unused-define-vars-in-style": "error"
       }
     }
   ]

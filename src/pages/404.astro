@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 
 import { defaultLang, languages, type SupportedLanguage } from "@/i18n/ui";
-import Layout from "@/layouts/Layout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const currentLocale = (Astro.url.pathname.split("/").filter(Boolean)[0] ||
   defaultLang) as SupportedLanguage;
@@ -16,7 +16,7 @@ const safeLocale: SupportedLanguage = Object.keys(languages).includes(
 const homepageUrl = `/${safeLocale}`;
 ---
 
-<Layout title={"Page Not Found"}>
+<BaseLayout title={"Page Not Found"}>
   <div
     class="flex flex-col items-center justify-center bg-gradient-to-b from-gray-100 to-white text-center"
     style="min-height: 100vh;"
@@ -36,4 +36,4 @@ const homepageUrl = `/${safeLocale}`;
       <a href={homepageUrl}>{"Go back to homepage"}</a>
     </Button>
   </div>
-</Layout>
+</BaseLayout>
