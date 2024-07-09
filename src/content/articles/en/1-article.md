@@ -8,7 +8,7 @@ description: essential to the success of a music project, as it allows for the p
 lang: en
 ---
 
-## Collaboration is a key component of many creative endeavors, and music production is no exception. In fact, collaboration can be
+## Collaboration is a key component of many creative endeavors
 
 essential to the success of a music project, as it allows for the pooling of diverse talents and perspectives to create something truly unique and compelling.
 essential to the success of a music project, as it allows for the pooling of diverse talents and perspectives to create something truly unique and compelling.
