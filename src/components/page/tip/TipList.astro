@@ -1,9 +1,9 @@
 ---
 import { getTipsUrl } from "@/lib/route";
 
+import TipCard from "./TipCard.astro";
 import type { SupportedLanguage } from "@/i18n/ui";
 import type { CollectionEntry } from "astro:content";
-import TipCard from "./TipCard.astro";
 
 interface Props {
   tips: CollectionEntry<"tips">[];
