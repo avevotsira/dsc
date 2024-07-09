@@ -1,0 +1,32 @@
+---
+import { getTipsUrl } from "@/lib/route";
+
+import type { SupportedLanguage } from "@/i18n/ui";
+import type { CollectionEntry } from "astro:content";
+import TipCard from "./TipCard.astro";
+
+interface Props {
+  tips: CollectionEntry<"tips">[];
+  lang: SupportedLanguage;
+}
+
+const { tips, lang } = Astro.props;
+---
+
+<ul class="grid list-none grid-cols-1 gap-5 p-5 md:grid-cols-2 lg:grid-cols-3">
+  {
+    tips.map((tip) => (
+      <li>
+        <TipCard
+          image={tip.data.image}
+          title={tip.data.title}
+          body={tip.body}
+          description={tip.data.description}
+          href={getTipsUrl(tip.slug, lang)}
+          date={tip.data.date}
+          lang={lang}
+        />
+      </li>
+    ))
+  }
+</ul>

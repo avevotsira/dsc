@@ -1,0 +1,74 @@
+---
+import { formatDate, toISOString } from "@/lib/date-helper";
+
+import { ButtonLink } from "../../ButtonLink";
+import TextElement from "../../TextElement";
+import { AspectRatio } from "../../ui/aspect-ratio";
+import type { SupportedLanguage } from "@/i18n/ui";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  image: ImageMetadata;
+  body: string;
+  href: string;
+  description: string;
+  date: string;
+  lang: SupportedLanguage;
+}
+
+const { title, href, image, date, lang, description } = Astro.props as Props;
+
+const trimmedTitle = title.trim().replace(/\s+/g, "-");
+---
+
+<article
+  class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
+  aria-labelledby={`article-${trimmedTitle}`}
+>
+  <header class="flex flex-col gap-2">
+    <figure role="none">
+      <AspectRatio ratio={16 / 9}>
+        <Image
+          src={image}
+          alt={title}
+          class="w-full rounded-lg"
+          loading="eager"
+          widths={[320, 480, 640, 768, 1024]}
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          quality="mid"
+          format="webp"
+        />
+      </AspectRatio>
+    </figure>
+    <time
+      datetime={toISOString(date)}
+      class="text-right text-base leading-6 text-mptc-secondary-foreground"
+    >
+      <TextElement className="sr-only" variant="paragraph"
+        >published on:</TextElement
+      >
+      {formatDate(date, lang)}
+    </time>
+    <TextElement variant="smallheading" id={`article-${trimmedTitle}`}>
+      {title}
+    </TextElement>
+  </header>
+  <section aria-label="Article summary">
+    <TextElement className="mt-2 line-clamp-4 text-card-foreground">
+      {description}
+    </TextElement>
+  </section>
+  <div class="flex justify-center pt-5">
+    <ButtonLink
+      href={href}
+      className="w-full"
+      aria-labelledby={`read-more-${href}`}
+    >
+      <span id={`read-more-${href}`}
+        >Read more<span class="sr-only"> about {title}</span></span
+      >
+    </ButtonLink>
+  </div>
+</article>

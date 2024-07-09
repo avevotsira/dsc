@@ -1,6 +1,7 @@
 ---
 import Main from "@/components/Main.astro";
 import ArticleList from "@/components/page/article/ArticleList.astro";
+import TipList from "@/components/page/tip/TipList.astro";
 import Pagination from "@/components/Pagination.astro";
 import TextElement from "@/components/TextElement";
 
@@ -47,7 +48,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
       <TextElement variant="heading" className="text-primary">
         {title}
       </TextElement>
-      <ArticleList articles={page.data} lang={lang} />
+      <TipList tips={page.data} lang={lang} />
       <Pagination page={page} />
     </section>
   </Main>

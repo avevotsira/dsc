@@ -94,3 +94,7 @@ export const getArticleUrl = (slug: string, lang: SupportedLanguage) => {
     `articles/${removeLanguagePrefix(slug, lang)}`,
   );
 };
+
+export const getTipsUrl = (slug: string, lang: SupportedLanguage) => {
+  return getRelativeLocaleUrl(lang, `tips/${removeLanguagePrefix(slug, lang)}`);
+};
