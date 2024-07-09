@@ -4,6 +4,7 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.about": "About",
     "nav.projects": "Projects",
     "home.whatwedo": "What We Do",
+    "structure.heading": "Organization Structure of DSC General Secretariat",
     "about.strategies": "Strategic Goals and Strategies",
     "about.strategiesText":
       "In order to achieve the above vision and objectives, the Royal Government has set four strategic goals and ten strategies as follows:",
@@ -13,6 +14,7 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.home": "Accueil",
     "nav.about": "À propos",
     "home.whatwedo": "កាតព្វកិច្ចរបស់យើង",
+    "structure.heading": "រចនាសម្ព័ន្ធរបស់អគ្គលេខាធិការដ្ឋាន គ.ស.ឌ.",
     "about.strategies": "គោលដៅជាយុទ្ធសាស្រ្ត និងយុទ្ធសាស្ត្រ",
     "about.strategiesText":
       "ដើម្បីសម្រេចបាននូវចក្ខុវិស័យនិងគោលបំណងខាងលើ រដ្ឋាភិបាលដាក់ចេញគោលដៅជាយុទ្ធសាស្ត្រចំនួន៤និងយុទ្ធសាស្ត្រចំនួន១០ ដូចខាងក្រោម៖",
