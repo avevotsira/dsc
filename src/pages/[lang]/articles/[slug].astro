@@ -44,7 +44,7 @@ const publicationDate = new Date(page.data.date);
           <Image
             src={page.data.image}
             alt={page.data.title}
-            class="w-full rounded-lg"
+            class="w-full lg:rounded-lg"
             loading="eager"
             quality="high"
             format="webp"
@@ -62,7 +62,9 @@ const publicationDate = new Date(page.data.date);
           <TextElement variant="body" className="text-xl text-muted-foreground">
             {page.data.description}
           </TextElement>
-          <div class="flex items-center gap-4 text-muted-foreground">
+          <div
+            class="flex w-fit flex-wrap items-center gap-4 text-muted-foreground"
+          >
             <span class="author byline flex flex-row gap-2">
               <span class="sr-only">Author:</span>
               <NotebookPen
