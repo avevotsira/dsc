@@ -24,7 +24,8 @@ const { title, description, canonicalURL, articles, image } = Astro.props;
   type="website"
 >
   <Fragment slot="head">
-    <script is:inline
+    <script
+      is:inline
       type="application/ld+json"
       set:html={JSON.stringify({
         "@context": "https://schema.org",
