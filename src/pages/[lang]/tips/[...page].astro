@@ -5,7 +5,7 @@ import Pagination from "@/components/Pagination.astro";
 import TextElement from "@/components/TextElement";
 
 import { languages } from "@/i18n/ui";
-import BlogListLayout from "@/layouts/BlogListLayout.astro";
+import Layout from "@/layouts/Layout.astro";
 import type { PaginateFunction } from "astro";
 import { getCollection } from "astro:content";
 
@@ -32,16 +32,9 @@ const { lang } = Astro.params;
 const { page } = Astro.props;
 
 const title = "Cybersecurity Tips";
-const description = "Browse our collection of articles on various topics.";
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 ---
 
-<BlogListLayout
-  title={title}
-  description={description}
-  canonicalURL={canonicalURL}
-  articles={page.data}
->
+<Layout title={title}>
   <Main>
     <section aria-label="Blog Posts">
       <TextElement variant="heading" className="text-primary">
@@ -51,4 +44,4 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
       <Pagination page={page} />
     </section>
   </Main>
-</BlogListLayout>
+</Layout>
