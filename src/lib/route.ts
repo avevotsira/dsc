@@ -17,6 +17,30 @@ export enum Routes {
   Leader = "/about/leader",
 }
 
+export const NavRoutes = [
+  { label: "Home", href: Routes.Home },
+  {
+    label: "About Us",
+    children: [
+      { label: "About DSC", href: Routes.About },
+      { label: "Structure", href: Routes.Structure },
+      { label: "DSC's Leader", href: Routes.Leader },
+    ],
+  },
+  {
+    label: "Media Hub",
+    children: [
+      { label: "Royal Degrees", href: Routes.RoyalDecrees },
+      { label: "Sub Degrees", href: Routes.SubDecrees },
+      { label: "Policies", href: Routes.Policies },
+      { label: "Decisions", href: Routes.Decisions },
+      { label: "Videos", href: Routes.Videos },
+    ],
+  },
+  { label: "New & Events", href: Routes.Aritcles },
+  { label: "Cybersecurity Tips", href: Routes.Contact },
+];
+
 interface RouteType {
   href?: string;
   label: string;

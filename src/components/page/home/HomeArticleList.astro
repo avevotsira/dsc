@@ -18,6 +18,7 @@ const { articles, lang } = Astro.props;
     articles.map((article) => (
       <li>
         <HomeArticleCard
+          description={article.data.description}
           image={article.data.image}
           title={article.data.title}
           body={article.body}
