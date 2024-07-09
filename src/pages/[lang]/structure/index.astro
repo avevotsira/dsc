@@ -1,14 +1,14 @@
 ---
 import Main from "@/components/Main.astro";
 import BoardMemberCard from "@/components/page/structure/BoardMemberCard.astro";
-import LeaderShipCard from "@/components/page/structure/LeaderShipCard.astro";
 import StructureChart from "@/components/page/structure/StructureChart.astro";
+import StructureLeaderShipCard from "@/components/page/structure/StructureLeaderShipCard.astro";
 import TextElement from "@/components/TextElement";
 
 import { SECRETARY_TYPES } from "@/content/secretary.type";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
-import Layout from "@/layouts/Layout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
 const title = "Structure";
@@ -40,7 +40,7 @@ const deputyGenerals = secretaties.filter(
 const t = useTranslations(lang);
 ---
 
-<Layout title={title}>
+<BaseLayout title={title}>
   <Main>
     <TextElement variant="heading" className="pb-6 text-primary">
       {t("structure.heading")}
@@ -75,7 +75,7 @@ const t = useTranslations(lang);
     <div>
       {
         general[0] && (
-          <LeaderShipCard
+          <StructureLeaderShipCard
             title={general[0].data.title}
             name={general[0].data.name}
             image={general[0].data.image}
@@ -92,7 +92,7 @@ const t = useTranslations(lang);
       <div class="grid grid-cols-1 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
         {
           deputyGenerals.map((deputy) => (
-            <LeaderShipCard
+            <StructureLeaderShipCard
               title={deputy.data.title}
               name={deputy.data.name}
               image={deputy.data.image}
@@ -102,4 +102,4 @@ const t = useTranslations(lang);
       </div>
     </div>
   </Main>
-</Layout>
+</BaseLayout>
