@@ -43,14 +43,16 @@ const t = useTranslations(lang);
 
 <BaseLayout title={title}>
   <Main>
-    <TextElement variant="heading" className="pb-6 text-primary">
-      {t("structure.heading")}
-    </TextElement>
-    <div class="pb-8">
-      <div class="grid gap-y-3 rounded-md bg-gray-200 p-5 text-sm xl:text-base">
+    <header>
+      <TextElement variant="heading" className="pb-6 text-primary">
+        {t("structure.heading")}
+      </TextElement>
+    </header>
+    <section aria-label="Board Members" class="pb-8">
+      <ul class="grid gap-y-3 rounded-md bg-gray-200 p-5 text-sm xl:text-base">
         {
-          boardMembers.map((member) => {
-            return (
+          boardMembers.map((member) => (
+            <li>
               <BoardMemberCard
                 title={member.data.title}
                 name={member.data.name}
@@ -58,22 +60,21 @@ const t = useTranslations(lang);
                 role={member.data.role}
                 lang={lang}
               />
-            );
-          })
+            </li>
+          ))
         }
-      </div>
-    </div>
-
-    <StructureChart />
-    <div>
+      </ul>
+    </section>
+    <section aria-label="Organization Structure">
+      <StructureChart />
+    </section>
+    <section aria-label="Leadership">
       <TextElement
         variant="subheading"
         className="py-10 text-center text-primary"
       >
         Secretary General
       </TextElement>
-    </div>
-    <div>
       {
         generalData && (
           <StructureLeaderShipCard
@@ -83,24 +84,25 @@ const t = useTranslations(lang);
           />
         )
       }
-
       <TextElement
         variant="subheading"
         className="py-10 text-center text-primary"
       >
         Deputy Secretary General
       </TextElement>
-      <div class="grid grid-cols-1 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
+      <ul class="grid grid-cols-1 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
         {
           deputyGenerals.map((deputy) => (
-            <StructureLeaderShipCard
-              title={deputy.data.title}
-              name={deputy.data.name}
-              image={deputy.data.image}
-            />
+            <li>
+              <StructureLeaderShipCard
+                title={deputy.data.title}
+                name={deputy.data.name}
+                image={deputy.data.image}
+              />
+            </li>
           ))
         }
-      </div>
-    </div>
+      </ul>
+    </section>
   </Main>
 </BaseLayout>
