@@ -25,17 +25,19 @@ const boardMembers = allBoardMembers.filter(
   (member) => member.data.lang === lang,
 );
 
-const allSecretaries = await getCollection("secretaries");
-const secretaties = allSecretaries.filter(
-  (secretary) => secretary.data.lang === lang,
+const allSecretaries = (
+  await getCollection(
+    "secretaries",
+    (secretary) => secretary.data.lang === lang,
+  )
+).map((secretary) => secretary.data);
+
+const general = allSecretaries.filter(
+  (secretary) => secretary.role === SECRETARY_TYPES.GENERAL,
 );
 
-const general = secretaties.filter(
-  (secretary) => secretary.data.role === SECRETARY_TYPES.GENERAL,
-);
-
-const deputyGenerals = secretaties.filter(
-  (secretary) => secretary.data.role === SECRETARY_TYPES.DEPUTY,
+const deputyGenerals = allSecretaries.filter(
+  (secretary) => secretary.role === SECRETARY_TYPES.DEPUTY,
 );
 
 const t = useTranslations(lang);
@@ -78,9 +80,9 @@ const t = useTranslations(lang);
       {
         general[0] && (
           <StructureLeaderShipCard
-            title={general[0].data.title}
-            name={general[0].data.name}
-            image={general[0].data.image}
+            title={general[0].title}
+            name={general[0].name}
+            image={general[0].image}
           />
         )
       }
@@ -95,9 +97,9 @@ const t = useTranslations(lang);
           deputyGenerals.map((deputy) => (
             <li>
               <StructureLeaderShipCard
-                title={deputy.data.title}
-                name={deputy.data.name}
-                image={deputy.data.image}
+                title={deputy.title}
+                name={deputy.name}
+                image={deputy.image}
               />
             </li>
           ))
