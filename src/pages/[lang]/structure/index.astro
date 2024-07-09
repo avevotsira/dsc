@@ -30,9 +30,10 @@ const secretaties = allSecretaries.filter(
   (secretary) => secretary.data.lang === lang,
 );
 
-const general = secretaties.filter(
+const generalData = secretaties.find(
   (secretary) => secretary.data.role === SECRETARY_TYPES.GENERAL,
-);
+)?.data;
+
 const deputyGenerals = secretaties.filter(
   (secretary) => secretary.data.role === SECRETARY_TYPES.DEPUTY,
 );
@@ -74,11 +75,11 @@ const t = useTranslations(lang);
     </div>
     <div>
       {
-        general[0] && (
+        generalData && (
           <StructureLeaderShipCard
-            title={general[0].data.title}
-            name={general[0].data.name}
-            image={general[0].data.image}
+            title={generalData.title}
+            name={generalData.name}
+            image={generalData.image}
           />
         )
       }
