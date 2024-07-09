@@ -1,74 +1,30 @@
 ---
-import NavBar from "@/components/NavBar.astro";
-
-import "@/styles/globals.css";
-
-import Footer from "@/components/Footer.astro";
-
-import { languages } from "@/i18n/ui";
+import BaseLayout from "./BaseLayout.astro";
 
 interface Props {
   title: string;
-  description?: string;
+  description: string;
   image?: string;
   canonicalURL?: string;
 }
 
-const {
-  title,
-  description = "Default description of your organization",
-  image = "/default-org-image.jpg",
-  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
-} = Astro.props;
-
-const authorName = "Digital Security Committee";
-const siteTitle = "Digital Security Committee";
+const { title, description, image, canonicalURL } = Astro.props;
 ---
 
-<!doctype html>
-<html lang={Astro.currentLocale || "en"}>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-
-    <title>{title} | {siteTitle}</title>
-    <meta name="description" content={description} />
-    <link rel="canonical" href={canonicalURL} />
-    <meta property="twitter:creator" content={authorName} />
-
-    {
-      Object.values(languages).map((lang) => (
-        <link
-          rel="alternate"
-          hreflang={lang}
-          href={new URL(`/${lang}${Astro.url.pathname}`, Astro.site).href}
-        />
-      ))
-    }
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, Astro.url)} />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.url} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL(image, Astro.url)} />
-
-    <!-- JSON-LD structured data for Organization -->
+<BaseLayout
+  title={title}
+  description={description}
+  image={image}
+  canonicalURL={canonicalURL}
+  type="organization"
+>
+  <Fragment slot="head">
     <script
       type="application/ld+json"
       set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Organization",
-        name: siteTitle,
+        name: "Digital Security Committee",
         url: Astro.site,
         logo: new URL("/logo.png", Astro.url),
         description: description,
@@ -91,12 +47,7 @@ const siteTitle = "Digital Security Committee";
         ],
       })}
     />
-  </head>
-  <body class="min-h-screen">
-    <header class="sticky top-0 z-10">
-      <NavBar />
-    </header>
-    <slot />
-    <Footer />
-  </body>
-</html>
+  </Fragment>
+
+  <slot />
+</BaseLayout>
