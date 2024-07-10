@@ -25,10 +25,6 @@ const abouts = allAbouts.filter((about) => about.data.lang === lang);
 const goals = abouts.filter((about) => about.data.type === ABOUT_TYPES.GOAL);
 const roles = abouts.filter((about) => about.data.type === ABOUT_TYPES.ROLE);
 
-// tempo value: remove when have content
-const goalTmp = Array.from({ length: 4 }, () => goals[0]);
-const roleTmp = Array.from({ length: 9 }, () => roles[0]);
-
 const langImages = {
   en: enAboutUs,
   km: kmAboutUs,
@@ -60,7 +56,7 @@ const description =
             {t("about.strategiesText")}
           </p>
         </header>
-        <AboutList abouts={goalTmp} className="lg:grid-cols-2" />
+        <AboutList abouts={goals} className="lg:grid-cols-2" />
       </section>
       <figure class="mx-auto flex flex-col items-center gap-4 text-center">
         <Image
@@ -87,7 +83,7 @@ const description =
             {t("about.roleResponsibilities")}
           </TextElement>
         </header>
-        <AboutList abouts={roleTmp} className="sm:grid-cols-2 lg:grid-cols-3" />
+        <AboutList abouts={roles} className="sm:grid-cols-2 lg:grid-cols-3" />
       </section>
     </div>
   </Main>

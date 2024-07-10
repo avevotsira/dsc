@@ -6,4 +6,4 @@ type: role
 lang: en
 ---
 
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour
+Directs and manages the technical work of digital security and serves as the direct assistants for the Chairman of the D.S.C.
