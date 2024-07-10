@@ -1,0 +1,44 @@
+---
+import Main from "@/components/Main.astro";
+import TextElement from "@/components/TextElement";
+
+import { languages } from "@/i18n/ui";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import "lite-youtube-embed/src/lite-yt-embed.css";
+
+const title = "Video";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const videoIds = ["dQw4w9WgXcQ", "jNQXAC9IVRw"];
+---
+
+<BaseLayout title={title}>
+  <Main>
+    <section aria-label={title} class="container mx-auto px-4">
+      <header class="mb-6">
+        <TextElement variant="heading" className="text-primary">
+          {title}
+        </TextElement>
+      </header>
+      <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
+        {
+          videoIds.map((videoId) => (
+            <div class="aspect-w-16 aspect-h-9">
+              <lite-youtube videoid={videoId} class="rounded-lg shadow-lg" />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </Main>
+</BaseLayout>
+
+<script>
+  import "lite-youtube-embed";
+</script>
