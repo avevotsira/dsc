@@ -2,6 +2,6 @@
 title: Title
 name: Name
 organization: Organization
-role: Member
+role: Vice-Chair
 lang: en
 ---
