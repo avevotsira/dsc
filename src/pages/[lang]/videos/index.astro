@@ -7,7 +7,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 import "lite-youtube-embed/src/lite-yt-embed.css";
 
-const title = "Video";
+const title = "Videos";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -15,27 +15,44 @@ export async function getStaticPaths() {
   }));
 }
 
-const videoIds = ["dQw4w9WgXcQ", "jNQXAC9IVRw"];
+const videos = [
+  { id: "dQw4w9WgXcQ", title: "Rick Astley - Never Gonna Give You Up" },
+  { id: "jNQXAC9IVRw", title: "Me at the zoo" },
+];
 ---
 
 <BaseLayout title={title}>
   <Main>
-    <section aria-label={title} class="container mx-auto px-4">
+    <article class="container mx-auto px-4">
       <header class="mb-6">
-        <TextElement variant="heading" className="text-primary">
-          {title}
-        </TextElement>
+        <h1>
+          <TextElement variant="heading" className="text-primary">
+            {title}
+          </TextElement>
+        </h1>
       </header>
-      <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
-        {
-          videoIds.map((videoId) => (
-            <div class="aspect-w-16 aspect-h-9">
-              <lite-youtube videoid={videoId} class="rounded-lg shadow-lg" />
-            </div>
-          ))
-        }
-      </div>
-    </section>
+      <section aria-label="Video Gallery">
+        <ul class="grid list-none gap-4 p-0 sm:grid-cols-1 md:grid-cols-2">
+          {
+            videos.map((video) => (
+              <li>
+                <figure>
+                  <lite-youtube
+                    videoid={video.id}
+                    class="rounded-lg shadow-lg"
+                    params="rel=0"
+                    playlabel={`Play: ${video.title}`}
+                  />
+                  <figcaption class="mt-2 text-center">
+                    {video.title}
+                  </figcaption>
+                </figure>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </article>
   </Main>
 </BaseLayout>
 
