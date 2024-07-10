@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Anuphan";
+  font-weight: 1 900;
+  font-display: optional;
+  src:
+    url("/assets/fonts/anuphan.woff2") format("woff2"),
+    url("/assets/fonts/anuphan.woff") format("woff");
+}
+
 @layer base {
   :root {
     --background: 215 0% 100%;
