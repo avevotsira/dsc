@@ -2,6 +2,6 @@
 title: Title
 name: Name
 organization: Organization
-role: Member
+role: អនុប្រធាន
 lang: km
 ---

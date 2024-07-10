@@ -1,7 +1,7 @@
 ---
-title: Title
-name: Name
-organization: Organization
-role: Chair
+title: សម្ដេចមហាបវរធិបតី
+name: ហ៊ុន ម៉ាណែត
+organization: នាយករដ្ឋមន្រ្តីនៃព្រះរាជាណាចក្រកម្ពុជា
+role: ប្រធាន
 lang: km
 ---
