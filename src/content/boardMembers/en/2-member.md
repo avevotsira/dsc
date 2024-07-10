@@ -1,7 +1,7 @@
 ---
 title: Title
 name: Name
-organization: Organization
-role: Vice-Chair
+organization: Deputy Prime Minister
+role: Permanent Vice-Chair
 lang: en
 ---

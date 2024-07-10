@@ -23,8 +23,8 @@ export const NavRoutes = [
     label: "About Us",
     children: [
       { label: "About DSC", href: Routes.About },
-      { label: "Structure", href: Routes.Structure },
-      { label: "DSC's Leader", href: Routes.Leader },
+      { label: "DSC's Structure", href: Routes.Structure },
+      { label: "DSC's Leaders", href: Routes.Leader },
     ],
   },
   {
