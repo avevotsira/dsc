@@ -15,13 +15,11 @@ export async function getStaticPaths({
   paginate: PaginateFunction;
 }) {
   const allLanguages = Object.values(languages);
-  const allArticles = await getCollection("articles");
+  const tips = await getCollection("cybersecurity-tips");
 
   return allLanguages.flatMap((lang) => {
-    const langArticles = allArticles.filter(
-      (article) => article.data.lang === lang,
-    );
-    return paginate(langArticles, {
+    const langTips = tips.filter((tip) => tip.data.lang === lang);
+    return paginate(langTips, {
       params: { lang },
       pageSize: 10,
     });
@@ -31,19 +29,19 @@ export async function getStaticPaths({
 const { lang } = Astro.params;
 const { page } = Astro.props;
 
-const title = "Articles";
-const description = "Browse our collection of articles on various topics.";
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const title = "Cybersecurity Tips";
+const description =
+  "A collection of cybersecurity tips to keep you safe online.";
 ---
 
 <BlogListLayout
   title={title}
   description={description}
-  canonicalURL={canonicalURL}
+  canonicalURL={Astro.url.toString()}
   content={page.data}
 >
   <Main>
-    <section aria-label="Blog Posts">
+    <section aria-label="Cybersecurity Tips">
       <TextElement variant="heading" className="text-primary">
         {title}
       </TextElement>

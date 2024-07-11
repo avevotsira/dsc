@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 }
 
 const lang = Astro.params.lang as SupportedLanguage;
-const allBoardMembers = await getCollection("boardMembers");
+const allBoardMembers = await getCollection("board-members");
 const boardMembers = allBoardMembers.filter(
   (member) => member.data.lang === lang,
 );
