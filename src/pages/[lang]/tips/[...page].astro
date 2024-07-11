@@ -1,11 +1,11 @@
 ---
+import ContentList from "@/components/content-card/ContentList.astro";
 import Main from "@/components/Main.astro";
-import TipList from "@/components/page/tip/TipList.astro";
 import Pagination from "@/components/Pagination.astro";
 import TextElement from "@/components/TextElement";
 
 import { languages } from "@/i18n/ui";
-import Layout from "@/layouts/Layout.astro";
+import BlogListLayout from "@/layouts/BlogListLayout.astro";
 import type { PaginateFunction } from "astro";
 import { getCollection } from "astro:content";
 
@@ -15,12 +15,10 @@ export async function getStaticPaths({
   paginate: PaginateFunction;
 }) {
   const allLanguages = Object.values(languages);
-  const allArticles = await getCollection("tips");
+  const tips = await getCollection("tips");
 
   return allLanguages.flatMap((lang) => {
-    const langArticles = allArticles.filter(
-      (article) => article.data.lang === lang,
-    );
+    const langArticles = tips.filter((article) => article.data.lang === lang);
     return paginate(langArticles, {
       params: { lang },
       pageSize: 10,
@@ -32,16 +30,23 @@ const { lang } = Astro.params;
 const { page } = Astro.props;
 
 const title = "Cybersecurity Tips";
+const description =
+  "A collection of cybersecurity tips to keep you safe online.";
 ---
 
-<Layout title={title}>
+<BlogListLayout
+  title={title}
+  description={description}
+  canonicalURL={Astro.url.toString()}
+  content={page.data}
+>
   <Main>
-    <section aria-label="Blog Posts">
+    <section aria-label="Cybersecurity Tips">
       <TextElement variant="heading" className="text-primary">
         {title}
       </TextElement>
-      <TipList tips={page.data} lang={lang} />
+      <ContentList content={page.data} lang={lang} />
       <Pagination page={page} />
     </section>
   </Main>
-</Layout>
+</BlogListLayout>

@@ -7,7 +7,7 @@ import ProseWrapper from "@/components/ProseWrapper.astro";
 import TextElement from "@/components/TextElement";
 
 import type { SupportedLanguage } from "@/i18n/ui";
-import Layout from "@/layouts/Layout.astro";
+import ArticleLayout from "@/layouts/ArticleLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { Clock3, NotebookPen } from "lucide-react";
@@ -30,12 +30,11 @@ const { Content } = await page.render();
 const publicationDate = new Date(page.data.date);
 ---
 
-<Layout
+<ArticleLayout
   title={page.data.title}
   description={page.data.description}
   image={page.data.image.src}
   canonicalURL={new URL(Astro.url.pathname, Astro.site).toString()}
-  type="article"
   publishDate={publicationDate}
 >
   <Main>
@@ -93,4 +92,4 @@ const publicationDate = new Date(page.data.date);
       </section>
     </ProseWrapper>
   </Main>
-</Layout>
+</ArticleLayout>

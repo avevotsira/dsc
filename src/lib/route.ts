@@ -50,15 +50,11 @@ interface RouteType {
 
 /**
  * Maps paths to localized routes based on the specified locale.
- *
- * @param {Array<{ href: string; label: string }>} paths - The array of paths containing href and label.
- * @param {string} locale - The locale to use for localization, defaults to defaultLang.
- * @return {Array<{ href: string; label: string }>} The array of localized routes.
  */
 export function getLocalizedRoute(
-  paths: { href: string; label: string }[],
+  paths: Array<{ href: string; label: string }>,
   locale: string,
-) {
+): Array<{ href: string; label: string }> {
   return paths.map((path) => ({
     ...path,
     href: getRelativeLocaleUrl(locale, path.href),

@@ -1,6 +1,6 @@
 ---
+import ContentList from "@/components/content-card/ContentList.astro";
 import Main from "@/components/Main.astro";
-import ArticleList from "@/components/page/article/ArticleList.astro";
 import Pagination from "@/components/Pagination.astro";
 import TextElement from "@/components/TextElement";
 
@@ -40,14 +40,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
   title={title}
   description={description}
   canonicalURL={canonicalURL}
-  articles={page.data}
+  content={page.data}
 >
   <Main>
     <section aria-label="Blog Posts">
       <TextElement variant="heading" className="text-primary">
         {title}
       </TextElement>
-      <ArticleList articles={page.data} lang={lang} />
+      <ContentList content={page.data} lang={lang} />
       <Pagination page={page} />
     </section>
   </Main>
