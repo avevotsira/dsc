@@ -47,51 +47,49 @@ const t = useTranslations(lang);
 
 <BaseLayout title={`Welcome to Astro - ${lang}`} description={"test"}>
   <HomeMain>
-    <section aria-label="hero-section">
-      <Hero
-        title="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages."
-        subtitle="It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-      />
-      <div
-        class="container flex flex-col items-center gap-16 px-24 py-8 max-sm:p-5"
-      >
-        <section aria-labelledby="vision">
-          <Vision client:idle />
-        </section>
-        <section aria-labelledby="mission">
-          <Mission client:idle />
-        </section>
-        <section aria-labelledby="what-we-do-heading">
-          <TextElement
-            variant="subheading"
-            id="what-we-do-heading"
-            className="mb-4 text-center"
-          >
-            {t("home.whatwedo")}
-          </TextElement>
-          <WhatWeDoGrid />
-        </section>
-        <section aria-labelledby="latest-news-heading">
-          <TextElement
-            variant="subheading"
-            id="latest-news-heading"
-            className="mb-4 text-center"
-          >
-            {"Latest News And Events"}
-          </TextElement>
-          <HomeArticleList articles={latestArticles} lang={lang} />
-        </section>
-        <section aria-labelledby="law-regulations-heading">
-          <TextElement
-            variant="subheading"
-            id="law-regulations-heading"
-            className="mb-4 text-center"
-          >
-            {"Law and Regulations"}
-          </TextElement>
-          <LawCardList directives={latestDirectives} lang={lang} />
-        </section>
-      </div>
-    </section>
+    <Hero
+      title="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages."
+      subtitle="It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    />
+    <div
+      class="container flex flex-col items-center gap-16 px-24 py-8 max-sm:p-5"
+    >
+      <section aria-labelledby="vision">
+        <Vision client:idle />
+      </section>
+      <section aria-labelledby="mission">
+        <Mission client:idle />
+      </section>
+      <section aria-labelledby="what-we-do-heading">
+        <TextElement
+          variant="subheading"
+          id="what-we-do-heading"
+          className="mb-4 text-center"
+        >
+          {t("home.whatwedo")}
+        </TextElement>
+        <WhatWeDoGrid />
+      </section>
+      <section aria-labelledby="latest-news-heading">
+        <TextElement
+          variant="subheading"
+          id="latest-news-heading"
+          className="mb-4 text-center"
+        >
+          {"Latest News And Events"}
+        </TextElement>
+        <HomeArticleList articles={latestArticles} lang={lang} />
+      </section>
+      <section aria-labelledby="law-regulations-heading">
+        <TextElement
+          variant="subheading"
+          id="law-regulations-heading"
+          className="mb-4 text-center"
+        >
+          {"Law and Regulations"}
+        </TextElement>
+        <LawCardList directives={latestDirectives} lang={lang} />
+      </section>
+    </div>
   </HomeMain>
 </BaseLayout>
