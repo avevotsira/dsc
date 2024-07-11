@@ -1,0 +1,61 @@
+---
+import Main from "@/components/Main.astro";
+import TextElement from "@/components/TextElement";
+
+import { languages } from "@/i18n/ui";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import "lite-youtube-embed/src/lite-yt-embed.css";
+
+const title = "Videos";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const videos = [
+  { id: "dQw4w9WgXcQ", title: "Rick Astley - Never Gonna Give You Up" },
+  { id: "jNQXAC9IVRw", title: "Me at the zoo" },
+];
+---
+
+<BaseLayout title={title}>
+  <Main>
+    <article class="container mx-auto px-4">
+      <header class="mb-6">
+        <h1>
+          <TextElement variant="heading" className="text-primary">
+            {title}
+          </TextElement>
+        </h1>
+      </header>
+      <section aria-label="Video Gallery">
+        <ul class="grid list-none gap-4 p-0 sm:grid-cols-1 md:grid-cols-2">
+          {
+            videos.map((video) => (
+              <li>
+                <figure>
+                  <lite-youtube
+                    videoid={video.id}
+                    class="rounded-lg shadow-lg"
+                    params="rel=0"
+                    playlabel={`Play: ${video.title}`}
+                  />
+                  <figcaption class="mt-2 text-center">
+                    {video.title}
+                  </figcaption>
+                </figure>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </article>
+  </Main>
+</BaseLayout>
+
+<script>
+  import "lite-youtube-embed";
+</script>

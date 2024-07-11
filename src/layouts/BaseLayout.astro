@@ -77,6 +77,14 @@ const pathWithoutLocale = removeLanguagePrefix(
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
     <meta property="twitter:creator" content={authorName} />
 
+    <link
+      rel="preload"
+      href="/assets/fonts/anuphan.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <slot name="head" />
   </head>
   <body class="min-h-screen">

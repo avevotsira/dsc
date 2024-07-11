@@ -6,6 +6,16 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   prefix: "",
   theme: {
+    fontSize: {
+      sm: "0.9375rem",
+      base: "1.125rem",
+      lg: "1.25rem",
+      xl: "1.5rem",
+      "2xl": "1.75rem",
+      "3xl": "2rem",
+      "4xl": "2.25rem",
+      "5xl": "2.5rem",
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -14,6 +24,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Anuphan", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -74,6 +87,17 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            fontSize: theme("fontSize.base"),
+            h1: { fontSize: theme("fontSize.3xl") },
+            h2: { fontSize: theme("fontSize.2xl") },
+            h3: { fontSize: theme("fontSize.xl") },
+            h4: { fontSize: theme("fontSize.lg") },
+          },
+        },
+      }),
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],

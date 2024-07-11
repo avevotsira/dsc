@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 }
 
 const lang = Astro.params.lang as SupportedLanguage;
-const allBoardMembers = await getCollection("boardMembers");
+const allBoardMembers = await getCollection("board-members");
 const boardMembers = allBoardMembers.filter(
   (member) => member.data.lang === lang,
 );
@@ -48,6 +48,9 @@ const t = useTranslations(lang);
     <header>
       <TextElement variant="heading" className="pb-6 text-primary">
         {t("structure.heading")}
+      </TextElement>
+      <TextElement variant="paragraph" className="pb-6">
+        {t("structure.intro")}
       </TextElement>
     </header>
     <section aria-label="Board Members" class="pb-8">

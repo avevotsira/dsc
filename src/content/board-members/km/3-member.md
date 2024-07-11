@@ -2,6 +2,6 @@
 title: Title
 name: Name
 organization: Organization
-role: Chair
-lang: en
+role: អនុប្រធាន
+lang: km
 ---

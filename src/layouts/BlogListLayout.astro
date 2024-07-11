@@ -1,5 +1,5 @@
 ---
-import { getArticleUrl } from "@/lib/route";
+import { getContentUrl } from "@/lib/route";
 
 import BaseLayout from "./BaseLayout.astro";
 import type { SupportedLanguage } from "@/i18n/ui";
@@ -9,11 +9,14 @@ interface Props {
   title: string;
   description: string;
   canonicalURL: string;
-  articles: CollectionEntry<"articles">[];
+  content: (
+    | CollectionEntry<"articles">
+    | CollectionEntry<"cybersecurity-tips">
+  )[];
   image?: string;
 }
 
-const { title, description, canonicalURL, articles, image } = Astro.props;
+const { title, description, canonicalURL, content, image } = Astro.props;
 ---
 
 <BaseLayout
@@ -47,19 +50,16 @@ const { title, description, canonicalURL, articles, image } = Astro.props;
           "@type": "Thing",
           name: "News Articles",
         },
-        hasPart: articles.map((article) => ({
+        hasPart: content.map((item) => ({
           "@type": "NewsArticle",
-          headline: article.data.title,
+          headline: item.data.title,
           url: new URL(
-            getArticleUrl(
-              article.slug,
-              Astro.currentLocale as SupportedLanguage,
-            ),
+            getContentUrl(item, Astro.currentLocale as SupportedLanguage),
             Astro.site,
           ).toString(),
-          datePublished: new Date(article.data.date).toISOString(),
-          image: article.data.image
-            ? new URL(article.data.image.src, Astro.site).toString()
+          datePublished: new Date(item.data.date).toISOString(),
+          image: item.data.image
+            ? new URL(item.data.image.src, Astro.site).toString()
             : undefined,
           author: {
             "@type": "Organization",

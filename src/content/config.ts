@@ -98,10 +98,11 @@ const secretariesCollection = defineCollection({
 });
 
 export const collections = {
+  "cybersecurity-tips": articlesCollection,
   articles: articlesCollection,
   directives: directivesCollection,
   abouts: aboutsCollection,
   leaders: leaderCollection,
-  boardMembers: boardMembersCollection,
+  "board-members": boardMembersCollection,
   secretaries: secretariesCollection,
 };

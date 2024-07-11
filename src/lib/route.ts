@@ -1,5 +1,6 @@
 import type { SupportedLanguage } from "@/i18n/ui";
 import { removeLanguagePrefix } from "@/i18n/utils";
+import type { CollectionEntry } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 export enum Routes {
@@ -15,6 +16,7 @@ export enum Routes {
   Projects = "/projects",
   Contact = "/contact",
   Leader = "/about/leader",
+  CybersecurityTips = "/cybersecurity-tips",
 }
 
 export const NavRoutes = [
@@ -23,8 +25,8 @@ export const NavRoutes = [
     label: "About Us",
     children: [
       { label: "About DSC", href: Routes.About },
-      { label: "Structure", href: Routes.Structure },
-      { label: "DSC's Leader", href: Routes.Leader },
+      { label: "DSC's Structure", href: Routes.Structure },
+      { label: "DSC's Leaders", href: Routes.Leader },
     ],
   },
   {
@@ -38,7 +40,7 @@ export const NavRoutes = [
     ],
   },
   { label: "New & Events", href: Routes.Aritcles },
-  { label: "Cybersecurity Tips", href: Routes.Contact },
+  { label: "Cybersecurity Tips", href: Routes.CybersecurityTips },
 ];
 
 interface RouteType {
@@ -49,15 +51,11 @@ interface RouteType {
 
 /**
  * Maps paths to localized routes based on the specified locale.
- *
- * @param {Array<{ href: string; label: string }>} paths - The array of paths containing href and label.
- * @param {string} locale - The locale to use for localization, defaults to defaultLang.
- * @return {Array<{ href: string; label: string }>} The array of localized routes.
  */
 export function getLocalizedRoute(
-  paths: { href: string; label: string }[],
+  paths: Array<{ href: string; label: string }>,
   locale: string,
-) {
+): Array<{ href: string; label: string }> {
   return paths.map((path) => ({
     ...path,
     href: getRelativeLocaleUrl(locale, path.href),
@@ -87,9 +85,25 @@ export function getLocalizedRoutes(
   });
 }
 
-export const getArticleUrl = (slug: string, lang: SupportedLanguage) => {
-  return getRelativeLocaleUrl(
-    lang,
-    `articles/${removeLanguagePrefix(slug, lang)}`,
-  );
+export const getContentUrl = (
+  entry: CollectionEntry<"articles" | "cybersecurity-tips">,
+  lang: SupportedLanguage,
+) => {
+  const baseUrl = getRelativeLocaleUrl(lang);
+  const slug = removeLanguagePrefix(entry.slug, lang);
+
+  const articlePath = Routes.Aritcles.replace(/^\//, "");
+  const cybersecurityTipsPath = Routes.CybersecurityTips.replace(/^\//, "");
+
+  const urlGenerators = {
+    articles: () => `${baseUrl}${articlePath}/${slug}`,
+    "cybersecurity-tips": () => `${baseUrl}${cybersecurityTipsPath}/${slug}`,
+  };
+
+  const generator = urlGenerators[entry.collection];
+  if (generator) {
+    return generator();
+  }
+
+  throw new Error(`Unsupported collection: ${entry.collection}`);
 };
