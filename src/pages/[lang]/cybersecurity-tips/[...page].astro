@@ -15,11 +15,11 @@ export async function getStaticPaths({
   paginate: PaginateFunction;
 }) {
   const allLanguages = Object.values(languages);
-  const tips = await getCollection("tips");
+  const tips = await getCollection("cybersecurity-tips");
 
   return allLanguages.flatMap((lang) => {
-    const langArticles = tips.filter((article) => article.data.lang === lang);
-    return paginate(langArticles, {
+    const langTips = tips.filter((tip) => tip.data.lang === lang);
+    return paginate(langTips, {
       params: { lang },
       pageSize: 10,
     });

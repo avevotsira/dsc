@@ -9,7 +9,10 @@ interface Props {
   title: string;
   description: string;
   canonicalURL: string;
-  content: (CollectionEntry<"articles"> | CollectionEntry<"tips">)[];
+  content: (
+    | CollectionEntry<"articles">
+    | CollectionEntry<"cybersecurity-tips">
+  )[];
   image?: string;
 }
 

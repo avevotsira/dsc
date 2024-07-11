@@ -13,7 +13,7 @@ import { getCollection } from "astro:content";
 import { Clock3, NotebookPen } from "lucide-react";
 
 export async function getStaticPaths() {
-  const pages = await getCollection("tips");
+  const pages = await getCollection("cybersecurity-tips");
 
   return pages.map((page) => {
     const [lang, slug] = page.slug.split("/");
