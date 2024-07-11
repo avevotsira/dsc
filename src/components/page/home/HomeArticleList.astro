@@ -1,5 +1,5 @@
 ---
-import { getArticleUrl } from "@/lib/route";
+import { getContentUrl } from "@/lib/route";
 
 import HomeArticleCard from "./HomeArticleCard.astro";
 import type { SupportedLanguage } from "@/i18n/ui";
@@ -22,7 +22,7 @@ const { articles, lang } = Astro.props;
           image={article.data.image}
           title={article.data.title}
           body={article.body}
-          href={getArticleUrl(article.slug, lang)}
+          href={getContentUrl(article, lang)}
           date={article.data.date}
           lang={lang}
         />

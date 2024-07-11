@@ -1,5 +1,5 @@
 ---
-import { getArticleUrl } from "@/lib/route";
+import { getContentUrl } from "@/lib/route";
 
 import BaseLayout from "./BaseLayout.astro";
 import type { SupportedLanguage } from "@/i18n/ui";
@@ -54,7 +54,7 @@ const { title, description, canonicalURL, content, image } = Astro.props;
           "@type": "NewsArticle",
           headline: item.data.title,
           url: new URL(
-            getArticleUrl(item.slug, Astro.currentLocale as SupportedLanguage),
+            getContentUrl(item, Astro.currentLocale as SupportedLanguage),
             Astro.site,
           ).toString(),
           datePublished: new Date(item.data.date).toISOString(),

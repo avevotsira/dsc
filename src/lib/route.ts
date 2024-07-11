@@ -1,5 +1,6 @@
 import type { SupportedLanguage } from "@/i18n/ui";
 import { removeLanguagePrefix } from "@/i18n/utils";
+import type { CollectionEntry } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 export enum Routes {
@@ -84,13 +85,25 @@ export function getLocalizedRoutes(
   });
 }
 
-export const getArticleUrl = (slug: string, lang: SupportedLanguage) => {
-  return getRelativeLocaleUrl(
-    lang,
-    `articles/${removeLanguagePrefix(slug, lang)}`,
-  );
-};
+export const getContentUrl = (
+  entry: CollectionEntry<"articles" | "cybersecurity-tips">,
+  lang: SupportedLanguage,
+) => {
+  const baseUrl = getRelativeLocaleUrl(lang);
+  const slug = removeLanguagePrefix(entry.slug, lang);
 
-export const getTipsUrl = (slug: string, lang: SupportedLanguage) => {
-  return getRelativeLocaleUrl(lang, `tips/${removeLanguagePrefix(slug, lang)}`);
+  const articlePath = Routes.Aritcles.replace(/^\//, "");
+  const cybersecurityTipsPath = Routes.CybersecurityTips.replace(/^\//, "");
+
+  const urlGenerators = {
+    articles: () => `${baseUrl}${articlePath}/${slug}`,
+    "cybersecurity-tips": () => `${baseUrl}${cybersecurityTipsPath}/${slug}`,
+  };
+
+  const generator = urlGenerators[entry.collection];
+  if (generator) {
+    return generator();
+  }
+
+  throw new Error(`Unsupported collection: ${entry.collection}`);
 };

@@ -1,12 +1,15 @@
 ---
-import { getArticleUrl } from "@/lib/route";
+import { getContentUrl } from "@/lib/route";
 
 import ContentCard from "./ContentCard.astro";
 import type { SupportedLanguage } from "@/i18n/ui";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  content: (CollectionEntry<"articles"> | CollectionEntry<"cybersecurity-tips">)[];
+  content: (
+    | CollectionEntry<"articles">
+    | CollectionEntry<"cybersecurity-tips">
+  )[];
   lang: SupportedLanguage;
 }
 
@@ -22,7 +25,7 @@ const { content, lang } = Astro.props;
           title={item.data.title}
           body={item.body}
           description={item.data.description}
-          href={getArticleUrl(item.slug, lang)}
+          href={getContentUrl(item, lang)}
           date={item.data.date}
           lang={lang}
         />
