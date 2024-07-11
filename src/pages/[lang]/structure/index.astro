@@ -1,0 +1,113 @@
+---
+import Main from "@/components/Main.astro";
+import BoardMemberCard from "@/components/page/structure/BoardMemberCard.astro";
+import StructureChart from "@/components/page/structure/StructureChart";
+import StructureLeaderShipCard from "@/components/page/structure/StructureLeaderShipCard.astro";
+import TextElement from "@/components/TextElement";
+
+import { SECRETARY_TYPES } from "@/content/secretary.type";
+import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const title = "Structure";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const lang = Astro.params.lang as SupportedLanguage;
+const allBoardMembers = await getCollection("boardMembers");
+const boardMembers = allBoardMembers.filter(
+  (member) => member.data.lang === lang,
+);
+
+const allSecretaries = (
+  await getCollection(
+    "secretaries",
+    (secretary) => secretary.data.lang === lang,
+  )
+).map((secretary) => secretary.data);
+
+const general = allSecretaries.filter(
+  (secretary) => secretary.role === SECRETARY_TYPES.GENERAL,
+);
+
+const deputyGenerals = allSecretaries.filter(
+  (secretary) => secretary.role === SECRETARY_TYPES.DEPUTY,
+);
+
+const t = useTranslations(lang);
+---
+
+<BaseLayout title={title}>
+  <Main>
+    <header>
+      <TextElement variant="heading" className="pb-6 text-primary">
+        {t("structure.heading")}
+      </TextElement>
+      <TextElement variant="paragraph" className="pb-6">
+        {t("structure.intro")}
+      </TextElement>
+    </header>
+    <section aria-label="Board Members" class="pb-8">
+      <ul class="grid gap-y-3 rounded-md bg-gray-200 p-5 text-sm xl:text-base">
+        {
+          boardMembers.map((member) => (
+            <li>
+              <BoardMemberCard
+                title={member.data.title}
+                name={member.data.name}
+                organization={member.data.organization}
+                role={member.data.role}
+                lang={lang}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <section aria-label="Organization Structure">
+      <StructureChart />
+    </section>
+    <section aria-label="Leadership">
+      <TextElement
+        variant="subheading"
+        className="py-10 text-center text-primary"
+      >
+        Secretary General
+      </TextElement>
+      {
+        general[0] && (
+          <StructureLeaderShipCard
+            title={general[0].title}
+            name={general[0].name}
+            image={general[0].image}
+          />
+        )
+      }
+      <TextElement
+        variant="subheading"
+        className="py-10 text-center text-primary"
+      >
+        Deputy Secretary General
+      </TextElement>
+      <ul class="grid grid-cols-1 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          deputyGenerals.map((deputy) => (
+            <li>
+              <StructureLeaderShipCard
+                title={deputy.title}
+                name={deputy.name}
+                image={deputy.image}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </Main>
+</BaseLayout>

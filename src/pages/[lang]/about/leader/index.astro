@@ -1,10 +1,10 @@
 ---
-import LeaderList from "@/components/leader/LeaderList.astro";
 import Main from "@/components/Main.astro";
+import LeaderList from "@/components/page/leader/LeaderList.astro";
 import TextElement from "@/components/TextElement";
 
 import { languages, type SupportedLanguage } from "@/i18n/ui";
-import Layout from "@/layouts/Layout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
 const title = "DSC General Secretariat's Leaders";
@@ -20,7 +20,7 @@ const allLeaders = await getCollection("leaders");
 const leaders = allLeaders.filter((leader) => leader.data.lang === lang);
 ---
 
-<Layout title={title}>
+<BaseLayout title={title}>
   <Main>
     <section aria-label={title}>
       <TextElement variant="heading" className="mb-4 text-center text-primary">
@@ -30,4 +30,4 @@ const leaders = allLeaders.filter((leader) => leader.data.lang === lang);
       <LeaderList leaders={leaders} lang={lang} />
     </section>
   </Main>
-</Layout>
+</BaseLayout>

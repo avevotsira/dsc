@@ -13,7 +13,7 @@ const { page } = Astro.props;
     page.url.prev && (
       <a
         href={page.url.prev}
-        class="mr-4 rounded bg-primary px-4 py-2 text-white"
+        class="mr-4 rounded bg-primary px-4 py-2 text-primary-foreground"
       >
         Previous
       </a>
@@ -26,7 +26,7 @@ const { page } = Astro.props;
     page.url.next && (
       <a
         href={page.url.next}
-        class="ml-4 rounded bg-primary px-4 py-2 text-white"
+        class="ml-4 rounded bg-primary px-4 py-2 text-primary-foreground"
       >
         Next
       </a>

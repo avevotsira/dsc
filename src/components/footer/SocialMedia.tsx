@@ -6,18 +6,20 @@ import {
 } from "./SocialMediaLinks";
 
 export default function SocialMedia() {
+  const socialMediaLinks = [
+    { Icon: TwitterIcon, label: "Twitter", link: "/" },
+    { Icon: FacebookIcon, label: "Facebook", link: "/" },
+    { Icon: InstagramIcon, label: "Instagram", link: "/" },
+    { Icon: LinkedinIcon, label: "LinkedIn", link: "/" },
+  ];
+
   return (
     <nav aria-label="Social Media Links">
       <ul className="flex gap-6">
-        {[
-          { Icon: TwitterIcon, label: "Twitter" },
-          { Icon: FacebookIcon, label: "Facebook" },
-          { Icon: InstagramIcon, label: "Instagram" },
-          { Icon: LinkedinIcon, label: "LinkedIn" },
-        ].map(({ Icon, label }) => (
+        {socialMediaLinks.map(({ Icon, label, link }) => (
           <li key={label}>
             <a
-              href="/"
+              href={link}
               aria-label={label}
               className="transition-colors hover:text-secondary"
             >
