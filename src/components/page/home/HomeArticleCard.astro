@@ -68,9 +68,9 @@ const trimmedTitle = title.trim().replace(/\s+/g, "-");
     <ButtonLink
       href={href}
       className="w-full"
-      aria-labelledby={`read-more-${href}`}
+      aria-labelledby={`read-more-${trimmedTitle}`}
     >
-      <span id={`read-more-${href}`}
+      <span id={`read-more-${trimmedTitle}`}
         >Read more<span class="sr-only"> about {title}</span></span
       >
     </ButtonLink>
