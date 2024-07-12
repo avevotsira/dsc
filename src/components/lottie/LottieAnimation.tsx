@@ -4,15 +4,9 @@ import { useLottie } from "lottie-react";
 
 interface LottieAnimationProps {
   animationType: "mission" | "vision";
-  width?: string;
-  height?: string;
 }
 
-const LottieAnimation: React.FC<LottieAnimationProps> = ({
-  animationType,
-  width = "100%",
-  height = "auto",
-}) => {
+const LottieAnimation: React.FC<LottieAnimationProps> = ({ animationType }) => {
   const animationData =
     animationType === "mission" ? missionAnimation : visionAnimation;
 
@@ -27,7 +21,7 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({
   return (
     <div
       aria-hidden="true"
-      style={{ width, height, maxWidth: "320px", margin: "0 auto" }}
+      className="mx-auto aspect-square w-full max-w-[320px]"
     >
       {View}
     </div>
