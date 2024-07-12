@@ -45,14 +45,13 @@ type Props = {
   itemProp?: string;
 } & React.ComponentProps<Tag>;
 
-export default function TextElement({
+export function TextElement({
   children,
   variant = "body",
   className,
   ...rest
 }: Props) {
-  const DynamicText = CONFIG[variant].tag;
-  const tw = CONFIG[variant].tw;
+  const { tag: DynamicText, tw } = CONFIG[variant];
 
   return (
     <DynamicText {...rest} className={cn(tw, className)}>
@@ -60,3 +59,7 @@ export default function TextElement({
     </DynamicText>
   );
 }
+
+TextElement.displayName = "TextElement";
+
+export default TextElement;
