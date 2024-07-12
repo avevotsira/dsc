@@ -1,3 +1,5 @@
+import React from "react";
+
 import { cn } from "@/lib/utils";
 
 const CONFIG = {
@@ -45,18 +47,18 @@ type Props = {
   itemProp?: string;
 } & React.ComponentProps<Tag>;
 
-export default function TextElement({
-  children,
-  variant = "body",
-  className,
-  ...rest
-}: Props) {
-  const DynamicText = CONFIG[variant].tag;
-  const tw = CONFIG[variant].tw;
+const TextElement = React.memo(
+  ({ children, variant = "body", className, ...rest }: Props) => {
+    const { tag: DynamicText, tw } = CONFIG[variant];
 
-  return (
-    <DynamicText {...rest} className={cn(tw, className)}>
-      {children}
-    </DynamicText>
-  );
-}
+    return React.createElement(
+      DynamicText,
+      { ...rest, className: cn(tw, className) },
+      children,
+    );
+  },
+);
+
+TextElement.displayName = "TextElement";
+
+export default TextElement;

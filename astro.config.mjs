@@ -2,6 +2,7 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
+import { visualizer } from "rollup-plugin-visualizer";
 
 // https://astro.build/config
 export default defineConfig({
@@ -34,5 +35,8 @@ export default defineConfig({
   },
   prefetch: {
     prefetchAll: true,
+  },
+  vite: {
+    plugins: [visualizer()],
   },
 });
