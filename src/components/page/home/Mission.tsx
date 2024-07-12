@@ -3,8 +3,10 @@ import TextElement from "../../TextElement";
 
 const Mission: React.FC = () => (
   <div className="flex flex-col gap-8 md:flex-row-reverse">
-    <div className="w-full md:w-2/5 md:justify-center">
-      <LottieAnimation animationType="mission" />
+    <div className="w-full md:w-2/5">
+      <div className="h-[320px] md:h-auto">
+        <LottieAnimation animationType="mission" />
+      </div>
     </div>
     <div className="w-full md:w-3/5">
       <TextElement variant="subheading" id="mission" className="pt-4">
