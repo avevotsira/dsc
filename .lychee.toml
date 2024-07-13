@@ -34,14 +34,7 @@ require_https = true
 ############################  Exclusions  ##########################
 
 # Exclude URLs and mail addresses from checking (supports regex).
-exclude = [
-  '^https://www\\.linkedin\\.com',
-  '^https://bookshop\\.org',
-  '^https://goo\\.gl/maps/7S8TwSuD47Ee8MG26',
-  '^https://mptc\\.gov\\.kh',
-  '^https://digitaleconomy\\.gov\\.kh',
-  '^https://dgc\\.gov\\.kh'
-]
+exclude = []
 
 # Check mail addresses
 include_mail = true
