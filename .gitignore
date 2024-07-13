@@ -23,4 +23,8 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+#stats plugin
 stats.html
+
+# Lychee
+.lycheecache
