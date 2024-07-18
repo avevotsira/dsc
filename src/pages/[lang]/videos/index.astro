@@ -19,6 +19,10 @@ const videos = [
   { id: "dQw4w9WgXcQ", title: "Rick Astley - Never Gonna Give You Up" },
   { id: "jNQXAC9IVRw", title: "Me at the zoo" },
 ];
+
+//temp: disable video page
+Astro.response.status = 404;
+Astro.response.statusText = "Page Not Found";
 ---
 
 <BaseLayout title={title}>

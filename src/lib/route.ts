@@ -36,7 +36,8 @@ export const NavRoutes = [
       { label: "Sub Degrees", href: Routes.SubDecrees },
       { label: "Policies", href: Routes.Policies },
       { label: "Decisions", href: Routes.Decisions },
-      { label: "Videos", href: Routes.Videos },
+      // temp: disable video page
+      // { label: "Videos", href: Routes.Videos },
     ],
   },
   { label: "New & Events", href: Routes.Aritcles },
