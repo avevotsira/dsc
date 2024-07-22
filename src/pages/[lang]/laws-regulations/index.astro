@@ -1,0 +1,72 @@
+---
+import DirectiveCardList from "@/components/directive/DirectiveCardList.astro";
+import Main from "@/components/Main.astro";
+import TextElement from "@/components/TextElement";
+
+import { DIRECTIVE_TYPES } from "@/content/content.type";
+import { languages, type SupportedLanguage } from "@/i18n/ui";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
+const title = "Laws and Regulations";
+const royalDecreeTitle = "Royal Decrees";
+const subDecreeTitle = "Sub Decrees";
+const decisionTitle = "Decisions";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const lang = Astro.params.lang as SupportedLanguage;
+const allDirectives = await getCollection("directives");
+const royalDecrees: CollectionEntry<"directives">[] = [];
+const subDecrees: CollectionEntry<"directives">[] = [];
+const decisions: CollectionEntry<"directives">[] = [];
+
+allDirectives.forEach((directive: CollectionEntry<"directives">) => {
+  if (directive.data.lang === lang) {
+    switch (directive.data.type) {
+      case DIRECTIVE_TYPES.ROYAL_DECREE:
+        royalDecrees.push(directive);
+        break;
+      case DIRECTIVE_TYPES.SUB_DECREE:
+        subDecrees.push(directive);
+        break;
+      case DIRECTIVE_TYPES.DECISION:
+        decisions.push(directive);
+        break;
+      default:
+        break;
+    }
+  }
+});
+
+console.log(typeof decisions);
+---
+
+<BaseLayout title={title}>
+  <Main>
+    <section aria-label={title}>
+      <header>
+        <TextElement variant="heading" className="text-primary">
+          {title}
+        </TextElement>
+      </header>
+      <TextElement variant="subheading" className="text-primary">
+        {royalDecreeTitle}
+      </TextElement>
+      <DirectiveCardList directives={royalDecrees} lang={lang} />
+      <TextElement variant="subheading" className="text-primary">
+        {subDecreeTitle}
+      </TextElement>
+      <DirectiveCardList directives={subDecrees} lang={lang} />
+      <TextElement variant="subheading" className="text-primary">
+        {decisionTitle}
+      </TextElement>
+      <DirectiveCardList directives={decisions} lang={lang} />
+    </section>
+  </Main>
+</BaseLayout>
