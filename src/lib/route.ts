@@ -7,10 +7,8 @@ export enum Routes {
   Home = "/",
   About = "/about",
   Structure = "/structure",
-  RoyalDecrees = "/royal-decrees",
-  SubDecrees = "/sub-decrees",
+  LawsRegulations = "/laws-regulations",
   Policies = "/policies",
-  Decisions = "/decisions",
   Videos = "/videos",
   Aritcles = "/articles",
   Projects = "/projects",
@@ -32,10 +30,8 @@ export const NavRoutes = [
   {
     label: "Media Hub",
     children: [
-      { label: "Royal Degrees", href: Routes.RoyalDecrees },
-      { label: "Sub Degrees", href: Routes.SubDecrees },
+      { label: "Laws and Regulations", href: Routes.LawsRegulations },
       { label: "Policies", href: Routes.Policies },
-      { label: "Decisions", href: Routes.Decisions },
       { label: "Videos", href: Routes.Videos },
     ],
   },
