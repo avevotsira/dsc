@@ -3,16 +3,12 @@ import DirectiveCardList from "@/components/directive/DirectiveCardList.astro";
 import Main from "@/components/Main.astro";
 import TextElement from "@/components/TextElement";
 
-import { DIRECTIVE_TYPES } from "@/content/content.type";
+import { DIRECTIVE_TYPES, DirectiveType } from "@/content/content.type";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import type { CollectionEntry } from "astro:content";
-import { getCollection } from "astro:content";
+import { CollectionEntry, getCollection } from "astro:content";
 
-const title = "Laws and Regulations";
-const royalDecreeTitle = "Royal Decrees";
-const subDecreeTitle = "Sub Decrees";
-const decisionTitle = "Decisions";
+const title = "Law and Regulations";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -22,27 +18,27 @@ export async function getStaticPaths() {
 
 const lang = Astro.params.lang as SupportedLanguage;
 const allDirectives = await getCollection("directives");
-const royalDecrees: CollectionEntry<"directives">[] = [];
-const subDecrees: CollectionEntry<"directives">[] = [];
-const decisions: CollectionEntry<"directives">[] = [];
 
-allDirectives.forEach((directive: CollectionEntry<"directives">) => {
-  if (directive.data.lang === lang) {
-    switch (directive.data.type) {
-      case DIRECTIVE_TYPES.ROYAL_DECREE:
-        royalDecrees.push(directive);
-        break;
-      case DIRECTIVE_TYPES.SUB_DECREE:
-        subDecrees.push(directive);
-        break;
-      case DIRECTIVE_TYPES.DECISION:
-        decisions.push(directive);
-        break;
-      default:
-        break;
-    }
-  }
-});
+function filterDirectives(
+  directives: CollectionEntry<"directives">[],
+  type: DirectiveType,
+  lang: SupportedLanguage,
+): CollectionEntry<"directives">[] {
+  return directives.filter(
+    (directive) => directive.data.lang === lang && directive.data.type === type,
+  );
+}
+
+const directiveMapping = [
+  { type: DIRECTIVE_TYPES.SUB_DECREE, title: "Sub Decrees" },
+  { type: DIRECTIVE_TYPES.ROYAL_DECREE, title: "Royal Decrees" },
+  { type: DIRECTIVE_TYPES.DECISION, title: "Decisions" },
+] as const;
+
+const directiveTypes = directiveMapping.map(({ type, title }) => ({
+  type,
+  title,
+}));
 ---
 
 <BaseLayout title={title}>
@@ -53,18 +49,20 @@ allDirectives.forEach((directive: CollectionEntry<"directives">) => {
           {title}
         </TextElement>
       </header>
-      <TextElement variant="subheading" className="text-primary">
-        {royalDecreeTitle}
-      </TextElement>
-      <DirectiveCardList directives={royalDecrees} lang={lang} />
-      <TextElement variant="subheading" className="text-primary">
-        {subDecreeTitle}
-      </TextElement>
-      <DirectiveCardList directives={subDecrees} lang={lang} />
-      <TextElement variant="subheading" className="text-primary">
-        {decisionTitle}
-      </TextElement>
-      <DirectiveCardList directives={decisions} lang={lang} />
+
+      {
+        directiveTypes.map(({ type, title }) => (
+          <section aria-label={title}>
+            <TextElement variant="subheading" className="text-primary">
+              {title}
+            </TextElement>
+            <DirectiveCardList
+              directives={filterDirectives(allDirectives, type, lang)}
+              lang={lang}
+            />
+          </section>
+        ))
+      }
     </section>
   </Main>
 </BaseLayout>
