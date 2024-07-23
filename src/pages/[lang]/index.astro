@@ -6,6 +6,7 @@ import LawCardList from "@/components/page/home/law/LawCardList.astro";
 import Mission from "@/components/page/home/Mission.astro";
 import Vision from "@/components/page/home/Vison.astro";
 import TextElement from "@/components/TextElement";
+import UnitLinks from "@/components/UnitLinks";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
 
 import { languages, type SupportedLanguage } from "@/i18n/ui";
@@ -89,6 +90,16 @@ const t = useTranslations(lang);
           {"Law and Regulations"}
         </TextElement>
         <LawCardList directives={latestDirectives} lang={lang} />
+      </section>
+      <section aria-labelledby="units-under-dsc-heading">
+        <TextElement
+          variant="subheading"
+          id="units-under-dsc-heading"
+          className="mb-4 text-center"
+        >
+          {"Units under Digital Security Committee"}
+        </TextElement>
+        <UnitLinks/>
       </section>
     </div>
   </HomeMain>
