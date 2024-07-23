@@ -1,22 +1,24 @@
-import { ExternalLink } from "lucide-react";
-
 export default function UnitLinks() {
   const ExternalLinks = [
     {
       label: "Cambodian Cyber Security Unit",
       link: "https://mptc.gov.kh",
+      image: "/assets/images/mptc-logo.png",
     },
     {
       label: "Anti-Cybsecurity Unit",
       link: "https://mptc.gov.kh",
+      image: "/assets/images/mptc-logo.png",
     },
-    { 
-      label: "National Cyberspace Defense Unit", 
-      link: "https://mptc.gov.kh" 
+    {
+      label: "National Cyberspace Defense Unit",
+      link: "https://mptc.gov.kh",
+      image: "/assets/images/mptc-logo.png",
     },
-    { 
-      label: "Cyber Diplomacy Unit", 
-      link: "https://mptc.gov.kh" 
+    {
+      label: "Cyber Diplomacy Unit",
+      link: "https://mptc.gov.kh",
+      image: "/assets/images/mptc-logo.png",
     },
   ];
 
@@ -32,11 +34,10 @@ export default function UnitLinks() {
               className="group flex items-start gap-4 hover:underline"
               aria-label={`${item.label} (opens in a new tab)`}
             >
-              <ExternalLink
-                size={30}
-                className="mt-1 shrink-0 transition-colors group-hover:text-secondary"
-              />
-              <span>{item.label}</span>
+              <div className="flex items-center">
+                <img src={item.image} width="30" height="30" />
+                <span className="ml-2">{item.label}</span>
+              </div>
             </a>
           </li>
         ))}
