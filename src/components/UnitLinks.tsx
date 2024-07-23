@@ -35,7 +35,7 @@ export default function UnitLinks() {
               aria-label={`${item.label} (opens in a new tab)`}
             >
               <div className="flex items-center">
-                <img src={item.image} width="30" height="30" />
+                <img src={item.image} alt={item.label} width="30" height="30" />
                 <span className="ml-2">{item.label}</span>
               </div>
             </a>
