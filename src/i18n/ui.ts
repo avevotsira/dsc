@@ -4,9 +4,19 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.about": "About",
     "nav.projects": "Projects",
     "home.whatwedo": "What We Do",
-    "structure.heading": "Organization Structure of DSC General Secretariat",
+    "structure.heading": "Organization Structure of DSC",
     "structure.intro":
       "The Royal Government has established the Digital Security Committee (D.S.C.) in order to ensure the efficient and effective function in leading, coordinating and promoting the management of digital security to protect the interests of all social actors against all forms of attacks as to respond to all technical aspects and relevant forces and thereby maintaining and protecting digital security.",
+    "structure.dscHeading":
+      "Structure of the Digital Security Committee (D.S.C.)",
+    "structure.dscIntro":
+      "The Digital Security Committee (DSC) of Cambodia is composed of high-ranking officials including the Prime Minister as Chairman, Deputy Prime Ministers, and various Ministers as Vice-Chairmen, along with Secretaries of State and military leaders as members. Its composition is formalized by the Royal Government, with provisions for adding more members as needed. The DSC convenes biannually, with the possibility of extraordinary meetings, chaired by designated officials or their delegates, ensuring continuity and decision-making authority across its membership.",
+    "structure.orgIntro":
+      "The D.S.C. has a subordinating General Secretariat, overseeing 4 units, Cambodian Cyber Security Unit, Anti-Cybercrime Unit, Cyber Space Defense Unit, and Cyber Diplomatic affairs Unit. These units represent various ministries including Interior, National Defense, and Foreign Affairs, with provisions for additional deputies as needed. Appointments to these roles are made by the Royal Government upon request from the Minister of Posts and Telecommunications.",
+    "structure.generalSecretaryHeading":
+      "Structure of D.S.C.'s General Secretariat",
+    "structure.generalSecretaryIntro":
+      "The General Secretary of the Digital Security Committee (DSC) is headed by the Minister of Posts and Telecommunications, supported by several Deputy Secretary Generals and is responsible for directs and coordinates all technical and administrative aspects of digital security, serving as a key assistant to the Chairman. This includes managing various specialized units, overseeing human resources and budgeting, ensuring secure file and data management, and preparing comprehensive reports on digital security efforts. Additionally, they undertake any further duties as required by the Chairman, showcasing their pivotal role in the operational and strategic functions of the DSC.",
     "about.dsc": "About Digital Security Committee",
     "about.dscText":
       "The Royal Government has established the Digital Security Committee (D.S.C.) in order to ensure the efficient and effective function in leading, coordinating and promoting the management of digital security to protect the interests of all social actors against all forms of attacks as to respond to all technical aspects and relevant forces and thereby maintaining and protecting digital security.",
