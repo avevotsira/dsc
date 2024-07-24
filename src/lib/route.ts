@@ -32,7 +32,8 @@ export const NavRoutes = [
     children: [
       { label: "Laws and Regulations", href: Routes.LawsRegulations },
       { label: "Policies", href: Routes.Policies },
-      { label: "Videos", href: Routes.Videos },
+      // temp: disable video page
+      // { label: "Videos", href: Routes.Videos },
     ],
   },
   { label: "New & Events", href: Routes.Aritcles },
