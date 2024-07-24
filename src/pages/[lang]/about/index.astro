@@ -56,6 +56,17 @@ const description =
             {t("about.strategiesText")}
           </p>
         </header>
+      </section>
+      <section aria-label={"Strategic Goals and Strategies"}>
+        <TextElement
+          variant="subheading"
+          className="text-center text-primary lg:text-3xl"
+        >
+          {t("about.strategies")}
+        </TextElement>
+        <p class="pt-8 text-center">
+          {t("about.strategiesText")}
+        </p>
         <AboutList abouts={goals} className="lg:grid-cols-2" />
       </section>
       <figure class="mx-auto flex flex-col items-center gap-4 text-center">
@@ -75,14 +86,12 @@ const description =
         </figcaption>
       </figure>
       <section aria-label={"Role and Responsibilites "}>
-        <header>
-          <TextElement
-            variant="subheading"
-            className="text-center text-primary lg:text-3xl"
-          >
-            {t("about.roleResponsibilities")}
-          </TextElement>
-        </header>
+        <TextElement
+          variant="subheading"
+          className="text-center text-primary lg:text-3xl"
+        >
+          {t("about.roleResponsibilities")}
+        </TextElement>
         <AboutList abouts={roles} className="sm:grid-cols-2 lg:grid-cols-3" />
       </section>
     </div>
