@@ -1,24 +1,55 @@
 ---
+import TextElement from "@/components/TextElement";
+
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
 interface Props {
   title: string;
   lang: string;
   role: string;
   name: string;
+  image: ImageMetadata;
   organization: string;
 }
 
-const { title, name, organization, role } = Astro.props as Props;
+const { title, name, image, organization, role } = Astro.props as Props;
 ---
 
 <div
-  class="board-member flex flex-col gap-x-3 space-y-3 rounded-md bg-white px-4 py-5 dark:bg-gray-500 md:flex-row md:space-y-0"
+  class="board-member flex flex-row gap-x-3 space-y-0 rounded-md bg-white p-3 dark:bg-gray-500 sm:flex-row sm:px-4 sm:py-5"
 >
-  <div class="name flex basis-3/12 gap-x-2">
-    {title}
-    <b class="font-bold">{name}</b>
+  <div class="size-24 shrink-0 sm:size-32 lg:size-40">
+    <Image
+      src={image}
+      alt={`${title} - ${name}`}
+      class="aspect-square size-full object-cover"
+      loading="eager"
+    />
   </div>
-  <div class="organization flex-1">{organization}</div>
-  <div class="role basis-2/12 text-sm md:whitespace-nowrap">
-    {role}
+  <div class="w-full">
+    <div class="flex flex-col md:flex-row">
+      <div class="flex flex-wrap gap-x-2 md:flex-1">
+        <TextElement
+          variant="small"
+          className="sm:shrink-0 sm:text-base md:shrink"
+        >
+          {title}
+        </TextElement>
+        <TextElement
+          variant="small"
+          className="font-bold sm:shrink-0 sm:text-base md:shrink"
+          >{name},</TextElement
+        >
+        <TextElement variant="small" className="sm:text-base"
+          >{organization}</TextElement
+        >
+      </div>
+      <div class="role md:basis-2/12 md:whitespace-nowrap">
+        <TextElement variant="small" className="sm:text-base"
+          >{role}</TextElement
+        >
+      </div>
+    </div>
   </div>
 </div>

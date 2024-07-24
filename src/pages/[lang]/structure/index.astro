@@ -54,13 +54,16 @@ const t = useTranslations(lang);
       </TextElement>
     </header>
     <section aria-label="Board Members" class="pb-8">
-      <ul class="grid gap-y-3 rounded-md bg-gray-200 p-5 text-sm xl:text-base">
+      <ul
+        class="grid gap-y-3 rounded-md bg-gray-200 p-3 text-sm sm:p-5 xl:text-base"
+      >
         {
           boardMembers.map((member) => (
             <li>
               <BoardMemberCard
                 title={member.data.title}
                 name={member.data.name}
+                image={member.data.image}
                 organization={member.data.organization}
                 role={member.data.role}
                 lang={lang}
