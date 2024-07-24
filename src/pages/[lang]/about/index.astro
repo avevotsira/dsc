@@ -48,25 +48,25 @@ const description =
         <header>
           <TextElement
             variant="heading"
-            className="text-center text-primary lg:text-3xl"
+            className="pb-6 text-center text-primary lg:text-3xl"
           >
             {t("about.dsc")}
           </TextElement>
-          <p class="pt-8 text-center">
+          <TextElement variant="body" className="text-center">
             {t("about.dscText")}
-          </p>
+          </TextElement>
         </header>
       </section>
       <section aria-label={"Strategic Goals and Strategies"}>
         <TextElement
           variant="subheading"
-          className="text-center text-primary lg:text-3xl"
+          className="pb-6 text-center text-primary lg:text-3xl"
         >
           {t("about.strategies")}
         </TextElement>
-        <p class="pt-8 text-center">
+        <TextElement variant="body" className="text-center">
           {t("about.strategiesText")}
-        </p>
+        </TextElement>
         <AboutList abouts={goals} className="lg:grid-cols-2" />
       </section>
       <figure class="mx-auto flex flex-col items-center gap-4 text-center">
