@@ -44,18 +44,29 @@ const description =
 >
   <Main>
     <div class="flex flex-col gap-12 py-8">
-      <section aria-label={"Strategic Goals and Strategies"}>
+      <section aria-label={"about dsc"}>
         <header>
           <TextElement
             variant="heading"
-            className="text-center text-primary lg:text-3xl"
+            className="pb-6 text-center text-primary lg:text-3xl"
           >
-            {t("about.strategies")}
+            {t("about.dsc")}
           </TextElement>
-          <p class="pt-8 text-center">
-            {t("about.strategiesText")}
-          </p>
+          <TextElement variant="body" className="text-center">
+            {t("about.dscText")}
+          </TextElement>
         </header>
+      </section>
+      <section aria-label={"Strategic Goals and Strategies"}>
+        <TextElement
+          variant="subheading"
+          className="pb-6 text-center text-primary lg:text-3xl"
+        >
+          {t("about.strategies")}
+        </TextElement>
+        <TextElement variant="body" className="text-center">
+          {t("about.strategiesText")}
+        </TextElement>
         <AboutList abouts={goals} className="lg:grid-cols-2" />
       </section>
       <figure class="mx-auto flex flex-col items-center gap-4 text-center">
@@ -75,14 +86,12 @@ const description =
         </figcaption>
       </figure>
       <section aria-label={"Role and Responsibilites "}>
-        <header>
-          <TextElement
-            variant="subheading"
-            className="text-center text-primary lg:text-3xl"
-          >
-            {t("about.roleResponsibilities")}
-          </TextElement>
-        </header>
+        <TextElement
+          variant="subheading"
+          className="text-center text-primary lg:text-3xl"
+        >
+          {t("about.roleResponsibilities")}
+        </TextElement>
         <AboutList abouts={roles} className="sm:grid-cols-2 lg:grid-cols-3" />
       </section>
     </div>
