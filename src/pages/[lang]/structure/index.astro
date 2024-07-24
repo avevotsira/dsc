@@ -46,7 +46,7 @@ const t = useTranslations(lang);
 <BaseLayout title={title}>
   <Main>
     <header>
-      <TextElement variant="heading" className="pb-6 text-primary">
+      <TextElement variant="heading" className="text-primary">
         {t("structure.heading")}
       </TextElement>
       <TextElement variant="paragraph" className="pb-6">
@@ -54,6 +54,12 @@ const t = useTranslations(lang);
       </TextElement>
     </header>
     <section aria-label="Board Members" class="pb-8">
+      <TextElement variant="subheading" className="text-primary">
+        {t("structure.dscHeading")}
+      </TextElement>
+      <TextElement variant="paragraph" className="pb-6">
+        {t("structure.dscIntro")}
+      </TextElement>
       <ul
         class="grid gap-y-3 rounded-md bg-gray-200 p-3 text-sm sm:p-5 xl:text-base"
       >
@@ -74,9 +80,18 @@ const t = useTranslations(lang);
       </ul>
     </section>
     <section aria-label="Organization Structure">
+      <TextElement variant="paragraph" className="pb-6">
+        {t("structure.orgIntro")}
+      </TextElement>
       <StructureChart />
     </section>
     <section aria-label="Leadership">
+      <TextElement variant="subheading" className="text-primary">
+        {t("structure.generalSecretaryHeading")}
+      </TextElement>
+      <TextElement variant="paragraph">
+        {t("structure.generalSecretaryIntro")}
+      </TextElement>
       <TextElement
         variant="subheading"
         className="py-10 text-center text-primary"
