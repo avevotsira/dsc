@@ -34,7 +34,8 @@ export const NavRoutes = [
       { label: "Laws and Regulations", href: Routes.LawsRegulations },
       { label: "Policies", href: Routes.Policies },
       { label: "Press Release", href: Routes.PressRelease },
-      { label: "Videos", href: Routes.Videos },
+      // temp: disable video page
+      // { label: "Videos", href: Routes.Videos },
     ],
   },
   { label: "New & Events", href: Routes.Aritcles },
