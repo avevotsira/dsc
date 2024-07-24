@@ -72,14 +72,15 @@ const leaderCollection = defineCollection({
   schema: leaderSchema,
 });
 
-const boardMembersSchema =({ image }: SchemaContext) => z.object({
-  name: z.string(),
-  title: z.string(),
-  image: image(),
-  organization: z.string(),
-  role: z.string(),
-  lang: z.enum(SupportedLanguage),
-});
+const boardMembersSchema = ({ image }: SchemaContext) =>
+  z.object({
+    name: z.string(),
+    title: z.string(),
+    image: image(),
+    organization: z.string(),
+    role: z.string(),
+    lang: z.enum(SupportedLanguage),
+  });
 
 const boardMembersCollection = defineCollection({
   schema: boardMembersSchema,
