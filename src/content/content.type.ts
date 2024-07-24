@@ -3,6 +3,7 @@ export const DIRECTIVE_TYPES = {
   ROYAL_DECREE: "royal-decree",
   POLICY: "policy",
   DECISION: "decision",
+  PRESS_RELEASE: "press-release",
 } as const;
 
 export type DirectiveType =

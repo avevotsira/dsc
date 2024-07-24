@@ -8,7 +8,7 @@ import { languages, type SupportedLanguage } from "@/i18n/ui";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
-const title = "Policies";
+const title = "Press Release";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -22,7 +22,7 @@ const allDirectives = await getCollection("directives");
 const directives = allDirectives.filter(
   (directive) =>
     directive.data.lang === lang &&
-    directive.data.type === DIRECTIVE_TYPES.POLICY,
+    directive.data.type === DIRECTIVE_TYPES.PRESS_RELEASE,
 );
 ---
 

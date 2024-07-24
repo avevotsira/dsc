@@ -9,6 +9,7 @@ export enum Routes {
   Structure = "/structure",
   LawsRegulations = "/laws-regulations",
   Policies = "/policies",
+  PressRelease = "/press-release",
   Videos = "/videos",
   Aritcles = "/articles",
   Projects = "/projects",
@@ -32,6 +33,7 @@ export const NavRoutes = [
     children: [
       { label: "Laws and Regulations", href: Routes.LawsRegulations },
       { label: "Policies", href: Routes.Policies },
+      { label: "Press Release", href: Routes.PressRelease },
       { label: "Videos", href: Routes.Videos },
     ],
   },
