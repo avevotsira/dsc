@@ -10,14 +10,14 @@ interface Props {
 }
 const { abouts, className } = Astro.props;
 
-const tw = "grid place-items-center gap-6 pt-12 grid-cols-1";
+const tw = "grid place-items-center gap-6 pt-12 grid-cols-1 min-h-96";
 ---
 
 <div aria-label="Strategic Goals">
   <ul class={cn(tw, className)}>
     {
       abouts.map((about) => (
-        <li>
+        <li class="size-full">
           <Card title={about.data.title} body={about.body} />
         </li>
       ))
