@@ -1,6 +1,8 @@
 ---
 import Main from "@/components/Main.astro";
 import AboutList from "@/components/page/about/AboutList.astro";
+import Mission from "@/components/page/home/Mission.astro";
+import Vision from "@/components/page/home/Vison.astro";
 import TextElement from "@/components/TextElement";
 
 import { ABOUT_TYPES } from "@/content/about.type";
@@ -32,7 +34,7 @@ const langImages = {
 
 const currentImage = langImages[lang] || enAboutUs;
 
-const title = "About Us";
+const title = "Explore DSC";
 const description =
   "Learn about the Digital Security Committee's strategic goals, roles, and responsibilities in developing Cambodia's digital government policy for 2022-2035.";
 ---
@@ -56,6 +58,12 @@ const description =
             {t("about.dscText")}
           </TextElement>
         </header>
+      </section>
+      <section aria-labelledby="vision">
+        <Vision />
+      </section>
+      <section aria-labelledby="mission">
+        <Mission />
       </section>
       <section aria-label={"Strategic Goals and Strategies"}>
         <TextElement
