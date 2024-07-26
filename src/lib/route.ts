@@ -40,6 +40,10 @@ export const NavRoutes = [
   },
   { label: "New & Events", href: Routes.Aritcles },
   { label: "Cybersecurity Tips", href: Routes.CybersecurityTips },
+  {
+    label: "Report Incident",
+    href: "https://www.camcert.gov.kh/en/report-incident/",
+  },
 ];
 
 interface RouteType {
@@ -67,10 +71,17 @@ export function getLocalizedRoutes(
 ): RouteType[] {
   return paths.map((path) => {
     if (path.href) {
-      return {
-        label: path.label,
-        href: getRelativeLocaleUrl(locale, path.href),
-      };
+      if (path.href.startsWith("http://") || path.href.startsWith("https://")) {
+        return {
+          label: path.label,
+          href: path.href,
+        };
+      } else {
+        return {
+          label: path.label,
+          href: getRelativeLocaleUrl(locale, path.href),
+        };
+      }
     }
 
     if (path.children) {
