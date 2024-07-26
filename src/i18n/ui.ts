@@ -49,4 +49,4 @@ export const languages = {
 
 export type SupportedLanguage = keyof typeof languages;
 
-export const defaultLang = languages.en;
+export const defaultLang = languages.km;
