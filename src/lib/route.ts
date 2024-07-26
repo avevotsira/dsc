@@ -54,12 +54,6 @@ export function getLocalizedRoutes(
 ): RouteType[] {
   return paths.map((path) => {
     if (path.href) {
-      if (path.href === Routes.Home) {
-        return {
-          label: path.label,
-          href: getRelativeLocaleUrl(locale),
-        };
-      }
       return {
         label: path.label,
         href: getRelativeLocaleUrl(locale, path.href),
@@ -84,9 +78,12 @@ export const getContentUrl = (
   const baseUrl = getRelativeLocaleUrl(lang);
   const slug = removeLanguagePrefix(entry.slug, lang);
 
+  const articlePath = Routes.Aritcles.replace(/^\//, "");
+  const cybersecurityTipsPath = Routes.CybersecurityTips.replace(/^\//, "");
+
   const urlGenerators = {
-    articles: () => `${baseUrl}${Routes.Aritcles}/${slug}`,
-    "cybersecurity-tips": () => `${baseUrl}${Routes.CybersecurityTips}/${slug}`,
+    articles: () => `${baseUrl}${articlePath}/${slug}`,
+    "cybersecurity-tips": () => `${baseUrl}${cybersecurityTipsPath}/${slug}`,
   };
 
   const generator = urlGenerators[entry.collection];
