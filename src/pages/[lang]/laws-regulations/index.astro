@@ -1,4 +1,5 @@
 ---
+import { Separator } from "@/components/ui/separator";
 import DirectiveCardList from "@/components/directive/DirectiveCardList.astro";
 import Main from "@/components/Main.astro";
 import TextElement from "@/components/TextElement";
@@ -8,7 +9,7 @@ import { languages, type SupportedLanguage } from "@/i18n/ui";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 
-const title = "Law and Regulations";
+const title = "Legislations";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -30,8 +31,8 @@ function filterDirectives(
 }
 
 const directiveMapping = [
-  { type: DIRECTIVE_TYPES.SUB_DECREE, title: "Sub Decrees" },
   { type: DIRECTIVE_TYPES.ROYAL_DECREE, title: "Royal Decrees" },
+  { type: DIRECTIVE_TYPES.SUB_DECREE, title: "Sub Decrees" },
   { type: DIRECTIVE_TYPES.DECISION, title: "Decisions" },
 ] as const;
 
@@ -48,6 +49,7 @@ const directiveTypes = directiveMapping.map(({ type, title }) => ({
         <TextElement variant="heading" className="text-primary">
           {title}
         </TextElement>
+        <Separator />
       </header>
 
       {

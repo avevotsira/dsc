@@ -31,13 +31,13 @@ export const NavRoutes = [
   {
     label: "Media Hub",
     children: [
-      { label: "Laws and Regulations", href: Routes.LawsRegulations },
       { label: "Policies", href: Routes.Policies },
       { label: "Press Release", href: Routes.PressRelease },
       // temp: disable video page
       // { label: "Videos", href: Routes.Videos },
     ],
   },
+  { label: "Legislation", href: Routes.LawsRegulations },
   { label: "New & Events", href: Routes.Aritcles },
   { label: "Cybersecurity Tips", href: Routes.CybersecurityTips },
 ];
