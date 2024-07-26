@@ -48,25 +48,18 @@ interface RouteType {
   children?: RouteType[];
 }
 
-/**
- * Maps paths to localized routes based on the specified locale.
- */
-export function getLocalizedRoute(
-  paths: Array<{ href: string; label: string }>,
-  locale: string,
-): Array<{ href: string; label: string }> {
-  return paths.map((path) => ({
-    ...path,
-    href: getRelativeLocaleUrl(locale, path.href),
-  }));
-}
-
 export function getLocalizedRoutes(
   paths: RouteType[],
   locale: string,
 ): RouteType[] {
   return paths.map((path) => {
     if (path.href) {
+      if (path.href === Routes.Home) {
+        return {
+          label: path.label,
+          href: getRelativeLocaleUrl(locale),
+        };
+      }
       return {
         label: path.label,
         href: getRelativeLocaleUrl(locale, path.href),
@@ -91,12 +84,9 @@ export const getContentUrl = (
   const baseUrl = getRelativeLocaleUrl(lang);
   const slug = removeLanguagePrefix(entry.slug, lang);
 
-  const articlePath = Routes.Aritcles.replace(/^\//, "");
-  const cybersecurityTipsPath = Routes.CybersecurityTips.replace(/^\//, "");
-
   const urlGenerators = {
-    articles: () => `${baseUrl}${articlePath}/${slug}`,
-    "cybersecurity-tips": () => `${baseUrl}${cybersecurityTipsPath}/${slug}`,
+    articles: () => `${baseUrl}${Routes.Aritcles}/${slug}`,
+    "cybersecurity-tips": () => `${baseUrl}${Routes.CybersecurityTips}/${slug}`,
   };
 
   const generator = urlGenerators[entry.collection];

@@ -14,7 +14,7 @@ export default defineConfig({
     }),
     sitemap({
       i18n: {
-        defaultLocale: "en",
+        defaultLocale: "km",
         locales: {
           en: "en-US",
           km: "km-KH",
@@ -23,14 +23,14 @@ export default defineConfig({
     }),
   ],
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "km",
     locales: ["en", "km"],
     routing: {
       prefixDefaultLocale: true,
       redirectToDefaultLocale: false,
     },
     fallback: {
-      km: "en",
+      en: "km",
     },
   },
   prefetch: {
@@ -39,4 +39,8 @@ export default defineConfig({
   vite: {
     plugins: [visualizer()],
   },
+  build: {
+    format: "file",
+  },
+  trailingSlash: "never",
 });
