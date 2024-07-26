@@ -4,6 +4,7 @@ import { getLocalizedRoutes, NavRoutes } from "@/lib/route";
 import MobileNavMenu from "@/components/header/MobileNavMenu";
 import NavMenu from "@/components/header/NavMenu";
 
+import { ButtonLink } from "./ButtonLink";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { defaultLang, type SupportedLanguage } from "@/i18n/ui";
 import { getRelativeLocaleUrl } from "astro:i18n";
@@ -19,7 +20,7 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
   href="#main-content">Skip Navigation</a
 >
 <nav class="bg-primary-foreground shadow-md" aria-label="Main navigation">
-  <div class="container mx-auto flex max-w-screen-2xl p-6">
+  <div class="container mx-auto flex max-w-screen-2xl gap-4 p-6">
     <a href={getRelativeLocaleUrl(locale)} aria-label="Go to home page">
       <div class="text-lg font-bold">
         <div>LOGO</div>
@@ -27,7 +28,7 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
     </a>
     <div class="grow"></div>
     <NavMenu navMenuItem={navigationItems} client:load />
-    <div class="flex ps-2 align-middle">
+    <div class="flex p-2 align-middle">
       <LanguageSwitcher
         currentPath={currentPath}
         initialLocale={locale as SupportedLanguage}
@@ -35,5 +36,12 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
       />
     </div>
     <MobileNavMenu navMenuItem={navigationItems} client:load />
+    <ButtonLink
+      href="https://www.camcert.gov.kh/en/report-incident/"
+      target="_blank"
+      className="hidden lg:block"
+    >
+      Report Incident
+    </ButtonLink>
   </div>
 </nav>

@@ -20,7 +20,7 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
   navMenuItem,
 }) => {
   return (
-    <nav>
+    <div>
       <NavigationMenu className="relative z-10 hidden w-full flex-1 items-center justify-center lg:flex">
         <NavigationMenuList>
           {navMenuItem?.map((item) => (
@@ -52,7 +52,7 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
           ))}
         </NavigationMenuList>
       </NavigationMenu>
-    </nav>
+    </div>
   );
 };
 
