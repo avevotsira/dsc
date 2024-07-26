@@ -1,5 +1,5 @@
 ---
-import { getLocalizedRoutes, NavRoutes, Routes } from "@/lib/route";
+import { getLocalizedRoutes, NavRoutes } from "@/lib/route";
 
 import MobileNavMenu from "@/components/header/MobileNavMenu";
 import NavMenu from "@/components/header/NavMenu";
@@ -20,10 +20,7 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
 >
 <nav class="bg-primary-foreground shadow-md" aria-label="Main navigation">
   <div class="container mx-auto flex max-w-screen-2xl p-6">
-    <a
-      href={getRelativeLocaleUrl(locale, Routes.Home)}
-      aria-label="Go to home page"
-    >
+    <a href={getRelativeLocaleUrl(locale)} aria-label="Go to home page">
       <div class="text-lg font-bold">
         <div>LOGO</div>
       </div>
