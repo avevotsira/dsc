@@ -39,8 +39,4 @@ export default defineConfig({
   vite: {
     plugins: [visualizer()],
   },
-  build: {
-    format: "file",
-  },
-  trailingSlash: "never",
 });
