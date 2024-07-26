@@ -13,6 +13,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+import { ButtonLink } from "../ButtonLink";
+import { Separator } from "../ui/separator";
 import { Menu } from "lucide-react";
 
 export interface NavMenuProps {
@@ -37,7 +39,7 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
           <SheetTitle>Mobile Menu</SheetTitle>
           <SheetDescription>Mobile Navigation</SheetDescription>
         </SheetHeader>
-        <ul className="h-[calc(100vh-4rem)] overflow-auto px-0 pt-2">
+        <ul className="h-[calc(100vh-4rem)] overflow-auto px-0 pb-2">
           {navMenuItem?.map((item, index) => (
             <li key={item.label}>
               {item.href ? (
@@ -75,6 +77,16 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
               )}
             </li>
           ))}
+          <Separator />
+          <li className="flex justify-center pt-4">
+            <ButtonLink
+              href="https://www.camcert.gov.kh/en/report-incident/"
+              target="_blank"
+              className="lg:hidden"
+            >
+              Report Incident
+            </ButtonLink>
+          </li>
         </ul>
       </SheetContent>
     </Sheet>
