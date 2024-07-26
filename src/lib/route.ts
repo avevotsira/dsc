@@ -5,8 +5,9 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 
 export enum Routes {
   Home = "/",
-  About = "/about",
-  Structure = "/structure",
+  About = "/explore",
+  Structure = "/explore/structure",
+  Leader = "/explore/leader",
   LawsRegulations = "/laws-regulations",
   Policies = "/policies",
   PressRelease = "/press-release",
@@ -14,14 +15,13 @@ export enum Routes {
   Aritcles = "/articles",
   Projects = "/projects",
   Contact = "/contact",
-  Leader = "/about/leader",
   CybersecurityTips = "/cybersecurity-tips",
 }
 
 export const NavRoutes = [
   { label: "Home", href: Routes.Home },
   {
-    label: "About Us",
+    label: "Explore DSC",
     children: [
       { label: "About DSC", href: Routes.About },
       { label: "DSC's Structure", href: Routes.Structure },

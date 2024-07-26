@@ -3,8 +3,6 @@ import Hero from "@/components/page/home/Hero.astro";
 import HomeArticleList from "@/components/page/home/HomeArticleList.astro";
 import HomeMain from "@/components/page/home/HomeMain.astro";
 import LawCardList from "@/components/page/home/law/LawCardList.astro";
-import Mission from "@/components/page/home/Mission.astro";
-import Vision from "@/components/page/home/Vison.astro";
 import TextElement from "@/components/TextElement";
 import UnitLinks from "@/components/UnitLinks";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
@@ -55,12 +53,6 @@ const t = useTranslations(lang);
     <div
       class="container flex flex-col items-center gap-16 px-24 py-8 max-sm:p-5"
     >
-      <section aria-labelledby="vision">
-        <Vision />
-      </section>
-      <section aria-labelledby="mission">
-        <Mission />
-      </section>
       <section aria-labelledby="what-we-do-heading">
         <TextElement
           variant="subheading"
