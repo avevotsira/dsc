@@ -1,0 +1,29 @@
+---
+import { getProcessedImages } from "@/lib/image-helper";
+
+import ImageCarousel from "@/components/page/home/carousel/ImageCarousel";
+
+import heroImage from "@/static/Hero.png";
+import hero2 from "@/static/Hero2.webp";
+
+const [hero, another] = await getProcessedImages([heroImage, hero2]);
+
+const carouselData = [
+  {
+    image: hero,
+    text: "It was popularised in the 1960s",
+    buttonText: "Learn More",
+  },
+  {
+    image: another,
+    text: "It was popularised in the 1960s. It was popularised in the 1960s",
+    buttonText: "Find out more",
+  },
+];
+---
+
+<section aria-label="Carousel">
+  <div class="relative h-[350px] w-full md:h-[450px]">
+    <ImageCarousel carouselDatas={carouselData} client:load />
+  </div>
+</section>

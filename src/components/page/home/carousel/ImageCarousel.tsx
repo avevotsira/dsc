@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useRef } from "react";
 
 import { Button } from "@/components/ui/button";
 import { CardContent } from "@/components/ui/card";
@@ -12,7 +12,7 @@ import TextElement from "@/components/TextElement";
 import Autoplay from "embla-carousel-autoplay";
 
 interface CarouselData {
-  image: string; // Accepting a React Node for the image
+  image: string;
   text: string;
   buttonText: string;
 }
@@ -22,12 +22,11 @@ interface ImageCarouselProps {
 }
 
 export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
-  const plugin = React.useRef(
+  const plugin = useRef(
     Autoplay({
-      delay: 8000,
+      delay: 4000,
       playOnInit: true,
       stopOnInteraction: false,
-      jump: true,
     }),
   );
 
@@ -37,9 +36,6 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
       opts={{ loop: true }}
       className="w-full"
     >
-      <TextElement variant="smallheading" className="visuallyhidden">
-        It was popularised in the 1960s
-      </TextElement>
       <CarouselContent>
         {carouselDatas?.map((item) => (
           <CarouselItem
@@ -53,7 +49,7 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
               className="absolute inset-0 size-full object-cover"
               loading="eager"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+            <div className="absolute inset-0 flex items-center justify-center bg-black/80">
               <CardContent className="flex flex-col items-center justify-center space-y-4 text-center text-primary-foreground">
                 <TextElement variant="title" className="whitespace-pre-line">
                   {item.text}
