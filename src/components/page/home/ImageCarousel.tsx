@@ -41,7 +41,7 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
         It was popularised in the 1960s
       </TextElement>
       <CarouselContent>
-        {carouselDatas?.map((item, index) => (
+        {carouselDatas?.map((item) => (
           <CarouselItem
             key={item.text}
             className="relative h-[350px] w-full md:h-[450px]"
@@ -63,7 +63,7 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
                   variant={"secondary"}
                   aria-label={item.buttonText}
                 >
-                  <a>{item.buttonText}</a>
+                  <a href="/">{item.buttonText}</a>
                 </Button>
               </CardContent>
             </div>
