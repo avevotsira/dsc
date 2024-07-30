@@ -1,0 +1,29 @@
+---
+import ImageCarousel from "@/components/page/home/ImageCarousel";
+import TextElement from "@/components/TextElement";
+
+import heroImage from "../../../static/Hero.png";
+---
+
+<section aria-label="Carousel">
+  <div class="relative h-[350px] w-full md:h-[450px]">
+    <TextElement variant="heading" className="visuallyhidden"
+      >It was popularised in the 1960s
+    </TextElement>
+    <ImageCarousel
+      carouselDatas={[
+        {
+          image: heroImage.src,
+          text: "It was popularised in the 1960s",
+          buttonText: "Learn More",
+        },
+        {
+          image: heroImage.src,
+          text: "It was popularised in the 1960s. It was popularised in the 1960s",
+          buttonText: "Find out more",
+        },
+      ]}
+      client:load
+    />
+  </div>
+</section>
