@@ -12,7 +12,8 @@
     "format:write": "prettier --write \"**/*.{js,jsx,ts,tsx,astro,mdx}\" --cache",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,astro,mdx}\" --cache",
     "staged": "npm run lint && npm run format:check && echo \"\n✅ All checks passed!\n\"",
-    "astro": "astro"
+    "astro": "astro",
+    "size": "size-limit"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
@@ -45,6 +46,7 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "@size-limit/file": "^11.1.4",
     "@tailwindcss/typography": "^0.5.13",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
@@ -60,10 +62,28 @@
     "prettier-plugin-astro": "^0.14.0",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "rollup-plugin-visualizer": "^5.12.0",
-    "simple-git-hooks": "^2.11.1"
+    "simple-git-hooks": "^2.11.1",
+    "size-limit": "^11.1.4"
   },
   "simple-git-hooks": {
     "pre-push": "npm run staged",
     "commit-msg": "npx --no -- commitlint --edit $1"
-  }
+  },
+  "size-limit": [
+    {
+      "path": "dist/**/*.html",
+      "limit": "500 kB",
+      "gzip": true
+    },
+    {
+      "path": "dist/**/*.css",
+      "limit": "20 kB",
+      "gzip": true
+    },
+    {
+      "path": "dist/**/*.js",
+      "limit": "500 kB",
+      "gzip": true
+    }
+  ]
 }
