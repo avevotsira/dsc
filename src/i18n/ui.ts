@@ -24,6 +24,21 @@ export const ui: Record<string, Record<string, string>> = {
     "about.strategiesText":
       "In order to achieve the above vision and objectives, the Royal Government has set four strategic goals and ten strategies as follows:",
     "about.roleResponsibilities": "Role and Responsibilites",
+    "unit.heading": "Units Under the Digital Security Committee",
+    "unit.headingText":
+      "The Digital Security Committee (D.S.C.) is organized around a key General Secretariat that oversees four essential units: the Cambodian Cyber Security Unit, Anti-Cybercrime Unit, Cyber Space Defense Unit, and Cyber Diplomatic Affairs Unit.",
+    "unit.ccsu": "Cambodia Cyber Security Unit",
+    "unit.ccsuText":
+      "The Cambodia Cyber Security Unit that is under the jurisdiction of the Ministry of Post and Telecommunications, and shall serve as the assistant to the General Secretariat of the D.S.C. on cybersecurity. The organization and functioning of the Cambodian Cyber Security Unit shall be determined by a separate Sub-decree at the request of the Minister of the MPTC.",
+    "unit.cybercrime": "Anti-Cybercrime Unit",
+    "unit.cybercrimeText":
+      "The Unit in charge of research, investigation and suppression of cybercrime that is under the jurisdiction of the Ministry of Interior shall perform the additional function of the Anti-Cybercrime Unit and shall serve asthe assistant for the General Secretariat of the D.S.C. The Anti-cybercrime Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management.",
+    "unit.defense": "Cyber Defense Unit",
+    "unit.defenseText":
+      "The Unit in charge of the National Cyberspace Defense under the jurisdiction of the Ministry of the National Defense shall perform additional functions as the National Cyberspace Defense Unit and shall serve as the assistant for the General Secretariat of the D.S.C. The National Cyberspace Defense Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management.",
+    "unit.diplomatic": "Cyber Diplomatic Unit",
+    "unit.diplomaticText":
+      "The Unit in charge of cyber diplomacy under the jurisdiction of the Ministry of Foreign Affairs and International Cooperation shall perform the additional function as the Cyber Diplomatic Unit, and shall serve as the assistant for the General Secretariat of the D.S.C. The Cyber Diplomatic Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management",
   },
   km: {
     "nav.home": "Accueil",

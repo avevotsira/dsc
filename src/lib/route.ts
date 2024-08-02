@@ -8,6 +8,7 @@ export enum Routes {
   About = "/about",
   Structure = "/about/structure",
   Leader = "/about/leader",
+  Unit = "/about/units",
   LawsRegulations = "/laws-regulations",
   Policies = "/policies",
   PressRelease = "/press-release",
@@ -26,6 +27,7 @@ export const NavRoutes = [
       { label: "About DSC", href: Routes.About },
       { label: "DSC's Structure", href: Routes.Structure },
       { label: "DSC's Leaders", href: Routes.Leader },
+      { label: "DSC's Units", href: Routes.Unit },
     ],
   },
   {
