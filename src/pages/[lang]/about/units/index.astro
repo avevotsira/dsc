@@ -1,0 +1,81 @@
+---
+import Main from "@/components/Main.astro";
+import StructureChart from "@/components/page/structure/StructureChart";
+import TextElement from "@/components/TextElement";
+
+import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import OrganizationLayout from "@/layouts/OrganizationLayout.astro";
+import enAboutUs from "src/static/about-us/en-about-us.webp";
+import kmAboutUs from "src/static/about-us/km-about-us.webp";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const lang = Astro.params.lang as SupportedLanguage;
+const t = useTranslations(lang);
+
+const langImages = {
+  en: enAboutUs,
+  km: kmAboutUs,
+};
+
+const currentImage = langImages[lang] || enAboutUs;
+
+const title = "Explore DSC";
+const description =
+  "Learn about the Digital Security Committee's strategic goals, roles, and responsibilities in developing Cambodia's digital government policy for 2022-2035.";
+---
+
+<OrganizationLayout
+  title={title}
+  description={description}
+  image={currentImage.src}
+>
+  <Main>
+    <header>
+      <TextElement variant="heading" className="text-primary">
+        {t("unit.heading")}
+      </TextElement>
+      <TextElement variant="paragraph" className="pb-6">
+        {t("unit.headingText")}
+      </TextElement>
+    </header>
+    <StructureChart />
+    <section aria-label={"cambodia cyber security unit"}>
+      <TextElement variant="subheading" className="text-primary">
+        {t("unit.ccsu")}
+      </TextElement>
+      <TextElement variant="paragraph" className="pb-6">
+        {t("unit.ccsuText")}
+      </TextElement>
+    </section>
+    <section aria-label={"anti cybercrime unit"}>
+      <TextElement variant="subheading" className="text-primary">
+        {t("unit.cybercrime")}
+      </TextElement>
+      <TextElement variant="paragraph" className="pb-6">
+        {t("unit.cybercrimeText")}
+      </TextElement>
+    </section>
+    <section aria-label={"cyber defense unit"}>
+      <TextElement variant="subheading" className="text-primary">
+        {t("unit.defense")}
+      </TextElement>
+      <TextElement variant="paragraph" className="pb-6">
+        {t("unit.defenseText")}
+      </TextElement>
+    </section>
+    <section aria-label={"cyber diplomatic unit"}>
+      <TextElement variant="subheading" className="text-primary">
+        {t("unit.diplomatic")}
+      </TextElement>
+      <TextElement variant="paragraph" className="pb-6">
+        {t("unit.diplomaticText")}
+      </TextElement>
+    </section>
+  </Main>
+</OrganizationLayout>
