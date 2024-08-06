@@ -18,7 +18,7 @@ export function getStaticPaths() {
   return Object.values(languages).map((lang) => ({ params: { lang } }));
 }
 
-const allArticles = await getCollection("articles");
+const allArticles = await getCollection("cybersecurity-tips");
 
 const langArticles = allArticles.filter(
   (article) => article.data.lang === lang,
@@ -63,15 +63,15 @@ const t = useTranslations(lang);
         </TextElement>
         <WhatWeDoGrid />
       </section>
-      <section aria-labelledby="latest-news-heading">
+      <section aria-labelledby="cybersecurity-tips">
         <TextElement
           variant="subheading"
-          id="latest-news-heading"
+          id="cybersecurity-tips-heading"
           className="mb-4 text-center"
         >
-          {"Latest News And Events"}
+          {"Cybersecurity Tips"}
         </TextElement>
-        <HomeArticleList articles={latestArticles} lang={lang} />
+        <HomeArticleList content={latestArticles} lang={lang} />
       </section>
       <section aria-labelledby="law-regulations-heading">
         <TextElement
