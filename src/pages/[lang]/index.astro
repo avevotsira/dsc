@@ -1,5 +1,5 @@
 ---
-import Hero from "@/components/page/home/Hero.astro";
+import HomeCarousel from "@/components/page/home/carousel/HomeCarousel.astro";
 import HomeArticleList from "@/components/page/home/HomeArticleList.astro";
 import HomeMain from "@/components/page/home/HomeMain.astro";
 import LawCardList from "@/components/page/home/law/LawCardList.astro";
@@ -46,10 +46,10 @@ const t = useTranslations(lang);
 
 <BaseLayout title={`Welcome to Astro - ${lang}`} description={"test"}>
   <HomeMain>
-    <Hero
-      title="It was popularised in the 1960s "
-      subtitle="It has survived not only five centuries,remaining essentially unchanged.It has survived not only five centuries,remaining essentially unchanged"
-    />
+    <TextElement variant="heading" className="sr-only">
+      It was popularised in the 1960s
+    </TextElement>
+    <HomeCarousel />
     <div
       class="container flex flex-col items-center gap-16 px-24 py-8 max-sm:p-5"
     >
