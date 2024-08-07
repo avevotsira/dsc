@@ -1,8 +1,8 @@
 ---
-title: Title
-name: Name
-image: src/asset/1-article/photomode_07052024_224722.png
-organization: Organization
-role: សមាជិក
+title: ឯកឧត្តមអភិសន្តិបណ្ឌិត
+name: ស សុខា
+image: src/asset/board-members/sar-sokha.jpg
+organization: រដ្ឋមន្ត្រីក្រសួងមហាផ្ទៃ
+role: អនុប្រធាន
 lang: km
 ---

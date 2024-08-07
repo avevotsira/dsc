@@ -1,8 +1,8 @@
 ---
-title: Title
-name: Name
-image: src/asset/1-article/photomode_07052024_224722.png
-organization: Organization
+title: H.E. Akka Pundit Sopheacha
+name: Dr. Aun Pornmoniroth
+image: src/asset/board-members/aun-pornmoniroth.jpg
+organization: Deputy Prime Minister, Minister of Economy and Finance
 role: Vice-Chair
 lang: en
 ---
