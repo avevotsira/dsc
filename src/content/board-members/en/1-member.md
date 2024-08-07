@@ -1,7 +1,7 @@
 ---
 title: Samdech Moha Bovor Thipadei
 name: Hun Manet
-image: src/asset/1-article/photomode_07052024_224722.png
+image: src/asset/board-members/hun-manet.jpg
 organization: Prime Minister of Cambodia
 role: Chair
 lang: en

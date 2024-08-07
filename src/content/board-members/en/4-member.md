@@ -1,8 +1,8 @@
 ---
-title: Title
-name: Name
-image: src/asset/1-article/photomode_07052024_224722.png
-organization: Organization
-role: Member
+title: H.E. Abhisantibindit
+name: Sar Sokha
+image: src/asset/board-members/sar-sokha.jpg
+organization: Deputy Prime Minister, Minister of Interior
+role: Vice-Chair
 lang: en
 ---
