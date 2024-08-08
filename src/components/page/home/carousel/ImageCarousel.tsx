@@ -1,12 +1,14 @@
 import { useRef } from "react";
 
-import { Button } from "@/components/ui/button";
+import { getContentUrl } from "@/lib/route";
+
 import { CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { ButtonLink } from "@/components/ButtonLink";
 import TextElement from "@/components/TextElement";
 
 import type { SupportedLanguage } from "@/i18n/ui";
@@ -18,7 +20,10 @@ interface ImageCarouselProps {
   lang: SupportedLanguage;
 }
 
-export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
+export default function ImageCarousel({
+  carouselDatas,
+  lang,
+}: ImageCarouselProps) {
   const plugin = useRef(
     Autoplay({
       delay: 4000,
@@ -46,18 +51,26 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
               className="absolute inset-0 size-full object-cover"
               loading="eager"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/80">
+            <div className="absolute inset-0 flex items-center justify-center bg-black/50">
               <CardContent className="flex flex-col items-center justify-center space-y-4 text-center text-primary-foreground">
-                <TextElement variant="title" className="whitespace-pre-line">
+                <TextElement
+                  variant="title"
+                  className="whitespace-pre-line text-4xl"
+                >
                   {item.data.title}
                 </TextElement>
-                <Button
-                  asChild
-                  variant={"secondary"}
-                  aria-label={item.data.title}
+                <TextElement variant="body" className="whitespace-pre-line">
+                  {item.data.description}
+                </TextElement>
+                <ButtonLink
+                  href={getContentUrl(item, lang)}
+                  aria-labelledby={`read-more-${item.slug}`}
                 >
-                  <a href="/">{item.data.title}</a>
-                </Button>
+                  <span id={`read-more-${item.slug}`}>
+                    Read more
+                    <span className="sr-only"> about {item.data.title}</span>
+                  </span>
+                </ButtonLink>
               </CardContent>
             </div>
           </CarouselItem>
