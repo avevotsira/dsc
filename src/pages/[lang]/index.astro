@@ -18,13 +18,21 @@ export function getStaticPaths() {
   return Object.values(languages).map((lang) => ({ params: { lang } }));
 }
 
-const allArticles = await getCollection("cybersecurity-tips");
+const allArticles = await getCollection("articles");
 
-const langArticles = allArticles.filter(
-  (article) => article.data.lang === lang,
-);
+const langArticles = allArticles.filter((tip) => tip.data.lang === lang);
 
 const latestArticles = langArticles
+  .sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
+  .slice(0, 3);
+
+const allTips = await getCollection("cybersecurity-tips");
+
+const langTips = allTips.filter((tip) => tip.data.lang === lang);
+
+const latestTips = langTips
   .sort(
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   )
@@ -49,7 +57,7 @@ const t = useTranslations(lang);
     <TextElement variant="heading" className="sr-only">
       It was popularised in the 1960s
     </TextElement>
-    <HomeCarousel />
+    <HomeCarousel content={latestArticles} />
     <div
       class="container flex flex-col items-center gap-16 px-24 py-8 max-sm:p-5"
     >
@@ -71,6 +79,7 @@ const t = useTranslations(lang);
         >
           {"Cybersecurity Tips"}
         </TextElement>
+        <HomeArticleList content={latestTips} lang={lang} />
         <HomeArticleList content={latestArticles} lang={lang} />
       </section>
       <section aria-labelledby="law-regulations-heading">
