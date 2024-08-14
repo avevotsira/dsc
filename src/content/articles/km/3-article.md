@@ -2,7 +2,7 @@
 categories: ["studio tips"]
 date: 05/24/2024
 featured: false
-image: src\asset\3-article\tmp-photo-1.jpg
+image: src/asset/3-article/tmp-photo-1.jpg
 title: វគ្គបណ្តុះបណ្តាលស្តីពី ការគំរាមកំហែងសាយប័រ (Cyber Threat Training)
 description: វគ្គបណ្តុះបណ្តាលស្តីពី ការគំរាមកំហែងសាយប័រ (Cyber Threat Training)
 lang: km

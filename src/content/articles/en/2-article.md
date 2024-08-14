@@ -2,7 +2,7 @@
 categories: ["studio tips"]
 date: 05/24/2024
 featured: false
-image: src\asset\2-article\2nd_ASEAN-Japan_Cybersecurity_Working_Group_Meeting.jpg
+image: src/asset/2-article/2nd_ASEAN-Japan_Cybersecurity_Working_Group_Meeting.jpg
 title: 2nd ASEAN-Japan Cybersecurity Working Group Meeting
 description: 2nd ASEAN-Japan Cybersecurity Working Group Meeting
 lang: en

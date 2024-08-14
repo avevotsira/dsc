@@ -2,7 +2,7 @@
 categories: ["studio tips"]
 date: 05/24/2024
 featured: false
-image: src\asset\3-article\tmp-photo-1.jpg
+image: src/asset/3-article/tmp-photo-1.jpg
 title: Cyber ​​Threat Training
 description: Cyber ​​Threat Training
 lang: en
