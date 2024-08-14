@@ -8,9 +8,9 @@ description: វគ្គបណ្តុះបណ្តាលស្តីពី 
 lang: km
 ---
 
-HE Secretary of State Khov Makara Presides Over the Opening Ceremony of Cyber ​​Threat Training at Hyatt Regency Hotel Phnom Penh With the support of the US Embassy in Cambodia and in collaboration with Carnegie Mellon University and the Department of Security, Information and Communication Technology of the General Department of Information and Communication Technology, with the participation of professional officers from various units, ministries, government institutions, banking associations, a total of about 50 people.
+ឯកឧត្តមរដ្ឋលេខាធិការ ខូវ មករា បានអញ្ជើញជាអធិបតីក្នុងពិធីបើកវគ្គបណ្តុះបណ្តាលស្តីពី ការគំរាមកំហែងសាយប័រ (Cyber Threat Training) នៅសណ្ឋាគារ ហៃយ៉ាត់ រីជិនស៊ី ភ្នំពេញ ដែលប្រព្រឹត្តទៅចាប់ពីថ្ងៃទី២៩​ មេសា​​ ដល់ថ្ងៃទី៣​ ខែឧសភា ឆ្នាំ២០២៤ ដោយមានការគាំទ្រពីស្ថានទូតអាមេរិកប្រចាំកម្ពុជា និងមានការសហការរវាងសាកលវិទ្យាល័យ Carnegie Mellon University និងនាយកដ្ឋានសន្តិសុខបច្ចេកវិទ្យាគមនាគមន៍និងព័ត៌មាន នៃអគ្គនាយកដ្ឋានបច្ចេកវិទ្យាគមនាគមន៍និងព័ត៌មាន ព្រមទាំងមានការអញ្ជើញចូលរួមពីមន្ត្រីជំនាញ បណ្តាអង្គភាព ក្រសួង-ស្ថាប័នរដ្ឋ សមាគមធនាគារ​ សរុបប្រមាណ​ ៥០រូប។
 
-The training aims to strengthen stakeholders' knowledge of how to deal with cyber security incidents, increase the ability to capture IP addresses used by information technology hackers (IOC), and share best practices for facilitating response and sharing. Share cybersecurity information.
+វគ្គបណ្តុះបណ្តាលនេះមានគោលបំណងដើម្បីពង្រឹងសមត្ថភាពអ្នកពាក់ព័ន្ធទៅលើចំណេះដឹងក្នុងការដោះស្រាយឧប្បត្តិហេតុសន្តិសុខសាយប័រ បង្កើនសមត្ថភាពក្នុងការចាប់យកអាសយដ្ឋានអាយភីដែលប្រើប្រាស់ដោយចោរព័ត៌មានវិទ្យា (IOC) និងចែករំលែកការអនុវត្តល្អបំផុតសម្រាប់ការសម្របសម្រួលការឆ្លើយតប និងចែករំលែកព័ត៌មានសន្តិសុខសាយប័រ។
 
 ![h.e menacingly talking](/src/asset/3-article/tmp-photo-3,2.jpg)
 
