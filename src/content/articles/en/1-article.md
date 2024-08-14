@@ -3,7 +3,7 @@ categories: ["studio tips"]
 date: 07/24/2024
 featured: false
 image: src/asset/1-article/CROWDSTRIKE.jpg
-title: <h2><strong>CamSA24-31: Instructions on how to restore a affected Windows operating system from CrowdStrike</strong></h2>
+title: Instructions on how to restore a affected Windows operating system from CrowdStrike
 description: Instructions on how to restore a affected Windows operating system from CrowdStrike.
 lang: en
 ---
@@ -16,7 +16,7 @@ Affected users and administrators can take the following steps to avoid this pro
 
 - Open Windows into Safe Mode or Windows Recovery Environment
 - Go to C: \ Windows \ System32 \ drivers \ CrowdStrike
-- Find and delete a file with the format "C-00000291 * .sys
+- Find and delete a file with the format "C-00000291 \* .sys
 - Open Windows normally.
 
 ## 2. Introduction
@@ -27,7 +27,7 @@ Affected users and administrators in public cloud systems or similar environment
 - Copy the backup data before performing the next step to avoid accidental editing
 - Connect this virtual disk to another virtual server
 - In this virtual disk go to location% WINDIR% \ System32 \ drivers \ CrowdStrike
-- Find and delete a file with the format "C-00000291 * .sys
+- Find and delete a file with the format "C-00000291 \* .sys
 - Disconnect the virtual disk from another server and reconnect to the original server.
 - Open Windows normally.
 
