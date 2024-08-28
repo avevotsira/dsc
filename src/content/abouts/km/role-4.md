@@ -6,4 +6,4 @@ type: role
 lang: km
 ---
 
-Manages and develops the human resources of the D.S.C.
+Control and collect digital related data

@@ -96,9 +96,12 @@ const description =
       <section aria-label={"Role and Responsibilites "}>
         <TextElement
           variant="subheading"
-          className="text-center text-primary lg:text-3xl"
+          className="pb-6 text-center text-primary lg:text-3xl"
         >
           {t("about.roleResponsibilities")}
+        </TextElement>
+        <TextElement variant="body" className="text-center">
+          {t("about.roleResponsibilitiesText")}
         </TextElement>
         <AboutList abouts={roles} className="sm:grid-cols-2 lg:grid-cols-3" />
       </section>
