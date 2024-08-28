@@ -46,15 +46,15 @@ const t = useTranslations(lang);
 <BaseLayout title={title}>
   <Main>
     <header>
-      <TextElement variant="heading" className="text-primary">
+      <TextElement variant="heading" className="text-center text-primary">
         {t("structure.heading")}
       </TextElement>
-      <TextElement variant="paragraph" className="pb-6">
+      <TextElement variant="paragraph" className="pb-6 text-center">
         {t("structure.intro")}
       </TextElement>
     </header>
     <section aria-label="Board Members" class="pb-8">
-      <TextElement variant="subheading" className="text-primary">
+      <TextElement variant="subheading" className="text-center text-primary">
         {t("structure.dscHeading")}
       </TextElement>
       <TextElement variant="paragraph" className="pb-6">
@@ -86,7 +86,7 @@ const t = useTranslations(lang);
       <StructureChart />
     </section>
     <section aria-label="Leadership">
-      <TextElement variant="subheading" className="text-primary">
+      <TextElement variant="subheading" className="text-center text-primary">
         {t("structure.generalSecretaryHeading")}
       </TextElement>
       <TextElement variant="paragraph">

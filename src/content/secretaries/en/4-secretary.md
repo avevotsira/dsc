@@ -2,6 +2,6 @@
 title: H.E
 name: Name
 role: deputy-secretary-general
-image: src/asset/1-article/photomode_07052024_224722.png
+image: src/asset/secretaries/user-avatar.png
 lang: en
 ---
