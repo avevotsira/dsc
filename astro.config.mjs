@@ -39,4 +39,7 @@ export default defineConfig({
   vite: {
     plugins: [visualizer()],
   },
+  experimental: {
+    contentIntellisense: true,
+  },
 });
