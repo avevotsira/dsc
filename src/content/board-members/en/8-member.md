@@ -1,7 +1,7 @@
 ---
-title: H.E. General Santebindith
-name: Neth Savoeun
-image: src/asset/board-members/neth-savoeun.jpg
+title: H.E. General
+name: Sar Thet
+image: src/asset/board-members/sar-thet.jpg
 organization: General Commissioner of National Police
 role: Member
 lang: en

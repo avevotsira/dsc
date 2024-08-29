@@ -1,7 +1,7 @@
 ---
-title: H.E
-name: Name
+title: ឯកឧត្ដម
+name: ជា វ៉ាន់ដេត
 role: secretary-general
-image: src/asset/1-article/photomode_07052024_224722.png
+image: src/asset/secretaries/chea-vandeth.jpg
 lang: km
 ---

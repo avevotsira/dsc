@@ -1,7 +1,7 @@
 ---
 title: H.E
-name: Name
+name: Keo Sothie
 role: deputy-secretary-general
-image: src/asset/1-article/photomode_07052024_224722.png
+image: src/asset/secretaries/keo-sothie.jpg
 lang: en
 ---

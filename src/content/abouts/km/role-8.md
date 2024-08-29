@@ -6,4 +6,4 @@ type: role
 lang: km
 ---
 
-Arranges, manages and uses the budget of the D.S.C.
+Perform other roles and duties as needed

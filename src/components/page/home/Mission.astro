@@ -1,6 +1,24 @@
 ---
 import LottieAnimation from "../../lottie/LottieAnimation";
 import TextElement from "../../TextElement";
+
+const missionList = [
+  {
+    text: "Intercommunicate and complement closely with the Digital Government Committee and Digital Economy and Business Committee to ensure a successful implementation of the Cambodia Digital Economy and Society Policy Framework 2021 – 2035 and Digital Government Policy 2022-2035.",
+  },
+  {
+    text: "Act as a command center to take action in respond to cyber incident and prevent cybersecurity risk in both public and private sectors. ",
+  },
+  {
+    text: "Act as a policy maker to review and decide on proposal for revision and/or amendment of laws, regulations, and policies related to digital security.",
+  },
+  {
+    text: "Act as coordinator of national and international cooperation related to digital security.",
+  },
+  {
+    text: "Mobilize financial, technical, and human resources with aim of building and developing Cambodia’s digital security.  ",
+  },
+];
 ---
 
 <div class="flex flex-col gap-8 md:flex-row-reverse">
@@ -13,12 +31,18 @@ import TextElement from "../../TextElement";
     <TextElement variant="subheading" id="mission" className="pt-4">
       Mission
     </TextElement>
-    <TextElement variant="body" className="text-pretty pt-4">
-      The mission of the Cambodia Digital Security Committee is to safeguard the
-      nation&apos;s digital infrastructure through innovative strategies and
-      collaborative efforts, ensuring a resilient and secure cyber ecosystem
-      that supports economic growth, national security, and the well-being of
-      all Cambodians.
+    <TextElement variant="body" className="mt-2">
+      To ensure a vibrant digital economy and Digital Security of the Kingdom of
+      Cambodia, The Digital Security Committee (DSC) has the vision:
     </TextElement>
+    <ul class="mt-2 list-disc pl-4">
+      {
+        missionList.map((mission) => (
+          <li>
+            <TextElement variant="body">{mission.text}</TextElement>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </div>
