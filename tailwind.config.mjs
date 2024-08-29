@@ -25,7 +25,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Anuphan", "sans-serif"],
+        sans: ["Kantumruy Pro", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
