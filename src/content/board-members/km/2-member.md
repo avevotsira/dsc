@@ -1,8 +1,8 @@
 ---
-title: Title
-name: Name
-image: src/asset/1-article/photomode_07052024_224722.png
-organization: Organization
+title: ឯកឧត្តមសន្តិបណ្ឌិត
+name: នេត សាវឿន
+image: src/asset/board-members/neth-savoeun.jpg
+organization: ឧបនាយករដ្ឋមន្ត្រី
 role: អនុប្រធានប្រចាំការ
 lang: km
 ---
