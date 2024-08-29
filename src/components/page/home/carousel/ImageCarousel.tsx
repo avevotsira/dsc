@@ -48,20 +48,18 @@ export default function ImageCarousel({
               src={item.data.image.src}
               alt={item.data.title}
               sizes="100vw"
-              className="absolute inset-0 size-full object-cover"
+              className="absolute inset-0 size-full object-cover object-center"
               loading="eager"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-              <CardContent className="flex flex-col items-center justify-center space-y-4 text-center text-primary-foreground">
+              <CardContent className="container mx-auto flex flex-col items-center justify-center space-y-4 p-4 text-center text-primary-foreground sm:p-6 md:p-8">
                 <TextElement
                   variant="title"
-                  className="whitespace-pre-line text-4xl"
+                  className="line-clamp-4 whitespace-pre-line text-pretty text-4xl"
                 >
                   {item.data.title}
                 </TextElement>
-                <TextElement variant="body" className="whitespace-pre-line">
-                  {item.data.description}
-                </TextElement>
+
                 <ButtonLink
                   href={getContentUrl(item, lang)}
                   aria-labelledby={`read-more-${item.slug}`}
