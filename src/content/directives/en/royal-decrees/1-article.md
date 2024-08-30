@@ -1,7 +1,7 @@
 ---
-date: 08/10/2021
-file: royal-decrees/Placeholder-PDF.pdf
-title: it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the.
+date: 08/07/2021
+file: royal-decrees/royal-decree-organization-function-of-national-digital-economy-society-council.pdf
+title: Royal-Decree No. NS/RKT/0821/564 on the Organization and Functioning of National Council for Digital Economy and Society.
 type: royal-decree
 lang: en
 ---
