@@ -1,7 +1,7 @@
 ---
-date: 08/10/2021
-file: royal-decrees/Placeholder-PDF.pdf
-title: it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the.
+date: 05/01/2024
+file: sub-decrees/sub-decree-organization-function-of-digital-security-committee.pdf
+title: Sub-Decree No. 44 ANKR.BT on the Organization and Functioning of Digital Security Committee.
 type: sub-decree
 lang: km
 ---
