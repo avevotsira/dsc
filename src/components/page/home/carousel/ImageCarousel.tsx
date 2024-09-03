@@ -20,7 +20,7 @@ export default function ImageCarousel() {
     }),
   );
 
-  const carouselItem = [
+  const carouselItems = [
     {
       title: "Safeguarding Cambodia’s Digital Security",
       description:
@@ -36,7 +36,7 @@ export default function ImageCarousel() {
       className="w-full"
     >
       <CarouselContent>
-        {carouselItem?.map((item) => (
+        {carouselItems?.map((item) => (
           <CarouselItem
             key={item.title}
             className="relative h-[350px] w-full md:h-[450px]"
