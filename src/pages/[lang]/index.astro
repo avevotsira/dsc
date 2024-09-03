@@ -54,10 +54,7 @@ const t = useTranslations(lang);
 
 <BaseLayout title={`Welcome to Astro - ${lang}`} description={"test"}>
   <HomeMain>
-    <TextElement variant="heading" className="sr-only">
-      It was popularised in the 1960s
-    </TextElement>
-    <HomeCarousel content={latestArticles} lang={lang} />
+    <HomeCarousel />
     <div
       class="container flex flex-col items-center gap-16 px-24 py-8 max-sm:p-5"
     >

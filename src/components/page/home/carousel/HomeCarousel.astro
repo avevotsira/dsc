@@ -1,19 +1,9 @@
 ---
 import ImageCarousel from "@/components/page/home/carousel/ImageCarousel";
-
-import type { SupportedLanguage } from "@/i18n/ui";
-import type { CollectionEntry } from "astro:content";
-
-interface Props {
-  content: CollectionEntry<"articles">[];
-  lang: SupportedLanguage;
-}
-
-const { content, lang } = Astro.props;
 ---
 
 <section aria-label="Carousel">
   <div class="relative h-[350px] w-full md:h-[450px]">
-    <ImageCarousel carouselDatas={content} lang={lang} client:load />
+    <ImageCarousel client:load />
   </div>
 </section>

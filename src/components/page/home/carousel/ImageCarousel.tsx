@@ -1,29 +1,17 @@
 import { useRef } from "react";
 
-import { getContentUrl } from "@/lib/route";
-
 import { CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { ButtonLink } from "@/components/ButtonLink";
 import TextElement from "@/components/TextElement";
 
-import type { SupportedLanguage } from "@/i18n/ui";
-import type { CollectionEntry } from "astro:content";
+import article2Image from "@/asset/articles/1-article-dsc-meeting/article-1-photo-2.webp";
 import Autoplay from "embla-carousel-autoplay";
 
-interface ImageCarouselProps {
-  carouselDatas: CollectionEntry<"articles">[];
-  lang: SupportedLanguage;
-}
-
-export default function ImageCarousel({
-  carouselDatas,
-  lang,
-}: ImageCarouselProps) {
+export default function ImageCarousel() {
   const plugin = useRef(
     Autoplay({
       delay: 4000,
@@ -32,6 +20,15 @@ export default function ImageCarousel({
     }),
   );
 
+  const carouselItem = [
+    {
+      title: "Safeguarding Cambodia’s Digital Security",
+      description:
+        "The Digital Security Committee (DSC) was established in order to ensure the efficient and effective in supporting the National Council for Digital Economy and Society, with function of leading, coordinating and promoting the management of digital security in Cambodia",
+      image: article2Image,
+    },
+  ];
+
   return (
     <Carousel
       plugins={[plugin.current]}
@@ -39,14 +36,14 @@ export default function ImageCarousel({
       className="w-full"
     >
       <CarouselContent>
-        {carouselDatas?.map((item) => (
+        {carouselItem?.map((item) => (
           <CarouselItem
-            key={item.data.title}
+            key={item.title}
             className="relative h-[350px] w-full md:h-[450px]"
           >
             <img
-              src={item.data.image.src}
-              alt={item.data.title}
+              src={item.image.src}
+              alt={item.title}
               sizes="100vw"
               className="absolute inset-0 size-full object-cover object-center"
               loading="eager"
@@ -54,21 +51,12 @@ export default function ImageCarousel({
             <div className="absolute inset-0 flex items-center justify-center bg-black/50">
               <CardContent className="container mx-auto flex flex-col items-center justify-center space-y-4 p-4 text-center text-primary-foreground sm:p-6 md:p-8">
                 <TextElement
-                  variant="title"
+                  variant="heading"
                   className="line-clamp-4 whitespace-pre-line text-pretty text-4xl"
                 >
-                  {item.data.title}
+                  {item.title}
                 </TextElement>
-
-                <ButtonLink
-                  href={getContentUrl(item, lang)}
-                  aria-labelledby={`read-more-${item.slug}`}
-                >
-                  <span id={`read-more-${item.slug}`}>
-                    Read more
-                    <span className="sr-only"> about {item.data.title}</span>
-                  </span>
-                </ButtonLink>
+                <TextElement>{item.description}</TextElement>
               </CardContent>
             </div>
           </CarouselItem>
