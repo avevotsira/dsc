@@ -7,6 +7,7 @@ import TextElement from "@/components/TextElement";
 import UnitLinks from "@/components/UnitLinks";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
 
+import { DIRECTIVE_TYPES } from "@/content/content.type";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
@@ -43,9 +44,19 @@ const langDirectives = allDirectives.filter(
   (article) => article.data.lang === lang,
 );
 
+// const latestDirectives = langDirectives
+//   .sort(
+//     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+//   )
+//   .slice(0, 4);
+
 const latestDirectives = langDirectives
-  .sort(
-    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  .filter(
+    (directive) =>
+      directive.data.lang === lang &&
+      (directive.data.type == DIRECTIVE_TYPES.ROYAL_DECREE ||
+        directive.data.type == DIRECTIVE_TYPES.SUB_DECREE ||
+        directive.data.type == DIRECTIVE_TYPES.POLICY),
   )
   .slice(0, 4);
 
