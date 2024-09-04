@@ -1,8 +1,8 @@
 ---
-title: ឯកឧត្តមនាយឧត្តមសេនីយ៍
-name: ស ថេត
-image: src/asset/board-members/sar-thet.jpg
-organization: អគ្គស្នងការនគរបាលជាតិ
-role: សមាជិក
+title: ឯកឧត្ដម
+name: ប្រាក់ ផល្លា
+image: src/asset/board-members/prak-phalla.jpg
+organization: រដ្ឋលេខាធិការក្រសួងការបរទេស និងសហប្រតិបត្តិការអន្តរជាតិ
+role: Member
 lang: km
 ---

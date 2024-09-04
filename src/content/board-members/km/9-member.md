@@ -1,8 +1,8 @@
 ---
-title: នាយឧត្តមសេនីយ៍
-name: សៅ សុខា
-image: src/asset/board-members/sao-sokha.jpg
-organization: មេបញ្ជាការកងរាជអាវុធហត្ថលើផ្ទៃប្រទេស
-role: សមាជិក
+title: ឯកឧត្ដម
+name: កេង សុម៉ារិទ្
+image: src/asset/board-members/keng-somarith.jpg
+organization: រដ្ឋលេខាធិការក្រសួងយុត្តិធម៌
+role: Member
 lang: km
 ---

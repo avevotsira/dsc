@@ -1,8 +1,8 @@
 ---
-title: General
-name: Sao Sokha
-image: src/asset/board-members/sao-sokha.jpg
-organization: Commander of the National Gendarmerie
+title: H.E.
+name: Keng Somarith
+image: src/asset/board-members/keng-somarith.jpg
+organization: Secretary of State at Ministry of Justice
 role: Member
 lang: en
 ---
