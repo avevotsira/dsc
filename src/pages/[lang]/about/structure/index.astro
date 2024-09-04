@@ -1,5 +1,7 @@
 ---
 import Main from "@/components/Main.astro";
+import DeputySecretaryGeneralList from "@/components/page/about/DeputySecretaryGeneralList.astro";
+import Role from "@/components/page/about/Role.astro";
 import BoardMemberCard from "@/components/page/structure/BoardMemberCard.astro";
 import StructureChart from "@/components/page/structure/StructureChart";
 import StructureLeaderShipCard from "@/components/page/structure/StructureLeaderShipCard.astro";
@@ -34,10 +36,6 @@ const allSecretaries = (
 
 const general = allSecretaries.filter(
   (secretary) => secretary.role === SECRETARY_TYPES.GENERAL,
-);
-
-const deputyGenerals = allSecretaries.filter(
-  (secretary) => secretary.role === SECRETARY_TYPES.DEPUTY,
 );
 
 const t = useTranslations(lang);
@@ -92,6 +90,9 @@ const t = useTranslations(lang);
       <TextElement variant="paragraph">
         {t("structure.generalSecretaryIntro")}
       </TextElement>
+      <section aria-labelledby="role">
+        <Role />
+      </section>
       <TextElement
         variant="subheading"
         className="py-10 text-center text-primary"
@@ -107,25 +108,12 @@ const t = useTranslations(lang);
           />
         )
       }
-      <TextElement
-        variant="subheading"
-        className="py-10 text-center text-primary"
-      >
+      <TextElement variant="subheading" className="text-center text-primary">
         Deputy Secretary General
       </TextElement>
-      <ul class="grid grid-cols-1 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
-        {
-          deputyGenerals.map((deputy) => (
-            <li>
-              <StructureLeaderShipCard
-                title={deputy.title}
-                name={deputy.name}
-                image={deputy.image}
-              />
-            </li>
-          ))
-        }
-      </ul>
+      <section aria-labelledby="deputy-secretary-general-list">
+        <DeputySecretaryGeneralList />
+      </section>
     </section>
   </Main>
 </BaseLayout>
