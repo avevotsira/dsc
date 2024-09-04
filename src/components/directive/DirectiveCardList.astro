@@ -16,7 +16,9 @@ const { directives, lang } = Astro.props;
 <ul class="grid list-none grid-cols-1 gap-5 p-5 md:grid-cols-2 lg:grid-cols-3">
   {
     directives.length === 0 && (
-      <TextElement>There is no content available yet.</TextElement>
+      <TextElement variant="paragraph">
+        There is no content available yet.
+      </TextElement>
     )
   }
   {
