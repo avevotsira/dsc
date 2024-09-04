@@ -44,19 +44,9 @@ const langDirectives = allDirectives.filter(
   (article) => article.data.lang === lang,
 );
 
-// const latestDirectives = langDirectives
-//   .sort(
-//     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
-//   )
-//   .slice(0, 4);
-
-const latestDirectives = langDirectives
+const featuredDirectives = langDirectives
   .filter(
-    (directive) =>
-      directive.data.lang === lang &&
-      (directive.data.type == DIRECTIVE_TYPES.ROYAL_DECREE ||
-        directive.data.type == DIRECTIVE_TYPES.SUB_DECREE ||
-        directive.data.type == DIRECTIVE_TYPES.POLICY),
+    (directive) => directive.data.lang === lang && directive.data.featured,
   )
   .slice(0, 4);
 
@@ -100,7 +90,7 @@ const t = useTranslations(lang);
         >
           {"Law and Regulations"}
         </TextElement>
-        <LawCardList directives={latestDirectives} lang={lang} />
+        <LawCardList directives={featuredDirectives} lang={lang} />
       </section>
       <section aria-labelledby="units-under-dsc-heading">
         <TextElement

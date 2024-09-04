@@ -1,8 +1,9 @@
 ---
-date: 08/10/2021
-file: royal-decrees/Placeholder-PDF.pdf
-title: it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the.
-type: press-release
+date: 05/10/2021
+file: policies/policies-digital-economy-and-society-policy-framework.pdf
+featured: true
+title: Cambodia Digital Economy and Society Policy Framework 2021-2035
+type: policy
 lang: km
 ---
 

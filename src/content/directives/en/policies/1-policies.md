@@ -1,6 +1,7 @@
 ---
 date: 05/10/2021
 file: policies/policies-digital-economy-and-society-policy-framework.pdf
+featured: true
 title: Cambodia Digital Economy and Society Policy Framework 2021-2035
 type: policy
 lang: en
