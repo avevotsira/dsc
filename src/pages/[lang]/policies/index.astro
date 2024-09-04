@@ -19,12 +19,11 @@ export async function getStaticPaths() {
 const lang = Astro.params.lang as SupportedLanguage;
 const allDirectives = await getCollection("directives");
 
-let directives = allDirectives.filter(
+const directives = allDirectives.filter(
   (directive) =>
     directive.data.lang === lang &&
     directive.data.type === DIRECTIVE_TYPES.POLICY,
 );
-directives = [];
 ---
 
 <BaseLayout title={title}>

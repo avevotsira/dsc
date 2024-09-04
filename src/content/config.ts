@@ -40,6 +40,7 @@ const articlesCollection = defineCollection({
 const directiveSchema = z.object({
   date: z.string(),
   title: z.string(),
+  featured: z.boolean(),
   lang: z.enum(SupportedLanguage),
   file: z.string(),
   type: DirectiveTypeEnum,
