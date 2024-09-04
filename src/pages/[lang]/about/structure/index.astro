@@ -1,5 +1,7 @@
 ---
 import Main from "@/components/Main.astro";
+import DeputySecretaryGeneralList from "@/components/page/about/DeputySecretaryGeneralList.astro";
+import Role from "@/components/page/about/Role.astro";
 import BoardMemberCard from "@/components/page/structure/BoardMemberCard.astro";
 import StructureChart from "@/components/page/structure/StructureChart";
 import StructureLeaderShipCard from "@/components/page/structure/StructureLeaderShipCard.astro";
@@ -88,6 +90,9 @@ const t = useTranslations(lang);
       <TextElement variant="paragraph">
         {t("structure.generalSecretaryIntro")}
       </TextElement>
+      <section aria-labelledby="role">
+        <Role />
+      </section>
       <TextElement
         variant="subheading"
         className="py-10 text-center text-primary"
@@ -103,6 +108,12 @@ const t = useTranslations(lang);
           />
         )
       }
+      <TextElement variant="subheading" className="text-center text-primary">
+        Deputy Secretary General
+      </TextElement>
+      <section aria-labelledby="deputy-secretary-general-list">
+        <DeputySecretaryGeneralList />
+      </section>
     </section>
   </Main>
 </BaseLayout>
