@@ -4,6 +4,7 @@ date: 05/24/2023
 featured: true
 image: src/asset/security-tips/5-point-of-stealing-identity.jpg
 title: ៥ ចំណុចដែលអ្នកគួរដឹងអំពីការលួចអត្តសញ្ញាណ
+author: CamCERT
 description: 5 points that you should know of how hacker steal your identity to access your information
 lang: en
 ---

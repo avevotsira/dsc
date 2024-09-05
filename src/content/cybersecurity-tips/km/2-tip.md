@@ -4,6 +4,7 @@ date: 07/25/2023
 featured: false
 image: src/asset/security-tips/telegram-scam.jpg
 title: ស្វែងយល់អំពីទម្រង់នៃការបោកប្រាស់តាមរយៈកម្មវិធី តេឡេក្រាម (Telegram)
+author: CamCERT
 description: Explore on how scammer do in telegram that lure telegram user to fall in their trap!
 lang: km
 ---

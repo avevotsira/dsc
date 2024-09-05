@@ -4,6 +4,7 @@ date: 10/26/2023
 featured: false
 image: src/asset/security-tips/cyber-security-training.jpg
 title: ការបណ្តុះបណ្តាលអំពីសុវត្ថិភាពសន្តិសុខសាយប័រ
+author: CamCERT
 description: read the article to learn more about general knowledge of cyber security
 lang: km
 ---
