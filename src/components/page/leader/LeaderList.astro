@@ -1,4 +1,6 @@
 ---
+import TextElement from "@/components/TextElement";
+
 import LeaderCard from "./LeaderCard.astro";
 import type { SupportedLanguage } from "@/i18n/ui";
 import type { CollectionEntry } from "astro:content";
@@ -12,6 +14,13 @@ const { leaders, lang } = Astro.props;
 ---
 
 <ul class="flex list-none flex-col gap-5 p-5">
+  {
+    leaders.length === 0 && (
+      <TextElement variant="paragraph">
+        There is no content available yet.
+      </TextElement>
+    )
+  }
   {
     leaders.map((leader, index) => (
       <li>

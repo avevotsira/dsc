@@ -1,0 +1,37 @@
+---
+import TextElement from "../../TextElement";
+
+const roleAndDutyList = [
+  {
+    text: "Directs and manages the technical work of digital security and serves as the direct assistants for the Chairman of the D.S.C.",
+  },
+  {
+    text: "Coordinates digital security work, including the Cambodia Cyber Security Unit, the Anti-Cybercrime Unit, the Cyberspace Defense Unit, and the Cyber Diplomatic Unit for the D.S.C.",
+  },
+  {
+    text: "Manages and supports the general administrative work of the D.S.C.",
+  },
+  { text: "Manages and develops the human resources of the D.S.C." },
+  { text: "Arranges, manages and uses the budget of the D.S.C." },
+  { text: "Manages and stores files and data related to digital security." },
+  {
+    text: "Prepares and summarizes monthly, quarterly, semi-annual and annual reports for the D.S.C.",
+  },
+  { text: "Performs other duties as assigned by the Chairman of the D.S.C." },
+];
+---
+
+<div class="">
+  <TextElement variant="body" className="mt-2">
+    The General Secretariat of the D.S.C has the following roles and duties:
+  </TextElement>
+  <ul class="m-2 list-disc pl-4">
+    {
+      roleAndDutyList.map((roleAndDuty) => (
+        <li>
+          <TextElement variant="body">{roleAndDuty.text}</TextElement>
+        </li>
+      ))
+    }
+  </ul>
+</div>

@@ -12,7 +12,10 @@ const WhatWeDoCard = ({ title, description }: WhatWeDoCardProps) => (
       <ClipboardList size={37} className="text-primary" />
     </div>
     <div>
-      <TextElement variant="title" className="text-lg text-primary">
+      <TextElement
+        variant="title"
+        className="mb-2 line-clamp-1 text-lg text-primary"
+      >
         {title}
       </TextElement>
       <TextElement variant="body" className="line-clamp-4 text-pretty">

@@ -2,41 +2,50 @@ import WhatWeDoCard from "./WhatWeDoCard";
 
 const cards = [
   {
-    title: "Header",
+    title: "Digital Security Management",
     description:
-      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the.",
+      "Lead, coordinate, and promote the management of digital security including cybersecurity, cybercrime, cyberspace defense and cyber diplomacy.",
   },
   {
-    title: "Header",
+    title: "Digital Security Policymaker",
     description:
-      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the.",
+      "Review and decide on proposals for revision and/or amendment of laws, regulations and policies related to digital security.",
   },
   {
-    title: "Header",
+    title: "Digital Security Regulations and Policies Implementation Evaluator",
     description:
-      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the.",
+      "Promote and review the implementation of policies, strategies, laws and regulations related to digital security.",
   },
   {
-    title: "Header",
+    title: "Coordinator of Cybersecurity Incidents Prevention ",
     description:
-      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the.",
+      "Lead and coordinate at the political level and take action to respond to cybersecurity incidents and prevent cybersecurity threats in both public and private sectors.",
   },
   {
-    title: "Header",
-    description:
-      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the.",
+    title: "Digital Security Data Management",
+    description: "Manage and collect data related to digital security.",
   },
   {
-    title: "Header",
+    title: "Human Resource Development",
     description:
-      "remaining essentially unchanged. It was popularised in the 1960s with the.",
+      "Accumulate financial, technical, and human resources with the attribution of building and developing digital security.",
   },
-  // Add more cards as needed
+  {
+    title: "Building and Developing Digital Security of Kingdom of Cambodia ",
+    description:
+      "Motivate, encourage, and support the building and development of digital security from every aspect.",
+  },
+  {
+    title:
+      "Coordinator and Promoter of National and International Cooperation Regarding Digital Security",
+    description:
+      "Coordinate and promote national and international cooperation related to digital security.",
+  },
 ];
 
 const WhatWeDoGrid = () => {
   return (
-    <ul className="grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-2 lg:grid-cols-3">
+    <ul className="grid list-none grid-cols-1 gap-4 p-0 lg:grid-cols-2">
       {cards.map((card) => (
         <li key={card.title}>
           <WhatWeDoCard title={card.title} description={card.description} />

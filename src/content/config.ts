@@ -27,8 +27,8 @@ const articleSchema = ({ image }: SchemaContext) =>
     featured: z.boolean(),
     image: image(),
     title: z.string(),
-    description: z.string().max(160, {
-      message: "Description must be at most 160 characters long",
+    description: z.string().max(220, {
+      message: "Description must be at most 220 characters long",
     }),
     lang: z.enum(SupportedLanguage),
   });
@@ -40,6 +40,7 @@ const articlesCollection = defineCollection({
 const directiveSchema = z.object({
   date: z.string(),
   title: z.string(),
+  featured: z.boolean(),
   lang: z.enum(SupportedLanguage),
   file: z.string(),
   type: DirectiveTypeEnum,

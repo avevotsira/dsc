@@ -1,10 +1,11 @@
 ---
-categories: ["studio tips"]
+categories: ["News"]
 date: 05/03/2024
 featured: false
 image: src/asset/articles/1-article-dsc-meeting/article-1-photo-1.webp
 title: កិច្ចប្រជុំ​ ប្រកាសសមាសភាព និងផ្សព្វផ្សាយគោលការណ៍ណែនាំសម្រាប់ គ.ស.ឌ.
-description: ឯកឧត្តម ជា វ៉ាន់ដេត រដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍​
+author: Digital Security Committee
+description: រាជធានីភ្នំពេញ៖ ថ្ងៃទី៣ ឧសភា ឆ្នាំ២០២៤ ឯកឧត្តម ជា វ៉ាន់ដេត បានអញ្ជើញចូលរួមកិច្ចប្រជុំ ដេីម្បីប្រកាសសមាសភាព និងផ្សព្វផ្សាយគោលការណ៍ណែនាំសម្រាប់ គ.ស.ឌ. ក្រោមអធិបតីភាពឯកឧត្តមសន្តិបណ្ឌិត នេត សាវឿន
 lang: en
 ---
 

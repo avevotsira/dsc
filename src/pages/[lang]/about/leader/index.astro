@@ -16,7 +16,8 @@ export async function getStaticPaths() {
 }
 
 const lang = Astro.params.lang as SupportedLanguage;
-const allLeaders = await getCollection("leaders");
+let allLeaders = await getCollection("leaders");
+allLeaders = [];
 const leaders = allLeaders.filter((leader) => leader.data.lang === lang);
 ---
 

@@ -25,6 +25,9 @@ function filterDirectives(
   type: DirectiveType,
   lang: SupportedLanguage,
 ): CollectionEntry<"directives">[] {
+  if (type === "decision") {
+    return [];
+  }
   return directives.filter(
     (directive) => directive.data.lang === lang && directive.data.type === type,
   );

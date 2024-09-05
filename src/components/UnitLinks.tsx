@@ -36,7 +36,9 @@ export default function UnitLinks() {
             >
               <div className="flex items-center">
                 <img src={item.image} alt={item.label} width="30" height="30" />
-                <span className="ml-2">{item.label}</span>
+                <span className="ml-2 underline hover:text-primary">
+                  {item.label}
+                </span>
               </div>
             </a>
           </li>

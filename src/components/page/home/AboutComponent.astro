@@ -10,9 +10,11 @@ const lang = Astro.currentLocale as SupportedLanguage;
 const t = useTranslations(lang);
 ---
 
-<div class="gap-12 py-16 md:flex md:items-start">
+<div class="gap-12 pt-16 md:flex md:items-start">
   <div class="mb-3 w-full">
-    <TextElement variant="heading">{t("nav.about")}</TextElement>
+    <TextElement variant="heading" className="text-primary"
+      >{t("nav.about")}</TextElement
+    >
     <TextElement variant="subheading" className="text-lg">
       Digital Security Committee
     </TextElement>

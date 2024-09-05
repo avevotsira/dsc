@@ -33,20 +33,16 @@ const allTips = await getCollection("cybersecurity-tips");
 
 const langTips = allTips.filter((tip) => tip.data.lang === lang);
 
-const latestTips = langTips
-  .sort(
-    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
-  )
-  .slice(0, 3);
+const latestTips = langTips.filter((tip) => tip.data.featured).slice(0, 3);
 
 const allDirectives = await getCollection("directives");
 const langDirectives = allDirectives.filter(
   (article) => article.data.lang === lang,
 );
 
-const latestDirectives = langDirectives
-  .sort(
-    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+const featuredDirectives = langDirectives
+  .filter(
+    (directive) => directive.data.lang === lang && directive.data.featured,
   )
   .slice(0, 4);
 
@@ -69,7 +65,7 @@ const t = useTranslations(lang);
         <TextElement
           variant="subheading"
           id="what-we-do-heading"
-          className="mb-4 text-center"
+          className="mb-4 text-center text-primary"
         >
           {t("home.whatwedo")}
         </TextElement>
@@ -79,7 +75,7 @@ const t = useTranslations(lang);
         <TextElement
           variant="subheading"
           id="units-under-dsc-heading"
-          className="mb-4 text-center"
+          className="mb-4 text-center text-primary"
         >
           {"Units under Digital Security Committee"}
         </TextElement>
@@ -89,7 +85,7 @@ const t = useTranslations(lang);
         <TextElement
           variant="subheading"
           id="cybersecurity-tips-heading"
-          className="mb-4 text-center"
+          className="mb-4 text-center text-primary"
         >
           {"Cybersecurity Tips"}
         </TextElement>
@@ -99,11 +95,11 @@ const t = useTranslations(lang);
         <TextElement
           variant="subheading"
           id="law-regulations-heading"
-          className="mb-4 text-center"
+          className="mb-4 text-center text-primary"
         >
           {"Law and Regulations"}
         </TextElement>
-        <LawCardList directives={latestDirectives} lang={lang} />
+        <LawCardList directives={featuredDirectives} lang={lang} />
       </section>
     </div>
   </HomeMain>
