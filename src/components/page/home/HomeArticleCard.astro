@@ -24,7 +24,7 @@ const trimmedTitle = title.trim().replace(/\s+/g, "-");
 ---
 
 <article
-  class="rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
+  class="flex h-full flex-col rounded-lg border bg-card p-5 text-card-foreground shadow-sm"
   aria-labelledby={`article-${trimmedTitle}`}
 >
   <header class="flex flex-col gap-2">
@@ -59,7 +59,7 @@ const trimmedTitle = title.trim().replace(/\s+/g, "-");
       {title}
     </TextElement>
   </header>
-  <section aria-label="Article summary">
+  <section aria-label="Article summary" class="grow">
     <TextElement className="mt-2 line-clamp-4 text-card-foreground">
       {description}
     </TextElement>
