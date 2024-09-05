@@ -4,6 +4,7 @@ date: 05/07/2021
 featured: false
 image: src/asset/security-tips/anti-virus-tip.jpg
 title: ការការពារកុំព្យូទ័ររបស់អ្នកពីមេរោគ
+author: CamCERT
 description: Learn how to protect your computer from any kinds of virus!
 lang: en
 ---

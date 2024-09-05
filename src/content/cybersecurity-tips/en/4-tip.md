@@ -4,6 +4,7 @@ date: 08/24/2024
 featured: true
 image: src/asset/security-tips/5-employee-harmful-mistake.png
 title: កំហុសទាំង៥ របស់បុគ្គលិកដែលអាចបង្កឱ្យមានហានិភ័យសាយប័រ
+author: CamCERT
 description: Learn top 5 common mistakes that normal employees often do that demaging to their company
 lang: en
 ---

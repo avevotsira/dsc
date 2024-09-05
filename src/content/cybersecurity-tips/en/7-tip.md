@@ -4,6 +4,7 @@ date: 08/25/2023
 featured: true
 image: src/asset/security-tips/cyber-security-principle.jpg
 title: គោលការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រ
+author: CamCERT
 description: Learn about the principle of cyber security
 lang: en
 ---

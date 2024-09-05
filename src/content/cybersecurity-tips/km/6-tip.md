@@ -4,6 +4,7 @@ date: 12/02/2023
 featured: false
 image: src/asset/security-tips/how-hacker-fake-data.jpg
 title: របៀប និងមូលហេតុដែលឧក្រិដ្ឋជនសាយប័រក្លែងបន្លំការលេចធ្លាយទិន្នន័យ
+author: CamCERT
 description: How and Why hacker fake their data to gain user trust
 lang: km
 ---
