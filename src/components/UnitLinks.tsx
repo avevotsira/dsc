@@ -24,7 +24,7 @@ export default function UnitLinks() {
 
   return (
     <nav>
-      <ul className="grid list-none grid-cols-1 gap-4 p-5 md:grid-cols-2 lg:grid-cols-4">
+      <ul className="grid list-none grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-4">
         {ExternalLinks.map((item) => (
           <li key={item.label}>
             <a

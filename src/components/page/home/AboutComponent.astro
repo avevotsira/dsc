@@ -1,0 +1,38 @@
+---
+import { ButtonLink } from "@/components/ButtonLink";
+import TextElement from "@/components/TextElement";
+
+import { type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import { ArrowRight } from "lucide-react";
+
+const lang = Astro.currentLocale as SupportedLanguage;
+const t = useTranslations(lang);
+---
+
+<div class="gap-12 py-16 md:flex md:items-start">
+  <div class="mb-3 w-full">
+    <TextElement variant="heading">{t("nav.about")}</TextElement>
+    <TextElement variant="subheading" className="text-lg">
+      Digital Security Committee
+    </TextElement>
+  </div>
+  <div class="w-full">
+    <section aria-label="about dsc detail">
+      <TextElement className="mt-2 line-clamp-4 text-card-foreground">
+        The Digital Security Committee (DSC) was established in order to ensure
+        the efficient and effective in supporting the National Council for
+        Digital Economy and Society, with function of leading, coordinating and
+        promoting the management of digital security in Cambodia.
+      </TextElement>
+    </section>
+    <ButtonLink
+      href={`/${lang}/about`}
+      className="mt-3 flex w-full justify-end bg-white text-secondary"
+    >
+      <span class="flex items-center gap-3">
+        About us<ArrowRight className="size-5" /></span
+      >
+    </ButtonLink>
+  </div>
+</div>
