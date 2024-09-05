@@ -67,6 +67,9 @@ export default {
             foreground: "hsl(var(--mptc-secondary-foreground))",
           },
         },
+        shadow: {
+          DEFAULT: "hsl(var(--shadow))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

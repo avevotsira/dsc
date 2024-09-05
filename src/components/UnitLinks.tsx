@@ -24,7 +24,7 @@ export default function UnitLinks() {
 
   return (
     <nav>
-      <ul className="grid list-none grid-cols-1 gap-4 p-5 md:grid-cols-2 lg:grid-cols-4">
+      <ul className="grid list-none grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-4">
         {ExternalLinks.map((item) => (
           <li key={item.label}>
             <a
@@ -36,7 +36,9 @@ export default function UnitLinks() {
             >
               <div className="flex items-center">
                 <img src={item.image} alt={item.label} width="30" height="30" />
-                <span className="ml-2">{item.label}</span>
+                <span className="ml-2 underline hover:text-primary">
+                  {item.label}
+                </span>
               </div>
             </a>
           </li>
