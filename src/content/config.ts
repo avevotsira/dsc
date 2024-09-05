@@ -27,8 +27,8 @@ const articleSchema = ({ image }: SchemaContext) =>
     featured: z.boolean(),
     image: image(),
     title: z.string(),
-    description: z.string().max(160, {
-      message: "Description must be at most 160 characters long",
+    description: z.string().max(220, {
+      message: "Description must be at most 220 characters long",
     }),
     lang: z.enum(SupportedLanguage),
   });
