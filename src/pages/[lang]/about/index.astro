@@ -37,6 +37,12 @@ const currentImage = langImages[lang] || enAboutUs;
 const title = "Explore DSC";
 const description =
   "Learn about the Digital Security Committee's strategic goals, roles, and responsibilities in developing Cambodia's digital government policy for 2022-2035.";
+
+const committeeList = [
+  "Digital Economy and Business Committee (Established 2021)",
+  "Digital Government Committee (Established 2022)",
+  "Digital Security Committee (Established 2024)",
+];
 ---
 
 <OrganizationLayout
@@ -54,8 +60,23 @@ const description =
           >
             {t("about.dsc")}
           </TextElement>
-          <TextElement variant="body" className="text-center">
-            {t("about.dscText")}
+          <TextElement variant="body" className="pb-6">
+            {t("about.dscText1")}
+          </TextElement>
+          <TextElement variant="body" className="pb-6">
+            {t("about.dscText2")}
+          </TextElement>
+          <ul class="list-decimal pb-6 pl-4">
+            {
+              committeeList.map((committee) => (
+                <li>
+                  <TextElement variant="body">{committee}</TextElement>
+                </li>
+              ))
+            }
+          </ul>
+          <TextElement variant="body" className="pb-6">
+            {t("about.dscText3")}
           </TextElement>
         </header>
       </section>
