@@ -26,9 +26,6 @@ const t = useTranslations(lang);
 const allAbouts = await getCollection("abouts");
 const abouts = allAbouts.filter((about) => about.data.lang === lang);
 const goals = abouts.filter((about) => about.data.type === ABOUT_TYPES.GOAL);
-const strategies = abouts.filter(
-  (about) => about.data.type === ABOUT_TYPES.STRATEGIES,
-);
 const roles = abouts.filter((about) => about.data.type === ABOUT_TYPES.ROLE);
 
 const langImages = {
