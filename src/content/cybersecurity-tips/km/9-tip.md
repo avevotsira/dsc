@@ -5,7 +5,7 @@ featured: false
 image: src/asset/security-tips/what-is-otp.jpg
 title: តើ One-Time Password (OTP) ជាអ្វី?
 author: CamCERT
-description: What is One-Time Password (OTP), and what is the advantages of it in sign up process!
+description: One-Time Password (OTP) គឺជាស៊េរីលេខ ឬលេខនិងអក្សរដែលត្រូវបានបង្កើតឡើងដោយស្វ័យប្រវត្តិសម្រាប់ អ្នកប្រើប្រាស់
 lang: km
 ---
 

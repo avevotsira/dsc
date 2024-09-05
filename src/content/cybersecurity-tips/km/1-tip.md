@@ -5,7 +5,7 @@ featured: false
 image: src/asset/security-tips/anti-virus-tip.jpg
 title: ការការពារកុំព្យូទ័ររបស់អ្នកពីមេរោគ
 author: CamCERT
-description: Learn how to protect your computer from any kinds of virus!
+description: មេរោគកុំព្យូទ័រគឺជាកម្មវិធីមួយដែលបង្កើតឡើងដើម្បីបង្កគ្រោះថ្នាក់ដល់ប្រព័ន្ធកុំព្យូទ័រ អ្នកប្រើប្រាស់ទាំងអស់គួរតែដំឡើងកម្មវិធីប្រឆាំងមេរោគដើម្បីការពារកុំព្យូទ័រ
 lang: km
 ---
 

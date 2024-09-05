@@ -5,7 +5,7 @@ featured: true
 image: src/asset/security-tips/cyber-security-principle.jpg
 title: គោលការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រ
 author: CamCERT
-description: Learn about the principle of cyber security
+description: គោលការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រគឺ ជាការផ្តល់ការណែនាំជាយុទ្ធសាស្រ្តអំពីរបៀបដែលអាចការពារប្រព័ន្ធ និងទិន្នន័យរបស់អង្គភាព
 lang: km
 ---
 

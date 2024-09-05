@@ -5,7 +5,7 @@ featured: false
 image: src/asset/security-tips/telegram-scam.jpg
 title: ស្វែងយល់អំពីទម្រង់នៃការបោកប្រាស់តាមរយៈកម្មវិធី តេឡេក្រាម (Telegram)
 author: CamCERT
-description: Explore on how scammer do in telegram that lure telegram user to fall in their trap!
+description: តេឡេក្រាម (Telegram) ជាប្រព័ន្ធកម្មវិធីផ្ញើសារដោយឥតគិតថ្លៃតាមរយៈប្រព័ន្ធអ៊ីនធឺណិត ដែលកំពុងមានការពេញនិយម ក្នុងការប្រើប្រាស់
 lang: km
 ---
 
