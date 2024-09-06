@@ -59,7 +59,12 @@ export default function ImageCarousel({
                 >
                   {item.data.title}
                 </TextElement>
-
+                <TextElement
+                  variant="paragraph"
+                  className="line-clamp-4 whitespace-pre-line text-pretty"
+                >
+                  {item.data.description}
+                </TextElement>
                 <ButtonLink
                   href={getContentUrl(item, lang)}
                   aria-labelledby={`read-more-${item.slug}`}
