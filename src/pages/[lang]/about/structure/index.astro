@@ -3,14 +3,15 @@ import Main from "@/components/Main.astro";
 import DeputySecretaryGeneralList from "@/components/page/about/DeputySecretaryGeneralList.astro";
 import Role from "@/components/page/about/Role.astro";
 import BoardMemberCard from "@/components/page/structure/BoardMemberCard.astro";
-import StructureChart from "@/components/page/structure/StructureChart";
 import StructureLeaderShipCard from "@/components/page/structure/StructureLeaderShipCard.astro";
 import TextElement from "@/components/TextElement";
 
+import structure from "@/asset/structure.svg";
 import { SECRETARY_TYPES } from "@/content/secretary.type";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 const title = "Structure";
@@ -81,7 +82,15 @@ const t = useTranslations(lang);
       <TextElement variant="paragraph" className="pb-6">
         {t("structure.orgIntro")}
       </TextElement>
-      <StructureChart />
+      <Image
+        src={structure}
+        alt=""
+        class="size-full object-cover"
+        loading="eager"
+        quality="high"
+        widths={[640, 768, 1024, 1280, 1440, 1600]}
+        format="webp"
+      />
     </section>
     <section aria-label="Leadership">
       <TextElement variant="subheading" className="text-primary">
