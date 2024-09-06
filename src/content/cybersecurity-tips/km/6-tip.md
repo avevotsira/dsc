@@ -5,7 +5,7 @@ featured: false
 image: src/asset/security-tips/how-hacker-fake-data.jpg
 title: របៀប និងមូលហេតុដែលឧក្រិដ្ឋជនសាយប័រក្លែងបន្លំការលេចធ្លាយទិន្នន័យ
 author: CamCERT
-description: How and Why hacker fake their data to gain user trust
+description: ការលេចធ្លាយទិន្នន័យជាបញ្ហាប្រឈមចម្បងសម្រាប់អង្គភាព ស្ថាប័ន និងក្រុមហ៊ុននានាទូទាំងពិភពលោក។ បញ្ហាប្រឈមនេះកាន់តែស្មុគស្មាញ
 lang: km
 ---
 

@@ -5,7 +5,7 @@ featured: false
 image: src/asset/security-tips/hosting-website-choice.jpg
 title: គន្លឹះក្នុងការជ្រើសរើសសេវាកម្មបង្ហោះគេហទំព័រសម្រាប់អាជីវកម្មរបស់អ្នក
 author: CamCERT
-description: Key idea of choosing the right hosting site to host your private application
+description: ការបង្កើតគេហទំព័រសម្រាប់អាជីវកម្មអនឡាញគឺជាជំហានដ៏សំខាន់មួយសម្រាប់សហគ្រិន។ អ្នកអាចទាក់ទាញចំណាប់អារម្មណ៍របស់អតិថិជន
 lang: en
 ---
 

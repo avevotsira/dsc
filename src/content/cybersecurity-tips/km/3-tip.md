@@ -5,7 +5,7 @@ featured: false
 image: src/asset/security-tips/cyber-security-training.jpg
 title: ការបណ្តុះបណ្តាលអំពីសុវត្ថិភាពសន្តិសុខសាយប័រ
 author: CamCERT
-description: read the article to learn more about general knowledge of cyber security
+description: ស្ថាប័ននីមួយៗគួរតែមានការបណ្តុះបណ្តាលអំពីសុវត្ថិភាពសន្តិសុខសាយប័រ ហើយត្រូវបានផ្តល់ជូនដល់បុគ្គលិកទាំងអស់នៅក្នុងស្ថាប័នដែលអាចជួយពួកគេក្នុងការយល់ដឹង
 lang: km
 ---
 

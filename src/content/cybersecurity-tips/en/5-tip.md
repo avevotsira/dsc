@@ -5,7 +5,7 @@ featured: false
 image: src/asset/security-tips/security-key-for-social-media-1.jpg
 title: គន្លឹះសុវត្ថិភាពសម្រាប់ប្រព័ន្ធបណ្តាញសង្គម និងកម្មវិធីផ្ញើសារ (ផ្នែក១)
 author: CamCERT
-description: Learn more about some security keys for social media and sms.
+description: ប្រព័ន្ធបណ្តាញសង្គម និងកម្មវិធីផ្ញើសារអាចបង្កហានិភ័យដល់សុវត្ថិភាព និងឯកជនភាពរបស់បុគ្គល និងអង្គភាពនានា។
 lang: en
 ---
 
