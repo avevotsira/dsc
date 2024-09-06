@@ -1,6 +1,6 @@
 ---
 name: F. Kennedy
-image: src/asset/1-article/photomode_07052024_224722.png
+image: src/asset/secretaries/user-avatar.png
 title: General Secretary
 lang: en
 ---
