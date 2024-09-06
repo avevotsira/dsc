@@ -27,7 +27,7 @@ const StructureChart = () => {
             <div className="my-auto h-1 w-full bg-sky-300" />
           </div>
           <div className="level-3 relative col-span-3 my-4 flex max-w-xs items-center justify-center rounded-md bg-sky-700 px-2 py-3 text-center text-primary-foreground before:absolute before:inset-x-0 before:bottom-full before:mx-auto before:w-1 before:bg-sky-300 after:absolute after:-top-8 after:bottom-full after:left-1/2 after:h-1 after:bg-sky-300 sm:w-52 md:px-5 lg:col-span-1 lg:my-0 lg:w-auto lg:before:h-8 lg:after:w-80">
-            Cambodia Cyber Security Unit
+            Cambodia Cybersecurity Unit
           </div>
           <div className="flex h-full items-center border-l-4 border-sky-300 lg:hidden">
             <div className="my-auto h-1 w-full bg-sky-300" />
