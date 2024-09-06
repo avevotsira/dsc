@@ -3,9 +3,9 @@ categories: ["News"]
 date: 05/03/2024
 featured: false
 image: src/asset/articles/1-article-dsc-meeting/article-1-photo-2.webp
-title: Meeting to Announce the Composition and Disseminate Guidelines for the D.S.C.
+title: Meeting to Announce the Composition and Disseminate Guidelines for the Digital Security Committee (D.S.C)
 author: Digital Security Committee
-description: His Excellency Chea Vandeth, attended the meeting to announce the composition and disseminate guidelines for the D.S.C. Presided over by HE Dr. Neth Savoeun
+description: His Excellency Chea Vandeth attended meeting to announce the composition and disseminate guidelines for D.S.C. presided over by H.E. Santibindit Neth Savoeun.
 lang: en
 ---
 
