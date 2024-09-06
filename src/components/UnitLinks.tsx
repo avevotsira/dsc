@@ -1,7 +1,7 @@
 export default function UnitLinks() {
   const ExternalLinks = [
     {
-      label: "Cambodian Cyber Security Unit",
+      label: "Cambodian Cybersecurity Unit",
       link: "https://mptc.gov.kh",
       image: "/assets/images/mptc-logo.png",
     },
