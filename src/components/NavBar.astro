@@ -23,14 +23,12 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
   href="#main-content">Skip Navigation</a
 >
 <nav class="bg-primary-foreground shadow-md" aria-label="Main navigation">
-  <div
-    class="container mx-auto flex max-w-screen-2xl items-center gap-2 p-6 sm:gap-4"
-  >
+  <div class="flex w-full items-center gap-2 p-6 sm:gap-4 lg:px-8 2xl:px-16">
     <a href={getRelativeLocaleUrl(locale)} aria-label="Go to home page">
       <Image
         src={DSCHorizontalSubtitleBlue}
         alt=""
-        class="w-44 min-w-44 object-cover sm:w-56 md:w-60 lg:w-64"
+        class="w-56 min-w-56 object-cover md:w-60 lg:w-72"
         loading="eager"
         quality="high"
         format="webp"
