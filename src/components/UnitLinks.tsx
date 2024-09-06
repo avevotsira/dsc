@@ -1,24 +1,26 @@
+import DSCLogo from "@/asset/logo/DSC-PNG-Logo.png";
+
 export default function UnitLinks() {
   const ExternalLinks = [
     {
       label: "Cambodian Cyber Security Unit",
       link: "https://mptc.gov.kh",
-      image: "/assets/images/mptc-logo.png",
+      image: DSCLogo,
     },
     {
       label: "Anti-Cybsecurity Unit",
       link: "https://mptc.gov.kh",
-      image: "/assets/images/mptc-logo.png",
+      image: DSCLogo,
     },
     {
       label: "National Cyberspace Defense Unit",
       link: "https://mptc.gov.kh",
-      image: "/assets/images/mptc-logo.png",
+      image: DSCLogo,
     },
     {
       label: "Cyber Diplomacy Unit",
       link: "https://mptc.gov.kh",
-      image: "/assets/images/mptc-logo.png",
+      image: DSCLogo,
     },
   ];
 
@@ -35,7 +37,12 @@ export default function UnitLinks() {
               aria-label={`${item.label} (opens in a new tab)`}
             >
               <div className="flex items-center">
-                <img src={item.image} alt={item.label} width="30" height="30" />
+                <img
+                  src={item.image.src}
+                  alt={item.label}
+                  width="30"
+                  height="30"
+                />
                 <span className="ml-2 underline hover:text-primary">
                   {item.label}
                 </span>

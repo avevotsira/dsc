@@ -3,7 +3,9 @@ import { getLocalizedRoutes, NavRoutes } from "@/lib/route";
 
 import OtherLinks from "./footer/OtherLinks";
 import SocialMedia from "./footer/SocialMedia";
+import DSCVeriticalSubtitleWhite from "@/asset/logo/DSC-Vertical-Subtitle-White.png";
 import { defaultLang } from "@/i18n/ui";
+import { Image } from "astro:assets";
 
 const locale = Astro.currentLocale ?? defaultLang;
 
@@ -11,18 +13,20 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
 ---
 
 <footer class="mt-auto bg-primary text-primary-foreground">
-  <div class="container max-w-screen-2xl px-4 py-12 lg:py-16">
+  <div class="container max-w-screen-2xl px-4 py-12 lg:px-8 lg:py-16">
     <div class="flex flex-col gap-12 lg:flex-row lg:justify-between">
       <div class="flex flex-col items-center lg:w-1/4 lg:items-start">
-        <a href="/" class="mb-6 inline-block">
-          <div
-            class="flex size-28 items-center justify-center rounded-full bg-blue-500"
-          >
-            <span class="text-4xl font-bold text-primary-foreground">DSC</span>
-          </div>
-        </a>
-
-        <SocialMedia />
+        <div class="flex flex-col items-center gap-4">
+          <Image
+            src={DSCVeriticalSubtitleWhite}
+            alt=""
+            class="w-64 object-cover"
+            loading="eager"
+            quality="high"
+            format="webp"
+          />
+          <SocialMedia />
+        </div>
       </div>
       <div class="grid gap-12 lg:w-3/4 lg:grid-cols-3">
         <nav>
