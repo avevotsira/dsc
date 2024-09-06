@@ -37,14 +37,16 @@ const articlesCollection = defineCollection({
   schema: articleSchema,
 });
 
-const directiveSchema = z.object({
-  date: z.string(),
-  title: z.string(),
-  featured: z.boolean(),
-  lang: z.enum(SupportedLanguage),
-  file: z.string(),
-  type: DirectiveTypeEnum,
-});
+const directiveSchema = ({ image }: SchemaContext) =>
+  z.object({
+    date: z.string(),
+    title: z.string(),
+    featured: z.boolean(),
+    image: image(),
+    lang: z.enum(SupportedLanguage),
+    file: z.string(),
+    type: DirectiveTypeEnum,
+  });
 
 const directivesCollection = defineCollection({
   schema: directiveSchema,

@@ -2,7 +2,8 @@
 date: 08/10/2021
 file: royal-decrees/Placeholder-PDF.pdf
 featured: false
-title: it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the.
+image: src/asset/security-tips/anti-virus-tip.jpg
+title: This is a Mock Press Release in Khmer
 type: press-release
 lang: km
 ---

@@ -39,7 +39,7 @@ export const NavRoutes = [
       // { label: "Videos", href: Routes.Videos },
     ],
   },
-  { label: "Legislation", href: Routes.LawsRegulations },
+  { label: "Legislations", href: Routes.LawsRegulations },
   { label: "News & Events", href: Routes.Aritcles },
   { label: "Cybersecurity Tips", href: Routes.CybersecurityTips },
 ];

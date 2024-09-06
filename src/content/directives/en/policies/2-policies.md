@@ -2,6 +2,7 @@
 date: 01/28/2022
 file: policies/policies-digital-government.pdf
 featured: true
+image: src/asset/directives/Digital-Government-Policy.png
 title: Cambodia Digital Government Policy 2022-2035
 type: policy
 lang: en
