@@ -45,7 +45,7 @@ const cards = [
 
 const WhatWeDoGrid = () => {
   return (
-    <ul className="grid list-none grid-cols-1 gap-4 py-5 lg:grid-cols-2">
+    <ul className="grid list-none grid-cols-1 gap-4 pt-5 lg:grid-cols-2">
       {cards.map((card) => (
         <li key={card.title}>
           <WhatWeDoCard title={card.title} description={card.description} />
