@@ -1,6 +1,6 @@
 ---
 import Main from "@/components/Main.astro";
-import StructureChart from "@/components/page/structure/StructureChart";
+import StructureImage from "@/components/page/structure/StructureImage.astro";
 import TextElement from "@/components/TextElement";
 
 import { languages, type SupportedLanguage } from "@/i18n/ui";
@@ -44,7 +44,14 @@ const description =
         {t("unit.headingText")}
       </TextElement>
     </header>
-    <StructureChart />
+    <section aria-label={"structure of digital security committee"}>
+      <figure class="mx-auto flex flex-col items-center gap-4 pb-6 text-center">
+        <StructureImage />
+        <figcaption>
+          Organizational Structure of the Digital Security Committee
+        </figcaption>
+      </figure>
+    </section>
     <section aria-label={"cambodia cyber security unit"}>
       <TextElement variant="subheading" className="text-primary">
         {t("unit.ccsu")}
