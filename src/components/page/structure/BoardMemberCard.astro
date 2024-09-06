@@ -41,9 +41,6 @@ const { title, name, image, organization, role } = Astro.props as Props;
           className="font-bold sm:shrink-0 sm:text-base md:shrink"
           >{name},</TextElement
         >
-        <TextElement variant="small" className="sm:text-base"
-          >{organization}</TextElement
-        >
       </div>
       <div class="role md:basis-2/12 md:whitespace-nowrap">
         <TextElement variant="small" className="sm:text-base"
@@ -51,5 +48,8 @@ const { title, name, image, organization, role } = Astro.props as Props;
         >
       </div>
     </div>
+    <TextElement variant="small" className="sm:text-base"
+      >{organization}</TextElement
+    >
   </div>
 </div>

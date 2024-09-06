@@ -3,17 +3,17 @@ categories: ["News"]
 date: 05/03/2024
 featured: false
 image: src/asset/articles/1-article-dsc-meeting/article-1-photo-2.webp
-title: កិច្ចប្រជុំ​ ប្រកាសសមាសភាព និងផ្សព្វផ្សាយគោលការណ៍ណែនាំសម្រាប់ គ.ស.ឌ.
+title: Meeting to Announce the Composition and Disseminate Guidelines for the D.S.C.
 author: Digital Security Committee
-description: ឯកឧត្តម ជា វ៉ាន់ដេត បានអញ្ជើញចូលរួមកិច្ចប្រជុំ ដេីម្បីប្រកាសសមាសភាព និងផ្សព្វផ្សាយគោលការណ៍ណែនាំសម្រាប់ គ.ស.ឌ. ក្រោមអធិបតីភាពឯកឧត្តមសន្តិបណ្ឌិត នេត សាវឿន
+description: His Excellency Chea Vandeth, attended the meeting to announce the composition and disseminate guidelines for the D.S.C. Presided over by HE Dr. Neth Savoeun
 lang: en
 ---
 
-ឯកឧត្តម ជា វ៉ាន់ដេត រដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍​ អនុប្រធាន​ និងជាអគ្គលេខាធិការ គណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) បានអញ្ជើញចូលរួមកិច្ចប្រជុំ​ ដេីម្បីប្រកាសសមាសភាព និងផ្សព្វផ្សាយគោលការណ៍ណែនាំសម្រាប់ គ.ស.ឌ. ក្រោមអធិបតីភាពឯកឧត្តមសន្តិបណ្ឌិត នេត សាវឿន ឧបនាយករដ្ឋមន្ត្រី​ និងជាអនុប្រធានប្រចាំការ គ.ស.ឌ. ជាតំណាងដ៏ខ្ពង់ខ្ពស់សម្តេចមហាបវរធិបតី ហ៊ុន ម៉ាណែត នាយករដ្ឋមន្ត្រី នៃព្រះរាជាណាចក្រកម្ពុជា និងជាប្រធាន គ.ស.ឌ.។
+His Excellency Chea Vandeth, Minister of Posts and Telecommunications, Vice Chairman and Secretary General of the Digital Security Committee (CDC), attended the meeting to announce the composition and disseminate guidelines for the SEC. Presided over by HE Dr. Neth Savoeun, Deputy Prime Minister and Permanent Deputy Chairman His Excellency Hun Manet, Prime Minister of the Kingdom of Cambodia and President of the Kingdom of Cambodia.
 
-គ.ស.ឌ.​ ត្រូវបានបង្កើតឡើងក្នុងគោលដៅធានា​ប្រសិទ្ធភាព​ និងស័ក្តិសិទ្ធភាពនៃការបំពេញមុខងារដឹកនាំ សម្របសម្រួល និងជំរុញការគ្រប់គ្រងសន្តិសុខឌីជីថល ដើម្បីការពារអត្ថប្រយោជន៍របស់គ្រប់តួអង្គសង្គមទប់ទល់នឹងការវាយប្រហារគ្រប់រូបភាព ឆ្លើតតបគ្រប់ផ្នែកទាំងបច្ចេកទេសនិងកម្លាំងពាក់ព័ន្ធនឹងការធានានិងការពារសន្តិសុខឌីជីថល។
+The Digital Security Committee (D.S.C.) was established with the aim of ensuring the efficiency and effectiveness of its leadership, coordination and promotion of digital security management to protect the interests of all social actors against all forms of attack, tactical and technical. And forces involved in ensuring and protecting digital security.
 
-រាជធានីភ្នំពេញ៖ សាលប្រជុំទីស្តីការគណៈរដ្ឋមន្ត្រី​ ថ្ងៃទី៣ ឧសភា ឆ្នាំ២០២៤
+Phnom Penh: Meeting Hall of the Office of the Council of Ministers on May 3, 2024
 
 ![photo 2](src/asset/articles/1-article-dsc-meeting/article-1-photo-1.webp)
 ![photo 3](src/asset/articles/1-article-dsc-meeting/article-1-photo-3.webp)
