@@ -6,6 +6,8 @@ import TextElement from "@/components/TextElement";
 
 import type { DirectiveType } from "@/content/content.type";
 import type { SupportedLanguage } from "@/i18n/ui";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 import { ExternalLink } from "lucide-react";
 
 interface Props {
@@ -13,19 +15,31 @@ interface Props {
   body: string;
   date: string;
   lang: SupportedLanguage;
+  image: ImageMetadata;
   file: string;
   type: DirectiveType;
 }
 
-const { title, lang, date, file, type } = Astro.props as Props;
+const { title, lang, date, image, file, type } = Astro.props as Props;
 
 const absoluteFileUrl = new URL(file, Astro.url.origin).href;
 ---
 
 <article
-  class="flex h-full min-h-[12rem] flex-col rounded-lg border bg-card p-5 text-card-foreground shadow-sm sm:min-h-[13rem] md:min-h-[14rem]"
+  class="flex h-full min-h-48 flex-col rounded-lg border bg-card p-5 text-card-foreground shadow-sm sm:min-h-52 md:min-h-56"
 >
   <div class="flex grow flex-col gap-2">
+    <div class="flex justify-center">
+      <Image
+        src={image}
+        alt=""
+        class="w-full object-cover"
+        loading="eager"
+        quality="high"
+        widths={[640, 768, 1024, 1280, 1440, 1600]}
+        format="webp"
+      />
+    </div>
     <time
       class="text-left text-mptc-secondary-foreground"
       datetime={new Date(date).toISOString()}

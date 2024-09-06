@@ -13,7 +13,7 @@ interface Props {
 const { directives, lang } = Astro.props;
 ---
 
-<ul class="grid list-none grid-cols-1 gap-5 py-5 md:grid-cols-2 lg:grid-cols-3">
+<ul class="grid list-none grid-cols-2 gap-5 py-5 md:grid-cols-3 lg:grid-cols-4">
   {
     directives.length === 0 && (
       <TextElement variant="paragraph">
@@ -28,6 +28,7 @@ const { directives, lang } = Astro.props;
           title={directive.data.title}
           body={directive.body}
           date={directive.data.date}
+          image={directive.data.image}
           lang={lang}
           file={directive.data.file}
           type={directive.data.type}

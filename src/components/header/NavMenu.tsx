@@ -36,7 +36,7 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
                 <>
                   <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[200px] p-4 md:w-[100px] md:grid-cols-1 lg:w-[400px]">
+                    <ul className="grid w-[200px] py-4 pl-4 md:w-[100px] md:grid-cols-1 lg:w-[400px]">
                       {item.children?.map((child) => (
                         <ListItem
                           key={child.label}
