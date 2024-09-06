@@ -1,4 +1,6 @@
 ---
+import TextElement from "@/components/TextElement";
+
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
@@ -17,7 +19,10 @@ const { title, image, name } = Astro.props as Props;
   >
     <Image src={image} alt="" class="size-full object-cover" />
   </div>
-  <figcaption class="text-lg md:text-xl">
+  <figcaption class="text-center text-lg md:text-xl">
     {title}<span class="ml-3 font-bold">{name}</span>
+    <TextElement className="text-center" variant="title"
+      >Minister of Post and Telecommunications</TextElement
+    >
   </figcaption>
 </figure>
