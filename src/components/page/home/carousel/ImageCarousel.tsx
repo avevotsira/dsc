@@ -51,7 +51,7 @@ export default function ImageCarousel({
               className="absolute inset-0 size-full object-cover object-center"
               loading="eager"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+            <div className="absolute inset-0 flex items-center justify-center bg-black/70">
               <CardContent className="container mx-auto flex flex-col items-center justify-center space-y-4 p-4 text-center text-primary-foreground sm:p-6 md:p-8">
                 <TextElement
                   variant="title"
@@ -59,7 +59,12 @@ export default function ImageCarousel({
                 >
                   {item.data.title}
                 </TextElement>
-
+                <TextElement
+                  variant="paragraph"
+                  className="line-clamp-4 whitespace-pre-line text-pretty"
+                >
+                  {item.data.description}
+                </TextElement>
                 <ButtonLink
                   href={getContentUrl(item, lang)}
                   aria-labelledby={`read-more-${item.slug}`}
