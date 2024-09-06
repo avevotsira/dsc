@@ -18,9 +18,16 @@ export const ui: Record<string, Record<string, string>> = {
     "structure.generalSecretaryIntro":
       "The General Secretary of the Digital Security Committee (DSC) is headed by the Minister of Posts and Telecommunications, supported by several Deputy Secretary Generals and is responsible for directs and coordinates all technical and administrative aspects of digital security, serving as a key assistant to the Chairman. This includes managing various specialized units, overseeing human resources and budgeting, ensuring secure file and data management, and preparing comprehensive reports on digital security efforts. Additionally, they undertake any further duties as required by the Chairman, showcasing their pivotal role in the operational and strategic functions of the DSC.",
     "about.dsc": "About Digital Security Committee",
-    "about.dscText":
-      "The Digital Security Committee (DSC) was established in order to ensure the efficient and effective in supporting the National Council for Digital Economy and Society, with function of leading, coordinating and promoting the management of digital security in Cambodia.",
-    "about.strategies": "Strategic Goals and Strategies",
+    "about.dscText1":
+      "In 2021, to ensure the development of vibrant digital economy and society of Cambodia, the Royal Government of Cambodia under the leadership of Samdech Akka Moha Sena Padei Techo Hun Sen, has established the “National Digital Economy and Society Council” in accordance with Cambodia Digital Economy and Society Policy Framework 2021 – 2035. ",
+    "about.dscText2":
+      "According to Cambodia Digital Economy and Society Policy Framework 2021 – 2035, the National Digital Economy and Society Council has three “Etat-Major” committees that are responsible for specific technical tasks. The committees are:",
+    "about.dscText3":
+      "Throughout the process of digital transformation and implementation of Cambodia Digital Economy and Society Policy Framework 2021 – 2035, the Royal Government of Cambodia has foreseen “Digital Security” as a vital asset to ensure the successful implementation of the framework itself and also to ensure that Cambodia’s cyberspace is safe from cyber risk. Therefore, in 2024, The Royal Government of Cambodia, under the leadership of Samdech Moha Borvor Thipadei Hun Manet, has established the “Digital Security Committee” which is the technical committee responsible for managing Cambodia’s digital security with the purpose of protecting the interest of users, resisting cyber-attack and competent to respond to all areas, including technical and strength, as well as the management of the entire national social security.",
+    "about.goals": "Goals",
+    "about.goalsText":
+      "In order to achieve the above vision and objectives, the Royal Government has set four strategic goals as follows:",
+    "about.strategies": "Strategies",
     "about.strategiesText":
       "In order to achieve the above vision and objectives, the Royal Government has set four strategic goals and ten strategies as follows:",
     "about.roleResponsibilities": "Role and Responsibilites",

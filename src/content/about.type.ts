@@ -1,5 +1,6 @@
 export const ABOUT_TYPES = {
   GOAL: "goal",
+  STRATEGIES: "strategies",
   ROLE: "role",
 } as const;
 
