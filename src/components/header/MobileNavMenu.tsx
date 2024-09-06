@@ -29,10 +29,7 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
   return (
     <Sheet>
       <SheetTrigger className="lg:hidden">
-        <Menu
-          className="ml-4 size-8 text-blue-950"
-          aria-label="Open mobile menu"
-        />
+        <Menu className="size-8 text-blue-950" aria-label="Open mobile menu" />
       </SheetTrigger>
       <SheetContent className="w-[300px] sm:w-[400px]">
         <SheetHeader className="sr-only">

@@ -6,8 +6,11 @@ import NavMenu from "@/components/header/NavMenu";
 
 import { ButtonLink } from "./ButtonLink";
 import LanguageSwitcher from "./LanguageSwitcher";
+import DSCHorizontalSubtitleBlue from "@/asset/logo/DSC-Horizontal-Subtitle-Blue.png";
 import { defaultLang, type SupportedLanguage } from "@/i18n/ui";
+import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import { TriangleAlert } from "lucide-react";
 
 const locale = Astro.currentLocale ?? defaultLang;
 const currentPath = Astro.url.pathname;
@@ -20,15 +23,20 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
   href="#main-content">Skip Navigation</a
 >
 <nav class="bg-primary-foreground shadow-md" aria-label="Main navigation">
-  <div class="container mx-auto flex max-w-screen-2xl gap-4 p-6">
+  <div class="flex w-full items-center gap-2 p-6 sm:gap-4 lg:px-8 2xl:px-16">
     <a href={getRelativeLocaleUrl(locale)} aria-label="Go to home page">
-      <div class="text-lg font-bold">
-        <div>LOGO</div>
-      </div>
+      <Image
+        src={DSCHorizontalSubtitleBlue}
+        alt=""
+        class="w-56 min-w-56 object-cover md:w-60 lg:w-72"
+        loading="eager"
+        quality="high"
+        format="webp"
+      />
     </a>
     <div class="grow"></div>
     <NavMenu navMenuItem={navigationItems} client:load />
-    <div class="flex p-2 align-middle">
+    <div class="flex w-fit p-2 align-middle">
       <LanguageSwitcher
         currentPath={currentPath}
         initialLocale={locale as SupportedLanguage}
@@ -39,9 +47,10 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
     <ButtonLink
       href="https://www.camcert.gov.kh/en/report-incident/"
       target="_blank"
-      className="hidden lg:block"
+      className="hidden px-2 lg:block"
     >
-      Report Incident
+      <TriangleAlert className="w-6 xl:hidden" />
+      <span class="hidden xl:flex">Report Incident</span>
     </ButtonLink>
   </div>
 </nav>
