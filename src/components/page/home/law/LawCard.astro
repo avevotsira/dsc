@@ -1,10 +1,12 @@
 ---
+import { formatDate } from "@/lib/date-helper";
 import { replaceSeparatorsAndCapitalize } from "@/lib/string-helper";
 
 import { ButtonLink } from "@/components/ButtonLink";
 import TextElement from "@/components/TextElement";
 
 import type { DirectiveType } from "@/content/content.type";
+import type { SupportedLanguage } from "@/i18n/ui";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import { ExternalLink } from "lucide-react";
@@ -13,11 +15,13 @@ interface Props {
   title: string;
   body: string;
   file: string;
+  date: string;
+  lang: SupportedLanguage;
   type: DirectiveType;
   image: ImageMetadata;
 }
 
-const { title, file, type, image } = Astro.props as Props;
+const { title, file, type, image, date, lang } = Astro.props as Props;
 const absoluteFileUrl = new URL(file, Astro.url.origin).href;
 const capitalizedType = replaceSeparatorsAndCapitalize(type);
 ---
@@ -39,10 +43,16 @@ const capitalizedType = replaceSeparatorsAndCapitalize(type);
       format="webp"
     />
   </figure>
-  <div class="flex w-full flex-col gap-4 sm:w-3/5 md:w-2/3 lg:w-2/3 xl:w-3/4">
+  <div class="flex w-full flex-col gap-2 sm:w-3/5 md:w-2/3 lg:w-2/3 xl:w-3/4">
     <TextElement variant="title" className="text-2xl text-primary">
       {capitalizedType}
     </TextElement>
+    <time
+      class="text-left text-mptc-secondary-foreground"
+      datetime={new Date(date).toISOString()}
+    >
+      {formatDate(date, lang)}
+    </time>
     <TextElement
       variant="body"
       className="line-clamp-4 scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight lg:text-base xl:text-base"

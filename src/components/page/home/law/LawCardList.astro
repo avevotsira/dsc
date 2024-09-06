@@ -8,7 +8,7 @@ interface Props {
   lang: SupportedLanguage;
 }
 
-const { directives } = Astro.props;
+const { directives, lang } = Astro.props;
 ---
 
 <ul class="grid grid-cols-1 gap-5 py-5 md:grid-cols-1 lg:grid-cols-2">
@@ -19,6 +19,8 @@ const { directives } = Astro.props;
           title={directive.data.title}
           body={directive.body}
           file={directive.data.file}
+          lang={lang}
+          date={directive.data.date}
           type={directive.data.type}
           image={directive.data.image}
         />
