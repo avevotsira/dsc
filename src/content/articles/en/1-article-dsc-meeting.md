@@ -2,7 +2,7 @@
 categories: ["News"]
 date: 05/03/2024
 featured: false
-image: src/asset/articles/1-article-dsc-meeting/article-1-photo-1.webp
+image: src/asset/articles/1-article-dsc-meeting/article-1-photo-2.webp
 title: កិច្ចប្រជុំ​ ប្រកាសសមាសភាព និងផ្សព្វផ្សាយគោលការណ៍ណែនាំសម្រាប់ គ.ស.ឌ.
 author: Digital Security Committee
 description: ឯកឧត្តម ជា វ៉ាន់ដេត បានអញ្ជើញចូលរួមកិច្ចប្រជុំ ដេីម្បីប្រកាសសមាសភាព និងផ្សព្វផ្សាយគោលការណ៍ណែនាំសម្រាប់ គ.ស.ឌ. ក្រោមអធិបតីភាពឯកឧត្តមសន្តិបណ្ឌិត នេត សាវឿន
@@ -15,7 +15,7 @@ lang: en
 
 រាជធានីភ្នំពេញ៖ សាលប្រជុំទីស្តីការគណៈរដ្ឋមន្ត្រី​ ថ្ងៃទី៣ ឧសភា ឆ្នាំ២០២៤
 
-![photo 2](src/asset/articles/1-article-dsc-meeting/article-1-photo-2.webp)
+![photo 2](src/asset/articles/1-article-dsc-meeting/article-1-photo-1.webp)
 ![photo 3](src/asset/articles/1-article-dsc-meeting/article-1-photo-3.webp)
 ![photo 4](src/asset/articles/1-article-dsc-meeting/article-1-photo-4.webp)
 ![photo 5](src/asset/articles/1-article-dsc-meeting/article-1-photo-5.webp)
