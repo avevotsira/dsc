@@ -3,6 +3,7 @@ import Main from "@/components/Main.astro";
 import DeputySecretaryGeneralList from "@/components/page/about/DeputySecretaryGeneralList.astro";
 import Role from "@/components/page/about/Role.astro";
 import BoardMemberCard from "@/components/page/structure/BoardMemberCard.astro";
+import StructureImage from "@/components/page/structure/StructureImage.astro";
 import StructureLeaderShipCard from "@/components/page/structure/StructureLeaderShipCard.astro";
 import TextElement from "@/components/TextElement";
 
@@ -78,19 +79,13 @@ const t = useTranslations(lang);
         }
       </ul>
     </section>
-    <section aria-label="Organization Structure">
-      <TextElement variant="paragraph" className="pb-6">
-        {t("structure.orgIntro")}
-      </TextElement>
-      <Image
-        src={structure}
-        alt=""
-        class="size-full object-cover"
-        loading="eager"
-        quality="high"
-        widths={[640, 768, 1024, 1280, 1440, 1600]}
-        format="webp"
-      />
+    <section aria-label={"structure of digital security committee"}>
+      <figure class="mx-auto flex flex-col items-center gap-4 pb-6 text-center">
+        <StructureImage />
+        <figcaption>
+          Organizational Structure of the Digital Security Committee
+        </figcaption>
+      </figure>
     </section>
     <section aria-label="Leadership">
       <TextElement variant="subheading" className="text-primary">

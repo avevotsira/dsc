@@ -4,13 +4,13 @@ import AboutList from "@/components/page/about/AboutList.astro";
 import Strategies from "@/components/page/about/Strategies.astro";
 import Mission from "@/components/page/home/Mission.astro";
 import Vision from "@/components/page/home/Vison.astro";
+import StructureImage from "@/components/page/structure/StructureImage.astro";
 import TextElement from "@/components/TextElement";
 
 import { ABOUT_TYPES } from "@/content/about.type";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
 import OrganizationLayout from "@/layouts/OrganizationLayout.astro";
-import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import enAboutUs from "src/static/about-us/en-about-us.webp";
 import kmAboutUs from "src/static/about-us/km-about-us.webp";
@@ -93,7 +93,7 @@ const committeeList = [
             of the framework itself and also to ensure that Cambodia’s
             cyberspace is safe from cyber risk. Therefore, in 2024, The Royal
             Government of Cambodia, under the leadership of <strong
-              >Samdech Akka Moha Sena Padei Techo Hun Sen</strong
+              >Samdech Moha Borvor Thipadei Hun Manet</strong
             >, has established the “Digital Security Committee” which is the
             technical committee responsible for managing Cambodia’s digital
             security with the purpose of protecting the interest of users,
@@ -134,22 +134,6 @@ const committeeList = [
         <!-- <AboutList abouts={strategies} className="lg:grid-cols-2" /> -->
         <Strategies />
       </section>
-      <figure class="mx-auto flex flex-col items-center gap-4 text-center">
-        <Image
-          src={currentImage}
-          alt={"Overview of Digital Government Policy Development of Cambodia 2022-2035"}
-          widths={[400, 600, 800]}
-          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 800px"
-          format="webp"
-          quality="high"
-          loading="lazy"
-          class="w-full max-w-[800px] rounded-lg"
-        />
-        <figcaption>
-          Overview of Digital Government Policy Development of Cambodia
-          2022-2035
-        </figcaption>
-      </figure>
       <section aria-label={"Role and Responsibilites "}>
         <TextElement
           variant="subheading"
