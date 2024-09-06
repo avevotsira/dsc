@@ -6,5 +6,5 @@ type: role
 lang: km
 ---
 
-Lead and coordinate at the political level and take action to respond to main cyber security incidents
+Lead and coordinate at the political level and take action to respond to main cybersecurity incidents
 and prevent cybersecurity risks in both the public and private sectors
