@@ -29,7 +29,7 @@ export const ui: Record<string, Record<string, string>> = {
       "In order to achieve the above vision and objectives, the Royal Government has set four strategic goals as follows:",
     "about.strategies": "Strategies",
     "about.strategiesText":
-      "In order to achieve the above vision and objectives, the Royal Government has set four strategic goals and ten strategies as follows:",
+      "The Digital Security Committee has established and outlined the following strategies",
     "about.roleResponsibilities": "Role and Responsibilites",
     "about.roleResponsibilitiesText":
       "The Digital Security Committee (DSC) was established under Sub-Decree No. 44 ANKR.BT on the Organization and Functioning of Digital Security Committee dated 1st May, 2024 with role and responsibilities:",
