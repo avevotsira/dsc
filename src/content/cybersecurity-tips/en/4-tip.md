@@ -3,54 +3,54 @@ categories: ["studio tips"]
 date: 08/24/2024
 featured: true
 image: src/asset/security-tips/5-employee-harmful-mistake.png
-title: កំហុសទាំង៥ របស់បុគ្គលិកដែលអាចបង្កឱ្យមានហានិភ័យសាយប័រ
+title: 5 Employee Mistakes That Can Cause Cyber ​​Risks
 author: CamCERT
-description: ឧបមាថាបុគ្គលិកម្នាក់ឱ្យសមាជិកគ្រួសារគាត់ប្រើប្រាស់កុំព្យូទ័រយួរដៃពីកន្លែងធ្វើការរបស់គាត់ដោយគិតថាគ្រាន់តែប្រើបន្តិចបន្តួចមិនអាចមានបញ្ហាអ្វីធំដុំឡើយ
+description: Suppose a family member borrow the employee's laptop and infected it without know, when the employee use it at the workplace it could infect other computers.
 lang: en
 ---
 
-១. ព័ត៌មានទូទៅ
+## 1. General Information
 
-ឧបមាថា បុគ្គលិកម្នាក់ឱ្យសមាជិកគ្រួសារគាត់ប្រើប្រាស់កុំព្យូទ័រយួរដៃពីកន្លែងធ្វើការរបស់គាត់ដោយគិតថាគ្រាន់តែប្រើបន្តិចបន្តួច មិនអាចមានបញ្ហាអ្វីធំដុំឡើយ ប៉ុន្តែគាត់មិនបានដឹងថាសមាជិកគ្រួសារបានទាញយកមេរោគដោយចៃដន្យនៅលើកុំព្យូទ័រយួរដៃរបស់គាត់ នៅពេលដែលបុគ្គលិកយកកុំព្យូទ័រយួរដៃទៅធ្វើការវិញ អាចបណ្ដាលឱ្យមេរោគនេះឆ្លងចូលប្រព័ន្ធរបស់ស្ថាប័ន។ ការធ្វេសប្រហែសនេះបណ្ដាលឱ្យប៉ះពាល់ទៅដល់ហេដ្ឋារចនាសម្ព័ន្ធសំខាន់ និងលេចធ្លាយទិន្នន័យសម្ងាត់របស់ស្ថាប័ន។
+Suppose an employee asks a family member to use a laptop from his or her workplace, thinking that just a little use might not be a big deal, but he or she is unaware that a family member has accidentally downloaded a virus to his or her laptop. When employees take their laptops back to work, the virus can infect the organization's system. This negligence causes damage to critical infrastructure and leaks of institutional confidential data.
 
-ករណីនេះមិនមែនគ្រាន់តែជាករណីច្នៃប្រឌិតស្រមើស្រមៃនោះទេ វេទិកាសេដ្ឋកិច្ចពិភពលោកបានស្រាវជ្រាវឃើញថា ៩៥% នៃឧប្បត្តិហេតុសន្តិសុខសាយប័រទាំងអស់កើតចេញពីការធ្វេសប្រហែសរបស់មនុស្សជាបុគ្គលិកក្នុងស្ថាប័ន។ ទោះបីជាស្ថាប័នមានបំពាក់ប្រព័ន្ធការពារទំនើប និងគោលការណ៍អនុវត្តល្អយ៉ាងណាក៏ដោយ ក៏ការធ្វេសប្រហែសនិងកំហុសអចេតនារបស់បុគ្គលិកអាចបណ្ដាលឱ្យមានឧប្បត្តិហេតុសន្តិសុខសាយប័រធ្ងន់ធ្ងរដែរ។ យោងតាម ក្រុមហ៊ុន IBM ការលេចធ្លាយទិន្នន័យក្នុងឆ្នាំ២០២៣ បានធ្វើឱ្យខូចខាតក្នុងទំហំទឹកប្រាក់ ៤,៤៥លានដុល្លារសហរដ្ឋអាមេរិក ដែលចំនួននេះបានកើនឡើង ១៥% ធៀបនឹង៣ឆ្នាំមុន។
+This is not just an imaginary case, the World Economic Forum has found that 95% of all cyber security incidents are caused by negligence on the part of employees. Although the institution is equipped with modern protection systems and good practices, the negligence and unintentional mistakes of employees can lead to serious cyber security incidents. According to IBM, the data leak in 2023 caused $ 4.45 million in damage, an increase of 15% over the previous three years.
 
-ការធ្វេសប្រហែស ចំនួន ៥ ដែលកើតឡើងច្រើនជាងគេដោយសារកំហុសបុគ្គលិក៖
+Top 5 Most Neglected Employee Mistakes:
 
-ក.ឱ្យគេផ្សេងប្រើឧបករណ៍របស់ស្ថាប័នដោយគ្មានការអនុញ្ញាត
+### 1. Let others use the institution's tools without permission
 
-ការអនុញ្ញាតឱ្យមិត្តភ័ក្តិ ឬសមាជិកគ្រួសារប្រើប្រាស់ឧបករណ៍របស់ស្ថាប័ននៅផ្ទះហាក់ដូចជាមិនមែនជាអ្វីធំដុំទេ ប៉ុន្តែគេអាចប្រទះឃើញទិន្នន័យសម្ងាត់របស់ស្ថាប័ន ឬចូលប្រើគេហទំព័រនិងកម្មវិធីដែលមិនមានសុវត្ថិភាពដោយអចេតនា។ ប្រសិនបើអ្នកប្រើប្រាស់ដែលគ្មានការអនុញ្ញាតធ្វើឱ្យឧបករណ៍ឆ្លងមេរោគ ឧក្រិដ្ឋជនសាយប័រអាចចូលប្រើទិន្នន័យស្ថាប័នឬកម្មវិធីពពក (clouds) ដែលអាចនាំឱ្យមានហានិភ័យសន្តិសុខធ្ងន់ធ្ងរ រួមទាំងការលេចធ្លាយទិន្នន័យ ការលួចកម្មសិទ្ធិបញ្ញា និងការខូចខាតកេរ្តិ៍ឈ្មោះ។
+Allowing friends or family members to use the institution's tools at home does not seem like a big deal, but they can accidentally discover the organization's confidential data or inadvertently access unsecured websites and applications. If unauthorized users make the device infected, cybercriminals can gain access to institutional data or cloud applications, which can lead to serious security risks, including data leaks, intellectual property theft and reputation damage.
 
-មធ្យោបាយកាត់បន្ថយហានិភ័យនេះរួមមានការអនុវត្តការគ្រប់គ្រងសុវត្ថិភាពតឹងរ៉ឹងដូចជាការប្រើឃ្លាសម្ងាត់ និងការផ្ទៀងផ្ទាត់ពហុកត្តា ហើយបង្រៀនឱ្យបុគ្គលិកយល់ដឹងពីសារៈសំខាន់នៃការរក្សាឧបករណ៍របស់ស្ថាប័នមិនឱ្យមានការប្រើប្រាស់ដោយគ្មានការអនុញ្ញាត។
+These risk mitigation measures include implementing strict security controls, such as the use of passwords and multi-factor authentication, and educating employees on the importance of keeping institutional devices unauthorized.
 
-ខ.ការបញ្ជូនព័ត៌មានសម្ងាត់ទៅខុសគោលដៅ
+### 2. Transmitting confidential information to the wrong target
 
-ឧបមាថា បុគ្គលិកម្នាក់បានផ្ញើអ៊ីមែលផ្ទុកព័ត៌មានសម្ងាត់ទៅកាន់អ្នកទទួលខុស នាំឱ្យមានការបែកធ្លាយ។ នៅក្នុងវិស័យ ពេលដែលសារអ៊ីមែលមានផ្ទុកទិន្នន័យសម្ងាត់ ដូចជាវិស័យសុខាភិបាលជាដើម ការបញ្ជូនទិន្នន័យសម្ងាត់ទៅខុសគោលដៅទទួលអាចបណ្ដាលឱ្យមានផលប៉ះពាល់យ៉ាងធ្ងន់ធ្ងរ។
+Suppose an employee sends an e-mail containing confidential information to the person in charge, leading to a leak. In areas where e-mail messages contain sensitive data, such as healthcare, sending sensitive data to the wrong recipient can have serious consequences.
 
-ដើម្បីកាត់បន្ថយការធ្វេសប្រហែសបែបនេះ មានមធ្យោបាយដូចជាការធ្វើកូដនីយកម្មលើអ៊ីមែលមានព័ត៌មានសម្ងាត់ ការប្រើប្រាស់មុខងារជូនដំណឹងឱ្យផ្ទៀងផ្ទាត់អាសយដ្ឋានគោលដៅម្ដងទៀតមុននឹងបញ្ជូនអ៊ីមែល និងការប្រើប្រាស់យន្តការការពារការបាត់បង់ទិន្នន័យ (data loss prevention) ជាដើម។
+To reduce such negligence, there are ways such as encrypting e-mails with confidential information, using the notification function to verify the target address again before sending e-mails, and using data loss prevention mechanisms.
 
-គ.ការប្រើពាក្យឬឃ្លាសម្ងាត់ចាស់ៗឡើងវិញ
+### 3. Reusing old words or phrases
 
-ស្ថាប័នអាចមានគោលការណ៍ឃ្លាសម្ងាត់ដែលមានប្រសិទ្ធភាព ប៉ុន្តែប្រសិនបើបុគ្គលិកប្រើពាក្យសម្ងាត់ចាស់ៗឡើងវិញនៅលើឧបករណ៍ផ្ទាល់ខ្លួន គេហទំព័រ និងកម្មវិធីដែលមិនសូវមានសុវត្ថិភាព នោះពួកគេនៅតែផ្ដល់ឱកាសសម្រាប់ឧក្រិដ្ឋជនសាយប័រដដែល ដោយសារពាក្យសម្ងាត់ចាស់ៗអាចមាននៅក្នុងកម្រងពាក្យសម្ងាត់លេចធ្លាយធំៗដែលមាននៅលើគេហទំព័រងងឹត។
+Institutions may have effective password policies, but if employees re-use old passwords on personal devices, websites and less secure applications, they will still provide opportunities for cybercriminals, as old passwords may be present in Large leaked passwords available on dark websites.
 
-ថ្វីត្បិតមិនមានវិធីសាស្ត្រល្អប្រពៃដែលអាចទប់ស្កាត់ទាំងស្រុងមិនឱ្យបុគ្គលិកប្រើពាក្យសម្ងាត់ចាស់ៗឡើងវិញបានក៏ដោយ ក៏មធ្យោបាយត្រួតពិនិត្យនិងការពារអត្តសញ្ញាណអាចជួយផ្ដល់ដំណឹងប្រសិនបើពាក្យសម្ងាត់ត្រូវបានបែកធ្លាយលើគេហទំព័រងងឹត។
+Although there is no good way to completely prevent employees from re-using old passwords, authentication and protection measures can help inform if a password is leaked on a dark website.
 
-ឃ.ការលាតត្រដាងច្រកចូលប្រើប្រព័ន្ធពីចម្ងាយ
+### 4. Exposure of remote system access
 
-ការធ្វើការពីចម្ងាយបាននាំមកនូវបញ្ហាប្រឈមថ្មីៗផងដែរ ក្រុមការងារព័ត៌មានវិទ្យា (IT) ជាញឹកញយត្រូវបំពេញការងារគ្រប់គ្រងពីចម្ងាយ ប៉ុន្តែការលាតត្រដាងច្រកចូលប្រើប្រព័ន្ធនៅលើអ៊ីនធឺណិតប្រៀបបានទៅនឹងការបង្ហាញច្រកចូលហេដ្ឋារចនាសម្ព័ន្ធរបស់ស្ថាប័នទៅនរណាក៏ដោយដែលប្រើប្រាស់អ៊ីនធឺណិត។
+Working remotely also brings new challenges. IT teams often have to perform remote management tasks, but revealing the access to the system on the Internet is tantamount to revealing the gateway of the infrastructure. Institution to anyone who uses the internet.
 
-ដើម្បីចូលប្រើប្រព័ន្ធពីចម្ងាយដោយមិនបើកបង្ហាញច្រកចូលរបស់ស្ថាប័ន គួរជ្រើសរើសដាក់លើអ៊ីនធឺណិតនូវសេវាកម្មដែលចាំបាច់បំផុតប៉ុណ្ណោះ លើសពីនេះ ការប្រើប្រាស់មធ្យោបាយថែទាំដោយស្វ័យប្រវត្តិនឹងជួយអ្នកកាត់បន្ថយភាពងាយរងគ្រោះ និងហានិភ័យ។
+To access the system remotely without revealing the organization's entrance, you should choose to put only the most necessary services on the Internet, in addition, the use of automated maintenance means will help you reduce vulnerabilities and risks.
 
-ង.ការប្រើប្រាស់ខុសនូវគណនីមានសិទ្ធិខ្ពស់
+### 5. Misuse of high privileged accounts
 
-អ្នកគ្រប់គ្រងផ្នែកព័ត៌មានវិទ្យា(IT) អាចប្រើគណនីដែលមានសិទ្ធិខ្ពស់របស់គេដើម្បីបំពេញការងារធម្មតាប្រចាំថ្ងៃរបស់គេដែលមិនចាំបាច់ត្រូវការសិទ្ធិចូលប្រើខ្ពស់ ព្រោះវាមានភាពងាយស្រួល ហើយគេមិនចាំបាច់ប្តូរទៅមកច្រើនដងរវាងគណនីគ្រប់គ្រង និងគណនីប្រើប្រាស់ធម្មតា ប៉ុន្តែភាពងាយស្រួលនេះនាំឱ្យមានហានិភ័យយ៉ាងខ្ពស់ ប្រសិនបើគណនីគ្រប់គ្រងរបស់គេត្រូវបានគេលួច វាអាចបណ្ដាលឱ្យមានការខូចខាតធ្ងន់ធ្ងរ។
+IT managers can use their high-privileged account to perform their daily tasks without the need for high-level access because it is easy and they do not need to switch back and forth between management accounts. And normal user accounts, but this convenience leads to a high risk, if their management account is hacked, it can cause serious damage.
 
-ដូច្នេះ ការបែងចែករវាងគណនីគ្រប់គ្រងដែលមានសិទ្ធិខ្ពស់ និងគណនីប្រើប្រាស់ធម្មតាមានសារៈសំខាន់ខ្លាំង។ ស្ថាប័នគួរអនុវត្តគោលការណ៍ផ្ដល់សិទ្ធិអប្បបរមា (principle of least privilege) ដោយធានាថាបុគ្គលិកមានសិទ្ធិចូលប្រើប្រាស់ត្រឹមធនធានដែលគេត្រូវការដើម្បីអនុវត្តមុខងាររបស់ពួកគេប៉ុណ្ណោះ។ ស្ថាប័នក៏គួរត្រួតពិនិត្យនិងធ្វើសវនកម្មលើសិទ្ធិចូលប្រើរបស់បុគ្គលិកជាប្រចាំ ដោយដកហូតសិទ្ធិដែលមិនចាំបាច់ឱ្យបានកាន់តែលឿនកាន់តែប្រសើរ។
+Therefore, the distinction between a highly authorized management account and a regular user account is crucial. Institutions should apply the principle of least privilege, ensuring that employees have access to only the resources they need to perform their functions. Institutions should also regularly monitor and audit employees' access rights, removing unnecessary rights as soon as possible.
 
-ច.សន្តិសុខសាយប័រគឺជាការងារក្រុម
+## 2. Cyber ​​security is teamwork
 
-សន្តិសុខសាយប័រគឺជាការងារក្រុម មិនថាយន្តការការពារផ្នែកបច្ចេកទេសរបស់ស្ថាប័នរឹងមាំប៉ុណ្ណានោះទេ ធនធានមនុស្សក្នុងស្ថាប័ននៅជាខ្សែការពារទីមួយ ហើយជាចំណុចខ្សោយបំផុតក្នុងស្ថាប័ន។ តាមរយៈការស្វែងយល់អំពីការធ្វេសប្រហែសដែលកើតមានឡើងញឹកញាប់បំផុត និងការអនុវត្តគោលនយោបាយ និងការកសាងសមត្ថភាពដែលមានលក្ខណៈបត់បែន ស្ថាប័នអាចកែប្រែធនធានមនុស្សពីចំណុចខ្សោយត្រូវទៅជាអ្នកការពារមានតម្លៃនៅក្នុងការប្រយុទ្ធប្រឆាំងនឹងការគំរាមកំហែងសាយប័រ។ លើសពីនេះ ក្នុងការការពារសន្តិសុខសាយប័រស្ថាប័ន ការការពារប្រសើរជាងការព្យាបាល។
+Cyber ​​security is a team effort, no matter how strong the technical protection mechanism of the organization, the human resources in the organization is the first line of defense and the weakest point in the organization. By understanding the most common negligence and flexible policy implementation and capacity building, institutions can transform human resources from weak to valuable protectors in the fight against cyber threats. . In addition to cyber security, institutional protection is better than cure.
 
-២.ឯកសារពាក់ព័ន្ធ
+## 3. Related documents
 
 – https://www.bleepingcomputer.com/news/security/end-user-cybersecurity-errors-that-can-cost- you-millions/

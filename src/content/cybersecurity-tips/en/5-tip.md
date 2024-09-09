@@ -3,42 +3,43 @@ categories: ["studio tips"]
 date: 04/01/2024
 featured: false
 image: src/asset/security-tips/security-key-for-social-media-1.jpg
-title: គន្លឹះសុវត្ថិភាពសម្រាប់ប្រព័ន្ធបណ្តាញសង្គម និងកម្មវិធីផ្ញើសារ (ផ្នែក១)
+title: Security Tips for Social Media and Messenger (Part 1)
 author: CamCERT
-description: ប្រព័ន្ធបណ្តាញសង្គម និងកម្មវិធីផ្ញើសារអាចបង្កហានិភ័យដល់សុវត្ថិភាព និងឯកជនភាពរបស់បុគ្គល និងអង្គភាពនានា។
+description: Personal information posted on social media or shared via messenger can be hacked, even by posting seemingly gentle messages, photos or videos.
 lang: en
 ---
 
-១. ព័ត៌មានទូទៅ
+## 1. General Information
 
-ប្រព័ន្ធបណ្តាញសង្គម និងកម្មវិធីផ្ញើសារអាចបង្កហានិភ័យដល់សុវត្ថិភាព និងឯកជនភាពរបស់បុគ្គល និងអង្គភាពនានា។ ការណែនាំនេះផ្តល់នូវទិដ្ឋភាពទូទៅនៃហានិភ័យ រួមជាមួយនឹង ការណែនាំសម្រាប់អាជីវកម្ម និងការប្រើប្រាស់ផ្ទាល់ខ្លួនដើម្បីធានាសុវត្ថិភាពគណនីប្រព័ន្ធបណ្តាញ សង្គម និងកម្មវិធីផ្ញើសារ។
+Social media and messengers can pose a risk to the security and privacy of individuals and organizations. This guide provides an overview of the risks along with instructions for business and personal use to secure your social media account and messenger.
 
-ហានិភ័យនៃការប្រើប្រាស់ប្រព័ន្ធបណ្តាញសង្គម និងកម្មវិធីផ្ញើសារ
+Risks of using social media and messengers
 
-២. ការលួចព័ត៌មានផ្ទាល់ខ្លួន
+## 2. Theft of personal information
 
-ព័ត៌មានផ្ទាល់ខ្លួនដែលត្រូវបានបង្ហោះទៅក្នុងប្រព័ន្ធបណ្តាញសង្គម ឬចែករំលែកតាមរយៈកម្មវិធីផ្ញើសារ អាចត្រូវបានគេលួយយកមកប្រើប្រាស់ សូម្បីតែការបង្ហោះសារ រូបថត ឬវីដេអូដែល មើលទៅហាក់ដូចជាស្លូតបូតក៏ដោយដែលព័ត៌មានទាំងនេះក៏អាចត្រូវបានប្រើប្រាស់នៅក្នុងការជំរិតទារប្រាក់ ឬក្នុងគោលបំណងវិស្វកម្មសង្គមដែលក្លែងបន្លំជានរណាម្នាក់ដែលយើងស្គាត់ដើម្បីទាញ យកព័ត៌មានរសើបពីបុគ្គលម្នាក់ ឬប្រព័ន្ធរបស់អង្គភាព។
+Personal information posted on social media or shared via messenger can be hacked, even by posting seemingly gentle messages, photos or videos. Used for extortion or for social engineering purposes, impersonating someone we know to extract sensitive information from an individual or organization system.
 
-៣. ការប្រមូលទិន្នន័យ
+## 3. Data collection
 
-ប្រព័ន្ធបណ្តាញសង្គម និងកម្មវិធីផ្ញើសារ (ឧទាហរណ៍ Facebook, Instagram, LinkedIn, Messenger, Pinterest, Reddit, Snapchat, Telegram, TikTok, Twitter, WeChat, WhatsApp, YouTube និងផ្សេងទៀត) ជាធម្មតាកម្មវិធីទាំងនេះអាចប្រមូលទិន្នន័យយើងបានយ៉ាងទូលំទូលាយ ហើយវាជាផ្នែកមួយនៃគំរូអាជីវកម្មរបស់ពួកគេ។ កម្មវិធីទាំងនេះក៏អាចប្រមូលទិន្នន័យបន្ថែមពីឧបករណ៍របស់បុគ្គលម្នាក់ៗផងដែរ ដែលរួមមានខ្លឹមសារនៃសារ វីដេអូ និងការថតសំឡេង។ ចំណាំប្រភេទ នៃទិន្នន័យដែលបានប្រមូលអាចផ្លាស់ប្តូរតាមពេលវេលា រួមទាំងពេលដែលកំណែថ្មី ឬមុខងារដែល ត្រូវបានចេញផ្សាយ។ លក្ខខណ្ឌនៃការប្រើប្រាស់និងគោលការណ៍ឯកជនភាពទាក់ទងនឹងអ្វីដែលទិន្នន័យត្រូវបានប្រមូល ក៏ដូចជាក្នុងករណីមានការផ្លាស់ប្តូរណាមួយនិងមានជូនដំណឹងតាមក្រោយដែលអាច អោយអ្នកប្រើប្រាស់មានការពិបាកផងដែរ។ ឬការប្រមូលសម្ងាត់ដោយប្រទេសផ្សេងៗ។
+Social networks and messengers (e.g. Facebook, Instagram, LinkedIn, Messenger, Pinterest, Reddit, Snapchat, Telegram, TikTok, Twitter, WeChat, WhatsApp, YouTube, etc.) These apps can usually collect a large amount of our data. And it is part of their business model. These apps can also collect additional data from individual devices, including the content of video messages and voice recordings. Note The type of data collected can change over time, including when a new version or function is released. Terms of use and privacy policy relate to what data is collected, as well as in case of any changes and subsequent notifications that may make it difficult for users. Or secret collection by other countries.
 
-៤. ការលួចអត្តសញ្ញាណ ការក្លែងបន្លំ ការខូចខាតកេរ្តិ៍ឈ្មោះ និងភាពអាម៉ាស់
+## 4. Identity theft, fraud, reputation damage and shame
 
-ដោយសារតែភាពពេញនិយមរបស់ប្រព័ន្ធបណ្តាញសង្គម និងកម្មវិធីផ្ញើសារក៏ជាមធ្យោបាយ ទូទៅសម្រាប់ឧក្រិតជនតាមអ៊ីនធឺណេតក្នុងការប្រមូលព័ត៌មានផ្ទាល់ខ្លួនអំពីបុគ្គល ក៏ដូចជាសកម្មភាព ក្នុងប្រព័ន្ធរបស់អង្គភាពផងដែរ។ សូម្បីតែប្រព័ន្ធបណ្តាញសង្គមសម្រាប់កុមារ និងកម្មវិធីផ្ញើសារដែល ផ្តោតលើកុមារ ឬក្មេងជំទង់ក៏មាន ហានិភ័យក្នុងនោះមានព័ត៌មានផ្ទាល់ខ្លួន ឬព័ត៌មានរសើបអាចត្រូវ បានប្រមូល។ នៅពេលដែលព័ត៌មានផ្ទាល់ខ្លួន ឬរសើបត្រូវបានបង្ហោះទៅក្នុងប្រព័ន្ធបណ្តាញសង្គម ឬចែករំលែកតាមរយៈកម្មវិធីផ្ញើសារ វាអាចធ្វើប៉ះពាល់ដល់កេរ្តិ៍ឈ្មោះ ឬរងភាពអាម៉ាស់។
+Due to the popularity of social media and messaging, it is also a common means for cybercriminals to gather personal information about individuals as well as activities within an organization's system. Even child-friendly social media and messaging apps aimed at children or adolescents are at risk, as personal or sensitive information may be collected. When personal or sensitive information is posted on social media or shared via messenger, it can hurt reputation or cause embarrassment.
 
-៥. អនុសាសន៍សម្រាប់ការប្រើប្រាស់អាជីវកម្ម
+## 5. Recommendations for business use
 
-អាជីវកម្មគួរតែគិតគូរពីតម្លាភាពរបស់អ្នកលក់ និងការប្តេជ្ញាចិត្តរបស់ពួកគេចំពោះសុវត្ថិភាព នៃផលិតផលនិងសេវាកម្មរបស់ពួកគេនៅពេលជ្រើសរើសក្រុមហ៊ុនដែលប្រើប្រាស់ប្រព័ន្ធបណ្តាញសង្គម និងកម្មវិធីផ្ញើសារ។
+Businesses should consider the transparency of vendors and their commitment to the security of their products and services when choosing a company that uses social media and messaging software.
 
-វិធានការខាងក្រោមនេះសម្រាប់អាជីវកម្មគួរតែត្រូវបានអនុវត្តក្នុងការប្រើប្រាស់គណនីប្រព័ន្ធបណ្តាញសង្គម៖
+The following measures for businesses should be implemented in the use of social media accounts:
 
-ត្រូវប្រាកដថាមានតែអ្នកប្រើប្រាស់ដែលមានការអនុញ្ញាតប៉ុណ្ណោះដែលអាចចូលប្រើគណនីប្រព័ន្ធបណ្តាញសង្គមរបស់ក្រុមហ៊ុន ហើយការចូលប្រើនោះ (ដោយផ្ទាល់ ឬផ្ទេរសិទ្ធិ) នៅពេលដែលមិនមានតម្រូវការសម្រាប់ការចូលប្រើទៀតទេ ត្រូវដកហូតភ្លាមៗ។
-ត្រូវប្រាកដថាអ្នកប្រើប្រាស់ត្រូវបានជូនដំណឹង និងយល់ព្រមតាមគោលការណ៍ប្រើប្រាស់ ប្រព័ន្ធបណ្តាញសង្គមរបស់អង្គភាពរបស់ពួកគេ។
-ត្រូវប្រាកដថាអ្នកប្រើប្រាស់ត្រូវបានបណ្តុះបណ្តាលលើការប្រើប្រាស់គណនីប្រព័ន្ធបណ្តាញសង្គមសាជីវកម្ម។
-ត្រូវប្រាកដថាអ្នកប្រើប្រាស់ដឹងពីអ្វីដែលអាច និងមិនអាចបង្ហោះទៅកាន់ប្រព័ន្ធបណ្តាញសង្គម ដោយប្រើគណនីប្រព័ន្ធបណ្តាញសង្គមសាជីវកម្ម។
-ត្រូវប្រាកដថាអ្នកប្រើប្រាស់ដឹងពីដំណើរការឆ្លើយតបទៅនឹងការបង្ហោះព័ត៌មានរសើប ឬមិនសមរម្យទៅកាន់ប្រព័ន្ធបណ្តាញសង្គម។
-ត្រូវប្រាកដថាអ្នកប្រើប្រាស់បានដឹងអំពីដំណើរការសម្រាប់ការទទួលបានការគ្រប់គ្រងឡើងវិញនៃគណនីប្រព័ន្ធបណ្តាញសង្គមសាជីវកម្មដែលត្រូវបានលួច។
-៦. ឯកសារពាក់ព័ន្ធ
+- Make sure that only authorized users have access to the company's social media accounts, and that access (direct or transferable) when there is no longer any need for access is immediately revoked. .
+- Make sure users are informed and agree to their organization's social media policies.
+- Make sure users are trained on the use of corporate social media accounts.
+- Make sure users know what can and cannot be posted to social media using a corporate social media account.
+- Make sure users are aware of the response process for posting sensitive or inappropriate information to social media.
+- Make sure users are aware of the process for regaining control of a hacked corporate social media account.
+
+## 6. Related Documents
 
 https://www.cyber.gov.au/resources-business-and-government/governance-and-user-education/user-education/security-tips-social-media-and-messaging-apps

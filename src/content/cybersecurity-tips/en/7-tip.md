@@ -3,77 +3,77 @@ categories: ["studio tips"]
 date: 08/25/2023
 featured: true
 image: src/asset/security-tips/cyber-security-principle.jpg
-title: គោលការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រ
+title: The Principles of Cyber ​​Security You Should Learn
 author: CamCERT
-description: គោលការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រគឺ ជាការផ្តល់ការណែនាំជាយុទ្ធសាស្រ្តអំពីរបៀបដែលអាចការពារប្រព័ន្ធ និងទិន្នន័យរបស់អង្គភាព
+description: The cyber security principles is to provide strategic guidance on how to protect the organization's systems and data.
 lang: en
 ---
 
-១. ព័ត៌មានទូទៅ
+## 1. General Information
 
-គោលការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រគឺ ជាការផ្តល់ការណែនាំជាយុទ្ធសាស្រ្តអំពីរបៀបដែលអាចការពារប្រព័ន្ធ និងទិន្នន័យរបស់អង្គភាពពួកគេពីការគំរាមកំហែងសន្តិសុខសាយប័រ។ គោលការណ៍សន្តិសុខតាមសុវត្ថិភាពសាយប័រទាំងនេះត្រូវបានដាក់ជាចេញជាសកម្មភាពសំខាន់ៗចំនួន បួនមានដូចខាងក្រោម៖
+The cyber security policy is to provide strategic guidance on how to protect their organization's systems and data from cyber security threats. These cyber security principles are set out in four main activities:
 
-យន្តការគ្រប់គ្រង ៖ ការកំណត់ និងការគ្រប់គ្រងហានិភ័យសុវត្ថិភាព។
-យន្តការការពារ ៖ ការអនុវត្តការគ្រប់គ្រងដើម្បីកាត់បន្ថយហានិភ័យ ។
-យន្តការត្រួតពិនិត្យ ៖ ការត្រួតពិនិត្យ និងការយល់ដឹងអំពីព្រឹត្តិការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រ ដើម្បីកំណត់អត្តសញ្ញាណឧប្បត្តិហេតុសន្តិសុខសុវត្ថិភាពសាយប័រ។
-យន្តការឆ្លើយតប ៖ ការឆ្លើយតប និងការស្ដារឡើងវិញពីឧប្បត្តិហេតុសន្តិសុខសុវត្ថិភាពសាយប័រ។
+Management mechanisms: Identification and management of safety risks.
+Prevention mechanisms: Implement risk management.
+Monitoring Mechanism: Monitoring and understanding of cyber security events to identify cyber security incidents.
+Response mechanism: Response and recovery from cyber security incidents.
 
-២. គោលការណ៍នៃយន្តការគ្រប់គ្រង
+## 2. Principles of management mechanisms
 
-គោលការណ៍នៃយន្តការគ្រប់គ្រង៖
+Principles of management mechanism:
 
-១. ប្រធានផ្នែកសន្តិសុខសាយប័រត្រូវមានភាពជាអ្នកដឹកនាំ និងមានការយល់ដឹងពីសន្តិសុខសុវត្ថិភាពសាយប័រ។
-២. អត្តសញ្ញាណ និងគុណតម្លៃ ប្រព័ន្ធ កម្មវិធី និងទិន្នន័យត្រូវបានកំណត់ និងចងក្រងជាឯកសារ។
-៣. ប្រព័ន្ធតម្រូវមាន ការរក្សាការសម្ងាត់ សុចរិតភាព និងលទ្ធភាព ហើយកម្មវិធី និងទិន្នន័យត្រូវបានកំណត់ និងចងក្រងទុកជាឯកសារ។
-៤. ក្របខ័ណ្ឌនៃការគ្រប់គ្រងហានិភ័យរបស់អង្គភាព ត្រូវតែរួមបញ្ចូលដំណើរការគ្រប់គ្រងហានិភ័យសុវត្ថិភាព។
-៥. ហានិភ័យសុវត្ថិភាពត្រូវមានការកំណត់អត្តសញ្ញាណ ចងក្រងឯកសារ គ្រប់គ្រង និងទទួលយកមុនពេលត្រូវបានអនុញ្ញាតឱ្យប្រើប្រាស់ផង និងពេលកំពុងប្រើប្រាស់ផង។
+1. The cyber security chief must be a leader and have an understanding of cyber security.
+2. Identities and values, systems, programs and data are defined and documented.
+3. The system requires confidentiality, integrity and accessibility, and applications and data are defined and documented.
+4. The organizational risk management framework must include a security risk management process.
+5. Security risks must be identified, documented, managed and accepted prior to both being authorized and used.
 
-៣. គោលការណ៍នៃយន្តការការពារ
+## 3. Principles of protection mechanisms
 
-គោលការណ៍នៃយន្តការការពារមាន៖
+The principles of the defense mechanism are:
 
-១. ប្រព័ន្ធនិងកម្មវិធីត្រូវមាន ការរចនា ដាក់ពង្រាយ ថែរក្សា និងបញ្ឈប់ដំណើរការស្របទៅតាមតម្លៃ និងគោលការណ៍ សម្ងាត់ សុចរិតភាព និងលទ្ធភាព។
-២. ការបញ្ជូន និងការគាំទ្ររបស់ប្រព័ន្ធនិងកម្មវិធីផ្សេងៗ អ្នកផ្គត់ផ្គង់ត្រូវតែមានប្រភពច្បាស់លាស់។
-៣. ការរចនា និងការកំណត់រចនាសម្ព័ន្ធ ត្រូវតែមានកាត់បន្ថយចំនួនវាយប្រហារប្រព័ន្ធនិងកម្មវិធី។
-៤. ប្រព័ន្ធ និងកម្មវិធីត្រូវមានការគ្រប់គ្រងដោយសុវត្ថិភាព និងគណនេយ្យភាព។
-៥. ភាពងាយរងគ្រោះផ្នែកសុវត្ថិភាពនៅក្នុងប្រព័ន្ធនិងកម្មវិធី ត្រូវតែកំណត់ និងកាត់បន្ថយទាន់ពេលវេលា។
-៦. ជឿទុកចិត្ត និងគាំទ្រតែប្រព័ន្ធប្រតិបត្តិការ កម្មវិធី និងកូដកុំព្យូទ័រប្រតិបត្តិលើប្រព័ន្ធប៉ុណ្ណោះ។
-៧. ទិន្នន័យត្រូវបានអ៊ិនគ្រីបនៅពេលគ្រប់គ្រង និងនៅពេលកំពុងឆ្លងកាត់រវាងប្រព័ន្ធផ្សេងៗ។
-៨. ទិន្នន័យទំនាក់ទំនងរវាងប្រព័ន្ធផ្សេងៗត្រូវបានគ្រប់គ្រង និងអាចត្រួតពិនិត្យបាន។
-៩. ទិន្នន័យ កម្មវិធី និងការកំណត់រចនាសម្ព័ន្ធត្រូវបានបម្រុងរក្សាទុកក្នុងលក្ខណៈសុវត្ថិភាព និងជាប្រចាំ។
-១០. បុគ្គលិកដែលជឿទុកចិត្តប៉ុណ្ណោះ ដែលត្រូវបានផ្តល់សិទ្ធិចូលប្រើប្រព័ន្ធ កម្មវិធី និងឃ្លាំងទិន្នន័យ។
-១១. បុគ្គលិកត្រូវបានផ្តល់សិទ្ធិក្នុងកម្រិតមួយ ចូលទៅកាន់ប្រព័ន្ធ កម្មវិធី និងឃ្លាំងទិន្នន័យ ដែលត្រូវការសម្រាប់ភារកិច្ចរបស់ពួកគេ។
-១២. ប្រើវិធីសាស្រ្តជាច្រើន ដើម្បីកំណត់អត្តសញ្ញាណ និងផ្ទៀងផ្ទាត់បុគ្គលិកទៅនឹងប្រព័ន្ធកម្មវិធី និងឃ្លាំងទិន្នន័យ។
-១៣. បុគ្គលិកត្រូវបានផ្តល់ជូនជាមួយនឹងការបណ្តុះបណ្តាលការយល់ដឹងអំពីសន្តិសុខសុវត្ថិភាពសាយប័រ។
-១៤. ចូលទៅប្រើប្រព័ន្ធដោយបុគ្គលផ្ទាល់ ហេដ្ឋារចនាសម្ព័ន្ធ និងគ្រឿងបរិក្ខារត្រូវបានដាក់កម្រិតចំពោះ បុគ្គលិកផ្ទាល់ដែលមានការអនុញ្ញាត ។
+1. Systems and software must be designed, deployed, maintained and shut down in accordance with the values ​​and principles of confidentiality, integrity and feasibility.
+2. The transmission and support of various systems and applications, suppliers must have a clear source.
+3. Design and configuration must minimize the number of system and software attacks.
+4. Systems and programs must be securely managed and accountable.
+5. Security vulnerabilities in systems and applications must be identified and minimized in a timely manner.
+6. Trust and support only the operating system, software and computer code executed on the system.
+7. Data is encrypted during management and when passing between different systems.
+8. Communication data between different systems is managed and controllable.
+9. Application and configuration data is backed up securely and regularly.
+10. Only trusted employees are granted access to software systems and databases.
+11. Employees are given a degree of access to the software systems and databases needed for their tasks.
+12. Use a variety of methods to identify and verify employees to software systems and databases.
+13. Staff are provided with cyber security awareness training.
+14. Personal access to the system, infrastructure and facilities are restricted to authorized personal staff.
 
-៤. គោលការណ៍នៃយន្តការត្រួតពិនិត្យ
+## 4. Principles of control mechanisms
 
-គោលការណ៍នៃយន្តការត្រួតពិនិត្យមាន៖
+The principles of the control mechanism are:
 
-១. កំណត់ហេតុព្រឹត្តិការណ៍ ត្រូវតែប្រមូល និងវិភាគ ដើម្បីស្វែងរកព្រឹត្តិការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រ។
-២. ព្រឹត្តិការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រ ត្រូវតែវិភាគក្នុងលក្ខណៈភ្លាមៗទាន់ពេលវេលាដើម្បីកំណត់អត្តសញ្ញាណឧប្បត្តិហេតុសន្តិសុខសាយប័រ។
+1. Event logs must be collected and analyzed to find cyber security events.
+2. Cyber ​​security events must be analyzed promptly and in a timely manner to identify cyber security incidents.
 
-៥. គោលការណ៍នៃយន្តការឆ្លើយតប
+## 5. Principles of response mechanisms
 
-គោលការណ៍នៃយន្តការឆ្លើយតបមាន៖
+The principles of the response mechanism are:
 
-១. ឧប្បត្តិហេតុសន្តិសុខសុវត្ថិភាពសាយប័រត្រូវតែរាយការណ៍ទាំងខាងក្នុង និងខាងក្រៅទៅកាន់ស្ថាប័នពាក់ព័ន្ធក្នុងលក្ខណៈភ្លាមៗទាន់ពេលវេលា។
-២. ឧប្បត្តិហេតុសន្តិសុខសុវត្ថិភាពសាយប័រ ត្រូវតែទប់ស្កាត់ លុបបំបាត់ និងស្ដារឡើងវិញ ក្នុងលក្ខណៈភ្លាមៗទាន់ពេលវេលា។
-៣. ការបន្តអាជីវកម្ម និងផែនការសង្គ្រោះគ្រោះមហន្តរាយត្រូវបានអនុម័តភ្លាមៗនៅពេលចាំបាច់។
+1. Cyber ​​security incidents must be reported both internally and externally to the relevant institutions in a timely manner.
+2. Cyber ​​security incidents must be prevented, eliminated and restored in a timely manner.
+3. Business renewals and disaster relief plans are approved immediately when necessary.
 
-៦. គំរូនៃសន្តិសុខសុវត្ថិភាពសាយប័រ
+## 6. Cyber ​​Security Model
 
-នៅពេលអនុវត្តគោលការណ៍សន្តិសុខសុវត្ថិភាពសាយប័ររបស់អង្គភាពមួយអាចប្រើប្រាស់ស្របតាមគំរូនៃសន្តិសុខសុវត្ថិភាពសាយប័រ ដើម្បីវាយតម្លៃ ការអនុវត្តគោលការណ៍បុគ្គល ការអនុវត្តគោលការណ៍ក្រុម ឬគោលការណ៍សុវត្ថិភាពសាយប័រទាំងមូល។
+When implementing an organization's cyber security policy, it can be used in accordance with the cyber security model to evaluate the implementation of individual policies, the implementation of group policies, or the entire cyber security policy.
 
-កម្រិតទាំង៥ នៅក្នុងគំរូនៃសន្តិសុខសុវត្ថិភាពសាយប័រមាន:
+The five levels in the Cyber ​​Security model are:
 
-១. គំរូមិនពេញលេញ ៖ គោលការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រត្រូវបានអនុវត្តដោយផ្នែក ឬមិនត្រូវអនុវត្តទាំងអស់។
-២. គំរូចាប់ផ្តើម ៖ គោលការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រត្រូវបានអនុវត្ត ប៉ុន្តែក្នុងមានលក្ខណៈមិនល្អ ឬលក្ខណៈចំពោះកិច្ច។
-៣. គំរូការអភិវឌ្ឍ ៖ គោលការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រត្រូវបានអនុវត្តគ្រប់គ្រាន់ ប៉ុន្តែផ្អែកលើគម្រោង។
-៤. គំរូការគ្រប់គ្រង ៖ គោលការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រត្រូវបានបង្កើតឡើងជាស្តង់ដាការអនុវត្តអាជីវកម្ម និងត្រូវបានអនុវត្តយ៉ាងតឹងរឹងសម្រាប់ស្ថាប័នទាំងមូល ។
-៥. គំរូការប្រសិទ្ធភាព ៖ ផ្តោតទៅលើការបង្កើនប្រសិទ្ធភាព និងកែតម្រូវជាបន្តបន្ទាប់សម្រាប់ការអនុវត្តគោលការណ៍សន្តិសុខសុវត្ថិភាពសាយប័រទូទាំងអង្គភាព។
+1. Incomplete model: Cyber ​​security principles are applied in part or not at all.
+2. Beginning model: Cyber ​​security principles are applied, but in a negative or functional manner.
+3. Development model: Cyber ​​security principles are adequately implemented but project-based.
+4. Management Model: Cyber ​​security principles are established as a standard of business practice and are strictly enforced for the entire organization.
+5. Efficiency model: Focus on continuous optimization and adjustment for the implementation of cyber security principles throughout the organization.
 
-៧.ឯកសារពាក់ព័ន្ធ
+## 7. Related documents
 
 – https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism/cyber-security-principles
