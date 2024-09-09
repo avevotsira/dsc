@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar.astro";
 
 import "@/styles/globals.css";
 
+import DSCLogo from "@/asset/logo/DSC-PNG-Logo.png";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import { removeLanguagePrefix } from "@/i18n/utils";
 
@@ -42,7 +43,7 @@ const pathWithoutLocale = removeLanguagePrefix(
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href={DSCLogo.src} />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title} | {siteTitle}</title>
