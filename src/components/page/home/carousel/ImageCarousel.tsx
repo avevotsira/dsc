@@ -55,13 +55,13 @@ export default function ImageCarousel({
               <CardContent className="container mx-auto flex flex-col items-center justify-center space-y-4 p-4 text-center text-primary-foreground sm:p-6 md:p-8">
                 <TextElement
                   variant="title"
-                  className="line-clamp-4 whitespace-pre-line text-pretty text-4xl"
+                  className="line-clamp-4 whitespace-pre-line text-pretty text-xl md:text-4xl"
                 >
                   {item.data.title}
                 </TextElement>
                 <TextElement
                   variant="paragraph"
-                  className="line-clamp-4 whitespace-pre-line text-pretty"
+                  className="line-clamp-4 whitespace-pre-line text-pretty text-sm md:text-base"
                 >
                   {item.data.description}
                 </TextElement>
