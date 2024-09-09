@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import DSCLogo from "@/asset/logo/DSC-PNG-Logo.png";
 
 interface Props {
   title: string;
@@ -26,15 +27,15 @@ const { title, description, image, canonicalURL } = Astro.props;
         "@context": "https://schema.org",
         "@type": "Organization",
         name: "Digital Security Committee",
-        url: Astro.site,
-        logo: new URL("/logo.png", Astro.url),
+        url: "",
+        logo: DSCLogo,
         description: description,
         address: {
           "@type": "PostalAddress",
-          addressLocality: "Your City",
-          addressRegion: "Your Region",
-          postalCode: "Your Postal Code",
-          addressCountry: "Your Country",
+          addressLocality: "Phnom Penh",
+          addressRegion: "Phnom Penh",
+          postalCode: "120210",
+          addressCountry: "Cambodia",
         },
         contactPoint: {
           "@type": "ContactPoint",
