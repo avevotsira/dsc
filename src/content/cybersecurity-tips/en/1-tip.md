@@ -3,33 +3,30 @@ categories: ["studio tips"]
 date: 05/07/2021
 featured: false
 image: src/asset/security-tips/anti-virus-tip.jpg
-title: ការការពារកុំព្យូទ័ររបស់អ្នកពីមេរោគ
+title: Ways to Protect Your Computer from Viruses
 author: CamCERT
-description: មេរោគកុំព្យូទ័រគឺជាកម្មវិធីមួយដែលបង្កើតឡើងដើម្បីបង្កគ្រោះថ្នាក់ដល់ប្រព័ន្ធកុំព្យូទ័រ អ្នកប្រើប្រាស់ទាំងអស់គួរតែដំឡើងកម្មវិធីប្រឆាំងមេរោគដើម្បីការពារកុំព្យូទ័រ
+description: Computer virus is a program designed to harm the computer system, all users should install anti-virus software to protect the computer
 lang: en
 ---
 
 ## Collaboration is a key component of many creative endeavors, and music production is no exception. In fact, collaboration can be
 
-១. ព័ត៌មានទូទៅ
+## 1. General Information
 
-មេរោគកុំព្យូទ័រគឺជាកម្មវិធីមួយដែលបង្កើតឡើងដើម្បីបង្កគ្រោះថ្នាក់ដល់ប្រព័ន្ធកុំព្យូទ័រ អ្នកប្រើប្រាស់ទាំងអស់គួរតែដំឡើងកម្មវិធីប្រឆាំងមេរោគដើម្បីការពារកុំព្យូទ័រ និងទិន្នន័យ ដោយកម្មវិធីប្រឆាំងមេរោគគឺជាកម្មវិធីសម្រាប់ការពារកុំព្យូទ័រ ពីមេរោគកុំព្យូទ័រផ្សេងៗដូចជា viruses, trojans និង worms ជាដើម កម្មវិធីនេះនឹងអាចជួយអ្នកប្រើប្រាស់ក្នុងស្វែងរកកម្មវិធីមេរោគនៅលើប្រព័ន្ធកុំព្យូទ័រ។
+A computer virus is a program designed to harm a computer system. All users should install anti-virus software to protect their computer and data, anti-virus software is a program to protect the computer from various computer viruses such as viruses, trojans and worms, this program will help users to find virus programs on the computer system.
 
-២. តើមេរោគផ្តល់ផលប៉ះពាល់ដល់កុំព្យូទ័ររបស់អ្នកយ៉ាងដូចម្តេច?
+## 2. How do viruses affect your computer?
 
-យឺតនៅចាប់ផ្តើមបើក
-យឺតនៅពេលដំណើរការ
-លោតអេក្រង់ចេញពណ៌ខៀវ គាំង ឬបិទដោយមិនបានបញ្ជា
-មិនអាចបើកចូលប្រើប្រាស់ថាសរឹង
-លោតចេញផ្ទាំងសារកំហុសឆ្គងផ្សេងៗ។
-៣. ការអនុវត្តល្អបំផុត
+Slow starting up the computer, slow when the process pops up, error blue screen, crashes or closes without control, can not access the hard disk, pops up various error messages.
 
-ប្រើកម្មវិធីប្រឆាំងមេរោគស្របច្បាប់ដើម្បីការពារកុំព្យូទ័ររបស់អ្នកពីកម្មវិធីដែលមានគំនិតអាក្រក់
-នៅពេលដំឡើងរួចត្រូវប្រាកដថាកម្មវិធីរប្រឆាំងមេរោគ គួរធ្វើការកំណត់ឱ្យកម្មវិធីដំណើរការដោយស្វ័យប្រវត្តនៅពេលកុំព្យូទ័រចាប់ផ្តើមដំណើរការ
-ត្រូវធ្វើការអាប់ដេតកម្មវិធីប្រឆាំងមេរោគជាប្រចាំ ដើម្បីឱ្យកម្មវិធីអាចមានលទ្ធភាពចាប់មេរោគថ្មីៗ
-ស្កេនកន្លែងផ្ទុកទិន្នន័យ ឯកសារ ទិន្នន័យតាមអ៊ីម៉ែល និងឧបករណ៍ផ្ទុកទិន្នន័យផ្សេងៗទៀតដូចជា ថាស​USB ជាដើម​។
-ជៀសវាងការចូលមើលគេហទំព័រដែលគួរឱ្យសង្ស័យ
-កុំបើកមើលសារអ៊ីមែលដែលទទួលបានពីប្រភពដែលមិនស្គាល់ ប្រសិនបើអ្នកមានការសង្ស័យអំពីអ៊ីមែលមិនគួរបើកមើលនោះទេ។
-៤. ឯកសារពាក់ព័ន្ធ
+## 3. Best Practices
+
+Use legitimate anti-virus software to protect your computer from malicious software
+Once installed, make sure that the anti-virus program should be set to run automatically when the computer starts up.
+You need to update your anti-virus software regularly so that it can catch the latest viruses.
+Scan data storage, email files and other storage devices such as USB disks.
+Avoid visiting suspicious websites and do not view email messages received from unknown sources if you have doubts about which emails should not be viewed.
+
+## 4. Related Documents
 
 https://www.secureverifyconnect.info/protect-your-computer-viruses
