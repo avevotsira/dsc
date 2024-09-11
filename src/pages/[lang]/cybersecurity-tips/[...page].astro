@@ -18,7 +18,12 @@ export async function getStaticPaths({
   const tips = await getCollection("cybersecurity-tips");
 
   return allLanguages.flatMap((lang) => {
-    const langTips = tips.filter((tip) => tip.data.lang === lang);
+    const langTips = tips
+      .filter((tip) => tip.data.lang === lang)
+      .sort(
+        (a, b) =>
+          new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+      );
     return paginate(langTips, {
       params: { lang },
       pageSize: 10,

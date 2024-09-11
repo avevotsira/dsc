@@ -3,8 +3,24 @@ import { ExternalLink } from "lucide-react";
 export default function OtherLinks() {
   const ExternalLinks = [
     {
+      label: "Ministry of Econ",
+      link: "https://mptc.gov.kh",
+    },
+    {
+      label: "Ministry of Interior",
+      link: "https://mptc.gov.kh",
+    },
+    {
+      label: "Ministry of defense",
+      link: "https://mptc.gov.kh",
+    },
+    {
       label: "Ministry of Post and Telecommunications",
       link: "https://mptc.gov.kh",
+    },
+    {
+      label: "Ministry of Foreign Affair and Cooperation",
+      link: "https://dgc.gov.kh",
     },
     {
       label: "Digital Economy And Business Committee",
