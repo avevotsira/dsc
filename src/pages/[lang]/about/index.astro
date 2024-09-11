@@ -1,7 +1,6 @@
 ---
 import Main from "@/components/Main.astro";
 import AboutList from "@/components/page/about/AboutList.astro";
-import Strategies from "@/components/page/about/Strategies.astro";
 import Mission from "@/components/page/home/Mission.astro";
 import Vision from "@/components/page/home/Vison.astro";
 import TextElement from "@/components/TextElement";
@@ -24,7 +23,6 @@ const lang = Astro.params.lang as SupportedLanguage;
 const t = useTranslations(lang);
 const allAbouts = await getCollection("abouts");
 const abouts = allAbouts.filter((about) => about.data.lang === lang);
-const goals = abouts.filter((about) => about.data.type === ABOUT_TYPES.GOAL);
 const roles = abouts.filter((about) => about.data.type === ABOUT_TYPES.ROLE);
 
 const langImages = {
