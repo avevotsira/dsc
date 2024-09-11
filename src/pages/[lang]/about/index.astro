@@ -1,7 +1,6 @@
 ---
 import Main from "@/components/Main.astro";
 import AboutList from "@/components/page/about/AboutList.astro";
-import Strategies from "@/components/page/about/Strategies.astro";
 import Mission from "@/components/page/home/Mission.astro";
 import Vision from "@/components/page/home/Vison.astro";
 import TextElement from "@/components/TextElement";
@@ -24,7 +23,6 @@ const lang = Astro.params.lang as SupportedLanguage;
 const t = useTranslations(lang);
 const allAbouts = await getCollection("abouts");
 const abouts = allAbouts.filter((about) => about.data.lang === lang);
-const goals = abouts.filter((about) => about.data.type === ABOUT_TYPES.GOAL);
 const roles = abouts.filter((about) => about.data.type === ABOUT_TYPES.ROLE);
 
 const langImages = {
@@ -107,31 +105,6 @@ const committeeList = [
       </section>
       <section aria-labelledby="mission">
         <Mission />
-      </section>
-      <section aria-label={"Strategic Goals and Strategies"}>
-        <TextElement
-          variant="subheading"
-          className="pb-6 text-center text-primary lg:text-3xl"
-        >
-          {t("about.goals")}
-        </TextElement>
-        <TextElement variant="body" className="text-center">
-          {t("about.goalsText")}
-        </TextElement>
-        <AboutList abouts={goals} className="lg:grid-cols-2" />
-      </section>
-      <section aria-label={"Strategic Goals and Strategies"}>
-        <TextElement
-          variant="subheading"
-          className="pb-6 text-center text-primary lg:text-3xl"
-        >
-          {t("about.strategies")}
-        </TextElement>
-        <TextElement variant="body" className="text-center">
-          {t("about.strategiesText")}
-        </TextElement>
-        <!-- <AboutList abouts={strategies} className="lg:grid-cols-2" /> -->
-        <Strategies />
       </section>
       <section aria-label={"Role and Responsibilites "}>
         <TextElement

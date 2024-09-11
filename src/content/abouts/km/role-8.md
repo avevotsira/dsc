@@ -6,4 +6,4 @@ type: role
 lang: km
 ---
 
-Perform other roles and duties as needed
+Perform other roles and duties as needed related to digital security matters
