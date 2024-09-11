@@ -3,24 +3,24 @@ import { ExternalLink } from "lucide-react";
 export default function OtherLinks() {
   const ExternalLinks = [
     {
-      label: "Ministry of Econ",
-      link: "https://mptc.gov.kh",
+      label: "Ministry of Economy and Finance",
+      link: "https://mef.gov.kh/",
     },
     {
       label: "Ministry of Interior",
-      link: "https://mptc.gov.kh",
+      link: "https://www.interior.gov.kh/",
     },
     {
-      label: "Ministry of defense",
-      link: "https://mptc.gov.kh",
+      label: "Ministry of National Defence",
+      link: "https://mod.gov.kh/",
     },
     {
       label: "Ministry of Post and Telecommunications",
       link: "https://mptc.gov.kh",
     },
     {
-      label: "Ministry of Foreign Affair and Cooperation",
-      link: "https://dgc.gov.kh",
+      label: "Ministry of Foreign Affairs and International Cooperation",
+      link: "https://www.mfaic.gov.kh/",
     },
     {
       label: "Digital Economy And Business Committee",
@@ -30,7 +30,7 @@ export default function OtherLinks() {
   ];
 
   return (
-    <nav>
+    <nav className="lg:col-span-2">
       <h2 className="mb-4 text-lg font-semibold">Other Links</h2>
       <ul className="space-y-4">
         {ExternalLinks.map((item) => (
