@@ -5,15 +5,13 @@ featured: false
 image: src/asset/articles/1-article-dsc-meeting/article-1-photo-2.webp
 title: Meeting to Announce the Composition and Disseminate Guidelines for the Digital Security Committee (D.S.C)
 author: Digital Security Committee
-description: His Excellency Chea Vandeth attended meeting to announce the composition and disseminate guidelines for D.S.C. presided over by H.E. Santibindit Neth Savoeun.
+description: On behalf Samdech Thipadei HUN MANET, Prime Minister, H.E. Santibandit Neth Savoeun, Deputy Prime Minister has presided over the meeting.
 lang: en
 ---
 
 His Excellency Chea Vandeth, Minister of Post and Telecommunications, Vice Chairman and Secretary General of the Digital Security Committee (CDC), attended the meeting to announce the composition and disseminate guidelines for the SEC. Presided over by HE Dr. Neth Savoeun, Deputy Prime Minister and Permanent Deputy Chairman His Excellency Hun Manet, Prime Minister of the Kingdom of Cambodia and President of the Kingdom of Cambodia.
 
 The Digital Security Committee (D.S.C.) was established with the aim of ensuring the efficiency and effectiveness of its leadership, coordination and promotion of digital security management to protect the interests of all social actors against all forms of attack, tactical and technical. And forces involved in ensuring and protecting digital security.
-
-Phnom Penh: Meeting Hall of the Office of the Council of Ministers on May 3, 2024
 
 ![photo 2](src/asset/articles/1-article-dsc-meeting/article-1-photo-1.webp)
 ![photo 3](src/asset/articles/1-article-dsc-meeting/article-1-photo-3.webp)
