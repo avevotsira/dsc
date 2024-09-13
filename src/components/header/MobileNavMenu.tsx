@@ -13,7 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { ButtonLink } from "../ButtonLink";
+import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import { Menu } from "lucide-react";
 
@@ -76,13 +76,7 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
           ))}
           <Separator />
           <li className="flex justify-center pt-4">
-            <ButtonLink
-              href="https://www.camcert.gov.kh/en/report-incident/"
-              target="_blank"
-              className="lg:hidden"
-            >
-              Report Incident
-            </ButtonLink>
+            <Button className="lg:hidden">Report Incident</Button>
           </li>
         </ul>
       </SheetContent>
