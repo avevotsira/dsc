@@ -56,10 +56,13 @@ const publicationDate = new Date(page.data.date);
           </figcaption>
         </figure>
         <div class="my-6 space-y-6">
-          <TextElement variant="heading" className="mb-0">
+          <TextElement variant="heading" className="mb-0 text-justify">
             {page.data.title}
           </TextElement>
-          <TextElement variant="body" className="text-xl text-muted-foreground">
+          <TextElement
+            variant="body"
+            className="text-justify text-xl text-muted-foreground"
+          >
             {page.data.description}
           </TextElement>
           <div
@@ -89,7 +92,7 @@ const publicationDate = new Date(page.data.date);
         </div>
       </header>
       <Separator className="m-2" />
-      <section>
+      <section class="text-justify">
         <Content />
       </section>
     </ProseWrapper>
