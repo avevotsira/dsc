@@ -26,7 +26,7 @@ export const ui: Record<string, Record<string, string>> = {
       "Throughout the process of digital transformation and implementation of Cambodia Digital Economy and Society Policy Framework 2021-2035, the Royal Government of Cambodia has foreseen “Digital Security” as a vital asset to ensure the successful implementation of the framework itself and also to ensure that Cambodia’s cyberspace is safe from cyber risk. Therefore, in 2024, The Royal Government of Cambodia, under the leadership of Samdech Moha Borvor Thipadei Hun Manet, has established the “Digital Security Committee” which is the technical committee responsible for managing Cambodia’s digital security with the purpose of protecting the interest of users, resisting cyber-attack and competent to respond to all areas, including technical and strength, as well as the management of the entire national social security.",
     "about.goals": "Goals",
     "about.goalsText":
-      "In order to achieve the above vision and objectives, the Royal Government has set four strategic goals as follows:",
+      "In order to achieve the above visions and objectives, the Royal Government has set four strategic goals as follows:",
     "about.strategies": "Strategies",
     "about.strategiesText":
       "The Digital Security Committee has established and outlined the following strategies",
@@ -76,7 +76,7 @@ export const ui: Record<string, Record<string, string>> = {
       "Throughout the process of digital transformation and implementation of Cambodia Digital Economy and Society Policy Framework 2021-2035, the Royal Government of Cambodia has foreseen “Digital Security” as a vital asset to ensure the successful implementation of the framework itself and also to ensure that Cambodia’s cyberspace is safe from cyber risk. Therefore, in 2024, The Royal Government of Cambodia, under the leadership of Samdech Moha Borvor Thipadei Hun Manet, has established the “Digital Security Committee” which is the technical committee responsible for managing Cambodia’s digital security with the purpose of protecting the interest of users, resisting cyber-attack and competent to respond to all areas, including technical and strength, as well as the management of the entire national social security.",
     "about.goals": "Goals",
     "about.goalsText":
-      "In order to achieve the above vision and objectives, the Royal Government has set four strategic goals as follows:",
+      "In order to achieve the above visions and objectives, the Royal Government has set four strategic goals as follows:",
     "about.strategies": "Strategies",
     "about.strategiesText":
       "The Digital Security Committee has established and outlined the following strategies",
