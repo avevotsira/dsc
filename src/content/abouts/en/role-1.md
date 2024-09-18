@@ -7,4 +7,4 @@ lang: en
 ---
 
 Lead, coordinate and promote the management of digital security, including cybersecurity,
-cybercrime, cyber defence and cyber diplomacy
+cybercrime, cyberdefence and cyberdiplomacy

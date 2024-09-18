@@ -6,5 +6,5 @@ type: role
 lang: km
 ---
 
-Mobilize financial, technical, and human resources in the cause of building and developing digital
+Mobilize the financial, technical, and human resources in the cause of building and developing digital
 security
