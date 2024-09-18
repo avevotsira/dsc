@@ -34,7 +34,7 @@ const visionList = [
     <TextElement variant="subheading" id="vision" className="mt-2 text-primary">
       Vision
     </TextElement>
-    <TextElement variant="body" className="mt-2">
+    <TextElement variant="body" className="mt-2 text-justify">
       To ensure a vibrant digital economy and digital security of the Kingdom of
       Cambodia, The Digital Security Committee (D.S.C.) has the vision:
     </TextElement>
@@ -42,7 +42,9 @@ const visionList = [
       {
         visionList.map((vision) => (
           <li>
-            <TextElement variant="body">{vision.text}</TextElement>
+            <TextElement variant="body" className="text-justify">
+              {vision.text}
+            </TextElement>
           </li>
         ))
       }
