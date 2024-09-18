@@ -4,7 +4,7 @@ const cards = [
   {
     title: "Digital Security Management",
     description:
-      "Lead, coordinate, and promote the management of digital security including cybersecurity, cybercrime, cyberspace defense and cyber diplomacy.",
+      "Lead, coordinate, and promote the management of digital security including cybersecurity, cybercrime, cyber defence and cyber diplomacy.",
   },
   {
     title: "Digital Security Policymaker",

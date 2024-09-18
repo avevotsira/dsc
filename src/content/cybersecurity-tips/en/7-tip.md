@@ -30,7 +30,7 @@ Principles of management mechanism:
 
 ## 3. Principles of protection mechanisms
 
-The principles of the defense mechanism are:
+The principles of the defence mechanism are:
 
 1. Systems and software must be designed, deployed, maintained and shut down in accordance with the values ​​and principles of confidentiality, integrity and feasibility.
 2. The transmission and support of various systems and applications, suppliers must have a clear source.

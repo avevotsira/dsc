@@ -13,7 +13,7 @@ export default function UnitLinks() {
       image: DSCLogo,
     },
     {
-      label: "National Cyberspace Defense Unit",
+      label: "National Cyber Defence Unit",
       link: "https://mptc.gov.kh",
       image: DSCLogo,
     },

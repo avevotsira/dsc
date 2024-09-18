@@ -32,10 +32,10 @@ export const ui: Record<string, Record<string, string>> = {
       "The Digital Security Committee has established and outlined the following strategies",
     "about.roleResponsibilities": "Role and Responsibilites",
     "about.roleResponsibilitiesText":
-      "The Digital Security Committee (D.S.C.) was established under Sub-Decree No. 44 ANKR.BT on the Organization and Functioning of Digital Security Committee dated 1st May, 2024 with role and responsibilities:",
+      "The Digital Security Committee (D.S.C.) was established under Sub-Decree No. 44 ANKR.BT on the Organization and Functioning of Digital Security Committee dated 1st March, 2024 with role and responsibilities:",
     "unit.heading": "Units Under the Digital Security Committee",
     "unit.headingText":
-      "The Digital Security Committee (D.S.C.) is organized around a key General Secretariat that oversees four essential units: the Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defense Unit, and Cyber Diplomatic Affairs Unit.",
+      "The Digital Security Committee (D.S.C.) is organized around a key General Secretariat that oversees four essential units: the Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Affairs Unit.",
     "unit.ccsu": "Cambodia Cybersecurity Unit",
     "unit.ccsuText":
       "The Cambodia Cybersecurity Unit that is under the jurisdiction of the Ministry of Post and Telecommunications, and shall perform its additional function as an executive body unit for the General Secretariat of the D.S.C. on cybersecurity affairs. The organization and functioning of the Cambodian Cybersecurity Unit shall be determined by a separate Sub-decree at the request of the Minister of the MPTC.",
@@ -82,10 +82,10 @@ export const ui: Record<string, Record<string, string>> = {
       "The Digital Security Committee has established and outlined the following strategies",
     "about.roleResponsibilities": "Role and Responsibilites",
     "about.roleResponsibilitiesText":
-      "The Digital Security Committee (D.S.C.) was established under Sub-Decree No. 44 ANKR.BT on the Organization and Functioning of Digital Security Committee dated 1st May, 2024 with role and responsibilities:",
+      "The Digital Security Committee (D.S.C.) was established under Sub-Decree No. 44 ANKR.BT on the Organization and Functioning of Digital Security Committee dated 1st March, 2024 with role and responsibilities:",
     "unit.heading": "Units Under the Digital Security Committee",
     "unit.headingText":
-      "The Digital Security Committee (D.S.C.) is organized around a key General Secretariat that oversees four essential units: the Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defense Unit, and Cyber Diplomatic Affairs Unit.",
+      "The Digital Security Committee (D.S.C.) is organized around a key General Secretariat that oversees four essential units: the Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Affairs Unit.",
     "unit.ccsu": "Cambodia Cybersecurity Unit",
     "unit.ccsuText":
       "The Cambodia Cybersecurity Unit that is under the jurisdiction of the Ministry of Post and Telecommunications, and shall perform its additional function as an executive body unit for the General Secretariat of the D.S.C. on cybersecurity affairs. The organization and functioning of the Cambodian Cybersecurity Unit shall be determined by a separate Sub-decree at the request of the Minister of the MPTC.",

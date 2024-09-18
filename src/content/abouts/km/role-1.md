@@ -7,4 +7,4 @@ lang: km
 ---
 
 Lead, coordinate and promote the management of digital security, including cybersecurity,
-cybercrime, cyber defense and cyber diplomacy
+cybercrime, cyber defence and cyber diplomacy

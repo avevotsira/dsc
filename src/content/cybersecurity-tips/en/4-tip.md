@@ -49,7 +49,7 @@ Therefore, the distinction between a highly authorized management account and a 
 
 ## 2. Cyber ​​security is teamwork
 
-Cyber ​​security is a team effort, no matter how strong the technical protection mechanism of the organization, the human resources in the organization is the first line of defense and the weakest point in the organization. By understanding the most common negligence and flexible policy implementation and capacity building, institutions can transform human resources from weak to valuable protectors in the fight against cyber threats. . In addition to cyber security, institutional protection is better than cure.
+Cyber ​​security is a team effort, no matter how strong the technical protection mechanism of the organization, the human resources in the organization is the first line of defence and the weakest point in the organization. By understanding the most common negligence and flexible policy implementation and capacity building, institutions can transform human resources from weak to valuable protectors in the fight against cyber threats. . In addition to cyber security, institutional protection is better than cure.
 
 ## 3. Related documents
 
