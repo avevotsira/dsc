@@ -10,7 +10,7 @@ export const ui: Record<string, Record<string, string>> = {
     "structure.dscHeading":
       "Structure of the Digital Security Committee (D.S.C.)",
     "structure.dscIntro":
-      "The Digital Security Committee (D.S.C.) of Cambodia is composed of high-ranking officials including the Prime Minister as Chairman, Deputy Prime Ministers, and various Ministers as Vice-Chairmen, along with Secretaries of State and military leaders as members. Its composition is formalized by the Royal Government, with provisions for adding more members as needed. The D.S.C. convenes biannually, with the possibility of extraordinary meetings, chaired by designated officials or their delegates, ensuring continuity and decision-making authority across its membership.",
+      "The Digital Security Committee (D.S.C.) of Cambodia is led by Samdech Moha Bovor Thipadei Hun Manet, Prime Minister of Cambodia as chairman. The committee is composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
     "structure.orgIntro":
       "The D.S.C. has a subordinating General Secretariat, overseeing 4 units, Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defense Unit, and Cyber Diplomatic affairs Unit. These units represent various ministries including Ministry of Post and Telecommunications, Ministry of Interior, Ministry of National Defense, and Ministry of Foreign Affairs and International Cooperation, with provisions for additional deputies as needed. Appointments to these roles are made by the Royal Government upon request from the Minister of Post and Telecommunications who is the Secretary General of D.S.C.",
     "structure.generalSecretaryHeading":
@@ -60,7 +60,7 @@ export const ui: Record<string, Record<string, string>> = {
     "structure.dscHeading":
       "Structure of the Digital Security Committee (D.S.C.)",
     "structure.dscIntro":
-      "The Digital Security Committee (D.S.C.) of Cambodia is composed of high-ranking officials including the Prime Minister as Chairman, Deputy Prime Ministers, and various Ministers as Vice-Chairmen, along with Secretaries of State and military leaders as members. Its composition is formalized by the Royal Government, with provisions for adding more members as needed. The D.S.C. convenes biannually, with the possibility of extraordinary meetings, chaired by designated officials or their delegates, ensuring continuity and decision-making authority across its membership.",
+      "The Digital Security Committee (D.S.C.) of Cambodia is led by Samdech Moha Bovor Thipadei Hun Manet, Prime Minister of Cambodia as chairman. The committee is composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
     "structure.orgIntro":
       "The D.S.C. has a subordinating General Secretariat, overseeing 4 units, Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defense Unit, and Cyber Diplomatic affairs Unit. These units represent various ministries including Ministry of Post and Telecommunications, Ministry of Interior, Ministry of National Defense, and Ministry of Foreign Affairs and International Cooperation, with provisions for additional deputies as needed. Appointments to these roles are made by the Royal Government upon request from the Minister of Post and Telecommunications who is the Secretary General of D.S.C.",
     "structure.generalSecretaryHeading":

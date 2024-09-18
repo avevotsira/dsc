@@ -1,7 +1,7 @@
 ---
 import { Button } from "@/components/ui/button";
 
-import { defaultLang, languages, type SupportedLanguage } from "@//ui";
+import { defaultLang, languages, type SupportedLanguage } from "@/i18n/ui";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const currentLocale = (Astro.url.pathname.split("/").filter(Boolean)[0] ||
