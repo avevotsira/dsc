@@ -12,7 +12,7 @@ export const ui: Record<string, Record<string, string>> = {
     "structure.dscIntro":
       "The Digital Security Committee (D.S.C.) of Cambodia is led by Samdech Moha Bovor Thipadei Hun Manet, Prime Minister of Cambodia as chairman. The committee is composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
     "structure.orgIntro":
-      "The D.S.C. has a subordinating General Secretariat, overseeing 4 units, Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defense Unit, and Cyber Diplomatic affairs Unit. These units represent various ministries including Ministry of Post and Telecommunications, Ministry of Interior, Ministry of National Defense, and Ministry of Foreign Affairs and International Cooperation, with provisions for additional deputies as needed. Appointments to these roles are made by the Royal Government upon request from the Minister of Post and Telecommunications who is the Secretary General of D.S.C.",
+      "The D.S.C. has a subordinating General Secretariat, overseeing 4 units, Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Unit. These units represent various ministries including Ministry of Post and Telecommunications, Ministry of Interior, Ministry of National Defence, and Ministry of Foreign Affairs and International Cooperation, with provisions for additional deputies as needed. Appointments to these roles are appointed by the Royal Government upon request from the Minister of Post and Telecommunications who is the Secretary General of D.S.C.",
     "structure.generalSecretaryHeading":
       "Structure of D.S.C.'s General Secretariat",
     "structure.generalSecretaryIntro":
@@ -35,16 +35,16 @@ export const ui: Record<string, Record<string, string>> = {
       "The Digital Security Committee (D.S.C.) was established under Sub Decree No. 44 ANKR.BT on the Organization and Functioning of Digital Security Committee dated 1st March, 2024 with the following role and responsibilities:",
     "unit.heading": "Units Under the Digital Security Committee",
     "unit.headingText":
-      "The Digital Security Committee (D.S.C.) is organized around a key General Secretariat that oversees four essential units: the Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Affairs Unit.",
+      "The Digital Security Committee (D.S.C.) is organized around a key General Secretariat that oversees four essential units: the Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Unit.",
     "unit.ccsu": "Cambodia Cybersecurity Unit",
     "unit.ccsuText":
       "The Cambodia Cybersecurity Unit that is under the jurisdiction of the Ministry of Post and Telecommunications, and shall perform its additional function as an executive body unit for the General Secretariat of the D.S.C. on cybersecurity affairs. The organization and functioning of the Cambodian Cybersecurity Unit shall be determined by a separate Sub Decree at the request of the Minister of the MPTC.",
     "unit.cybercrime": "Anti-Cybercrime Unit",
     "unit.cybercrimeText":
       "The Unit in charge of research, investigation and suppression of cybercrime that is under the jurisdiction of the Ministry of Interior shall perform the additional function of the Anti-Cybercrime Unit and as an executive body unit for the General Secretariat of the D.S.C. The Anti-cybercrime Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management.",
-    "unit.defense": "Cyber Defense Unit",
-    "unit.defenseText":
-      "The Unit in charge of the National Cyber Defense under the jurisdiction of the Ministry of National Defense shall perform additional functions as the National Cyberspace Defense Unit and as an executive body unit for the General Secretariat of the D.S.C. The National Cyberspace Defense Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management.",
+    "unit.defence": "Cyber Defence Unit",
+    "unit.defenceText":
+      "The Unit in charge of the National Cyber Defence under the jurisdiction of the Ministry of National Defence shall perform additional functions as the National Cyberspace Defence Unit and as an executive body unit for the General Secretariat of the D.S.C. The National Cyberspace Defence Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management.",
     "unit.diplomatic": "Cyber Diplomatic Unit",
     "unit.diplomaticText":
       "The Unit in charge of cyber diplomacy under the jurisdiction of the Ministry of Foreign Affairs and International Cooperation shall perform the additional function as the Cyber Diplomatic Unit, and as an executive body unit for the General Secretariat of the D.S.C. The Cyber Diplomatic Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management",
@@ -62,7 +62,7 @@ export const ui: Record<string, Record<string, string>> = {
     "structure.dscIntro":
       "The Digital Security Committee (D.S.C.) of Cambodia is led by Samdech Moha Bovor Thipadei Hun Manet, Prime Minister of Cambodia as chairman. The committee is composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
     "structure.orgIntro":
-      "The D.S.C. has a subordinating General Secretariat, overseeing 4 units, Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defense Unit, and Cyber Diplomatic affairs Unit. These units represent various ministries including Ministry of Post and Telecommunications, Ministry of Interior, Ministry of National Defense, and Ministry of Foreign Affairs and International Cooperation, with provisions for additional deputies as needed. Appointments to these roles are made by the Royal Government upon request from the Minister of Post and Telecommunications who is the Secretary General of D.S.C.",
+      "The D.S.C. has a subordinating General Secretariat, overseeing 4 units, Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Unit. These units represent various ministries including Ministry of Post and Telecommunications, Ministry of Interior, Ministry of National Defence, and Ministry of Foreign Affairs and International Cooperation, with provisions for additional deputies as needed. Appointments to these roles are appointed by the Royal Government upon request from the Minister of Post and Telecommunications who is the Secretary General of D.S.C.",
     "structure.generalSecretaryHeading":
       "Structure of D.S.C.'s General Secretariat",
     "structure.generalSecretaryIntro":
@@ -85,16 +85,16 @@ export const ui: Record<string, Record<string, string>> = {
       "The Digital Security Committee (D.S.C.) was established under Sub Decree No. 44 ANKR.BT on the Organization and Functioning of Digital Security Committee dated 1st March, 2024 with the following role and responsibilities:",
     "unit.heading": "Units Under the Digital Security Committee",
     "unit.headingText":
-      "The Digital Security Committee (D.S.C.) is organized around a key General Secretariat that oversees four essential units: the Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Affairs Unit.",
+      "The Digital Security Committee (D.S.C.) is organized around a key General Secretariat that oversees four essential units: the Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Unit.",
     "unit.ccsu": "Cambodia Cybersecurity Unit",
     "unit.ccsuText":
       "The Cambodia Cybersecurity Unit that is under the jurisdiction of the Ministry of Post and Telecommunications, and shall perform its additional function as an executive body unit for the General Secretariat of the D.S.C. on cybersecurity affairs. The organization and functioning of the Cambodian Cybersecurity Unit shall be determined by a separate Sub Decree at the request of the Minister of the MPTC.",
     "unit.cybercrime": "Anti-Cybercrime Unit",
     "unit.cybercrimeText":
       "The Unit in charge of research, investigation and suppression of cybercrime that is under the jurisdiction of the Ministry of Interior shall perform the additional function of the Anti-Cybercrime Unit and as an executive body unit for the General Secretariat of the D.S.C. The Anti-cybercrime Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management.",
-    "unit.defense": "Cyber Defense Unit",
-    "unit.defenseText":
-      "The Unit in charge of the National Cyber Defense under the jurisdiction of the Ministry of National Defense shall perform additional functions as the National Cyberspace Defense Unit and as an executive body unit for the General Secretariat of the D.S.C. The National Cyberspace Defense Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management.",
+    "unit.defence": "Cyber Defence Unit",
+    "unit.defenceText":
+      "The Unit in charge of the National Cyber Defence under the jurisdiction of the Ministry of National Defence shall perform additional functions as the National Cyberspace Defence Unit and as an executive body unit for the General Secretariat of the D.S.C. The National Cyberspace Defence Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management.",
     "unit.diplomatic": "Cyber Diplomatic Unit",
     "unit.diplomaticText":
       "The Unit in charge of cyber diplomacy under the jurisdiction of the Ministry of Foreign Affairs and International Cooperation shall perform the additional function as the Cyber Diplomatic Unit, and as an executive body unit for the General Secretariat of the D.S.C. The Cyber Diplomatic Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management",
