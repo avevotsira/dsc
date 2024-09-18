@@ -9,7 +9,7 @@ const cards = [
   {
     title: "Digital Security Policymaker",
     description:
-      "Review and decide on proposals for revision and/or amendment of laws, regulations and policies related to digital security.",
+      "Review and decide on proposals for revision and/or amendment of policies, laws, and regulations related to digital security.",
   },
   {
     title: "Digital Security Regulations and Policies Implementation Evaluator",
