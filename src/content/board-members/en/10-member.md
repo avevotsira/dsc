@@ -1,6 +1,6 @@
 ---
 title: H.E.
-name: Youk Sokha
+name: YOUK Sokha
 image: src/asset/board-members/youk-sokha.jpg
 organization: Secretary of State, Office of the Council of Ministers
 role: Member
