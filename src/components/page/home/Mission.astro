@@ -35,7 +35,7 @@ const missionList = [
     >
       Mission
     </TextElement>
-    <TextElement variant="body" className="mt-2">
+    <TextElement variant="body" className="mt-2 text-justify">
       To ensure a vibrant digital economy and Digital Security of the Kingdom of
       Cambodia, The Digital Security Committee (D.S.C.) has the mission:
     </TextElement>
@@ -43,7 +43,9 @@ const missionList = [
       {
         missionList.map((mission) => (
           <li>
-            <TextElement variant="body">{mission.text}</TextElement>
+            <TextElement variant="body" className="text-justify">
+              {mission.text}
+            </TextElement>
           </li>
         ))
       }
