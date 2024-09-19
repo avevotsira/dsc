@@ -10,7 +10,7 @@ export const ui: Record<string, Record<string, string>> = {
     "structure.dscHeading":
       "Structure of the Digital Security Committee (D.S.C.)",
     "structure.dscIntro":
-      "The Digital Security Committee (D.S.C.) of Cambodia is led by Samdech Moha Bovor Thipadei Hun Manet, Prime Minister of Cambodia as chairman. The committee is composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
+      "The Digital Security Committee (D.S.C.) of Cambodia is led by Samdech Moha Bovor Thipadei HUN MANET, Prime Minister of Cambodia as chairman. The committee is composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
     "structure.orgIntro":
       "The D.S.C. has a subordinating General Secretariat, overseeing 4 units, Cambodia Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Unit. These units are represented by Deputy Secretaries General from various ministries including Ministry of Post and Telecommunications, Ministry of Interior, Ministry of National Defence, and Ministry of Foreign Affairs and International Cooperation, with provisions for additional deputies as needed.",
     "structure.generalSecretaryHeading":
