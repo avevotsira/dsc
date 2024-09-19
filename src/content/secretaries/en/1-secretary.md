@@ -1,6 +1,6 @@
 ---
 title: H.E.
-name: Chea Vandeth
+name: CHEA Vandeth
 role: secretary-general
 image: src/asset/secretaries/chea-vandeth.jpg
 lang: en

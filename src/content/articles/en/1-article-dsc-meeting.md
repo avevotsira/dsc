@@ -9,7 +9,7 @@ description: On behalf Samdech Thipadei HUN MANET, Prime Minister, H.E. Santiban
 lang: en
 ---
 
-Phnom Penh, May 3, 2024 — His Excellency Santibandit Neth Savoeun, Deputy Prime Minister, Vice-Chair of the Digital Security Committee, a High Representative of Samdech Moha Bovor Thipadei HUN MANET, Prime Minister of the Kingdom of Cambodia, Chairman of the Digital Security Committee has chaired a meeting to officially announce the compositions and disseminate guidelines for the Digital Security Committee at the Council of Ministers.
+Phnom Penh, May 3, 2024 — His Excellency Santibandit Neth Savoeun, Deputy Prime Minister, Vice-Chair of the Digital Security Committee, a High Representative of <Strong>Samdech Moha Bovor Thipadei HUN MANET</Strong>, Prime Minister of the Kingdom of Cambodia, Chairman of the Digital Security Committee has chaired a meeting to officially announce the compositions and disseminate guidelines for the Digital Security Committee at the Council of Ministers.
 
 The Digital Security Committee (D.S.C.) was established with the aim of ensuring the efficiency and effectiveness of its leadership, coordination and promotion of digital security management in order to protect the public interests against all forms of attack, respond to all aspects of technology and security-related forces and protect digital security.
 
