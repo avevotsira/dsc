@@ -35,7 +35,7 @@ export const ui: Record<string, Record<string, string>> = {
       "The Digital Security Committee (D.S.C.) was established under Sub Decree No. 44 ANKR.BT on the Organization and Functioning of Digital Security Committee dated 1st March, 2024 with the following role and responsibilities:",
     "unit.heading": "Units Under the Digital Security Committee",
     "unit.headingText":
-      "The Digital Security Committee (D.S.C.) is organized around a key General Secretariat that oversees four units which include the Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Unit.",
+      "The Digital Security Committee (D.S.C.) has one General Secretariat that oversees four units which include the Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Unit.",
     "unit.ccsu": "Cambodia Cybersecurity Unit",
     "unit.ccsuText":
       "The Cambodia Cybersecurity Unit is under the jurisdiction of the Ministry of Post and Telecommunications and perform its additional functions as an executive body unit for the General Secretariat of the D.S.C. on cybersecurity affairs of the Kingdom of Cambodia.",
@@ -85,7 +85,7 @@ export const ui: Record<string, Record<string, string>> = {
       "The Digital Security Committee (D.S.C.) was established under Sub Decree No. 44 ANKR.BT on the Organization and Functioning of Digital Security Committee dated 1st March, 2024 with the following role and responsibilities:",
     "unit.heading": "Units Under the Digital Security Committee",
     "unit.headingText":
-      "The Digital Security Committee (D.S.C.) is organized around a key General Secretariat that oversees four units which include the Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Unit.",
+      "The Digital Security Committee (D.S.C.) has one General Secretariat that oversees four units which include the Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Unit.",
     "unit.ccsu": "Cambodia Cybersecurity Unit",
     "unit.ccsuText":
       "The Cambodia Cybersecurity Unit is under the jurisdiction of the Ministry of Post and Telecommunications and perform its additional functions as an executive body unit for the General Secretariat of the D.S.C. on cybersecurity affairs of the Kingdom of Cambodia.",
