@@ -1,6 +1,7 @@
 ---
-import LottieAnimation from "../../lottie/LottieAnimation";
 import TextElement from "../../TextElement";
+import VisionImage from "@/asset/about/vision.png";
+import { Image } from "astro:assets";
 
 const visionList = [
   {
@@ -23,8 +24,16 @@ const visionList = [
 
 <div class="flex flex-col gap-8 md:flex-row">
   <div class="w-full md:w-2/5">
-    <div class="h-[320px] md:h-auto">
-      <LottieAnimation animationType="vision" client:idle />
+    <div class="flex h-[320px] items-center justify-center md:h-auto">
+      <Image
+        src={VisionImage}
+        alt="mission of D.S.C."
+        class="size-full max-w-96 object-cover"
+        loading="eager"
+        quality="high"
+        widths={[640, 768, 1024, 1280, 1440, 1600]}
+        format="webp"
+      />
     </div>
   </div>
   <div class="w-full md:w-3/5">
