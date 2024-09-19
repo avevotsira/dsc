@@ -1,6 +1,6 @@
 ---
 title: H.E. Dr.
-name: Chea Vandeth
+name: CHEA Vandeth
 image: src/asset/board-members/chea-vandeth.jpg
 organization: Minister of Post and Telecommunications
 role: Vice-Chair
