@@ -38,16 +38,16 @@ export const ui: Record<string, Record<string, string>> = {
       "The Digital Security Committee (D.S.C.) is organized around a key General Secretariat that oversees four essential units: the Cambodian Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Unit.",
     "unit.ccsu": "Cambodia Cybersecurity Unit",
     "unit.ccsuText":
-      "The Cambodia Cybersecurity Unit that is under the jurisdiction of the Ministry of Post and Telecommunications, and shall perform its additional function as an executive body unit for the General Secretariat of the D.S.C. on cybersecurity affairs. The organization and functioning of the Cambodian Cybersecurity Unit shall be determined by a separate Sub Decree at the request of the Minister of the MPTC.",
+      "The Cambodia Cybersecurity Unit is under the jurisdiction of the Ministry of Post and Telecommunications and perform its additional functions as an executive body unit for the General Secretariat of the D.S.C. on cybersecurity affairs of the Kingdom of Cambodia.",
     "unit.cybercrime": "Anti-Cybercrime Unit",
     "unit.cybercrimeText":
-      "The Unit in charge of research, investigation and suppression of cybercrime that is under the jurisdiction of the Ministry of Interior shall perform the additional function of the Anti-Cybercrime Unit and as an executive body unit for the General Secretariat of the D.S.C. The Anti-cybercrime Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management.",
+      "The Anti-Cybercrime Unit is under the jurisdiction of the Ministry of Interior and perform its additional functions as an executive body unit for the General Secretariat of the D.S.C. on affairs related to anti-cybercrime measures of the Kingdom of Cambodia.",
     "unit.defence": "Cyber Defence Unit",
     "unit.defenceText":
-      "The Unit in charge of the National Cyber Defence under the jurisdiction of the Ministry of National Defence shall perform additional functions as the National Cyberspace Defence Unit and as an executive body unit for the General Secretariat of the D.S.C. The National Cyberspace Defence Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management.",
+      "The Cyber Defence Unit is under the jurisdiction of the Ministry of National Defence and perform its additional functions as an executive body unit for the General Secretariat of the D.S.C. on affairs related to national cyber defence of the Kingdom of Cambodia.",
     "unit.diplomatic": "Cyber Diplomatic Unit",
     "unit.diplomaticText":
-      "The Unit in charge of cyber diplomacy under the jurisdiction of the Ministry of Foreign Affairs and International Cooperation shall perform the additional function as the Cyber Diplomatic Unit, and as an executive body unit for the General Secretariat of the D.S.C. The Cyber Diplomatic Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management",
+      "The Cyber Diplomatic Unit is under the jurisdiction of the Ministry of Foreign Affairs and International Cooperation and perform its additional functions as an executive body unit for the General Secretariat of the D.S.C. on cyber diplomacy affairs of the Kingdom of Cambodia.",
   },
   km: {
     "nav.home": "Home",
