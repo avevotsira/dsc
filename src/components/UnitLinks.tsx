@@ -18,7 +18,7 @@ export default function UnitLinks() {
       image: DSCLogo,
     },
     {
-      label: "Cyber Diplomacy Unit",
+      label: "Cyber Diplomatic Unit",
       link: "https://mptc.gov.kh",
       image: DSCLogo,
     },
