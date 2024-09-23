@@ -1,50 +1,31 @@
-import DSCLogo from "@/asset/logo/DSC-PNG-Logo.png";
+import type { CollectionEntry } from "astro:content";
 
-export default function UnitLinks() {
-  const ExternalLinks = [
-    {
-      label: "Cambodian Cybersecurity Unit",
-      link: "https://mptc.gov.kh",
-      image: DSCLogo,
-    },
-    {
-      label: "Anti-Cybsecurity Unit",
-      link: "https://mptc.gov.kh",
-      image: DSCLogo,
-    },
-    {
-      label: "National Cyber Defence Unit",
-      link: "https://mptc.gov.kh",
-      image: DSCLogo,
-    },
-    {
-      label: "Cyber Diplomatic Unit",
-      link: "https://mptc.gov.kh",
-      image: DSCLogo,
-    },
-  ];
+interface UnitLinkProps {
+  content: CollectionEntry<"unit-link">[];
+}
 
+export default function UnitLinks({ content }: UnitLinkProps) {
   return (
     <nav>
       <ul className="grid list-none grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-4">
-        {ExternalLinks.map((item) => (
-          <li key={item.label}>
+        {content.map((item) => (
+          <li key={item.data.label}>
             <a
-              href={item.link}
+              href={item.data.link}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-start gap-4 hover:underline"
-              aria-label={`${item.label} (opens in a new tab)`}
+              aria-label={`${item.data.label} (opens in a new tab)`}
             >
               <div className="flex items-center">
                 <img
-                  src={item.image.src}
-                  alt={item.label}
+                  src={item.data.image}
+                  alt={item.data.label}
                   width="30"
                   height="30"
                 />
                 <span className="ml-2 underline hover:text-primary">
-                  {item.label}
+                  {item.data.label}
                 </span>
               </div>
             </a>

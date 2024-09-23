@@ -8,6 +8,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import { Button } from "./ui/button";
 import DSCHorizontalSubtitleBlue from "@/asset/logo/DSC-Horizontal-Subtitle-Blue.png";
 import { defaultLang, type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { TriangleAlert } from "lucide-react";
@@ -16,6 +17,9 @@ const locale = Astro.currentLocale ?? defaultLang;
 const currentPath = Astro.url.pathname;
 
 const navigationItems = getLocalizedRoutes(NavRoutes, locale);
+
+const lang = Astro.currentLocale as SupportedLanguage;
+const t = useTranslations(lang);
 ---
 
 <a
@@ -46,7 +50,7 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
     <MobileNavMenu navMenuItem={navigationItems} client:load />
     <Button className="hidden px-2 lg:block">
       <TriangleAlert className="w-6 xl:hidden" />
-      <span class="hidden xl:flex">Report Incident</span>
+      <span class="hidden xl:flex">{t("nav.reportIncident")}</span>
     </Button>
   </div>
 </nav>

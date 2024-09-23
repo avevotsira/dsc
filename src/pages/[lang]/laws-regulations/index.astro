@@ -6,6 +6,7 @@ import TextElement from "@/components/TextElement";
 
 import { DIRECTIVE_TYPES, type DirectiveType } from "@/content/content.type";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 
@@ -43,6 +44,7 @@ const directiveTypes = directiveMapping.map(({ type, title }) => ({
   type,
   title,
 }));
+const t = useTranslations(lang);
 ---
 
 <BaseLayout title={title}>
@@ -50,7 +52,7 @@ const directiveTypes = directiveMapping.map(({ type, title }) => ({
     <section aria-label={title}>
       <header>
         <TextElement variant="heading" className="text-center text-primary">
-          {title}
+          {t("legislation")}
         </TextElement>
         <Separator />
       </header>

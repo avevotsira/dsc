@@ -50,6 +50,16 @@ const featuredDirectives = langDirectives
   )
   .slice(0, 4);
 
+const whatWeDoCard = await getCollection("what-we-do");
+const whatWeDo = whatWeDoCard
+  .filter((card) => card.data.lang === lang)
+  .sort((a, b) => a.id.localeCompare(b.id));
+
+const unitLinkData = await getCollection("unit-link");
+const unitLink = unitLinkData
+  .filter((item) => item.data.lang === lang)
+  .sort((a, b) => a.id.localeCompare(b.id));
+
 const t = useTranslations(lang);
 ---
 
@@ -80,7 +90,7 @@ const t = useTranslations(lang);
           >
             {t("home.whatwedo")}
           </TextElement>
-          <WhatWeDoGrid />
+          <WhatWeDoGrid content={whatWeDo} />
         </div>
       </section>
       <section
@@ -95,7 +105,7 @@ const t = useTranslations(lang);
           >
             {"Units under Digital Security Committee"}
           </TextElement>
-          <UnitLinks />
+          <UnitLinks content={unitLink} />
         </div>
       </section>
       <section

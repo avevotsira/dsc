@@ -17,7 +17,7 @@ import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import { Menu } from "lucide-react";
 
-export interface NavMenuProps {
+interface NavMenuProps {
   href?: string;
   label: string;
   children?: NavMenuProps[];

@@ -3,6 +3,7 @@ import TextElement from "@/components/TextElement";
 
 import LeaderCard from "./LeaderCard.astro";
 import type { SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -11,14 +12,13 @@ interface Props {
 }
 
 const { leaders, lang } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <ul class="flex list-none flex-col gap-5 p-5">
   {
     leaders.length === 0 && (
-      <TextElement variant="paragraph">
-        There is no content available yet.
-      </TextElement>
+      <TextElement variant="paragraph">{t("noContent")}</TextElement>
     )
   }
   {
