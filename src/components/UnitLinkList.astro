@@ -1,0 +1,29 @@
+---
+import UnitLinkCard from "@/components/UnitLinkCard.astro";
+
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  content: CollectionEntry<"unit-link">[];
+}
+
+const { content } = Astro.props;
+---
+
+<nav>
+  <ul
+    class="grid list-none grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-4"
+  >
+    {
+      content.map((item) => (
+        <li>
+          <UnitLinkCard
+            label={item.data.label}
+            image={item.data.image}
+            link={item.data.link}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</nav>

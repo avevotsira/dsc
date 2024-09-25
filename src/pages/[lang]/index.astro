@@ -5,7 +5,7 @@ import HomeArticleList from "@/components/page/home/HomeArticleList.astro";
 import HomeMain from "@/components/page/home/HomeMain.astro";
 import LawCardList from "@/components/page/home/law/LawCardList.astro";
 import TextElement from "@/components/TextElement";
-import UnitLinks from "@/components/UnitLinks";
+import UnitLinkList from "@/components/UnitLinkList.astro";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
 
 import { languages, type SupportedLanguage } from "@/i18n/ui";
@@ -105,7 +105,7 @@ const t = useTranslations(lang);
           >
             {"Units under Digital Security Committee"}
           </TextElement>
-          <UnitLinks content={unitLink} />
+          <UnitLinkList content={unitLink} />
         </div>
       </section>
       <section

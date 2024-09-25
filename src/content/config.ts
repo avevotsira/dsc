@@ -102,6 +102,40 @@ const secretariesCollection = defineCollection({
   schema: secretariesSchema,
 });
 
+const otherLinksSchema = () =>
+  z.object({
+    label: z.string(),
+    link: z.string(),
+    lang: z.enum(SupportedLanguage),
+  });
+
+const otherLinksCollection = defineCollection({
+  schema: otherLinksSchema,
+});
+
+const unitLinkSchema = ({ image }: SchemaContext) =>
+  z.object({
+    label: z.string(),
+    link: z.string(),
+    image: image(),
+    lang: z.enum(SupportedLanguage),
+  });
+
+const unitLinkCollection = defineCollection({
+  schema: unitLinkSchema,
+});
+
+const whatWeDoSchema = () =>
+  z.object({
+    title: z.string(),
+    description: z.string(),
+    lang: z.enum(SupportedLanguage),
+  });
+
+const whatWeDoCollection = defineCollection({
+  schema: whatWeDoSchema,
+});
+
 export const collections = {
   "cybersecurity-tips": articlesCollection,
   articles: articlesCollection,
@@ -110,4 +144,7 @@ export const collections = {
   leaders: leaderCollection,
   "board-members": boardMembersCollection,
   secretaries: secretariesCollection,
+  "other-links": otherLinksCollection,
+  "unit-link": unitLinkCollection,
+  "what-we-do": whatWeDoCollection,
 };
