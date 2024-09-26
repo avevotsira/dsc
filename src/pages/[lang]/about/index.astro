@@ -35,12 +35,6 @@ const currentImage = langImages[lang] || enAboutUs;
 const title = "Explore DSC";
 const description =
   "Learn about the Digital Security Committee's strategic goals, roles, and responsibilities in developing Cambodia's digital government policy for 2022-2035.";
-
-const committeeList = [
-  "Digital Economy and Business Committee (Established 2021)",
-  "Digital Government Committee (Established 2022)",
-  "Digital Security Committee (Established 2024)",
-];
 ---
 
 <OrganizationLayout
@@ -59,44 +53,35 @@ const committeeList = [
             {t("about.dsc")}
           </TextElement>
           <TextElement variant="body" className="pb-6 text-justify">
-            In 2021, to ensure the development of vibrant digital economy and
-            society of Cambodia, the Royal Government of Cambodia under the
-            leadership of <strong
-              >Samdech Akka Moha Sena Padei Techo Hun Sen</strong
-            >, has established the “National Digital Economy and Society
-            Council” in accordance with Cambodia Digital Economy and Society
-            Policy Framework 2021-2035.
+            {t("about.dscText1.part1")}
+            <strong>{t("SamdechAkkaMohaSenaPadeiTechoHunSen")}</strong>{
+              t("about.dscText1.part2")
+            }
           </TextElement>
           <TextElement variant="body" className="pb-6 text-justify">
-            According to Cambodia Digital Economy and Society Policy Framework
-            2021-2035, the National Digital Economy and Society Council has
-            three “Etat-Major” committees that are responsible for specific
-            technical tasks. The committees are:
+            {t("about.dscText2")}
           </TextElement>
           <ul class="list-disc pb-6 pl-10">
-            {
-              committeeList.map((committee) => (
-                <li>
-                  <TextElement variant="body">{committee}</TextElement>
-                </li>
-              ))
-            }
+            <li>
+              <TextElement variant="body"
+                >{t("about.committeeList1")}</TextElement
+              >
+            </li>
+            <li>
+              <TextElement variant="body"
+                >{t("about.committeeList2")}</TextElement
+              >
+            </li>
+            <li>
+              <TextElement variant="body"
+                >{t("about.committeeList3")}</TextElement
+              >
+            </li>
           </ul>
           <TextElement variant="body" className="pb-6 text-justify">
-            Throughout the process of digital transformation and implementation
-            of Cambodia Digital Economy and Society Policy Framework 2021 –
-            2035, the Royal Government of Cambodia has foreseen “Digital
-            Security” as a vital asset to ensure the successful implementation
-            of the framework itself and also to ensure that Cambodia’s
-            cyberspace is safe from cyber risk. Therefore, in 2024, The Royal
-            Government of Cambodia, under the leadership of <strong
-              >Samdech Moha Borvor Thipadei Hun Manet</strong
-            >, has established the “Digital Security Committee” which is the
-            technical committee responsible for managing Cambodia’s digital
-            security with the purpose of protecting the interest of users,
-            resisting cyber-attack and competent to respond to all areas,
-            including technical and strength, as well as the management of the
-            entire national social security.
+            {t("about.dscText3.part1")}
+            <strong> {t("SamdechAkkaMohaSenaPadeiTechoHunSen")}</strong>
+            {t("about.dscText3.part2")}
           </TextElement>
         </header>
       </section>

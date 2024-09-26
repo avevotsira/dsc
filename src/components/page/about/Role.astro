@@ -1,37 +1,40 @@
 ---
 import TextElement from "../../TextElement";
+import { type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 
-const roleAndDutyList = [
-  {
-    text: "Directs and manages the technical work of digital security and serves as the direct assistants for the Chairman of the D.S.C.",
-  },
-  {
-    text: "Coordinates digital security work, including the Cambodia Cybersecurity Unit, the Anti-Cybercrime Unit, the Cyber Defence Unit, and the Cyber Diplomatic Unit for the D.S.C.",
-  },
-  {
-    text: "Manages and supports the general administrative work of the D.S.C.",
-  },
-  { text: "Manages and develops the human resources of the D.S.C." },
-  { text: "Arranges, manages and uses the budget of the D.S.C." },
-  { text: "Manages and stores files and data related to digital security." },
-  {
-    text: "Prepares and summarizes monthly, quarterly, semi-annual and annual reports for the D.S.C.",
-  },
-  { text: "Performs other duties as assigned by the Chairman of the D.S.C." },
-];
+const lang = Astro.currentLocale as SupportedLanguage;
+const t = useTranslations(lang);
 ---
 
 <div class="">
   <TextElement variant="body" className="mt-2">
-    The General Secretariat of the D.S.C. has the following roles and duties:
+    {t("structure.roleText")}
   </TextElement>
   <ul class="m-2 list-disc pl-4">
-    {
-      roleAndDutyList.map((roleAndDuty) => (
-        <li>
-          <TextElement variant="body">{roleAndDuty.text}</TextElement>
-        </li>
-      ))
-    }
+    <li>
+      <TextElement variant="body">{t("structure.role.point1")}</TextElement>
+    </li>
+    <li>
+      <TextElement variant="body">{t("structure.role.point2")}</TextElement>
+    </li>
+    <li>
+      <TextElement variant="body">{t("structure.role.point3")}</TextElement>
+    </li>
+    <li>
+      <TextElement variant="body">{t("structure.role.point4")}</TextElement>
+    </li>
+    <li>
+      <TextElement variant="body">{t("structure.role.point5")}</TextElement>
+    </li>
+    <li>
+      <TextElement variant="body">{t("structure.role.point6")}</TextElement>
+    </li>
+    <li>
+      <TextElement variant="body">{t("structure.role.point7")}</TextElement>
+    </li>
+    <li>
+      <TextElement variant="body">{t("structure.role.point8")}</TextElement>
+    </li>
   </ul>
 </div>

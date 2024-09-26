@@ -6,6 +6,7 @@ import TextElement from "@/components/TextElement";
 
 import type { DirectiveType } from "@/content/content.type";
 import type { SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import { ExternalLink } from "lucide-react";
@@ -23,6 +24,7 @@ interface Props {
 const { title, lang, date, image, file, type } = Astro.props as Props;
 
 const absoluteFileUrl = new URL(file, Astro.url.origin).href;
+const t = useTranslations(lang);
 ---
 
 <article
@@ -61,7 +63,8 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
       target="_blank"
       rel="noopener noreferrer"
     >
-      <ExternalLink size={14} aria-hidden="true" /> Read full document
+      <ExternalLink size={14} aria-hidden="true" />
+      {t("readFullDoc")}
     </ButtonLink>
   </div>
 </article>

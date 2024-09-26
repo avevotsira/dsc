@@ -12,8 +12,11 @@ import { ButtonLink } from "@/components/ButtonLink";
 import TextElement from "@/components/TextElement";
 
 import type { SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 import type { CollectionEntry } from "astro:content";
 import Autoplay from "embla-carousel-autoplay";
+
+// const lang = Astro.currentLocale as SupportedLanguage;
 
 interface ImageCarouselProps {
   carouselDatas: CollectionEntry<"articles">[];
@@ -31,6 +34,8 @@ export default function ImageCarousel({
       stopOnInteraction: false,
     }),
   );
+
+  const t = useTranslations(lang);
 
   return (
     <Carousel
@@ -69,10 +74,7 @@ export default function ImageCarousel({
                   href={getContentUrl(item, lang)}
                   aria-labelledby={`read-more-${item.slug}`}
                 >
-                  <span id={`read-more-${item.slug}`}>
-                    Read more
-                    <span className="sr-only"> about {item.data.title}</span>
-                  </span>
+                  <span id={`read-more-${item.slug}`}>{t("readMore")}</span>
                 </ButtonLink>
               </CardContent>
             </div>

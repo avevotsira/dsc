@@ -1,4 +1,6 @@
 ---
+import { type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 import type { Page } from "astro";
 
 interface Props {
@@ -6,6 +8,8 @@ interface Props {
 }
 
 const { page } = Astro.props;
+const lang = Astro.currentLocale as SupportedLanguage;
+const t = useTranslations(lang);
 ---
 
 <nav aria-label="Pagination" class="mt-8 flex justify-center">
@@ -15,12 +19,15 @@ const { page } = Astro.props;
         href={page.url.prev}
         class="mr-4 rounded bg-primary px-4 py-2 text-primary-foreground"
       >
-        Previous
+        {t("previous")}
       </a>
     )
   }
   <span class="px-4 py-2">
-    Page {page.currentPage} of {page.lastPage}
+    {t("page")}
+    {page.currentPage}
+    {t("of")}
+    {page.lastPage}
   </span>
   {
     page.url.next && (
@@ -28,7 +35,7 @@ const { page } = Astro.props;
         href={page.url.next}
         class="ml-4 rounded bg-primary px-4 py-2 text-primary-foreground"
       >
-        Next
+        {t("next")}
       </a>
     )
   }

@@ -5,7 +5,7 @@ import HomeArticleList from "@/components/page/home/HomeArticleList.astro";
 import HomeMain from "@/components/page/home/HomeMain.astro";
 import LawCardList from "@/components/page/home/law/LawCardList.astro";
 import TextElement from "@/components/TextElement";
-import UnitLinks from "@/components/UnitLinks";
+import UnitLinkList from "@/components/UnitLinkList.astro";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
 
 import { languages, type SupportedLanguage } from "@/i18n/ui";
@@ -50,6 +50,16 @@ const featuredDirectives = langDirectives
   )
   .slice(0, 4);
 
+const whatWeDoCard = await getCollection("what-we-do");
+const whatWeDo = whatWeDoCard
+  .filter((card) => card.data.lang === lang)
+  .sort((a, b) => a.id.localeCompare(b.id));
+
+const unitLinkData = await getCollection("unit-link");
+const unitLink = unitLinkData
+  .filter((item) => item.data.lang === lang)
+  .sort((a, b) => a.id.localeCompare(b.id));
+
 const t = useTranslations(lang);
 ---
 
@@ -80,7 +90,7 @@ const t = useTranslations(lang);
           >
             {t("home.whatwedo")}
           </TextElement>
-          <WhatWeDoGrid />
+          <WhatWeDoGrid content={whatWeDo} />
         </div>
       </section>
       <section
@@ -95,7 +105,7 @@ const t = useTranslations(lang);
           >
             {"Units under Digital Security Committee"}
           </TextElement>
-          <UnitLinks />
+          <UnitLinkList content={unitLink} />
         </div>
       </section>
       <section

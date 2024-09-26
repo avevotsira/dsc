@@ -5,6 +5,7 @@ import { ButtonLink } from "../../ButtonLink";
 import TextElement from "../../TextElement";
 import { AspectRatio } from "../../ui/aspect-ratio";
 import type { SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
@@ -21,6 +22,7 @@ interface Props {
 const { title, href, image, date, description, lang } = Astro.props as Props;
 
 const trimmedTitle = title.trim().replace(/\s+/g, "-");
+const t = useTranslations(lang);
 ---
 
 <article
@@ -70,9 +72,7 @@ const trimmedTitle = title.trim().replace(/\s+/g, "-");
       className="w-full"
       aria-labelledby={`read-more-${href}`}
     >
-      <span id={`read-more-${href}`}
-        >Read more<span class="sr-only"> about {title}</span></span
-      >
+      <span id={`read-more-${href}`}>{t("readMore")}</span>
     </ButtonLink>
   </div>
 </article>

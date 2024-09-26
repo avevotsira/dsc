@@ -1,0 +1,27 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  label: string;
+  image: ImageMetadata;
+  link: string;
+}
+
+const { label, image, link } = Astro.props as Props;
+---
+
+<a
+  href={link}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="group flex items-start gap-4 hover:underline"
+  aria-label={`${label} (opens in a new tab)`}
+>
+  <div class="flex items-center">
+    <Image src={image} alt={label} class="size-8 rounded-lg" loading="lazy" />
+    <span class="ml-2 underline hover:text-primary">
+      {label}
+    </span>
+  </div>
+</a>
