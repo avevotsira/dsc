@@ -1,5 +1,5 @@
 ---
-title: Coordinator and Promoter of National and International Cooperation Regarding Digital Security
+title: ស្ថាប័នសម្របសម្រួលនិងជំរុញកិច្ចសហប្រតិបត្តិការក្នុងប្រទេសនិងអន្តរជាតិពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល
 lang: km
-description: Coordinate and promote national and international cooperation related to digital security.
+description: សម្របសម្រួលនិងជំរុញកិច្ចសហប្រតិបត្តិការក្នុងប្រទេសនិងអន្តរជាតិពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល។
 ---

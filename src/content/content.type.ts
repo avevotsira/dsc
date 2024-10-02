@@ -1,9 +1,9 @@
 export const DIRECTIVE_TYPES = {
-  SUB_DECREE: "sub-decree",
-  ROYAL_DECREE: "royal-decree",
+  SUB_DECREE: "subDecree",
+  ROYAL_DECREE: "royalDecree",
   POLICY: "policy",
   DECISION: "decision",
-  PRESS_RELEASE: "press-release",
+  PRESS_RELEASE: "pressRelease",
 } as const;
 
 export type DirectiveType =

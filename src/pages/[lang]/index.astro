@@ -61,12 +61,11 @@ const unitLink = unitLinkData
   .sort((a, b) => a.id.localeCompare(b.id));
 
 const t = useTranslations(lang);
+const title = t("DSC2");
+const description = t("home.about.description");
 ---
 
-<BaseLayout
-  title={`Digital Security Committee - D.S.C.`}
-  description={"The Digital Security Committee (D.S.C.) was established in order to ensure the efficient and effective in supporting the National Council for Digital Economy and Society, with function of leading, coordinating and promoting the management of digital security in Cambodia."}
->
+<BaseLayout title={title} description={description}>
   <HomeMain>
     <TextElement variant="heading" className="sr-only">
       It was popularised in the 1960s
@@ -103,7 +102,7 @@ const t = useTranslations(lang);
             id="units-under-dsc-heading"
             className="mb-4 text-center text-primary"
           >
-            {"Units under Digital Security Committee"}
+            {t("home.unitsUnderDSCTitle")}
           </TextElement>
           <UnitLinkList content={unitLink} />
         </div>
@@ -118,7 +117,7 @@ const t = useTranslations(lang);
             id="cybersecurity-tips-heading"
             className="mb-4 text-center text-primary"
           >
-            {"Cybersecurity Tips"}
+            {t("nav.cybersecurityTips")}
           </TextElement>
           <HomeArticleList content={latestTips} lang={lang} />
         </div>
@@ -133,7 +132,7 @@ const t = useTranslations(lang);
             id="law-regulations-heading"
             className="mb-4 text-center text-primary"
           >
-            {"Laws and Regulations"}
+            {t("lawAndRegulations")}
           </TextElement>
           <LawCardList directives={featuredDirectives} lang={lang} />
         </div>

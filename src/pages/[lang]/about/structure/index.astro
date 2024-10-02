@@ -13,8 +13,6 @@ import { useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
-const title = "Structure";
-
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
     params: { lang },
@@ -39,6 +37,7 @@ const general = allSecretaries.filter(
 );
 
 const t = useTranslations(lang);
+const title = t("nav.exploreDSC.DSCstructure");
 ---
 
 <BaseLayout title={title}>
@@ -57,9 +56,7 @@ const t = useTranslations(lang);
       </TextElement>
       <TextElement variant="paragraph" className="pb-6 text-justify">
         {t("structure.dscHeading.text1")}
-        <strong>{t("SamdechAkkaMohaSenaPadeiTechoHunSen")}</strong>{
-          t("structure.dscHeading.text2")
-        }
+        <strong>{t("SamdechHunManet")}</strong>{t("structure.dscHeading.text2")}
       </TextElement>
       <ul
         class="grid gap-y-3 rounded-md bg-gray-200 p-3 text-sm sm:p-5 xl:text-base"

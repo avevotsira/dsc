@@ -32,7 +32,7 @@ const langImages = {
 
 const currentImage = langImages[lang] || enAboutUs;
 
-const title = "Explore DSC";
+const title = t("nav.exploreDSC.aboutDSC");
 const description =
   "Learn about the Digital Security Committee's strategic goals, roles, and responsibilities in developing Cambodia's digital government policy for 2022-2035.";
 ---
@@ -54,9 +54,7 @@ const description =
           </TextElement>
           <TextElement variant="body" className="pb-6 text-justify">
             {t("about.dscText1.part1")}
-            <strong>{t("SamdechAkkaMohaSenaPadeiTechoHunSen")}</strong>{
-              t("about.dscText1.part2")
-            }
+            <strong>{t("SamdechHunSen")}</strong>{t("about.dscText1.part2")}
           </TextElement>
           <TextElement variant="body" className="pb-6 text-justify">
             {t("about.dscText2")}
@@ -80,7 +78,7 @@ const description =
           </ul>
           <TextElement variant="body" className="pb-6 text-justify">
             {t("about.dscText3.part1")}
-            <strong> {t("SamdechAkkaMohaSenaPadeiTechoHunSen")}</strong>
+            <strong> {t("SamdechHunManet")}</strong>
             {t("about.dscText3.part2")}
           </TextElement>
         </header>

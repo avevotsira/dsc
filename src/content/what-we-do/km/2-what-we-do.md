@@ -1,5 +1,5 @@
 ---
-title: Digital Security Policymaker
+title: ស្ថាប័នបង្កើតគោលនយោបាយពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល
 lang: km
-description: Review and decide on proposals for revision and/or amendment of policies, laws, and regulations related to digital security.
+description: ពិនិត្យនិងសម្រេចលើសំណើរៀបចំ កែសម្រួល និង/ឬធ្វើវិសោធនកម្មច្បាប់ ខិតបទដ្ឋានគតិយុត្តនិងគោលនយោបាយពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល។
 ---

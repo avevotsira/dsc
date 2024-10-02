@@ -5,6 +5,7 @@ import Pagination from "@/components/Pagination.astro";
 import TextElement from "@/components/TextElement";
 
 import { languages } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 import BlogListLayout from "@/layouts/BlogListLayout.astro";
 import type { PaginateFunction } from "astro";
 import { getCollection } from "astro:content";
@@ -31,7 +32,9 @@ export async function getStaticPaths({
 const { lang } = Astro.params;
 const { page } = Astro.props;
 
-const title = "Articles";
+const t = useTranslations(lang);
+
+const title = t("nav.newEvent");
 const description = "Browse our collection of articles on various topics.";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 ---

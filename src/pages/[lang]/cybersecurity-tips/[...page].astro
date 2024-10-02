@@ -5,6 +5,7 @@ import Pagination from "@/components/Pagination.astro";
 import TextElement from "@/components/TextElement";
 
 import { languages } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 import BlogListLayout from "@/layouts/BlogListLayout.astro";
 import type { PaginateFunction } from "astro";
 import { getCollection } from "astro:content";
@@ -34,9 +35,10 @@ export async function getStaticPaths({
 const { lang } = Astro.params;
 const { page } = Astro.props;
 
-const title = "Cybersecurity Tips";
 const description =
   "A collection of cybersecurity tips to keep you safe online.";
+const t = useTranslations(lang);
+const title = t("nav.cybersecurityTips");
 ---
 
 <BlogListLayout
@@ -46,7 +48,7 @@ const description =
   content={page.data}
 >
   <Main>
-    <section aria-label="Cybersecurity Tips">
+    <section aria-label={title}>
       <TextElement variant="heading" className="text-primary">
         {title}
       </TextElement>

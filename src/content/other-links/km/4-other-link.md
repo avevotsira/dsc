@@ -1,5 +1,5 @@
 ---
-label: Ministry of Post and Telecommunications
+label: ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍
 lang: km
 link: https://mptc.gov.kh
 ---

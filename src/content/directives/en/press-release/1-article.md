@@ -4,7 +4,7 @@ file: royal-decrees/Placeholder-PDF.pdf
 featured: false
 image: src/asset/security-tips/anti-virus-tip.jpg
 title: This is a Mock Press Release
-type: press-release
+type: pressRelease
 lang: en
 ---
 

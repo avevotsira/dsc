@@ -3,8 +3,8 @@ date: 08/07/2021
 file: royal-decrees/royal-decree-organization-function-of-national-digital-economy-society-council.pdf
 featured: true
 image: src/asset/directives/royal-decree-functioning.png
-title: Royal-Decree No. NS/RKT/0821/564 on the Organization and Functioning of National Council for Digital Economy and Society.
-type: royal-decree
+title: ព្រះរាជក្រឹត្យលេខ ០៨២១/៥៦៤ ស្តីពីការរៀបចំ និងការប្រព្រឹត្តទៅរបស់ក្រុមប្រឹក្សាជាតិសេដ្ឋកិច្ច និងសង្គមឌីជីថល
+type: royalDecree
 lang: km
 ---
 

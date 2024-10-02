@@ -1,5 +1,5 @@
 ---
-title: Building and Developing Digital Security of Kingdom of Cambodia
+title: ការកសាងនិងការអភិវឌ្ឍសន្តិសុខឌីជីថលនៃព្រះរាជាណាចក្រកម្ពុជា
 lang: km
-description: Motivate, encourage, and support the building and development of digital security from every aspect.
+description: ជំរុញ លើកទឹកចិត្ត និងគាំទ្រការកសាងនិងការអភិវឌ្ឍសន្តិសុខឌីជីថលពីគ្រប់មជ្ឈដ្ឋាន។
 ---

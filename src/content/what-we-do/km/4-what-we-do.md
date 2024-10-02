@@ -1,5 +1,5 @@
 ---
-title: Coordinator of Cybersecurity Incidents Prevention
+title: ស្ថាប័នសម្របសម្រួលការឆ្លើយតបឧប្បត្តិហេតុសន្តិសុខសាយប័រសំខាន់ៗ និងការទប់ស្កាត់ហានិភ័យសន្តិសុខសាយប័រ
 lang: km
-description: Lead and coordinate at the political level and take action to respond to cybersecurity incidents and prevent cybersecurity threats in both public and private sectors.
+description: ដឹកនាំសម្របសម្រួលកម្រិតនយោបាយ និងដាក់វិធានការក្នុងការឆ្លើយតបឧប្បត្តិហេតុសន្តិសុខសាយប័រសំខាន់ៗ និងការទប់ស្កាត់ហានិភ័យសន្តិសុខសាយប័រ ទាំងវិស័យសាធារណៈនិងវិស័យឯកជន។
 ---

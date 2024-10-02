@@ -2,21 +2,33 @@ export const ui: Record<string, Record<string, string>> = {
   en: {
     readMore: "Read more",
     DSC: "Digital Security Committee",
+    DSC2: "Digital Security Committee - D.S.C.",
     about: "About",
     aboutUs: "About us",
     readFullDoc: "Read full document",
-    SamdechAkkaMohaSenaPadeiTechoHunSen:
-      "Samdech Akka Moha Sena Padei Techo Hun Sen",
-    noContent: "There is no content available yet.",
+    SamdechHunSen: "Samdech Akka Moha Sena Padei Techo Hun Sen",
+    SamdechHunManet: "Samdech Moha Borvor Thipadei Hun Manet",
+    noContent: "Sorry, there are no content available yet.",
     MinisterofPostandTelecommunications:
       "Minister of Post and Telecommunications",
     previous: "Previous",
     next: "Next",
     page: "Page",
     of: "of",
+    legislation: "Legislation",
+    royalDecree: "Royal Decree",
+    subDecree: "Sub Decree",
+    policy: "Policy",
+    decision: "Decision",
+    legislations: "Legislations",
+    royalDecrees: "Royal Decrees",
+    subDecrees: "Sub Decrees",
+    policies: "Policies",
+    decisions: "Decisions",
+    lawAndRegulations: "Law and Regulations",
     "nav.home": "Home",
     "nav.exploreDSC": "Explore D.S.C.",
-    "nav.exploreDSC.aboutDSC": "About DSC",
+    "nav.exploreDSC.aboutDSC": "About D.S.C.",
     "nav.exploreDSC.DSCstructure": "DSC's Structure",
     "nav.exploreDSC.DSCChairRemarks": "DSC Chair's Remarks",
     "nav.exploreDSC.DSCUnits": "DSC's Units",
@@ -37,6 +49,7 @@ export const ui: Record<string, Record<string, string>> = {
     "home.whatwedo": "What We Do",
     "home.about.description":
       "The Digital Security Committee (D.S.C.) was established in order to ensure the efficient and effective in supporting the National Council for Digital Economy and Society, with function of leading, coordinating and promoting the management of digital security in Cambodia.",
+    "home.unitsUnderDSCTitle": "Units under Digital Security Committee",
     "structure.heading": "Organization Structure of D.S.C.",
     "structure.intro":
       "The Royal Government has established the Digital Security Committee (D.S.C.) in order to ensure the efficient and effective function in leading, coordinating and promoting the management of digital security to protect the interests of all social actors against all forms of attacks as to respond to all technical aspects and relevant forces and thereby maintaining and protecting digital security.",
@@ -155,23 +168,34 @@ export const ui: Record<string, Record<string, string>> = {
     "unit.diplomatic": "Cyber Diplomatic Unit",
     "unit.diplomaticText":
       "The Cyber Diplomatic Unit is under the jurisdiction of the Ministry of Foreign Affairs and International Cooperation and perform its additional functions as an executive body unit for the General Secretariat of the D.S.C. on cyber diplomacy affairs of the Kingdom of Cambodia.",
-    legislation: "Legislations",
   },
   km: {
-    readMore: "Read more",
-    DSC: "Digital Security Committee",
-    about: "About",
-    aboutUs: "About us",
-    readFullDoc: "Read full document",
-    SamdechAkkaMohaSenaPadeiTechoHunSen:
-      "Samdech Akka Moha Sena Padei Techo Hun Sen",
-    noContent: "There is no content available yet.",
+    readMore: "អានបន្ថែម",
+    DSC: "គណៈកម្មាធិការសន្តិសុខឌីជីថល",
+    DSC2: "គណៈកម្មាធិការសន្តិសុខឌីជីថល - គ.ស.ឌ.",
+    about: "អំពី",
+    aboutUs: "អំពីយើង",
+    readFullDoc: "អានឯកសារនេះ",
+    SamdechHunSen: "សម្តេចអគ្គមហាសេនាបតីតេជោ ហ៊ុន សែន",
+    SamdechHunManet: "សម្តេចមហាបវរធិបតី ហ៊ុន ម៉ាណែត",
+    noContent: "សូមអភ័យទោស នៅពេលនេះមិនទាន់មានខ្លឹមសារនៅឡើយទេ។",
     MinisterofPostandTelecommunications:
-      "Minister of Post and Telecommunications",
-    previous: "Previous",
-    next: "Next",
-    page: "Page",
-    of: "of",
+      "រដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍",
+    previous: "​ក្រោយ",
+    next: "បន្ទាប់",
+    page: "ទំព័រ",
+    of: "នៃ",
+    legislation: "ច្បាប់ និងលិខិតបទដ្ឋានគតិយុត្ត",
+    royalDecree: "ព្រះរាជក្រឹត្យ",
+    subDecree: "អនុក្រឹត្យ",
+    policy: "គោលនយោបាយ",
+    decision: "សេចក្ដីសម្រេច",
+    legislations: "ច្បាប់ និងលិខិតបទដ្ឋានគតិយុត្ត",
+    royalDecrees: "ព្រះរាជក្រឹត្យ",
+    subDecrees: "អនុក្រឹត្យ",
+    policies: "គោលនយោបាយ",
+    decisions: "សេចក្ដីសម្រេច",
+    lawAndRegulations: "ច្បាប់ និងបទប្បញ្ញត្តិ",
     "nav.home": "ទំព័រដើម",
     "nav.exploreDSC": "ស្វែងយល់អំពី គ.ស.ឌ.",
     "nav.exploreDSC.aboutDSC": "អំពី គ.ស.ឌ.",
@@ -185,71 +209,69 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.newEvent": "ព័ត៌មាន និងព្រឹត្តិការណ៍",
     "nav.cybersecurityTips": "គន្លឹះសុវត្ថិភាពសន្តិសុខសាយប័រ",
     "nav.reportIncident": "រាយការណ៍អំពីឧប្បត្តិហេតុ",
-    "footer.quickLinks": "Quick Links",
-    "footer.contact": "Contact",
-    "footer.tel": "Tel",
-    "footer.email": "Email",
+    "footer.quickLinks": "តំណភ្ជាប់រហ័ស",
+    "footer.contact": "ទំនាក់ទំនង",
+    "footer.tel": "ទូរស័ព្ទ",
+    "footer.email": "អ៊ីមែល",
     "footer.address":
-      "Address: Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh Phnom Penh, Cambodia, 120210",
-    "footer.otherLinks": "Other Links",
-    "home.whatwedo": "What We Do",
+      "អគារលេខ ១៣ មហាវិថីព្រះមុនីវង្ស សង្កាត់ស្រះចក ខណ្ឌដូនពេញ រាជធានីភ្នំពេញ 120210",
+    "footer.otherLinks": "តំណផ្សេងៗ",
+    "home.whatwedo": "អ្វីដែលយើងធ្វើ",
     "home.about.description":
-      "The Digital Security Committee (D.S.C.) was established in order to ensure the efficient and effective in supporting the National Council for Digital Economy and Society, with function of leading, coordinating and promoting the management of digital security in Cambodia.",
-    "structure.heading": "Organization Structure of D.S.C.",
+      "គណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) បំពេញមុខងារជាសេនាធិការការងារបច្ចេកទេសជូន ក្រុមប្រឹក្សាជាតិសេដ្ឋកិច្ច និងសង្គមឌីជីថល និងត្រូវបានបង្កើតឡើងក្នុងគោលបំណងធានាប្រសិទ្ធភាព និងស័ក្តិសិទ្ធិភាព នៅក្នុងការដឹកនាំ សម្របសម្រួល និងជំរុញការគ្រប់គ្រងសន្តិសុខឌីជីថលនៃព្រះរាជាណាចក្រកម្ពុជា។",
+    "home.unitsUnderDSCTitle":
+      "អង្គភាពស្ថិតក្រោមឱវាទគណៈកម្មាធិការសន្តិសុខឌីជីថល",
+    "structure.heading": "រចនាសម្ព័ន្ធនៃ គ.ស.ឌ.",
     "structure.intro":
-      "The Royal Government has established the Digital Security Committee (D.S.C.) in order to ensure the efficient and effective function in leading, coordinating and promoting the management of digital security to protect the interests of all social actors against all forms of attacks as to respond to all technical aspects and relevant forces and thereby maintaining and protecting digital security.",
-    "structure.dscHeading":
-      "Structure of the Digital Security Committee (D.S.C.)",
+      "រាជរដ្ឋាភិបាលនៃព្រះរាជាណាចក្រកម្ពុជាបានបង្កើតឡើងនូវគណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) ក្នុងគោលបំណងធានាប្រសិទ្ធភាពនិងស័ក្តិសិទ្ធិភាពនៃការបំពេញមុខងារដឹកនាំ សម្របសម្រួល និងជំរុញការគ្រប់គ្រងសន្តិសុខឌីជីថល ដើម្បីការពារអត្ថប្រយោជន៍របស់គ្រប់តួអង្គសង្គមទប់ទល់នឹងការវាយប្រហារគ្រប់រូបភាព ឆ្លើយតបគ្រប់ផ្នែកទាំងបច្ចេកទេសនិងកម្លាំងពាក់ព័ន្ធនឹងការធានានិងការពារសន្តិសុខឌីជីថល។",
+    "structure.dscHeading": "សមាសភាពថ្នាក់ដឹកនាំរបស់ គ.ស.ឌ.",
     "structure.dscHeading.text1":
-      "The Digital Security Committee (D.S.C.) of Cambodia is led by ",
+      "គណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) នៃព្រះរាជាណាចក្រកម្ពុជាស្ថិតក្រោមការដឹកនាំដ៏ខ្ពង់ខ្ពស់របស់",
     "structure.dscHeading.text2":
-      ", Prime Minister of Cambodia as chairman. The committee is composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
+      "នាយករដ្ឋមន្ត្រីនៃកម្ពុជាជាប្រធាន និងមានសមាសភាពថ្នាក់ដឹកនាំ និងមន្ត្រីជាន់ខ្ពស់មកពីក្រសួងស្ថាប័ននានាជាអនុប្រធាន និងសមាជិក។",
     "structure.dscIntro":
       "The Digital Security Committee (D.S.C.) of Cambodia is led by Samdech Moha Bovor Thipadei HUN MANET, Prime Minister of Cambodia as chairman. The committee is composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
     "structure.orgIntro":
-      "The D.S.C. has a subordinating General Secretariat, overseeing 4 units, Cambodia Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Unit. These units are represented by Deputy Secretaries General from various ministries including Ministry of Post and Telecommunications, Ministry of Interior, Ministry of National Defence, and Ministry of Foreign Affairs and International Cooperation, with provisions for additional deputies as needed.",
+      "គ.ស.ឌ. មានអគ្គលេខាធិការដ្ឋានមួយជាសេនាធិការទទួលបន្ទុកសម្របសម្រួលលើអង្គភាពចំនួន ៤ ដែលរួមមាន អង្គភាពសន្តិសុខសាយប័រកម្ពុជា អង្គភាពប្រឆាំងឧក្រិដ្ឋកម្មសាយប័រ អង្គភាពការពារជាតិក្នុងលំហសាយប័រ និងអង្គភាពការទូតសាយប័រ។ អង្គភាពទាំង៤ ខាងលើត្រូវបានតំណាងដោយអគ្គលេខាធិការរងដែលមានសមាសភាពមកពីក្រសួងនានា រួមមាន ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ ក្រសួងមហាផ្ទៃ ក្រសួងការពារជាតិ និងក្រសួងការបរទេស និងសហប្រតិបត្តិការអន្តរជាតិ និងអគ្គលេខាធិការរងមួយចំនួនទៀត ដែលជាតំណាងក្រសួងស្ថាប័នពាក់ព័ន្ធ តាមការចាំបាច់។",
     "structure.figCaption":
-      "Organizational Structure of the Digital Security Committee",
+      "សមាសភាពថ្នាក់ដឹកនាំរបស់គណៈកម្មាធិការសន្តិសុខឌីជីថល",
     "structure.generalSecretaryHeading":
-      "Structure of D.S.C.'s General Secretariat",
+      "រចនាសម្ព័ន្ធនៃ អគ្គលេខាធិការដ្ឋាន គ.ស.ឌ.",
     "structure.generalSecretaryIntro":
-      "The General Secretariat of the Digital Security Committee (D.S.C.) is headed by the Minister of Post and Telecommunications, supported by several Deputy Secretaries General. The Deputy Secretaries General are responsible for directing and coordinating all technical and administrative aspects of digital security which include managing various specialized units, overseeing human and financial resources, ensuring the security of data and file management, and preparing comprehensive reports to D.S.C. Additionally, the Deputy Secretaries General will undertake any further duties as required by the Chairman, showcasing their pivotal role in the operational and strategic functions of the D.S.C. These roles are appointed by the Decision of the Royal Government of the Kingdom of Cambodia upon request from the Minister of Post and Telecommunications who is the Secretary General of D.S.C.",
+      "អគ្គលេខាធិការដ្ឋាននៃគណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) ដឹកនាំដោយអគ្គលេខាធិការដែលជារដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ និងអគ្គលេខាធិការរងមួយចំនួនជាជំនួយការ។ អគ្គលេខាធិការរងទទួលបន្ទុកដឹកនាំ និងសម្របសម្រួលផ្នែកបច្ចេកទេស និងរដ្ឋបាលនៃសន្តិសុខឌីជីថល ដែលរួមមាន ការគ្រប់គ្រងអង្គភាព ការត្រួតពិនិត្យធនធានមនុស្ស និងហិរញ្ញវត្ថុ ការធានាសុវត្ថិភាពនៃទិន្នន័យ និងសុវត្ថិភាពនៃការគ្រប់គ្រងឯកសារ និងការរៀបចំរបាយការណ៍អំពីអង្គភាពខ្លួនជូន គ.ស.ឌ.។ លើសពីនេះ អគ្គលេខាធិការរងនឹងត្រូវបំពេញភារកិច្ចបន្ថែមទៀតតាមការបញ្ជាដឹកនាំដ៏ខ្ពង់ខ្ពស់របស់ សម្តេចមហាបវរធីបតី ហ៊ុន ម៉ាណែត ប្រធាន គ.ស.ឌ. ដោយបង្ហាញពីតួនាទីសំខាន់របស់ពួកគេស្របតាម ការប្រតិបត្តិនិងយុទ្ធសាស្ត្រដែលដាក់ចេញដោយ គ.ស.ឌ.។ អគ្គលេខាធិការរងត្រូវទទួលតែងតាំងដោយសេចក្តីសម្រេចរបស់រាជរដ្ឋាភិបាលនៃព្រះរាជាណាចក្រកម្ពុជាតាមការស្នើសុំពីរដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ ដែលជាអគ្គលេខាធិការ នៃអគ្គលេខាធិការដ្ឋាន គ.ស.ឌ.។",
     "structure.roleText":
-      " The General Secretariat of the D.S.C. has the following roles and duties:",
+      "អគ្គលេខាធិការដ្ឋាន គ.ស.ឌ.មានតួនាទីនិងភារកិច្ចដូចតទៅ៖",
     "structure.role.point1":
-      "Directs and manages the technical work of digital security and serves as the direct assistants for the Chairman of the D.S.C.",
+      "ដឹកនាំគ្រប់គ្រងការងារបច្ចេកទេសសន្តិសុខឌីជីថល និងជាសេនាធិការផ្ទាល់របស់ប្រធាន គ.ស.ឌ.",
     "structure.role.point2":
-      "Coordinates digital security work, including the Cambodia Cybersecurity Unit, the Anti-Cybercrime Unit, the Cyber Defence Unit, and the Cyber Diplomatic Unit for the D.S.C.",
-    "structure.role.point3":
-      "Manages and supports the general administrative work of the D.S.C.",
-    "structure.role.point4":
-      "Manages and develops the human resources of the D.S.C.",
-    "structure.role.point5":
-      "Arranges, manages and uses the budget of the D.S.C.",
+      "សម្របសម្រួលការងារសន្តិសុខឌីជីថល រួមមាន អង្គភាពសន្តិសុខសាយប័រកម្ពុជា អង្គភាពប្រឆាំងឧក្រិដ្ឋកម្មសាយប័រ អង្គភាពការពារជាតិក្នុងលំហសាយប័រ និងអង្គភាពការទូតសាយប័រ ជូន គ.ស.ឌ.",
+    "structure.role.point3": "គ្រប់គ្រងនិងគាំទ្រការងាររដ្ឋបាលទូទៅនៃ គ.ស.ឌ.",
+    "structure.role.point4": "គ្រប់គ្រងនិងអភិវឌ្ឍធនធានមនុស្សនៃ គ.ស.ឌ.",
+    "structure.role.point5": "រៀបចំ គ្រប់គ្រង និងប្រើប្រាស់ថវិការបស់ គ.ស.ឌ.",
     "structure.role.point6":
-      "Manages and stores files and data related to digital security.",
+      "គ្រប់គ្រងនិងរក្សាទុកឯកសារនិងទិន្នន័យទាំងឡាយពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល",
     "structure.role.point7":
-      "Prepares and summarizes monthly, quarterly, semi-annual and annual reports for the D.S.C.",
+      "រៀបចំនិងបូកសរុបរបាយការណ៍ ប្រចាំខែ ត្រីមាស ឆមាស នព្វមាស និងប្រចាំឆ្នាំ ជូន គ.ស.ឌ.",
     "structure.role.point8":
-      "Performs other duties as assigned by the Chairman of the D.S.C.",
-    "structure.secretaryGeneral": "Secretary General",
-    "structure.deputySecretaryGeneral": "Deputy Secretary General",
+      "អនុវត្តភារកិច្ចផ្សេងទៀតតាមការប្រគល់ពីប្រធាន គ.ស.ឌ.។",
+    "structure.secretaryGeneral": "អគ្គលេខាធិការ",
+    "structure.deputySecretaryGeneral": "អគ្គលេខាធិការរង",
     "structure.deputySecretaryGeneral.text":
-      "The General Secretariat of the D.S.C. has the following Deputy Secretaries General:",
+      "អគ្គលេខាធិការដ្ឋាន គ.ស.ឌ. មានអគ្គលេខាធិការរងមួយចំនួនដូចខាងក្រោម៖",
     "structure.deputySecretaryGeneral.point1":
-      "One Deputy Secretary General in charge of the Cambodia Cybersecurity Unit that represents Ministry of Post and Telecommunications.",
+      "អគ្គលេខាធិការរង ១ រូប ទទួលបន្ទុកអង្គភាពសន្តិសុខសាយប័រកម្ពុជា ដែលជាតំណាង ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍",
     "structure.deputySecretaryGeneral.point2":
-      "One Deputy Secretary General in charge of the Anti-Cybercrime Unit that represents the Ministry of Interior.",
+      "អគ្គលេខាធិការរង ១ រូប ទទួលបន្ទុកអង្គភាពប្រឆាំងឧក្រិដ្ឋកម្មសាយប័រ ដែលជាតំណាងក្រសួងមហាផ្ទៃ",
     "structure.deputySecretaryGeneral.point3":
-      "One Deputy Secretary General in charge of the National Cyber Defence Unit that represents the Ministry of the National Defence.",
+      "អគ្គលេខាធិការរង ១ រូប ទទួលបន្ទុកអង្គភាពការពារជាតិក្នុងលំហសាយប័រ ដែលជាតំណាងក្រសួងការពារជាតិ",
     "structure.deputySecretaryGeneral.point4":
-      "One Deputy Secretary General in charge of the Cyber Diplomatic Unit that represents the Ministry of Foreign Affairs and International Cooperation.",
+      "អគ្គលេខាធិការរង ១ រូប ទទួលបន្ទុកអង្គភាពការទូតសាយប័រ ដែលជាតំណាងក្រសួងការបរទេសនិងសហប្រតិបត្តិការអន្តរជាតិ",
     "structure.deputySecretaryGeneral.point5":
-      "One Deputy Secretary General in charge of the Secretariat that represents the Ministry of Post and Telecommunications.",
+      "អគ្គលេខាធិការរង ១ រូប ទទួលបន្ទុកលេខាធិការដ្ឋាន ដែលជាតំណាងក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍",
     "structure.deputySecretaryGeneral.point6":
-      "Other Deputy Secretaries General, as necessary, that represent relevant ministries-institutions.",
+      "អគ្គលេខាធិការរងមួយចំនួនទៀត តាមការចាំបាច់ ដែលជាតំណាងក្រសួង ស្ថាប័នពាក់ព័ន្ធ។",
     "structure.deputySecretaryGeneral.point7":
-      "The Secretary General and the Deputy Secretaries General shall be appointed by a decision of the Royal Government at the request of the Minister of the Ministry of Post and Telecommunications.",
+      "អគ្គលេខាធិការ និងអគ្គលេខាធិការរងត្រូវបានតែងតាំងដោយសេចក្តីសម្រេចរបស់រាជរដ្ឋាភិបាលតាមសំណើរបស់រដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍។",
     "about.dsc": "About Digital Security Committee",
     "about.dscText1.part1":
       "In 2021, to ensure the development of vibrant digital economy and society of Cambodia, the Royal Government of Cambodia under the leadership of ",
@@ -298,22 +320,21 @@ export const ui: Record<string, Record<string, string>> = {
     "about.roleResponsibilities": "Role and Responsibilites",
     "about.roleResponsibilitiesText":
       "The Digital Security Committee (D.S.C.) was established under Sub Decree No. 44 ANKR.BT on the Organization and Functioning of Digital Security Committee dated 1st March, 2024 with the following role and responsibilities:",
-    "unit.heading": "Units Under the Digital Security Committee",
+    "unit.heading": "អង្គភាពស្ថិតក្រោមឱវាទគណៈកម្មាធិការសន្តិសុខឌីជីថល",
     "unit.headingText":
-      "The Digital Security Committee (D.S.C.) has one General Secretariat that oversees four units which include the Cambodia Cybersecurity Unit, Anti-Cybercrime Unit, Cyber Defence Unit, and Cyber Diplomatic Unit.",
-    "unit.ccsu": "Cambodia Cybersecurity Unit",
+      "គ.ស.ឌ. មានអគ្គលេខាធិការដ្ឋានមួយជាសេនាធិការទទួលបន្ទុកសម្របសម្រួលលើអង្គភាពចំនួន ៤ ដែលរួមមាន អង្គភាពសន្តិសុខសាយប័រកម្ពុជា អង្គភាពប្រឆាំងឧក្រិដ្ឋកម្មសាយប័រ អង្គភាពការពារជាតិក្នុងលំហសាយប័រ និងអង្គភាពការទូតសាយប័រ។",
+    "unit.ccsu": "អង្គភាពសន្តិសុខសាយប័រកម្ពុជា",
     "unit.ccsuText":
-      "The Cambodia Cybersecurity Unit is under the jurisdiction of the Ministry of Post and Telecommunications and perform its additional functions as an executive body unit for the General Secretariat of the D.S.C. on cybersecurity affairs of the Kingdom of Cambodia.",
-    "unit.cybercrime": "Anti-Cybercrime Unit",
+      "អង្គភាពសន្តិសុខសាយប័រកម្ពុជា ស្ថិតក្រោមសមត្ថកិច្ចរបស់ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ និងត្រូវបំពេញមុខងារបន្ថែមជាសេនាធិការរបស់អគ្គលេខាធិការដ្ឋាន គ.ស.ឌ. លើកិច្ចការពាក់ព័ន្ធនឹងសន្តិសុខសាយប័រនៃព្រះរាជាណាចក្រកម្ពុជា។",
+    "unit.cybercrime": "អង្គភាពប្រឆាំងឧក្រិដ្ឋកម្មសាយប័រ",
     "unit.cybercrimeText":
-      "The Anti-Cybercrime Unit is under the jurisdiction of the Ministry of Interior and perform its additional functions as an executive body unit for the General Secretariat of the D.S.C. on affairs related to anti-cybercrime measures of the Kingdom of Cambodia.",
-    "unit.defence": "Cyber Defence Unit",
+      "អង្គភាពប្រឆាំងឧក្រិដ្ឋកម្មសាយប័រ ស្ថិតក្រោមសមត្ថកិច្ចរបស់ក្រសួងមហាផ្ទៃ និងត្រូវបំពេញមុខងារបន្ថែមជាសេនាធិការរបស់អគ្គលេខាធិការដ្ឋាន គ.ស.ឌ. លើកិច្ចការពាក់ព័ន្ធនឹងវិធានការបង្ក្រាបបទល្មើសបច្ចេកវិទ្យានៃព្រះរាជាណាចក្រកម្ពុជា។",
+    "unit.defence": "អង្គភាពការពារជាតិក្នុងលំហសាយប័រ",
     "unit.defenceText":
-      "The Cyber Defence Unit is under the jurisdiction of the Ministry of National Defence and perform its additional functions as an executive body unit for the General Secretariat of the D.S.C. on affairs related to national cyber defence of the Kingdom of Cambodia.",
-    "unit.diplomatic": "Cyber Diplomatic Unit",
+      "អង្គភាពការពារជាតិក្នុងលំហសាយប័រ ស្ថិតក្រោមសមត្ថកិច្ចរបស់ក្រសួងការពារជាតិ និងត្រូវបំពេញមុខងារបន្ថែមជាសេនាធិការរបស់អគ្គលេខាធិការដ្ឋាន គ.ស.ឌ. លើកិច្ចការពាក់ព័ន្ធនឹងការការពារជាតិក្នុងលំហសាយប័រនៃព្រះរាជាណាចក្រកម្ពុជា។",
+    "unit.diplomatic": "អង្គភាពការទូតសាយប័រ",
     "unit.diplomaticText":
-      "The Cyber Diplomatic Unit is under the jurisdiction of the Ministry of Foreign Affairs and International Cooperation and perform its additional functions as an executive body unit for the General Secretariat of the D.S.C. on cyber diplomacy affairs of the Kingdom of Cambodia.",
-    legislation: "Legislations",
+      "អង្គភាពការទូតសាយប័រ ស្ថិតក្រោមសមត្ថកិច្ចរបស់ក្រសួងការបរទេស និងសហប្រតិបត្តិការអន្តរជាតិ និងត្រូវបំពេញមុខងារបន្ថែមជាសេនាធិការរបស់អគ្គលេខាធិការដ្ឋាន គ.ស.ឌ. លើកិច្ចការការទូតសាយប័រនៃព្រះរាជាណាចក្រកម្ពុជា",
   },
 } as const;
 
