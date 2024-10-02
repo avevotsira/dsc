@@ -20,28 +20,28 @@ export enum Routes {
 }
 
 export const NavRoutes = [
-  { label: "Home", href: Routes.Home },
+  { label: "nav.home", href: Routes.Home },
   {
-    label: "Explore DSC",
+    label: "nav.exploreDSC",
     children: [
-      { label: "About DSC", href: Routes.About },
-      { label: "DSC's Structure", href: Routes.Structure },
-      { label: "DSC Chair's Remarks", href: Routes.ChairRemarks },
-      { label: "DSC's Units", href: Routes.Unit },
+      { label: "nav.exploreDSC.aboutDSC", href: Routes.About },
+      { label: "nav.exploreDSC.DSCstructure", href: Routes.Structure },
+      { label: "nav.exploreDSC.DSCChairRemarks", href: Routes.ChairRemarks },
+      { label: "nav.exploreDSC.DSCUnits", href: Routes.Unit },
     ],
   },
   {
-    label: "Media Hub",
+    label: "nav.mediaHub",
     children: [
-      { label: "Legislations", href: Routes.LawsRegulations },
-      { label: "Policies", href: Routes.Policies },
-      { label: "Press Release", href: Routes.PressRelease },
+      { label: "nav.mediaHub.legislations", href: Routes.LawsRegulations },
+      { label: "nav.mediaHub.policies", href: Routes.Policies },
+      { label: "nav.mediaHub.pressRelease", href: Routes.PressRelease },
       // temp: disable video page
       // { label: "Videos", href: Routes.Videos },
     ],
   },
-  { label: "News & Events", href: Routes.Aritcles },
-  { label: "Cybersecurity Tips", href: Routes.CybersecurityTips },
+  { label: "nav.newEvent", href: Routes.Aritcles },
+  { label: "nav.cybersecurityTips", href: Routes.CybersecurityTips },
 ];
 
 interface RouteType {
