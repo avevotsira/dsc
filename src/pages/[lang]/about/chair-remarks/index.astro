@@ -4,10 +4,9 @@ import LeaderList from "@/components/page/leader/LeaderList.astro";
 import TextElement from "@/components/TextElement";
 
 import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
-
-const title = "DSC Chair's Remarks";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -19,6 +18,8 @@ const lang = Astro.params.lang as SupportedLanguage;
 let allLeaders = await getCollection("leaders");
 allLeaders = [];
 const leaders = allLeaders.filter((leader) => leader.data.lang === lang);
+const t = useTranslations(lang);
+const title = t("nav.exploreDSC.DSCChairRemarks");
 ---
 
 <BaseLayout title={title}>

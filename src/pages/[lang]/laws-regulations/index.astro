@@ -10,8 +10,6 @@ import { useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 
-const title = "Legislations";
-
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
     params: { lang },
@@ -35,9 +33,9 @@ function filterDirectives(
 }
 
 const directiveMapping = [
-  { type: DIRECTIVE_TYPES.ROYAL_DECREE, title: "Royal Decrees" },
-  { type: DIRECTIVE_TYPES.SUB_DECREE, title: "Sub Decrees" },
-  { type: DIRECTIVE_TYPES.DECISION, title: "Decisions" },
+  { type: DIRECTIVE_TYPES.ROYAL_DECREE, title: "royalDecrees" },
+  { type: DIRECTIVE_TYPES.SUB_DECREE, title: "subDecrees" },
+  { type: DIRECTIVE_TYPES.DECISION, title: "decisions" },
 ] as const;
 
 const directiveTypes = directiveMapping.map(({ type, title }) => ({
@@ -45,6 +43,7 @@ const directiveTypes = directiveMapping.map(({ type, title }) => ({
   title,
 }));
 const t = useTranslations(lang);
+const title = t("legislations");
 ---
 
 <BaseLayout title={title}>
@@ -52,7 +51,7 @@ const t = useTranslations(lang);
     <section aria-label={title}>
       <header>
         <TextElement variant="heading" className="text-center text-primary">
-          {t("legislation")}
+          {title}
         </TextElement>
         <Separator />
       </header>
@@ -61,7 +60,7 @@ const t = useTranslations(lang);
         directiveTypes.map(({ type, title }) => (
           <section aria-label={title}>
             <TextElement variant="subheading" className="text-primary">
-              {title}
+              {t(title)}
             </TextElement>
             <DirectiveCardList
               directives={filterDirectives(allDirectives, type, lang)}

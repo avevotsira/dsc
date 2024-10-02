@@ -1,5 +1,5 @@
 ---
-title: Digital Security Regulations and Policies Implementation Evaluator
+title: ស្ថាប័នវាយតម្លៃការអនុវត្តគោលនយោបាយ និងលិខិតបទដ្ឋានគតិយុត្តពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល
 lang: km
-description: Promote and review the implementation of policies, strategies, laws and regulations related to digital security.
+description: ជំរុញនិងពិនិត្យការអនុវត្តគោលនយោបាយ យុទ្ធសាស្ត្រ ច្បាប់ និងលិខិតបទដ្ឋានគតិយុត្តពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល។
 ---

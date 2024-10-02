@@ -1,6 +1,5 @@
 ---
 import { formatDate } from "@/lib/date-helper";
-import { replaceSeparatorsAndCapitalize } from "@/lib/string-helper";
 
 import { ButtonLink } from "@/components/ButtonLink";
 import TextElement from "@/components/TextElement";
@@ -24,7 +23,6 @@ interface Props {
 
 const { title, file, type, image, date, lang } = Astro.props as Props;
 const absoluteFileUrl = new URL(file, Astro.url.origin).href;
-const capitalizedType = replaceSeparatorsAndCapitalize(type);
 const t = useTranslations(lang);
 ---
 
@@ -47,7 +45,7 @@ const t = useTranslations(lang);
   </figure>
   <div class="flex w-full flex-col gap-2 sm:w-3/5 md:w-2/3 lg:w-2/3 xl:w-3/4">
     <TextElement variant="title" className="text-2xl text-primary">
-      {capitalizedType}
+      {t(type)}
     </TextElement>
     <time
       class="text-left text-mptc-secondary-foreground"

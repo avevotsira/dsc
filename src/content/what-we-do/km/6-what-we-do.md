@@ -1,5 +1,5 @@
 ---
-title: Human Resource Development
+title: ការអភិវឌ្ឍធនធានមនុស្ស ហិរញ្ញវត្ថុ និង បច្ចេកទេស
 lang: km
-description: Accumulate financial, technical, and human resources with the attribution of building and developing digital security.
+description: កៀរគរធនធានហិរញ្ញវត្ថុ ធនធានបច្ចេកទេស និងធនធានមនុស្ស ក្នុងបុព្វហេតុកសាងនិងអភិវឌ្ឍសន្តិសុខឌីជីថល។
 ---

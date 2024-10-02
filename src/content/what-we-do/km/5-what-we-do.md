@@ -1,5 +1,5 @@
 ---
-title: Digital Security Data Management
+title: ការគ្រប់គ្រងទិន្នន័យពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល
 lang: km
-description: Manage and collect data related to digital security.
+description: គ្រប់គ្រងនិងប្រមូលផ្តុំទិន្នន័យពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល។
 ---

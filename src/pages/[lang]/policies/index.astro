@@ -5,10 +5,9 @@ import TextElement from "@/components/TextElement";
 
 import { DIRECTIVE_TYPES } from "@/content/content.type";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
-
-const title = "Policies";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -24,6 +23,8 @@ const directives = allDirectives.filter(
     directive.data.lang === lang &&
     directive.data.type === DIRECTIVE_TYPES.POLICY,
 );
+const t = useTranslations(lang);
+const title = t("policies");
 ---
 
 <BaseLayout title={title}>
