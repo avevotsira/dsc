@@ -1,5 +1,5 @@
 import type { SupportedLanguage } from "@/i18n/ui";
-import { removeLanguagePrefix } from "@/i18n/utils";
+import { getTranslatedkey, removeLanguagePrefix } from "@/i18n/utils";
 import type { CollectionEntry } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
@@ -57,14 +57,14 @@ export function getLocalizedRoutes(
   return paths.map((path) => {
     if (path.href) {
       return {
-        label: path.label,
+        label: getTranslatedkey(path.label, locale),
         href: getRelativeLocaleUrl(locale, path.href),
       };
     }
 
     if (path.children) {
       return {
-        label: path.label,
+        label: getTranslatedkey(path.label, locale),
         children: getLocalizedRoutes(path.children, locale),
       };
     }
