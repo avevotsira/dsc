@@ -6,4 +6,4 @@ type: role
 lang: km
 ---
 
-Encourage and support the building and development of digital security from all aspects of life
+ជំរុញ លើកទឹកចិត្ត និងគាំទ្រការកសាងនិងការអភិវឌ្ឍសន្តិសុខឌីជីថលពីគ្រប់មជ្ឈដ្ឋាន។

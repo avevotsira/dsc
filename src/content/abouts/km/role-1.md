@@ -6,5 +6,4 @@ type: role
 lang: km
 ---
 
-Lead, coordinate and promote the management of digital security, including cybersecurity,
-cybercrime, cyberdefence and cyberdiplomacy
+ដឹកនាំ សម្របសម្រួល និងជំរុញការគ្រប់គ្រងសន្តិសុខឌីជីថល ដែលរួមមាន សន្តិសុខសាយប័រ ឧក្រិដ្ឋកម្មសាយប័រ ការការពារជាតិក្នុងលំហសាយប័រ និងការទូតសាយប័រ។

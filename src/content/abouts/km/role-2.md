@@ -6,5 +6,4 @@ type: role
 lang: km
 ---
 
-Lead and coordinate at the political level and take action to respond to main cybersecurity incidents
-and prevent cybersecurity risks in both the public and private sectors
+ពិនិត្យនិងសម្រេចលើសំណើរៀបចំ កែសម្រួល និង/ឬធ្វើវិសោធនកម្មច្បាប់ ខិតបទដ្ឋានគតិយុត្តនិងគោលនយោបាយពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល។

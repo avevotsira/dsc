@@ -6,4 +6,4 @@ type: role
 lang: km
 ---
 
-Coordinate and promote in-country and international cooperation related to digital security
+គ្រប់គ្រងនិងប្រមូលផ្តុំទិន្នន័យពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល។
