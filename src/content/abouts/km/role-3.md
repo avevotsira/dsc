@@ -6,5 +6,4 @@ type: role
 lang: km
 ---
 
-Review and decide on proposals for revision and/or amendment of policies, laws, and regulations
-related to digital security
+ជំរុញនិងពិនិត្យការអនុវត្តគោលនយោបាយ យុទ្ធសាស្ត្រ ច្បាប់ និងលិខិតបទដ្ឋានគតិយុត្តពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល។

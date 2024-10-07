@@ -38,8 +38,8 @@ const t = useTranslations(lang);
           <SocialMedia />
         </div>
       </div>
-      <div class="grid gap-12 lg:w-3/4 lg:grid-cols-4">
-        <nav>
+      <div class="grid gap-12 lg:w-3/4 lg:grid-cols-7">
+        <nav class="lg:col-span-2">
           <h2 class="mb-4 text-lg font-semibold">{t("footer.quickLinks")}</h2>
           <ul class="space-y-3">
             {
@@ -63,7 +63,7 @@ const t = useTranslations(lang);
             }
           </ul>
         </nav>
-        <address class="not-italic">
+        <address class="not-italic lg:col-span-2">
           <h2 class="mb-4 text-lg font-semibold">{t("footer.contact")}</h2>
           <ul class="space-y-3">
             <li>

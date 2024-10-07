@@ -272,54 +272,56 @@ export const ui: Record<string, Record<string, string>> = {
       "អគ្គលេខាធិការរងមួយចំនួនទៀត តាមការចាំបាច់ ដែលជាតំណាងក្រសួង ស្ថាប័នពាក់ព័ន្ធ។",
     "structure.deputySecretaryGeneral.point7":
       "អគ្គលេខាធិការ និងអគ្គលេខាធិការរងត្រូវបានតែងតាំងដោយសេចក្តីសម្រេចរបស់រាជរដ្ឋាភិបាលតាមសំណើរបស់រដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍។",
-    "about.dsc": "About Digital Security Committee",
+    "about.dsc": "អំពីគណៈកម្មាធិការសន្តិសុខឌីជីថល",
     "about.dscText1.part1":
-      "In 2021, to ensure the development of vibrant digital economy and society of Cambodia, the Royal Government of Cambodia under the leadership of ",
+      "នៅឆ្នាំ 2021 ដើម្បីធានាឱ្យបាននូវការអភិវឌ្ឍសេដ្ឋកិច្ច និងសង្គមឌីជីថលរស់រវើកសម្រាប់ព្រះរាជាណាចក្រកម្ពុជា រាជរដ្ឋាភិបាលកម្ពុជា ក្រោមការដឹកនាំដ៏ខ្ពង់ខ្ពស់របស់ ",
     "about.dscText1.part2":
-      ", has established the “National Digital Economy and Society Council” in accordance with Cambodia Digital Economy and Society Policy Framework 2021-2035.",
+      ' បានសម្រេចបង្កើត "ក្រុមប្រឹក្សាជាតិសេដ្ឋកិច្ច និងសង្គមឌីជីថល" ស្របតាមក្របខណ្ឌគោលនយោបាយសេដ្ឋកិច្ច និងសង្គមឌីជីថលកម្ពុជា ២០២១-២០៣៥។',
     "about.dscText2":
-      "According to Cambodia Digital Economy and Society Policy Framework 2021-2035, the National Digital Economy and Society Council has three “Etat-Major” committees that are responsible for specific technical tasks. The committees are:",
+      "យោងតាមក្របខណ្ឌគោលនយោបាយសេដ្ឋកិច្ច និងសង្គមឌីជីថលកម្ពុជា 2021-2035 ក្រុមប្រឹក្សាជាតិសេដ្ឋកិច្ច និងសង្គមឌីជីថលជាតិមានគណៈកម្មាធិការចំនួនបីបំពេញមុខងារជាសេនាធិការទទួលខុសត្រូវលើការងារបច្ចេកទេសជាក់លាក់។ គណៈកម្មាធិការទាំងនេះរួមមាន៖",
     "about.committeeList1":
-      "Digital Economy and Business Committee (Established 2021)",
-    "about.committeeList2": "Digital Government Committee (Established 2022)",
-    "about.committeeList3": "Digital Security Committee (Established 2024)",
+      "គណៈកម្មាធិការសេដ្ឋកិច្ច និង ធុរកិច្ចឌីជីថល (បង្កើតឡើងក្នុងឆ្នាំ២០២១)",
+    "about.committeeList2":
+      "គណៈកម្មាធិការរដ្ឋាភិបាលឌីជីថល (បង្កើតឡើងក្នុងឆ្នាំ២០២២)",
+    "about.committeeList3":
+      "គណៈកម្មាធិការសន្តិសុខឌីជីថល (បង្កើតឡើងក្នុងឆ្នាំ២០២៤)",
     "about.dscText3.part1":
-      "Throughout the process of digital transformation and implementation of Cambodia Digital Economy and Society Policy Framework 2021–2035, the Royal Government of Cambodia has foreseen “Digital Security” as a vital asset to ensure the successful implementation of the framework itself and also to ensure that Cambodia’s cyberspace is safe from cyber risk. Therefore, in 2024, The Royal Government of Cambodia, under the leadership of",
+      'នៅក្នុងដំណើរការបរិវត្តកម្មឌីជីថល និងការអនុវត្តក្របខណ្ឌគោលនយោបាយសេដ្ឋកិច្ច និងសង្គមឌីជីថលកម្ពុជា ឆ្នាំ ២០២១-២០៣៥ រាជរដ្ឋាភិបាលកម្ពុជាបានសង្កេតឃើញ "សន្តិសុខឌីជីថល" ជាកត្តាដ៏សំខាន់មួយដើម្បីធានាការអនុវត្តប្រកបដោយជោគជ័យនៃក្របខណ្ឌគោលនយោបាយនេះ និងដើម្បីធានាថា ដែនលំហសាយប័រនៃព្រះរាជាណាចក្រកម្ពុជាមានសុវត្ថិភាពពីហានិភ័យសន្តិសុខសាយប័រ ក្នុងន័យនេះ រាជរដ្ឋាភិបាលនីតិកាលទី៧នៃព្រះរាជាណាចក្រកម្ពុជា ក្រោមការដឹកនាំដ៏ខ្ពង់ខ្ពស់របស់ ',
     "about.dscText3.part2":
-      "has established the “Digital Security Committee” which is the technical committee responsible for managing Cambodia’s digital security with the purpose of protecting the interests of users, resisting cyber-attacks, and responding competently to all areas, including technical expertise and strength, as well as managing the entire national social security.",
-    "about.vision": "Vision",
+      " នាយករដ្ឋមន្ត្រីនៃព្រះរាជាណាចក្រកម្ពុជា បានសម្រេចបង្កើត “គណៈកម្មាធិការសន្តិសុខឌីជីថល” ដែលជាគណៈកម្មាធិការជំនាញទទួលខុសត្រូវក្នុងការគ្រប់គ្រងសន្តិសុខឌីជីថលរបស់ព្រះរាជាណាចក្រកម្ពុជា ក្នុងគោលបំណងការពារអត្ថប្រយោជន៍របស់អ្នកប្រើប្រាស់ ទប់ទល់នឹងការវាយប្រហារ និងមានសមត្ថភាពឆ្លើយតបគ្រប់ផ្នែក ទាំងបច្ចេកទេស និងកម្លាំង ក៏ដូចជាគ្រប់គ្រងឱ្យបាននូវសន្តិសុខសង្គមជាតិទាំងមូល។",
+    "about.vision": "ចក្ខុវិស័យ",
     "about.vision.text":
-      "To ensure a vibrant digital economy and digital security of the Kingdom of Cambodia, the Digital Security Committee (D.S.C.) has the following visions:",
+      "ដើម្បីធានាបាននូវសេដ្ឋកិច្ចឌីជីថល និងសន្តិសុខឌីជីថលដ៏រស់រវើកនៃព្រះរាជាណាចក្រកម្ពុជា គណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ..) មានចក្ខុវិស័យដូចខាងក្រោម៖",
     "about.vision.point1":
-      "To fulfill its functions as the “Etat-Major” to the National Digital Economy and Society Council.",
+      "បំពេញមុខងារជាសេនាធិការជំនាញជូនក្រុមប្រឹក្សាជាតិសេដ្ឋកិច្ច និងសង្គមឌីជីថល",
     "about.vision.point2":
-      "To resist and respond to all form of cyberattacks, thereby safeguarding the digital security of Cambodia’s cyberspace.",
+      "ទប់ទល់ និងឆ្លើយតបទៅលើកាន់ការវាយប្រហារផ្នែកសាយប័រគ្រប់ទម្រង់ ក្នុងន័យការពារសន្តិសុខឌីជីថលនៃលំហសាយប័ររបស់ព្រះរាជាណាចក្រកម្ពុជា។",
     "about.vision.point3":
-      "To coordinate, direct, prepare, implement, monitor, and evaluate the implementation of policies, strategies, measures, technical standards and action plans related to digital security including cybersecurity, cybercrime, cyber defence, and cyber diplomacy.",
+      "សម្របសម្រួល ដឹកនាំ រៀបចំ អនុវត្ត ត្រួតពិនិត្យ និងវាយតម្លៃការអនុវត្តគោលនយោបាយ យុទ្ធសាស្ត្រ វិធានការ ស្តង់ដារបច្ចេកទេស និងផែនការសកម្មភាពទាក់ទងនឹងសន្តិសុខឌីជីថល រួមមានសន្តិសុខសាយប័រ ឧក្រិដ្ឋកម្មសាយប័រ ការការពារជាតិក្នុងលំហសាយប័រ និងការទូតសាយប័រ។",
     "about.vision.point4":
-      "To develop Digital Security Policy's framework, regulation, and strategy related to Cambodia’s digital security.",
+      "អភិវឌ្ឍក្របខណ្ឌគោលនយោបាយសន្តិសុខឌីជីថល លិខិបទដ្ឋានគតិយុត្ត និងយុទ្ធសាស្ត្រដែលពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថលនៃព្រះរាជាណាចក្រកម្ពុជា។",
     "about.vision.point5":
-      "To ensure a successful implementation of the Cambodia Digital Economy and Society Policy Framework 2021-2035 and Digital Government Policy 2022-2035.",
-    "about.mission": "Mission",
+      "ធានាបានឱ្យបាននូវការអនុវត្តក្របខណ្ឌគោលនយោបាយសេដ្ឋកិច្ច និងសង្គមឌីជីថលកម្ពុជា ឆ្នាំ២០២១-២០៣៥ និងគោលនយោបាយរដ្ឋាភិបាលឌីជីថលកម្ពុជា ២០២២-២០៣៥ ប្រកបដោយភាពជោគជ័យ។",
+    "about.mission": "បេសកកម្ម",
     "about.mission.text":
-      "To ensure a vibrant digital economy and Digital Security of the Kingdom of Cambodia, the Digital Security Committee (D.S.C.) has the following missions:",
+      "ដើម្បីធានាបាននូវសេដ្ឋកិច្ចឌីជីថល និងសន្តិសុខឌីជីថលដ៏រស់រវើកនៃព្រះរាជាណាចក្រកម្ពុជា គណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ..) មានបេសកកម្មដូចខាងក្រោម៖",
     "about.mission.point1":
-      "Intercommunicate and complement closely with the Digital Government Committee and Digital Economy and Business Committee to ensure a successful implementation of the Cambodia Digital Economy and Society Policy Framework 2021-2035 and Digital Government Policy 2022-2035.",
+      "មានអន្តរទំនាក់ទំនងសហការយ៉ាងជិតស្និទ្ធ និងបំពេញគ្នារវាង គណៈកម្មាធិការរដ្ឋាភិបាលឌីជីថល និងគណៈកម្មាធិការសេដ្ឋកិច្ច និងធុរកិច្ចឌីជីថល ដើម្បីធានាឱ្យបាននូវការអនុវត្តក្របខណ្ឌគោលនយោបាយសេដ្ឋកិច្ច និងសង្គមឌីជីថលកម្ពុជា ឆ្នាំ២០២១-២០៣៥ និងគោលនយោបាយរដ្ឋាភិបាលឌីជីថលកម្ពុជា ២០២២-២០៣៥ ប្រកបដោយភាពជោគជ័យ។",
     "about.mission.point2":
-      "Act as a policy maker to review and decide on proposal for revision and/or amendment of laws, regulations, and policies related to digital security.",
+      "បំពេញតួនាទីជាស្ថាប័នបង្កើតគោលនយោបាយ ក្នុងការពិនិត្យ និងសម្រេចលើសំណើសម្រាប់ការពិនិត្យឡើងវិញ និង/ឬការធ្វើវិសោធនកម្មច្បាប់ បទប្បញ្ញត្តិ និងគោលនយោបាយទាក់ទងនឹងសន្តិសុខឌីជីថល។",
     "about.mission.point3":
-      "Act as coordinator of national and international cooperation related to digital security.",
+      "បំពេញតួនាទីជាស្ថាប័នសម្របសម្រួលកិច្ចសហប្រតិបត្តិការក្នុងប្រទេស និងអន្តរជាតិទាក់ពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល។",
     "about.mission.point4":
-      "Mobilize the financial, technical, and human resources with aim of building and developing Cambodia’s digital security.",
+      "កៀរគរធនធានហិរញ្ញវត្ថុ បច្ចេកទេស និងធនធានមនុស្ស ក្នុងបុព្វហេតុកសាង និងអភិវឌ្ឍសន្តិសុខឌីជីថលរបស់ព្រះរាជាណាចក្រកម្ពុជា។",
     "about.goals": "Goals",
     "about.goalsText":
       "In order to achieve the above visions and objectives, the Royal Government has set four strategic goals as follows:",
     "about.strategies": "Strategies",
     "about.strategiesText":
       "The Digital Security Committee has established and outlined the following strategies",
-    "about.roleResponsibilities": "Role and Responsibilites",
+    "about.roleResponsibilities": "តួនាទីនិងភារកិច្ច",
     "about.roleResponsibilitiesText":
-      "The Digital Security Committee (D.S.C.) was established under Sub Decree No. 44 ANKR.BT on the Organization and Functioning of Digital Security Committee dated 1st March, 2024 with the following role and responsibilities:",
+      "គណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) ត្រូវបានបង្កើតឡើងដោយអនុក្រឹត្យលេខ 44 អនក្រ.បក ស្តីពីការរៀបចំនិងការប្រព្រឹត្តទៅរបស់គណៈកម្មាធិការសន្តិសុខឌីជីថល ចុះថ្ងៃទី 1 ខែមីនា ឆ្នាំ 2024 ដែលមានតួនាទី និងភារៈកិច្ចដូចខាងក្រោម៖",
     "unit.heading": "អង្គភាពស្ថិតក្រោមឱវាទគណៈកម្មាធិការសន្តិសុខឌីជីថល",
     "unit.headingText":
       "គ.ស.ឌ. មានអគ្គលេខាធិការដ្ឋានមួយជាសេនាធិការទទួលបន្ទុកសម្របសម្រួលលើអង្គភាពចំនួន ៤ ដែលរួមមាន អង្គភាពសន្តិសុខសាយប័រកម្ពុជា អង្គភាពប្រឆាំងឧក្រិដ្ឋកម្មសាយប័រ អង្គភាពការពារជាតិក្នុងលំហសាយប័រ និងអង្គភាពការទូតសាយប័រ។",

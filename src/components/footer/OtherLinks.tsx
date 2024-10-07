@@ -11,7 +11,7 @@ interface OtherlinkProps {
 export default function OtherLinks({ content, lang }: OtherlinkProps) {
   const t = useTranslations(lang);
   return (
-    <nav className="lg:col-span-2 lg:pl-8">
+    <nav className="lg:col-span-3 lg:pl-12">
       <h2 className="mb-4 text-lg font-semibold">{t("footer.otherLinks")}</h2>
       <ul className="space-y-4">
         {content.map((item) => (

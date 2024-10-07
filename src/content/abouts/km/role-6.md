@@ -6,5 +6,4 @@ type: role
 lang: km
 ---
 
-Mobilize the financial, technical, and human resources in the cause of building and developing digital
-security
+កៀរគរធនធានហិរញ្ញវត្ថុ ធនធានបច្ចេកទេស និងធនធានមនុស្ស ក្នុងបុព្វហេតុកសាងនិងអភិវឌ្ឍសន្តិសុខឌីជីថល។

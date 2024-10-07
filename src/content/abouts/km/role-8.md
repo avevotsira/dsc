@@ -6,4 +6,4 @@ type: role
 lang: km
 ---
 
-Perform other roles and duties as needed related to digital security matters
+សម្របសម្រួលនិងជំរុញកិច្ចសហប្រតិបត្តិការក្នុងប្រទេសនិងអន្តរជាតិពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថល។
