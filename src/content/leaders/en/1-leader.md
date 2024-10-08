@@ -1,5 +1,5 @@
 ---
-name: F. Kennedy
+name: leader 1 in en
 image: src/asset/secretaries/user-avatar.png
 title: General Secretary
 lang: en

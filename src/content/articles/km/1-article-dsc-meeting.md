@@ -24,3 +24,7 @@ lang: km
 ![photo 8](src/asset/articles/1-article-dsc-meeting/article-1-photo-8.webp)
 ![photo 9](src/asset/articles/1-article-dsc-meeting/article-1-photo-9.webp)
 ![photo 10](src/asset/articles/1-article-dsc-meeting/article-1-photo-10.webp)
+![photo 11](src/asset/articles/1-article-dsc-meeting/article-1-photo-11.webp)
+![photo 12](src/asset/articles/1-article-dsc-meeting/article-1-photo-12.webp)
+![photo 13](src/asset/articles/1-article-dsc-meeting/article-1-photo-13.webp)
+![photo 14](src/asset/articles/1-article-dsc-meeting/article-1-photo-14.webp)
