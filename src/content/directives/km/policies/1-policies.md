@@ -1,8 +1,8 @@
 ---
 date: 05/10/2021
-file: policies/policies-digital-economy-and-society-policy-framework.pdf
+file: policies/policies-digital-economy-and-society-policy-framework-kh.pdf
 featured: true
-image: src/asset/directives/Digital-Economy-and-Society-Framework.jpg
+image: src/asset/directives/Digital-Economy-and-Society-Framework-kh.png
 title: ក្របខណ្ឌគោលនយោបាយសេដ្ឋកិច្ច និងសង្គមឌីជីថលកម្ពុជា ២០២១-២០៣៥
 type: policy
 lang: km
