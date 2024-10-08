@@ -67,8 +67,10 @@ export const ui: Record<string, Record<string, string>> = {
       "Organizational Structure of the Digital Security Committee",
     "structure.generalSecretaryHeading":
       "Structure of D.S.C.'s General Secretariat",
-    "structure.generalSecretaryIntro":
-      "The General Secretariat of the Digital Security Committee (D.S.C.) is headed by the Minister of Post and Telecommunications, supported by several Deputy Secretaries General. The Deputy Secretaries General are responsible for directing and coordinating all technical and administrative aspects of digital security which include managing various specialized units, overseeing human and financial resources, ensuring the security of data and file management, and preparing comprehensive reports to D.S.C. Additionally, the Deputy Secretaries General will undertake any further duties as required by the Chairman, showcasing their pivotal role in the operational and strategic functions of the D.S.C. These roles are appointed by the Decision of the Royal Government of the Kingdom of Cambodia upon request from the Minister of Post and Telecommunications who is the Secretary General of D.S.C.",
+    "structure.generalSecretaryIntro.part1":
+      "The General Secretariat of the Digital Security Committee (D.S.C.) is headed by the Minister of Post and Telecommunications, supported by several Deputy Secretaries General. The Deputy Secretaries General are responsible for directing and coordinating all technical and administrative aspects of digital security which include managing various specialized units, overseeing human and financial resources, ensuring the security of data and file management, and preparing comprehensive reports to D.S.C. Additionally, the Deputy Secretaries General will undertake any further duties as required under the leadership of ",
+    "structure.generalSecretaryIntro.part2":
+      " Chairman of the D.S.C. showcasing their pivotal role in the operational and strategic functions of the D.S.C. These roles are appointed by the Decision of the Royal Government of the Kingdom of Cambodia upon request from the Minister of Post and Telecommunications who is the Secretary General of D.S.C.",
     "structure.roleText":
       " The General Secretariat of the D.S.C. has the following roles and duties:",
     "structure.role.point1":
@@ -233,12 +235,13 @@ export const ui: Record<string, Record<string, string>> = {
       "The Digital Security Committee (D.S.C.) of Cambodia is led by Samdech Moha Bovor Thipadei HUN MANET, Prime Minister of Cambodia as chairman. The committee is composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
     "structure.orgIntro":
       "គ.ស.ឌ. មានអគ្គលេខាធិការដ្ឋានមួយជាសេនាធិការទទួលបន្ទុកសម្របសម្រួលលើអង្គភាពចំនួន ៤ ដែលរួមមាន អង្គភាពសន្តិសុខសាយប័រកម្ពុជា អង្គភាពប្រឆាំងឧក្រិដ្ឋកម្មសាយប័រ អង្គភាពការពារជាតិក្នុងលំហសាយប័រ និងអង្គភាពការទូតសាយប័រ។ អង្គភាពទាំង៤ ខាងលើត្រូវបានតំណាងដោយអគ្គលេខាធិការរងដែលមានសមាសភាពមកពីក្រសួងនានា រួមមាន ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ ក្រសួងមហាផ្ទៃ ក្រសួងការពារជាតិ និងក្រសួងការបរទេស និងសហប្រតិបត្តិការអន្តរជាតិ និងអគ្គលេខាធិការរងមួយចំនួនទៀត ដែលជាតំណាងក្រសួងស្ថាប័នពាក់ព័ន្ធ តាមការចាំបាច់។",
-    "structure.figCaption":
-      "រចនាសម្ព័ន្ធរបស់គណៈកម្មាធិការសន្តិសុខឌីជីថល",
+    "structure.figCaption": "រចនាសម្ព័ន្ធរបស់គណៈកម្មាធិការសន្តិសុខឌីជីថល",
     "structure.generalSecretaryHeading":
       "រចនាសម្ព័ន្ធនៃអគ្គលេខាធិការដ្ឋាន គ.ស.ឌ.",
-    "structure.generalSecretaryIntro":
-      "អគ្គលេខាធិការដ្ឋាននៃគណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) ដឹកនាំដោយអគ្គលេខាធិការដែលជារដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ និងអគ្គលេខាធិការរងមួយចំនួនជាជំនួយការ។ អគ្គលេខាធិការរងទទួលបន្ទុកដឹកនាំ និងសម្របសម្រួលផ្នែកបច្ចេកទេស និងរដ្ឋបាលនៃសន្តិសុខឌីជីថល ដែលរួមមាន ការគ្រប់គ្រងអង្គភាព ការត្រួតពិនិត្យធនធានមនុស្ស និងហិរញ្ញវត្ថុ ការធានាសុវត្ថិភាពនៃទិន្នន័យ និងសុវត្ថិភាពនៃការគ្រប់គ្រងឯកសារ និងការរៀបចំរបាយការណ៍អំពីអង្គភាពខ្លួនជូន គ.ស.ឌ.។ លើសពីនេះ អគ្គលេខាធិការរងនឹងត្រូវបំពេញភារកិច្ចបន្ថែមទៀតតាមការបញ្ជាដឹកនាំដ៏ខ្ពង់ខ្ពស់របស់ សម្តេចមហាបវរធីបតី ហ៊ុន ម៉ាណែត ប្រធាន គ.ស.ឌ. ដោយបង្ហាញពីតួនាទីសំខាន់របស់ពួកគេស្របតាម ការប្រតិបត្តិនិងយុទ្ធសាស្ត្រដែលដាក់ចេញដោយ គ.ស.ឌ.។ អគ្គលេខាធិការរងត្រូវទទួលតែងតាំងដោយសេចក្តីសម្រេចរបស់រាជរដ្ឋាភិបាលនៃព្រះរាជាណាចក្រកម្ពុជាតាមការស្នើសុំពីរដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ ដែលជាអគ្គលេខាធិការ នៃអគ្គលេខាធិការដ្ឋាន គ.ស.ឌ.។",
+    "structure.generalSecretaryIntro.part1":
+      "អគ្គលេខាធិការដ្ឋាននៃគណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) ដឹកនាំដោយអគ្គលេខាធិការដែលជារដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ និងអគ្គលេខាធិការរងមួយចំនួនជាជំនួយការ។ អគ្គលេខាធិការរងទទួលបន្ទុកដឹកនាំ និងសម្របសម្រួលផ្នែកបច្ចេកទេស និងរដ្ឋបាលនៃសន្តិសុខឌីជីថល ដែលរួមមាន ការគ្រប់គ្រងអង្គភាព ការត្រួតពិនិត្យធនធានមនុស្ស និងហិរញ្ញវត្ថុ ការធានាសុវត្ថិភាពនៃទិន្នន័យ និងសុវត្ថិភាពនៃការគ្រប់គ្រងឯកសារ និងការរៀបចំរបាយការណ៍អំពីអង្គភាពខ្លួនជូន គ.ស.ឌ.។ លើសពីនេះ អគ្គលេខាធិការរងនឹងត្រូវបំពេញភារកិច្ចបន្ថែមទៀតតាមការបញ្ជាដឹកនាំដ៏ខ្ពង់ខ្ពស់របស់ ",
+    "structure.generalSecretaryIntro.part2":
+      " ប្រធាន គ.ស.ឌ. ដោយបង្ហាញពីតួនាទីសំខាន់របស់ពួកគេស្របតាម ការប្រតិបត្តិនិងយុទ្ធសាស្ត្រដែលដាក់ចេញដោយ គ.ស.ឌ.។ អគ្គលេខាធិការរងត្រូវទទួលតែងតាំងដោយសេចក្តីសម្រេចរបស់រាជរដ្ឋាភិបាលនៃព្រះរាជាណាចក្រកម្ពុជាតាមការស្នើសុំពីរដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ ដែលជាអគ្គលេខាធិការ នៃអគ្គលេខាធិការដ្ឋាន គ.ស.ឌ.។",
     "structure.roleText":
       "អគ្គលេខាធិការដ្ឋាន គ.ស.ឌ.មានតួនាទីនិងភារកិច្ចដូចតទៅ៖",
     "structure.role.point1":
