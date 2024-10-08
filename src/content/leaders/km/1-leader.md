@@ -1,5 +1,5 @@
 ---
-name: F. Kennedy
+name: leader 1 in kh
 image: src/asset/secretaries/user-avatar.png
 title: General Secretary
 lang: km

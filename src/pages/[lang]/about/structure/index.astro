@@ -84,7 +84,7 @@ const title = t("nav.exploreDSC.DSCstructure");
         {t("structure.orgIntro")}
       </TextElement>
       <figure class="mx-auto flex flex-col items-center gap-4 pb-6 text-center">
-        <StructureImage />
+        <StructureImage lang={lang} />
         <figcaption>
           {t("structure.figCaption")}
         </figcaption>
@@ -96,6 +96,11 @@ const title = t("nav.exploreDSC.DSCstructure");
       </TextElement>
       <TextElement variant="paragraph" className="text-justify">
         {t("structure.generalSecretaryIntro")}
+      </TextElement>
+      <TextElement variant="body" className="pb-6 text-justify">
+        {t("structure.generalSecretaryIntro.part1")}
+        <strong>{t("SamdechHunManet")}</strong>
+        {t("structure.generalSecretaryIntro.part2")}
       </TextElement>
       <section aria-labelledby="role">
         <Role />

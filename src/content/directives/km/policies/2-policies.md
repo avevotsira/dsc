@@ -1,8 +1,8 @@
 ---
 date: 01/28/2022
-file: policies/policies-digital-government.pdf
+file: policies/policies-digital-government-kh.pdf
 featured: true
-image: src/asset/directives/Digital-Government-Policy.png
+image: src/asset/directives/Digital-Government-Policy-kh.png
 title: គោលនយោបាយរដ្ឋាភិបាលឌីជីថលកម្ពុជា ២០២២-២០៣៥
 type: policy
 lang: km

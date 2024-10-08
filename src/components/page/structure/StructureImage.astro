@@ -1,11 +1,19 @@
 ---
-import structureDesktop from "@/asset/structure-desktop.svg";
-import structureMobile from "@/asset/structure-mobile.svg";
+import structureDesktopEN from "@/asset/structure-desktop-en.svg";
+import structureDesktopKH from "@/asset/structure-desktop-kh.svg";
+import structureMobileEN from "@/asset/structure-mobile-en.svg";
+import structureMobileKH from "@/asset/structure-mobile-kh.svg";
 import { Image } from "astro:assets";
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props as Props;
 ---
 
 <Image
-  src={structureDesktop}
+  src={lang == "en" ? structureDesktopEN : structureDesktopKH}
   alt="structure diagram of D.S.C."
   class="hidden size-full object-cover lg:flex"
   loading="eager"
@@ -15,7 +23,7 @@ import { Image } from "astro:assets";
 />
 
 <Image
-  src={structureMobile}
+  src={lang == "en" ? structureMobileEN : structureMobileKH}
   alt="structure diagram of D.S.C."
   class="size-full object-cover lg:hidden"
   loading="eager"
