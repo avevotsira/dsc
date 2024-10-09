@@ -50,15 +50,15 @@ export const ui: Record<string, Record<string, string>> = {
     "home.about.description":
       "The Digital Security Committee (D.S.C.) was established in order to ensure the efficient and effective in supporting the National Council for Digital Economy and Society, with function of leading, coordinating and promoting the management of digital security in Cambodia.",
     "home.unitsUnderDSCTitle": "Units under Digital Security Committee",
-    "structure.heading": "Organization Structure of D.S.C.",
+    "structure.heading": "Organizational Structure of D.S.C.",
     "structure.intro":
       "The Royal Government has established the Digital Security Committee (D.S.C.) in order to ensure the efficient and effective function in leading, coordinating and promoting the management of digital security to protect the interests of all social actors against all forms of attacks as to respond to all technical aspects and relevant forces and thereby maintaining and protecting digital security.",
     "structure.dscHeading":
-      "Structure of the Digital Security Committee (D.S.C.)",
+      "Composition of Digital Security Committee (D.S.C.)",
     "structure.dscHeading.text1":
       "The Digital Security Committee (D.S.C.) of Cambodia is led by ",
     "structure.dscHeading.text2":
-      ", Prime Minister of Cambodia as chairman. The committee is composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
+      ", Prime Minister of Cambodia as chairman and composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
     "structure.dscIntro":
       "The Digital Security Committee (D.S.C.) of Cambodia is led by Samdech Moha Bovor Thipadei HUN MANET, Prime Minister of Cambodia as chairman. The committee is composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
     "structure.orgIntro":
@@ -234,7 +234,7 @@ export const ui: Record<string, Record<string, string>> = {
     "structure.dscIntro":
       "The Digital Security Committee (D.S.C.) of Cambodia is led by Samdech Moha Bovor Thipadei HUN MANET, Prime Minister of Cambodia as chairman. The committee is composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
     "structure.orgIntro":
-      "គ.ស.ឌ. មានអគ្គលេខាធិការដ្ឋានមួយជាសេនាធិការទទួលបន្ទុកសម្របសម្រួលលើអង្គភាពចំនួន ៤ ដែលរួមមាន អង្គភាពសន្តិសុខសាយប័រកម្ពុជា អង្គភាពប្រឆាំងឧក្រិដ្ឋកម្មសាយប័រ អង្គភាពការពារជាតិក្នុងលំហសាយប័រ និងអង្គភាពការទូតសាយប័រ។ អង្គភាពទាំង៤ ខាងលើត្រូវបានតំណាងដោយអគ្គលេខាធិការរងដែលមានសមាសភាពមកពីក្រសួងនានា រួមមាន ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ ក្រសួងមហាផ្ទៃ ក្រសួងការពារជាតិ ក្រសួងការបរទេសនិងសហប្រតិបត្តិការអន្តរជាតិ និងអគ្គលេខាធិការរងមួយចំនួនទៀត ដែលជាតំណាងក្រសួងស្ថាប័នពាក់ព័ន្ធ តាមការចាំបាច់។",
+      "គណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) មានអគ្គលេខាធិការដ្ឋានមួយជាសេនាធិការទទួលបន្ទុកសម្របសម្រួលលើអង្គភាពចំនួន ៤ ដែលរួមមាន អង្គភាពសន្តិសុខសាយប័រកម្ពុជា អង្គភាពប្រឆាំងឧក្រិដ្ឋកម្មសាយប័រ អង្គភាពការពារជាតិក្នុងលំហសាយប័រ និងអង្គភាពការទូតសាយប័រ។ អង្គភាពទាំង៤ ខាងលើត្រូវបានតំណាងដោយអគ្គលេខាធិការរងដែលមានសមាសភាពមកពីក្រសួងនានា រួមមាន ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ ក្រសួងមហាផ្ទៃ ក្រសួងការពារជាតិ ក្រសួងការបរទេសនិងសហប្រតិបត្តិការអន្តរជាតិ និងអគ្គលេខាធិការរងមួយចំនួនទៀត ដែលជាតំណាងក្រសួងស្ថាប័នពាក់ព័ន្ធ តាមការចាំបាច់។",
     "structure.figCaption": "រចនាសម្ព័ន្ធរបស់គណៈកម្មាធិការសន្តិសុខឌីជីថល",
     "structure.generalSecretaryHeading":
       "រចនាសម្ព័ន្ធនៃអគ្គលេខាធិការដ្ឋាន គ.ស.ឌ.",
@@ -289,7 +289,7 @@ export const ui: Record<string, Record<string, string>> = {
     "about.committeeList3":
       "គណៈកម្មាធិការសន្តិសុខឌីជីថល (បង្កើតឡើងក្នុង ឆ្នាំ២០២៤)",
     "about.dscText3.part1":
-      'នៅក្នុងដំណើរការបរិវត្តកម្មឌីជីថល និងការអនុវត្តក្របខណ្ឌគោលនយោបាយសេដ្ឋកិច្ច និងសង្គមឌីជីថលកម្ពុជា ឆ្នាំ ២០២១-២០៣៥ រាជរដ្ឋាភិបាលកម្ពុជាបានសង្កេតឃើញ "សន្តិសុខឌីជីថល" ជាកត្តាដ៏សំខាន់មួយដើម្បីធានាការអនុវត្តប្រកបដោយជោគជ័យនៃក្របខណ្ឌគោលនយោបាយនេះ និងដើម្បីធានាថា ដែនលំហសាយប័រនៃព្រះរាជាណាចក្រកម្ពុជាមានសុវត្ថិភាពពីហានិភ័យសន្តិសុខសាយប័រ ក្នុងន័យនេះ រាជរដ្ឋាភិបាលនីតិកាលទី៧នៃព្រះរាជាណាចក្រកម្ពុជា ក្រោមការដឹកនាំដ៏ខ្ពង់ខ្ពស់របស់ ',
+      'នៅក្នុងដំណើរការបរិវត្តកម្មឌីជីថល និងការអនុវត្តក្របខណ្ឌគោលនយោបាយសេដ្ឋកិច្ច និងសង្គមឌីជីថលកម្ពុជា ឆ្នាំ ២០២១-២០៣៥ រាជរដ្ឋាភិបាលកម្ពុជាបានសង្កេតឃើញ "សន្តិសុខឌីជីថល" ជាកត្តាដ៏សំខាន់មួយដើម្បីធានាការអនុវត្តប្រកបដោយជោគជ័យនៃក្របខណ្ឌគោលនយោបាយនេះ និងដើម្បីធានាថា ដែនលំហសាយប័រនៃព្រះរាជាណាចក្រកម្ពុជាមានសុវត្ថិភាពពីហានិភ័យសន្តិសុខសាយប័រ។ ក្នុងន័យនេះ រាជរដ្ឋាភិបាលនីតិកាលទី៧នៃព្រះរាជាណាចក្រកម្ពុជា ក្រោមការដឹកនាំដ៏ខ្ពង់ខ្ពស់របស់ ',
     "about.dscText3.part2":
       " នាយករដ្ឋមន្ត្រីនៃព្រះរាជាណាចក្រកម្ពុជា បានសម្រេចបង្កើត “គណៈកម្មាធិការសន្តិសុខឌីជីថល” ដែលជាគណៈកម្មាធិការជំនាញទទួលខុសត្រូវក្នុងការគ្រប់គ្រងសន្តិសុខឌីជីថលរបស់ព្រះរាជាណាចក្រកម្ពុជា ក្នុងគោលបំណងការពារអត្ថប្រយោជន៍របស់អ្នកប្រើប្រាស់ ទប់ទល់នឹងការវាយប្រហារ និងមានសមត្ថភាពឆ្លើយតបគ្រប់ផ្នែក ទាំងបច្ចេកទេស និងកម្លាំង ក៏ដូចជាគ្រប់គ្រងឱ្យបាននូវសន្តិសុខសង្គមជាតិទាំងមូល។",
     "about.vision": "ចក្ខុវិស័យ",
@@ -304,7 +304,7 @@ export const ui: Record<string, Record<string, string>> = {
     "about.vision.point4":
       "អភិវឌ្ឍក្របខណ្ឌគោលនយោបាយសន្តិសុខឌីជីថល លិខិបទដ្ឋានគតិយុត្ត និងយុទ្ធសាស្ត្រដែលពាក់ព័ន្ធនឹងសន្តិសុខឌីជីថលនៃព្រះរាជាណាចក្រកម្ពុជា។",
     "about.vision.point5":
-      "ធានាបានឱ្យបាននូវការអនុវត្តក្របខណ្ឌគោលនយោបាយសេដ្ឋកិច្ច និងសង្គមឌីជីថលកម្ពុជា ឆ្នាំ២០២១-២០៣៥ និងគោលនយោបាយរដ្ឋាភិបាលឌីជីថលកម្ពុជា ២០២២-២០៣៥ ប្រកបដោយភាពជោគជ័យ។",
+      "ធានាឱ្យបាននូវការអនុវត្តក្របខណ្ឌគោលនយោបាយសេដ្ឋកិច្ច និងសង្គមឌីជីថលកម្ពុជា ឆ្នាំ២០២១-២០៣៥ និងគោលនយោបាយរដ្ឋាភិបាលឌីជីថលកម្ពុជា ២០២២-២០៣៥ ប្រកបដោយភាពជោគជ័យ។",
     "about.mission": "បេសកកម្ម",
     "about.mission.text":
       "ដើម្បីធានាបាននូវសេដ្ឋកិច្ចឌីជីថល និងសន្តិសុខឌីជីថលដ៏រស់រវើកនៃព្រះរាជាណាចក្រកម្ពុជា គណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) មានបេសកកម្មដូចខាងក្រោម៖",
@@ -327,7 +327,7 @@ export const ui: Record<string, Record<string, string>> = {
       "គណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) ត្រូវបានបង្កើតឡើងដោយអនុក្រឹត្យលេខ ៤៤ អនក្រ.បក ស្តីពីការរៀបចំនិងការប្រព្រឹត្តទៅរបស់គណៈកម្មាធិការសន្តិសុខឌីជីថល ចុះថ្ងៃទី ១ ខែមីនា ឆ្នាំ ២០២៤ ដែលមានតួនាទី និងភារៈកិច្ចដូចខាងក្រោម៖",
     "unit.heading": "អង្គភាពស្ថិតក្រោមឱវាទគណៈកម្មាធិការសន្តិសុខឌីជីថល",
     "unit.headingText":
-      "គ.ស.ឌ. មានអគ្គលេខាធិការដ្ឋានមួយជាសេនាធិការទទួលបន្ទុកសម្របសម្រួលលើអង្គភាពចំនួន ៤ ដែលរួមមាន អង្គភាពសន្តិសុខសាយប័រកម្ពុជា អង្គភាពប្រឆាំងឧក្រិដ្ឋកម្មសាយប័រ អង្គភាពការពារជាតិក្នុងលំហសាយប័រ និងអង្គភាពការទូតសាយប័រ។",
+      "គណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) មានអគ្គលេខាធិការដ្ឋានមួយជាសេនាធិការទទួលបន្ទុកសម្របសម្រួលលើអង្គភាពចំនួន ៤ ដែលរួមមាន អង្គភាពសន្តិសុខសាយប័រកម្ពុជា អង្គភាពប្រឆាំងឧក្រិដ្ឋកម្មសាយប័រ អង្គភាពការពារជាតិក្នុងលំហសាយប័រ និងអង្គភាពការទូតសាយប័រ។",
     "unit.ccsu": "អង្គភាពសន្តិសុខសាយប័រកម្ពុជា",
     "unit.ccsuText":
       "អង្គភាពសន្តិសុខសាយប័រកម្ពុជា ស្ថិតក្រោមសមត្ថកិច្ចរបស់ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ និងត្រូវបំពេញមុខងារបន្ថែមជាសេនាធិការរបស់អគ្គលេខាធិការដ្ឋាន គ.ស.ឌ. លើកិច្ចការពាក់ព័ន្ធនឹងសន្តិសុខសាយប័រនៃព្រះរាជាណាចក្រកម្ពុជា។",
