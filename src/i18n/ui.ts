@@ -82,7 +82,7 @@ export const ui: Record<string, Record<string, string>> = {
     "structure.role.point4":
       "Manages and develops the human resources of the D.S.C.",
     "structure.role.point5":
-      "Arranges, manages and uses the budget of the D.S.C.",
+      "Prepare, manages and uses the budget of the D.S.C.",
     "structure.role.point6":
       "Manages and stores files and data related to digital security.",
     "structure.role.point7":
@@ -230,7 +230,7 @@ export const ui: Record<string, Record<string, string>> = {
     "structure.dscHeading.text1":
       "គណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) នៃព្រះរាជាណាចក្រកម្ពុជាស្ថិតក្រោមការដឹកនាំដ៏ខ្ពង់ខ្ពស់របស់",
     "structure.dscHeading.text2":
-      "នាយករដ្ឋមន្ត្រីនៃកម្ពុជាជាប្រធាន និងមានសមាសភាពថ្នាក់ដឹកនាំ និងមន្ត្រីជាន់ខ្ពស់មកពីក្រសួងស្ថាប័ននានាជាអនុប្រធាន និងសមាជិក។",
+      " នាយករដ្ឋមន្ត្រីនៃកម្ពុជាជាប្រធាន និងមានសមាសភាពថ្នាក់ដឹកនាំ និងមន្ត្រីជាន់ខ្ពស់មកពីក្រសួងស្ថាប័ននានាជាអនុប្រធាន និងសមាជិក។",
     "structure.dscIntro":
       "The Digital Security Committee (D.S.C.) of Cambodia is led by Samdech Moha Bovor Thipadei HUN MANET, Prime Minister of Cambodia as chairman. The committee is composed of high-ranking officials from various Ministeries and institutions as Vice-Chairmen and members.",
     "structure.orgIntro":
@@ -241,9 +241,9 @@ export const ui: Record<string, Record<string, string>> = {
     "structure.generalSecretaryIntro.part1":
       "អគ្គលេខាធិការដ្ឋាននៃគណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) ដឹកនាំដោយអគ្គលេខាធិការដែលជារដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ និងអគ្គលេខាធិការរងមួយចំនួនជាជំនួយការ។ អគ្គលេខាធិការរងទទួលបន្ទុកដឹកនាំ និងសម្របសម្រួលផ្នែកបច្ចេកទេស និងរដ្ឋបាលនៃសន្តិសុខឌីជីថល ដែលរួមមាន ការគ្រប់គ្រងអង្គភាព ការត្រួតពិនិត្យធនធានមនុស្ស និងហិរញ្ញវត្ថុ ការធានាសុវត្ថិភាពនៃទិន្នន័យ និងសុវត្ថិភាពនៃការគ្រប់គ្រងឯកសារ និងការរៀបចំរបាយការណ៍អំពីអង្គភាពខ្លួនជូន គ.ស.ឌ.។ លើសពីនេះ អគ្គលេខាធិការរងនឹងត្រូវបំពេញភារកិច្ចបន្ថែមទៀតតាមការបញ្ជាដឹកនាំដ៏ខ្ពង់ខ្ពស់របស់ ",
     "structure.generalSecretaryIntro.part2":
-      " ប្រធាន គ.ស.ឌ. ដោយបង្ហាញពីតួនាទីសំខាន់របស់ពួកគេស្របតាម ការប្រតិបត្តិនិងយុទ្ធសាស្ត្រដែលដាក់ចេញដោយ គ.ស.ឌ.។ អគ្គលេខាធិការរងត្រូវទទួលតែងតាំងដោយសេចក្តីសម្រេចរបស់រាជរដ្ឋាភិបាលនៃព្រះរាជាណាចក្រកម្ពុជាតាមការស្នើសុំពីរដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ ដែលជាអគ្គលេខាធិការ នៃអគ្គលេខាធិការដ្ឋាន គ.ស.ឌ.។",
+      " ប្រធាន គ.ស.ឌ. ដោយបង្ហាញពីតួនាទីសំខាន់ស្របតាម កិច្ចដំណើរការ និងយុទ្ធសាស្ត្រដែលដាក់ចេញដោយ គ.ស.ឌ.។ អគ្គលេខាធិការរងត្រូវទទួលតែងតាំងដោយសេចក្តីសម្រេចរបស់រាជរដ្ឋាភិបាលនៃព្រះរាជាណាចក្រកម្ពុជាតាមការស្នើសុំពីរដ្ឋមន្ត្រីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ ដែលជាអគ្គលេខាធិការ នៃអគ្គលេខាធិការដ្ឋាន គ.ស.ឌ.។",
     "structure.roleText":
-      "អគ្គលេខាធិការដ្ឋាន គ.ស.ឌ.មានតួនាទីនិងភារកិច្ចដូចតទៅ៖",
+      "អគ្គលេខាធិការដ្ឋាន គ.ស.ឌ. មានតួនាទីនិងភារកិច្ចដូចតទៅ៖",
     "structure.role.point1":
       "ដឹកនាំគ្រប់គ្រងការងារបច្ចេកទេសសន្តិសុខឌីជីថល និងជាសេនាធិការផ្ទាល់របស់ប្រធាន គ.ស.ឌ.",
     "structure.role.point2":
