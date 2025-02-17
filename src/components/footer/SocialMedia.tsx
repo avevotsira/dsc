@@ -21,7 +21,7 @@ export default function SocialMedia() {
             <a
               href={link}
               aria-label={label}
-              className="transition-colors hover:text-secondary"
+              className="text-yellow-500 transition-colors hover:text-secondary"
             >
               <Icon className="size-6" />
             </a>

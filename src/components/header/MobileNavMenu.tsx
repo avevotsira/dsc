@@ -76,7 +76,14 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
           ))}
           <Separator />
           <li className="flex justify-center pt-4">
-            <Button className="lg:hidden">Report Incident</Button>
+            <a
+              href="https://www.camcert.gov.kh/en/report-incident/"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="lg:hidden"
+            >
+              <Button>Report Incident</Button>
+            </a>
           </li>
         </ul>
       </SheetContent>
